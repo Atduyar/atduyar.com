@@ -9,16 +9,16 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="w-full overflow-x-hidden">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-[#111216] text-white">
+	<body class="bg-[#111216] text-white w-screen w-full overflow-x-hidden">
 		<main class="bg-[#121417] border-1 border-[#90c5ff14] container m-auto min-h-dvh">
 			<slot />
 		</main>
