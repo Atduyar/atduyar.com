@@ -1,22 +1,21 @@
 ---
+import Break from "../components/Break.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
 
+// import HomeLayout from "../layouts/HomeLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Atduyar</title>
-		<style>
-			html, body {
-				background-color: black;
-				color: white;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Atduyar.com</h1>
-	</body>
-</html>
+<HomeLayout title="Atduyar" description="Ahmet Tarik Duyar Portfolio">
+	<nav class="my-4">
+		<ul class="flex justify-center gap-8">
+			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#">Home</a></li>
+			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#">Blog</a></li>
+			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#">Resume</a></li>
+			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#">Contact</a></li>
+		</ul> 
+	</nav>
+	<Break/>
+	<h1 class="text-9xl font-sinistre p-16">I'm Ahmet Tarik Duyar,<br/>a Software Engineer</h1>
+	<Break/>
+	<p class="text-4xl font-sinistre font-var p-16">Soon....</p>
+</HomeLayout>
