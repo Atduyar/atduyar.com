@@ -1,0 +1,19 @@
+---
+interface Props {
+	title: string;
+	sectionId: string;
+	class?: string;
+}
+
+const { title, sectionId, class: className } = Astro.props;
+---
+<section class={"flex p-4 md:p-8 lg:p-16 text-lg " + (className ?? "")} id={sectionId}>
+	<div class="w-full">
+		<div class="flex justify-between">
+			<h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl font-sinistre pb-3 ">{ title }</h2>
+			<slot name="title-logo"/>
+		</div>
+		<slot/>
+	</div>
+	<slot name="left"/>
+</section>
