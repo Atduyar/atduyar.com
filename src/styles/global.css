@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-	--font-sinistre: "Sinistre Variable";
+	--font-sinistre: "sinistre variable";
 	--font-sinistre--font-variation-settings: "wght" 72;
 }
 
@@ -11,4 +11,28 @@
 	font-weight: 100 900;
 	font-style: normal;
 	font-display: swap;
+}
+
+@theme {
+	--font-oldturcic: "NotoSansOldTurkic Regular";
+}
+
+@font-face {
+	font-family: "NotoSansOldTurkic Regular";
+	src: url("/fonts/NotoSansOldTurkic-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@theme {
+	--animate-slide: slide 1s linear infinite;
+	@keyframes slide {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
 }
