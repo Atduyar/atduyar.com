@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import PostHog from "../components/posthog.astro";
 
 interface Props {
 	title: string;
@@ -17,9 +18,10 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{title}</title>
+		<PostHog />
 	</head>
 	<body class="bg-[#111216] text-white w-screen w-full overflow-x-hidden">
-		<main class="bg-[#121417] border-1 border-[#90c5ff14] container m-auto min-h-dvh">
+		<main class="bg-[#121417] border border-[#90c5ff14] container m-auto min-h-dvh">
 			<slot />
 		</main>
 	</body>

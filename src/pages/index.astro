@@ -57,10 +57,11 @@ import HomeLayout from "../layouts/HomeLayout.astro";
 		<div class="flex justify-end">
 			<input type="button" id="contact_send" class="border-b-2" value="Sign"/>
 		</div>
-		<!-- --animate-consume-red: slide 2s ease-in-out forwards; -->
+
 		<div class="select-none pointer-events-none absolute left-0 top-0 h-full w-full \
 			transition-[--x] duration-600 ease-out [--x:0%] group-has-[input[type=button]:hover]:[--x:100%] \
-			bg-radial-[circle_at_100%_100%,var(--tw-gradient-from)_var(--x)] to-30% opacity-50 from-red-900 group-has-[input[type=button]:hover]:opacity-100 from-red-900 to-transparent mix-blend-hard-light">
+			to-30% opacity-50 from-red-900 to-transparent mix-blend-hard-light \
+			bg-radial-[circle_at_100%_100%,var(--tw-gradient-from)_var(--x)] group-has-[input[type=button]:hover]:opacity-100">
 		</div>
 	</HomeSection>
 	<Break/>
