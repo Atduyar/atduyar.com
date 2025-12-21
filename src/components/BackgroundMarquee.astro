@@ -1,0 +1,23 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+<div class={"w-full overflow-hidden flex absolute left-0 top-0 font-oldturcic text-gray-500 text-xl text-nowrap *:animate-[slide_120s_linear_infinite] " + (className ?? "")}>
+	<p class="left-0">
+		<slot/>
+	</p>
+	<p class="left-full ">
+		<slot/>
+	</p>
+</div>
+<div class={"w-full overflow-hidden flex absolute left-0 bottom-0 font-oldturcic text-gray-500 text-xl text-nowrap *:animate-[slide_120s_linear_infinite_reverse] " + (className ?? "")}>
+	<p class="left-0">
+		<slot/>
+	</p>
+	<p class="left-full ">
+		<slot/>
+	</p>
+</div>
