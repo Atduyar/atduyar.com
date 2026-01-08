@@ -1,5 +1,6 @@
 ---
 import BackgroundMarquee from "../components/BackgroundMarquee.astro";
+import Badge from "../components/Badge.astro";
 import Break from "../components/Break.astro";
 import HomeSection from "../components/HomeSection.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
@@ -8,11 +9,13 @@ import HomeLayout from "../layouts/HomeLayout.astro";
 <HomeLayout title="Atduyar" description="Ahmet Tarik Duyar Portfolio">
 	<nav class="my-4">
 		<ul class="flex justify-center gap-3 md:gap-8">
-			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#about">Home</a></li>
-			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#">Blog</a></li>
-			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#">Resume</a></li>
+			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#">Home</a></li>
+			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#experience">Experience</a></li>
+			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#projects">Projects</a></li>
+			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#blog">Blog</a></li>
+			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#resume">Resume</a></li>
 			<li class="text-2xl font-sinistre hover:text-blue-300 transition hover:-translate-y-0.5"><a href="#contact">Contact</a></li>
-		</ul> 
+		</ul>
 	</nav>
 	<Break/>
 
@@ -23,7 +26,7 @@ import HomeLayout from "../layouts/HomeLayout.astro";
 		<img slot="title-logo" class="block sm:hidden w-auto h-lh scale-150 my-auto mr-6 aspect-square" src="/favicon.svg"/>
 		<div class="flex">
 			<p>
-				I'm Ahmet Tarık Duyar, a Full-Stack Software Engineer with a year of professional experience specializing in building robust backend architectures, designing scalable databases, and managing critical systems. During my time at Deniz Egece Co. Ltd., I took ownership of architecting and deploying a streaming platform serving over 17,000 paid users, demonstrating my ability to deliver end-to-end solutions across various platforms. As an Honor Student in Software Engineering at the International University of Sarajevo, I'm deeply focused on computer science fundamentals while actively exploring C, Rust, JavaScript, and Linux. I thrive in dynamic environments, comfortable taking responsibility for system design, reliability, and performance in fast-moving teams.
+				I'm Ahmet Tarık Duyar, a Full-Stack Software Engineer with a year of professional experience specializing in building robust backend architectures, designing scalable databases, and managing critical systems. During my time at Deniz Egece Co. Ltd., I took ownership of architecting and deploying a streaming platform serving over <span class="text-white font-bold">17,000 paid users</span>, demonstrating my ability to deliver end-to-end solutions across various platforms. As an Honor Student in Software Engineering at the International University of Sarajevo, I'm deeply focused on computer science fundamentals while actively exploring C, Rust, JavaScript, and Linux. I thrive in dynamic environments, comfortable taking responsibility for system design, reliability, and performance in fast-moving teams.
 			</p>
 		</div>
 		<img slot="left" class="h-full w-full my-auto hidden sm:block sm:w-1/5 lg:w-1/3 2xl:w-1/5 ml-6 aspect-square" src="/favicon.svg"/>
@@ -32,59 +35,313 @@ import HomeLayout from "../layouts/HomeLayout.astro";
 
 		<!-- class="bg-radial-[circle_at_95%_95%] from-red-950 to-transparent from-15% to-15% has-[input[type=button]:hover]:to-100% has-[input[type=button]:hover]:from-100%  transition-all duration-1000 relative \ -->
 	<HomeSection title="Contact" sectionId="contact" class="relative group">
-		<BackgroundMarquee class="group-has-[input[type=button]:hover]:text-white group-has-[input[type=button]:hover]: duration-500 transition-all">
+		<BackgroundMarquee class="group-has-[#contactsend:hover]:text-white group-has-[#contactsend:hover]: duration-500 transition-all">
 			𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰖𐰸: 𐰼𐰾𐰼: 𐰸𐰆𐰯: 𐰇𐰠𐱅𐰲𐰃: 𐰼𐱅𐰏𐰕: 𐰃𐰤𐰢: 𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰚𐰼𐰏𐰚: 𐰉𐰆𐰡𐰃: 𐰇𐰕𐰢: 𐰽𐰴𐰦𐰢: 𐰚𐰇𐰼𐰇𐰼: 𐰚𐰇𐰕𐰢: 𐰚𐰇𐰼𐰢𐰕: 𐱅𐰏: 𐰋𐰃𐰠𐰼: 𐰋𐰃𐰠𐰏𐰢: 𐰋𐰃𐰠𐰢𐰕: 𐱅𐰏: 𐰉𐰆𐰡𐰃: 𐰇𐰕𐰢: 𐰽𐰴𐰦𐰢: 𐰇𐰓: 𐱅𐰭𐰼𐰃: 𐰖𐰽𐰺: 𐰚𐰃𐰾𐰃: 𐰆𐰍𐰞𐰃: 𐰸𐰆𐰯: 𐰇𐰠𐰏𐰠𐰃: 𐱅𐰇𐰼𐰇𐰢𐰾:
-			<!-- 𐰚𐰇𐰠𐱅𐰃𐰏𐰤 𐰖𐰸 𐰼𐰾𐰼 𐰸𐰆𐰯 𐰇𐰠𐱅𐰲𐰃 𐰼𐱅𐰏𐰕 𐰃𐰤𐰢 𐰚𐰇𐰠𐱅𐰃𐰏𐰤 𐰚𐰼𐰏𐰚 𐰉𐰆𐰡𐰃 𐰇𐰕𐰢 𐰽𐰴𐰦𐰢 𐰚𐰇𐰼𐰇𐰼 𐰚𐰇𐰕𐰢 𐰚𐰇𐰼𐰢𐰕 𐱅𐰏 𐰋𐰃𐰠𐰼 𐰋𐰃𐰠𐰏𐰢 𐰋𐰃𐰠𐰢𐰕 𐱅𐰏 𐰉𐰆𐰡𐰃 𐰇𐰕𐰢 𐰽𐰴𐰦𐰢 𐰇𐰓 𐱅𐰭𐰼𐰃 𐰖𐰽𐰺 𐰚𐰃𐰾𐰃 𐰆𐰍𐰞𐰃 𐰸𐰆𐰯 𐰇𐰠𐰏𐰠𐰃 𐱅𐰇𐰼𐰇𐰢𐰾 -->
+			<!-- 𐰚𐰇𐰠𐱅𐰃𐰏𐰤 𐰖𐰸 𐰼𐰾𐼀 𐰸𐰆𐰯 𐰇𐰠𐱅𐰲𐰃 𐰼𐱅𐰏𐰕 𐰃𐰤𐰢 𐰚𐰇𐰠𐱅𐰃𐰏𐰤 𐰚𐰼𐰏𐰚 𐰉𐰆𐰡𐰃 𐰇𐰕𐰢 𐰽𐰴𐰦𐰢 𐰚𐰇𐰼𐰇𐰼 𐰚𐰇𐰕𐰢 𐰚𐰇𐰼𐰢𐰕 𐱅𐰏 𐰋𐰃𐰠𐰼 𐰋𐰃𐰠𐰏𐰢 𐰋𐰃𐰠𐰢𐰕 𐱅𐰏 𐰉𐰆𐰡𐰃 𐰇𐰕𐰢 𐰽𐰴𐰦𐰢 𐰇𐰓 𐱅𐰭𐰼𐰃 𐰖𐰽𐰺 𐰚𐰃𐰾𐰃 𐰆𐰍𐰞𐰃 𐰸𐰆𐰯 𐰇𐰠𐰏𐰠𐰃 𐱅𐰇𐰼𐰇𐰢𐰾 -->
 		</BackgroundMarquee>
 		<br>
-		<div class="flex justify-between w-full">
-			<div>
-				<label for="contact_name" class="font-sinistre text-2xl">Your Name: </label>
-				<input type="text" id="contact_name" class="border-b-2"/>
+		<div class="space-y-8">
+			<div class="grid grid-cols-[auto_1fr_auto_1fr] gap-x-8 gap-y-8">
+				<label for="contact_name" class="text-xl font-sinistre text-gray-300 self-end pb-3">Name:</label>
+				<input type="text" id="contact_name" class="w-full px-0 py-3 bg-transparent border-b-2 border-[#90c5ff20] focus:border-blue-300/60 focus:outline-none transition-colors text-white placeholder-gray-600 text-lg"/>
+				<label for="contact_email" class="text-xl font-sinistre text-gray-300 self-end pb-3">Email:</label>
+				<input type="text" id="contact_email" class="w-full px-0 py-3 bg-transparent border-b-2 border-[#90c5ff20] focus:border-blue-300/60 focus:outline-none transition-colors text-white placeholder-gray-600 text-lg"/>
+				<label for="contact_message" class="text-xl font-sinistre text-gray-300 self-start pb-3">Message:</label>
+				<textarea id="contact_message" rows="5" class="col-span-3 px-0 py-3 bg-transparent border-b-2 border-[#90c5ff20] focus:border-blue-300/60 focus:outline-none transition-colors text-white placeholder-gray-600 resize-none text-lg"/>
 			</div>
-			<div>
-				<label for="contact_emain" class="font-sinistre text-2xl">Email: </label>
-				<input type="text" id="contact_emain" class="border-b-2"/>
-			</div>
-			<div></div>
-		</div>
-		<br>
-		<div class="flex align-top">
-			<label for="contact_message" class="font-sinistre text-2xl mr-8">Message: </label>
-			<textarea id="contact_message" rows="5" class="border-b-2 w-full placeholder:font-sinistre" placeholder="Your message"/>
 		</div>
 		<br>
 		<div class="flex justify-end">
-			<input type="button" id="contact_send" class="border-b-2" value="Sign"/>
+			<button id="contactsend" class="group relative px-6 py-2 border-b-2 border-[#90c5ff20] hover:border-white/40 focus:border-white/40 focus:outline-none text-white font-sinistre text-xl cursor-pointer bg-transparent transition-all duration-300">
+				<span class="group-hover:hidden">Send</span>
+				<span class="hidden group-hover:inline">Sign</span>
+			</button>
 		</div>
 
 		<div class="select-none pointer-events-none absolute left-0 top-0 h-full w-full \
-			transition-[--x] duration-600 ease-out [--x:0%] group-has-[input[type=button]:hover]:[--x:100%] \
+			transition-[--x] duration-600 ease-out [--x:0%] group-has-[#contactsend:hover]:[--x:100%] \
 			to-30% opacity-50 from-red-900 to-transparent mix-blend-hard-light \
-			bg-radial-[circle_at_100%_100%,var(--tw-gradient-from)_var(--x)] group-has-[input[type=button]:hover]:opacity-100">
+			bg-radial-[circle_at_100%_100%,var(--tw-gradient-from)_var(--x)] group-has-[#contactsend:hover]:opacity-100">
 		</div>
 	</HomeSection>
 	<Break/>
 
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
+	<HomeSection title="Experience" sectionId="experience">
+		<div class="space-y-16">
+			<div class="border-l-2 border-[#90c5ff14] pl-8 pb-8 relative group">
+				<div class="absolute -left-[5px] top-0 w-2 h-2 bg-white rounded-full group-hover:bg-blue-300 transition-colors"></div>
+				<div class="flex items-center gap-4 mb-3">
+					<h3 class="text-2xl sm:text-3xl font-sinistre group-hover:text-blue-300 transition-colors">Founding Full-Stack Engineer</h3>
+					<span class="font-oldturcic text-3xl opacity-10 text-gray-500 group-hover:opacity-50 group-hover:text-blue-300 transition-all duration-300">𐰭</span>
+				</div>
+				<p class="text-gray-400 mb-8 text-sm">Deniz Egece Co. Ltd. &bull; July 2022 – June 2023</p>
+				<div class="space-y-8">
+					<div class="group/project">
+						<h4 class="font-sinistre text-xl text-white mb-3 group-hover/project:text-blue-300 transition-colors">EgeceTV</h4>
+						<p class="text-gray-300 mb-4 leading-relaxed">Architected and deployed a health and education streaming platform serving <span class="text-white font-bold bg-blue-300/10 px-2 py-1 rounded">17,000+ paid users</span> across 5 platforms with a library of ~1,000 videos.</p>
+						<div class="flex flex-wrap gap-2 mt-4">
+							<Badge>Next.js</Badge>
+							<Badge>GraphQL</Badge>
+							<Badge>MySQL</Badge>
+							<Badge>GitHub Actions</Badge>
+							<Badge>Linux</Badge>
+						</div>
+					</div>
+					<div class="group/project">
+						<h4 class="font-sinistre text-xl text-white mb-3 group-hover/project:text-blue-300 transition-colors">Distance Education Platform</h4>
+						<p class="text-gray-300 mb-4 leading-relaxed">Designed modular enterprise API using Clean Architecture principles, featuring real-time video conferencing, reservation systems, and homework tracking for psychologists and dietitians.</p>
+						<div class="flex flex-wrap gap-2 mt-4">
+							<Badge>C#</Badge>
+							<Badge>.NET</Badge>
+							<Badge>AWS</Badge>
+							<Badge>Docker</Badge>
+							<Badge>PostgreSQL</Badge>
+							<Badge>VideoSDK</Badge>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</HomeSection>
 	<Break/>
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
+
+	<HomeSection title="Projects" sectionId="projects">
+		<div class="space-y-6">
+			<div class="border border-[#90c5ff14] p-10 relative overflow-hidden group">
+				<div class="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background-image: radial-gradient(circle at 2px 2px, #90c5ff08 1px, transparent 0); background-size: 20px 20px;"></div>
+				<div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+				<div class="relative">
+					<div class="flex items-start justify-between mb-6">
+						<h4 class="font-sinistre text-4xl text-white group-hover:text-blue-300 transition-colors">Minesweeper</h4>
+						<span class="font-oldturcic text-5xl opacity-20 text-gray-500 group-hover:opacity-100 group-hover:text-blue-300 transition-all duration-300">𐰏</span>
+					</div>
+					<p class="text-gray-300 mb-8 leading-relaxed text-lg">Terminal-based puzzle game implemented across three languages (C#, Python, JavaScript), demonstrating language-specific approaches to game logic, algorithm implementation, and cross-platform terminal compatibility with ANSI escape sequences.</p>
+					<div class="mb-8 flex flex-wrap gap-2">
+						<Badge>C#</Badge>
+						<Badge>Python</Badge>
+						<Badge>JavaScript</Badge>
+						<Badge>ANSI Escape</Badge>
+					</div>
+					<a href="https://github.com/Atduyar/Minesweeper" target="_blank" rel="noopener" class="inline-block text-sm text-gray-400 hover:text-blue-300 transition-colors">
+						github.com/Atduyar/Minesweeper
+					</a>
+				</div>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="border border-[#90c5ff14] p-8 relative overflow-hidden group">
+					<div class="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background-image: radial-gradient(circle at 2px 2px, #90c5ff08 1px, transparent 0); background-size: 20px 20px;"></div>
+					<div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative">
+						<div class="flex items-start justify-between mb-4">
+							<h4 class="font-sinistre text-3xl text-white group-hover:text-blue-300 transition-colors">PingPongFasm</h4>
+							<span class="font-oldturcic text-4xl opacity-20 text-gray-500 group-hover:opacity-100 group-hover:text-blue-300 transition-all duration-300">𐰢</span>
+						</div>
+						<p class="text-gray-300 mb-6 leading-relaxed text-base">Assembly-C integration with neural network AI, implementing proper System V ABI calling conventions, stack alignment, and memory management coordination between FASM2 x86-64 assembly and raylib graphics.</p>
+						<div class="mb-6 flex flex-wrap gap-2">
+							<Badge>FASM2</Badge>
+							<Badge>x86-64</Badge>
+							<Badge>C</Badge>
+							<Badge>raylib</Badge>
+							<Badge>Neural Network</Badge>
+						</div>
+						<a href="https://github.com/Atduyar/PingPongFasm" target="_blank" rel="noopener" class="inline-block text-sm text-gray-400 hover:text-blue-300 transition-colors">
+							github.com/Atduyar/PingPongFasm
+						</a>
+					</div>
+				</div>
+				<div class="border border-[#90c5ff14] p-8 relative overflow-hidden group">
+					<div class="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background-image: radial-gradient(circle at 2px 2px, #90c5ff08 1px, transparent 0); background-size: 20px 20px;"></div>
+					<div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative">
+						<div class="flex items-start justify-between mb-4">
+							<h4 class="font-sinistre text-3xl text-white group-hover:text-blue-300 transition-colors">REKV</h4>
+							<span class="font-oldturcic text-4xl opacity-20 text-gray-500 group-hover:opacity-100 group-hover:text-blue-300 transition-all duration-300">𐱅</span>
+						</div>
+						<p class="text-gray-300 mb-6 leading-relaxed text-base">Multi-threaded in-memory key-value store with thread-safe hash map synchronization, published on crates.io as installable package featuring complete CRUD operations and concurrent access patterns.</p>
+						<div class="mb-6 flex flex-wrap gap-2">
+							<Badge>Rust</Badge>
+							<Badge>Mutex</Badge>
+							<Badge>Sockets</Badge>
+							<Badge>crates.io</Badge>
+						</div>
+						<a href="https://github.com/Atduyar/rekv" target="_blank" rel="noopener" class="inline-block text-sm text-gray-400 hover:text-blue-300 transition-colors">
+							github.com/Atduyar/rekv
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="border border-[#90c5ff14] p-8 relative overflow-hidden group">
+					<div class="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background-image: radial-gradient(circle at 2px 2px, #90c5ff08 1px, transparent 0); background-size: 20px 20px;"></div>
+					<div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative">
+						<div class="flex items-start justify-between mb-4">
+							<h4 class="font-sinistre text-3xl text-white group-hover:text-blue-300 transition-colors">Make2Game</h4>
+							<span class="font-oldturcic text-4xl opacity-20 text-gray-500 group-hover:opacity-100 group-hover:text-blue-300 transition-all duration-300">𐰚</span>
+						</div>
+						<p class="text-gray-300 mb-6 leading-relaxed text-base">Experimental 2D game engine with OpenGL batch rendering, SDL2 window management, Lua 5.4 scripting via C API, and Dear ImGui editor tools with live code editing capabilities.</p>
+						<div class="mb-6 flex flex-wrap gap-2">
+							<Badge>C++17</Badge>
+							<Badge>OpenGL</Badge>
+							<Badge>SDL2</Badge>
+							<Badge>Lua</Badge>
+							<Badge>ImGui</Badge>
+						</div>
+						<a href="https://github.com/Atduyar/Make2Game" target="_blank" rel="noopener" class="inline-block text-sm text-gray-400 hover:text-blue-300 transition-colors">
+							github.com/Atduyar/Make2Game
+						</a>
+					</div>
+				</div>
+				<div class="border border-[#90c5ff14] p-8 relative overflow-hidden group">
+					<div class="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background-image: radial-gradient(circle at 2px 2px, #90c5ff08 1px, transparent 0); background-size: 20px 20px;"></div>
+					<div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative">
+						<div class="flex items-start justify-between mb-4">
+							<h4 class="font-sinistre text-3xl text-white group-hover:text-blue-300 transition-colors">LinkListBrainfuck</h4>
+							<span class="font-oldturcic text-4xl opacity-20 text-gray-500 group-hover:opacity-100 group-hover:text-blue-300 transition-all duration-300">𐰃</span>
+						</div>
+						<p class="text-gray-300 mb-6 leading-relaxed text-base">Doubly-linked list Brainfuck interpreter with dynamic memory tape, file-based loop navigation, ANSI terminal visualization, demonstrating first linked list implementation and recursive list traversal algorithms.</p>
+						<div class="mb-6 flex flex-wrap gap-2">
+							<Badge>C</Badge>
+							<Badge>Linked List</Badge>
+							<Badge>ANSI Terminal</Badge>
+						</div>
+						<a href="https://github.com/Atduyar/LinkListBrainfuck" target="_blank" rel="noopener" class="inline-block text-sm text-gray-400 hover:text-blue-300 transition-colors">
+							github.com/Atduyar/LinkListBrainfuck
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="border border-[#90c5ff14] p-8 relative overflow-hidden group">
+					<div class="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background-image: radial-gradient(circle at 2px 2px, #90c5ff08 1px, transparent 0); background-size: 20px 20px;"></div>
+					<div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative">
+						<div class="flex items-start justify-between mb-4">
+							<h4 class="font-sinistre text-3xl text-white group-hover:text-blue-300 transition-colors">NeuroevolutionFlappyBird</h4>
+							<span class="font-oldturcic text-4xl opacity-20 text-gray-500 group-hover:opacity-100 group-hover:text-blue-300 transition-all duration-300">𐰖</span>
+						</div>
+						<p class="text-gray-300 mb-6 leading-relaxed text-base">Genetic algorithm neural network visualization training 200 Flappy Bird agents, implementing feed-forward networks, fitness-based selection, crossover operators, and real-time training visualization in Octave.</p>
+						<div class="mb-6 flex flex-wrap gap-2">
+							<Badge>Octave</Badge>
+							<Badge>Neural Networks</Badge>
+							<Badge>Genetic Algorithm</Badge>
+						</div>
+						<a href="https://github.com/Atduyar/NeuroevolutionFlappyBird" target="_blank" rel="noopener" class="inline-block text-sm text-gray-400 hover:text-blue-300 transition-colors">
+							github.com/Atduyar/NeuroevolutionFlappyBird
+						</a>
+					</div>
+				</div>
+				<div class="border border-[#90c5ff14] p-8 relative overflow-hidden group">
+					<div class="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" style="background-image: radial-gradient(circle at 2px 2px, #90c5ff08 1px, transparent 0); background-size: 20px 20px;"></div>
+					<div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative">
+						<div class="flex items-start justify-between mb-4">
+							<h4 class="font-sinistre text-3xl text-white group-hover:text-blue-300 transition-colors">Evrenomi</h4>
+							<span class="font-oldturcic text-4xl opacity-20 text-gray-500 group-hover:opacity-100 group-hover:text-blue-300 transition-all duration-300">𐰼</span>
+						</div>
+						<p class="text-gray-300 mb-6 leading-relaxed text-base">Turkish social media blogging platform with mobile-responsive design, RESTful API architecture, user authentication, comment systems, and achieving 95+ Lighthouse performance scores.</p>
+						<div class="mb-6 flex flex-wrap gap-2">
+							<Badge>C#</Badge>
+							<Badge>REST API</Badge>
+							<Badge>JavaScript</Badge>
+							<Badge>Mobile-Responsive</Badge>
+						</div>
+						<a href="https://github.com/Atduyar/Evrenomi-frontend" target="_blank" rel="noopener" class="inline-block text-sm text-gray-400 hover:text-blue-300 transition-colors">
+							github.com/Atduyar/Evrenomi-frontend
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</HomeSection>
 	<Break/>
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
+
+	<HomeSection title="Education" sectionId="education">
+		<div class="space-y-10">
+			<div class="border-l-2 border-[#90c5ff14] pl-8 pb-8 relative">
+				<div class="absolute -left-[5px] top-0 w-2 h-2 bg-white rounded-full"></div>
+				<h3 class="text-xl sm:text-2xl font-sinistre mb-3 text-white">Bachelor of Science in Software Engineering</h3>
+				<p class="text-gray-400 mb-2">International University of Sarajevo (IUS)</p>
+				<p class="text-sm text-gray-400">
+					2023 – 2026 (Expected) &bull;
+					<span class="inline-block px-2 py-1 bg-white/10 border border-white/20 text-white text-xs font-medium ml-1">
+						3.78/4.00 GPA &bull; Honor Student
+					</span>
+				</p>
+			</div>
+			<div class="border-l-2 border-[#90c5ff14] pl-8 relative">
+				<div class="absolute -left-[5px] top-0 w-2 h-2 bg-white rounded-full"></div>
+				<h3 class="text-xl sm:text-2xl font-sinistre mb-3 text-white">Associate Degree in Computer Programming</h3>
+				<p class="text-gray-400 mb-2">KTO Karatay University</p>
+				<p class="text-sm text-gray-400">2020 – 2022</p>
+			</div>
+		</div>
+	</HomeSection>
 	<Break/>
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
+
+	<HomeSection title="Resume" sectionId="resume">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="border border-[#90c5ff14] p-6 space-y-4">
+				<h4 class="font-sinistre text-lg text-white mb-4">Contact</h4>
+				<p class="text-white font-medium">Ahmet Tarık Duyar</p>
+				<p class="text-sm text-gray-400">atduyar@gmail.com &bull; +90 543 860 66 37</p>
+				<p class="text-sm text-gray-400">github.com/atduyar &bull; atduyar.com</p>
+			</div>
+			<div class="border border-[#90c5ff14] p-6 space-y-4">
+				<h4 class="font-sinistre text-lg text-white mb-4">Summary</h4>
+				<p class="text-sm text-gray-300 leading-relaxed">Full-Stack developer with 1 year of professional experience owning backend architecture, databases, and critical systems for a production streaming service with 17,000+ paid users across 5 platforms.</p>
+			</div>
+			<div class="border border-[#90c5ff14] p-6 space-y-4 md:col-span-2">
+				<h4 class="font-sinistre text-lg text-white mb-4">Technical Focus</h4>
+				<p class="text-sm text-gray-300 leading-relaxed mb-4">Building scalable systems, performance optimization, clean architecture, and infrastructure automation. Currently exploring systems programming and game engine development.</p>
+				<div class="flex flex-wrap gap-2">
+					<Badge>Backend Architecture</Badge>
+					<Badge>Clean Architecture</Badge>
+					<Badge>System Design</Badge>
+					<Badge>CI/CD</Badge>
+					<Badge>Performance</Badge>
+				</div>
+			</div>
+		</div>
+		<div class="mt-8 flex justify-end">
+			<a href="#" class="inline-flex items-center gap-2 px-6 py-3 border-2 border-white/10 hover:border-white/20 transition-colors text-white font-sinistre">
+				Download PDF
+			</a>
+		</div>
+	</HomeSection>
 	<Break/>
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
-	<Break/>
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
-	<Break/>
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
-	<Break/>
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
-	<Break/>
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
-	<Break/>
-	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
+
+	<HomeSection title="Blog" sectionId="blog">
+		<div class="mb-8 p-6 border border-[#90c5ff14] bg-[#90c5ff05]">
+			<p class="text-gray-400 text-sm mb-2">Status</p>
+			<p class="text-2xl font-sinistre text-white">Chronicles in Progress</p>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-40">
+			<div class="border border-[#90c5ff14] p-6 relative overflow-hidden group">
+				<div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+				<div class="relative">
+					<p class="text-xs text-gray-500 mb-2">Coming Soon</p>
+					<h4 class="font-sinistre text-xl text-white mb-3">Deep Dive: Backend Architecture Patterns</h4>
+					<p class="text-sm text-gray-400 mb-4">Exploring scalable backend designs and clean architecture principles from production experience.</p>
+					<div class="flex items-center gap-2 text-xs text-gray-500">
+						<span>12 min read</span>
+					</div>
+				</div>
+			</div>
+			<div class="border border-[#90c5ff14] p-6 relative overflow-hidden group">
+				<div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+				<div class="relative">
+					<p class="text-xs text-gray-500 mb-2">Coming Soon</p>
+					<h4 class="font-sinistre text-xl text-white mb-3">Building a Game Engine from Scratch</h4>
+					<p class="text-sm text-gray-400 mb-4">Journey through implementing a 2D game engine with Lua scripting and OpenGL rendering.</p>
+					<div class="flex items-center gap-2 text-xs text-gray-500">
+						<span>15 min read</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</HomeSection>
 	<Break/>
 	<p class="text-xl sm:text-4xl font-sinistre font-var p-4 md:p-8 lg:p-16">Soon....</p>
 </HomeLayout>
