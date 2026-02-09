@@ -1,0 +1,1344 @@
+---
+import BackgroundMarquee from "../../../components/BackgroundMarquee.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Ahmet Tarik Duyar - Blog Explorations" description="10 Unique Blog Section Designs" bodyClass="bg-[#0a0b0d] text-white w-screen overflow-x-hidden">
+	<main class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-7xl mx-auto min-h-dvh relative">
+		<!-- Subtle noise overlay -->
+		<div class="fixed inset-0 pointer-events-none opacity-[0.015] z-50" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+		
+		<!-- Navigation -->
+		<nav class="py-6 px-4 md:px-8 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
+			<div class="flex justify-between items-center">
+				<a href="#hero" class="group flex items-center gap-3">
+					<div class="w-10 h-10 rounded-full border border-blue-400/30 flex items-center justify-center group-hover:border-blue-400/60 transition-colors relative overflow-hidden">
+						<div class="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors"></div>
+						<img src="/favicon.svg" alt="Logo" class="w-6 h-6 relative z-10" />
+					</div>
+					<span class="font-sinistre text-xl tracking-wide hidden sm:block">Atduyar</span>
+				</a>
+				<div class="flex items-center gap-4">
+					<span class="text-xs text-gray-500 font-mono hidden md:block">10 BLOG DESIGNS</span>
+					<span class="text-xs text-blue-400/60 font-mono">/final/13</span>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section id="hero" class="min-h-[60vh] flex flex-col justify-center px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="absolute inset-0">
+				<div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px]"></div>
+				<div class="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px]"></div>
+			</div>
+			
+			<div class="relative z-10">
+				<p class="font-oldturcic text-blue-400/50 text-lg mb-4 tracking-[0.4em] animate-fade-in leading-none">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</p>
+				<h1 class="text-4xl sm:text-6xl lg:text-7xl font-sinistre leading-[0.9] mb-8">
+					<span class="block animate-slide-up" style="animation-delay: 0.1s;">Ten Ways to</span>
+					<span class="block animate-slide-up" style="animation-delay: 0.2s;">
+						<span class="text-blue-300">Tell</span> a Story
+					</span>
+				</h1>
+				<p class="text-lg md:text-xl text-gray-400 max-w-xl animate-fade-in leading-relaxed" style="animation-delay: 0.5s;">
+					Each section below reimagines the blog format through a different lens.
+					Scroll to explore all ten interpretations.
+				</p>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 1: THE BROADCAST -->
+		<!-- Blog as a pirate radio station with frequencies -->
+		<!-- ============================================== -->
+		<section id="broadcast" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<!-- Radio static background -->
+			<div class="absolute inset-0 opacity-[0.02]" style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px);"></div>
+			
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<div class="flex items-center gap-4 mb-2">
+					<span class="font-mono text-xs text-red-500 animate-pulse">ON AIR</span>
+					<div class="w-3 h-3 rounded-full bg-red-500 animate-pulse shadow-[0_0_12px_rgba(239,68,68,0.6)]"></div>
+				</div>
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰋𐰃𐰠</span>
+					The Broadcast
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12 font-mono text-sm">FREQUENCY: 107.3 FM // PIRATE RADIO // BROADCASTING FROM SARAJEVO</p>
+				
+				<!-- Radio dial interface -->
+				<div class="max-w-4xl mx-auto">
+					<!-- Frequency display -->
+					<div class="border border-amber-800/40 bg-gradient-to-b from-amber-950/20 to-[#0a0b0d] rounded-t-lg overflow-hidden">
+						<!-- Dial header with frequency markers -->
+						<div class="bg-amber-950/30 border-b border-amber-800/30 px-6 py-4">
+							<div class="flex items-center justify-between text-xs font-mono text-amber-600/60">
+								<span>88</span>
+								<span>92</span>
+								<span>96</span>
+								<span>100</span>
+								<span class="text-amber-400">104</span>
+								<span class="text-amber-400">108</span>
+							</div>
+							<div class="h-1 bg-amber-900/30 mt-2 rounded relative">
+								<div class="absolute right-[15%] top-1/2 -translate-y-1/2 w-3 h-3 bg-amber-400 rounded-full shadow-[0_0_10px_rgba(251,191,36,0.5)]"></div>
+							</div>
+						</div>
+						
+						<!-- Current broadcast -->
+						<div class="p-8">
+							<div class="text-center mb-8">
+								<div class="font-mono text-6xl text-amber-300 tracking-wider">107.3</div>
+								<div class="text-amber-600/60 text-sm mt-2">ATDUYAR FM</div>
+							</div>
+							
+							<!-- Now playing - Featured article -->
+							<div class="border border-amber-700/30 bg-amber-950/20 p-6 mb-6">
+								<div class="flex items-center gap-2 text-xs text-amber-500/60 mb-3">
+									<span class="uppercase tracking-wider">Now Playing</span>
+									<span class="flex-1 border-t border-dashed border-amber-700/30"></span>
+									<span>23:47 CET</span>
+								</div>
+								<h3 class="font-sinistre text-2xl text-amber-100 mb-3 hover:text-amber-200 transition-colors cursor-pointer">
+									The Art of Debugging: A Midnight Monologue
+								</h3>
+								<p class="text-gray-400 leading-relaxed mb-4">
+									Tonight we discuss the meditative practice of debugging at 3 AM. When the world sleeps and the only light is your monitor's glow, something shifts in how you perceive code. The bug becomes less an enemy and more a puzzle, a conversation partner who speaks only in segfaults and undefined behaviors...
+								</p>
+								<div class="flex items-center gap-4 text-xs text-amber-600/60">
+									<span>Duration: 18 min</span>
+									<span>Category: Philosophy</span>
+								</div>
+							</div>
+							
+							<!-- Broadcast schedule -->
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<div class="border border-amber-900/30 p-4 hover:border-amber-700/50 transition-colors cursor-pointer group">
+									<div class="font-mono text-xs text-amber-600/40 mb-1">UP NEXT // 00:15</div>
+									<h4 class="font-sinistre text-lg text-amber-200 group-hover:text-amber-100">Building a Redis Clone in Rust</h4>
+									<p class="text-sm text-gray-500 mt-1">A deep dive into memory management and protocol design.</p>
+								</div>
+								<div class="border border-amber-900/30 p-4 hover:border-amber-700/50 transition-colors cursor-pointer group">
+									<div class="font-mono text-xs text-amber-600/40 mb-1">TOMORROW // 22:00</div>
+									<h4 class="font-sinistre text-lg text-amber-200 group-hover:text-amber-100">The PostgreSQL Episodes, Part III</h4>
+									<p class="text-sm text-gray-500 mt-1">Query optimization war stories from production.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Radio controls -->
+					<div class="bg-gradient-to-b from-gray-800 to-gray-900 border border-t-0 border-gray-700 rounded-b-lg p-4 flex items-center justify-between">
+						<div class="flex items-center gap-4">
+							<div class="w-8 h-8 rounded-full bg-gray-700 border border-gray-600"></div>
+							<div class="w-8 h-8 rounded-full bg-gray-700 border border-gray-600"></div>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(52,211,153,0.5)]"></div>
+							<span class="font-mono text-xs text-gray-500">SIGNAL STRONG</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 2: THE EXCAVATION -->
+		<!-- Blog as archaeological dig site layers -->
+		<!-- ============================================== -->
+		<section id="excavation" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<!-- Soil texture background -->
+			<div class="absolute inset-0 opacity-[0.03]" style="background: url('data:image/svg+xml,%3Csvg width=%22100%22 height=%22100%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22soil%22%3E%3CfeTurbulence baseFrequency=%220.8%22 type=%22fractalNoise%22 numOctaves=%224%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23soil)%22/%3E%3C/svg%3E');"></div>
+			
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Excavation
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">Unearthing knowledge, layer by layer. Each stratum reveals older wisdom.</p>
+				
+				<!-- Dig site visualization -->
+				<div class="max-w-4xl mx-auto">
+					<!-- Grid overlay -->
+					<div class="relative">
+						<!-- Excavation grid markers -->
+						<div class="flex justify-between text-xs font-mono text-amber-700/40 mb-2 px-4">
+							<span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span>
+						</div>
+						
+						<!-- Soil layers -->
+						<div class="border-2 border-amber-900/40 relative">
+							<!-- Topsoil - Recent posts (2026) -->
+							<div class="relative border-b-2 border-dashed border-amber-800/30" style="background: linear-gradient(180deg, #1a1510 0%, #15120d 100%);">
+								<div class="absolute left-0 top-0 bottom-0 w-12 border-r border-amber-900/30 flex items-center justify-center">
+									<span class="font-mono text-xs text-amber-600/40 -rotate-90 whitespace-nowrap">2026 CE</span>
+								</div>
+								<div class="pl-16 pr-6 py-6">
+									<div class="flex items-start gap-4 mb-4">
+										<div class="w-8 h-8 rounded border border-amber-600/40 bg-amber-900/20 flex items-center justify-center flex-shrink-0">
+											<span class="font-mono text-xs text-amber-500">A1</span>
+										</div>
+										<div>
+											<h3 class="font-sinistre text-xl text-amber-100 mb-1 hover:text-amber-200 transition-colors cursor-pointer">
+												Fresh Discovery: WebAssembly on the Server
+											</h3>
+											<p class="text-gray-500 text-sm">Recently uncovered thoughts on WASM runtime integration with Node.js. Artifact condition: pristine.</p>
+											<div class="flex items-center gap-3 mt-2 text-xs text-amber-700/60">
+												<span>Excavated: Feb 2026</span>
+												<span>Layer Depth: 0-5cm</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Second layer - 2025 -->
+							<div class="relative border-b-2 border-dashed border-amber-800/30" style="background: linear-gradient(180deg, #181410 0%, #14110c 100%);">
+								<div class="absolute left-0 top-0 bottom-0 w-12 border-r border-amber-900/30 flex items-center justify-center">
+									<span class="font-mono text-xs text-amber-600/40 -rotate-90 whitespace-nowrap">2025 CE</span>
+								</div>
+								<div class="pl-16 pr-6 py-6 space-y-4">
+									<div class="flex items-start gap-4">
+										<div class="w-8 h-8 rounded border border-amber-600/30 bg-amber-900/10 flex items-center justify-center flex-shrink-0">
+											<span class="font-mono text-xs text-amber-600/60">B2</span>
+										</div>
+										<div>
+											<h3 class="font-sinistre text-lg text-amber-200/80 mb-1 hover:text-amber-200 transition-colors cursor-pointer">
+												Partially Restored: The Streaming Architecture Papers
+											</h3>
+											<p class="text-gray-500 text-sm">Documentation of HLS implementation decisions. Some fragments missing.</p>
+											<div class="flex items-center gap-3 mt-2 text-xs text-amber-700/60">
+												<span>Layer Depth: 5-15cm</span>
+												<span>Condition: Good</span>
+											</div>
+										</div>
+									</div>
+									<div class="flex items-start gap-4">
+										<div class="w-8 h-8 rounded border border-amber-600/30 bg-amber-900/10 flex items-center justify-center flex-shrink-0">
+											<span class="font-mono text-xs text-amber-600/60">C2</span>
+										</div>
+										<div>
+											<h3 class="font-sinistre text-lg text-amber-200/80 mb-1 hover:text-amber-200 transition-colors cursor-pointer">
+												Container Orchestration Tablets
+											</h3>
+											<p class="text-gray-500 text-sm">Ancient wisdom on Kubernetes deployment strategies.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Deep layer - 2024 and earlier -->
+							<div class="relative" style="background: linear-gradient(180deg, #15120e 0%, #100d09 100%);">
+								<div class="absolute left-0 top-0 bottom-0 w-12 border-r border-amber-900/30 flex items-center justify-center">
+									<span class="font-mono text-xs text-amber-700/30 -rotate-90 whitespace-nowrap">ANCIENT</span>
+								</div>
+								<div class="pl-16 pr-6 py-6">
+									<div class="flex items-start gap-4 opacity-70">
+										<div class="w-8 h-8 rounded border border-amber-700/20 bg-amber-950/20 flex items-center justify-center flex-shrink-0">
+											<span class="font-mono text-xs text-amber-700/40">D4</span>
+										</div>
+										<div>
+											<h3 class="font-sinistre text-lg text-amber-300/50 mb-1 cursor-pointer">
+												Fragmentary: First Steps in Systems Programming
+											</h3>
+											<p class="text-gray-600 text-sm">Early writings on C and memory management. Weathered but significant.</p>
+											<div class="flex items-center gap-3 mt-2 text-xs text-amber-800/40">
+												<span>Layer Depth: 30-50cm</span>
+												<span>Condition: Fragile</span>
+												<span class="text-amber-600/50">EXCAVATION IN PROGRESS</span>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Dig deeper prompt -->
+									<div class="mt-6 pt-6 border-t border-dashed border-amber-900/20 text-center">
+										<p class="text-xs text-amber-700/40 font-mono">[ DEEPER STRATA AWAIT EXCAVATION ]</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Grid side markers -->
+						<div class="absolute right-0 top-0 bottom-0 w-8 flex flex-col justify-between text-xs font-mono text-amber-700/40 py-4">
+							<span>1</span><span>2</span><span>3</span><span>4</span>
+						</div>
+					</div>
+					
+					<!-- Excavation notes -->
+					<div class="mt-6 p-4 border border-dashed border-amber-900/30 bg-amber-950/10">
+						<div class="text-xs text-amber-600/60 font-mono">
+							FIELD NOTES: Site ATD-2024. Grid reference 44.5N, 18.4E. Artifacts suggest continuous habitation and knowledge accumulation. Recommend continued systematic excavation.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 3: THE OBSERVATORY LOG -->
+		<!-- Blog as astronomical observation entries -->
+		<!-- ============================================== -->
+		<section id="observatory" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<!-- Star field background -->
+			<div class="absolute inset-0">
+				<div class="absolute inset-0 opacity-30" style="background: radial-gradient(1px 1px at 20px 30px, white, transparent), radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.8), transparent), radial-gradient(1px 1px at 50px 160px, rgba(255,255,255,0.6), transparent), radial-gradient(1px 1px at 90px 40px, white, transparent), radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.7), transparent), radial-gradient(1px 1px at 160px 120px, white, transparent); background-size: 200px 200px;"></div>
+			</div>
+			
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰼𐱅</span>
+					The Observatory Log
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">Nightly observations from the code observatory. Celestial phenomena in the digital sky.</p>
+				
+				<!-- Observatory interface -->
+				<div class="max-w-4xl mx-auto">
+					<!-- Telescope viewfinder header -->
+					<div class="flex items-center justify-between mb-6 font-mono text-xs text-blue-400/60">
+						<span>OBSERVATORY: ATDUYAR-1</span>
+						<span>APERTURE: 200mm</span>
+						<span>CONDITIONS: CLEAR</span>
+					</div>
+					
+					<!-- Observation entries -->
+					<div class="space-y-6">
+						<!-- Entry 1 -->
+						<div class="border border-blue-900/40 bg-gradient-to-r from-blue-950/20 to-transparent relative group hover:border-blue-700/50 transition-all">
+							<div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500/50"></div>
+							<div class="p-6 pl-8">
+								<div class="flex items-start justify-between gap-4">
+									<div>
+										<div class="font-mono text-xs text-blue-500/60 mb-2">
+											OBSERVATION #2026-037 // 02:34:17 UTC // RA 14h 29m 42s, Dec +38 21 18
+										</div>
+										<h3 class="font-sinistre text-xl text-blue-100 mb-2 group-hover:text-blue-200 transition-colors cursor-pointer">
+											Binary System: Rust and C Interoperability
+										</h3>
+										<p class="text-gray-400 leading-relaxed">
+											Observed a stable binary system where two languages orbit a common center of mass. The Rust component exhibits strong type safety emissions, while the C companion shows remarkable performance luminosity. FFI bridge visible at the Lagrange point. Recommend continued monitoring for gravitational coupling patterns.
+										</p>
+									</div>
+									<!-- Star magnitude indicator -->
+									<div class="flex-shrink-0 w-16 h-16 rounded-full border border-blue-500/30 flex items-center justify-center bg-blue-950/30">
+										<div class="text-center">
+											<div class="font-mono text-lg text-blue-300">1.2</div>
+											<div class="text-[8px] text-blue-500/60">MAG</div>
+										</div>
+									</div>
+								</div>
+								<div class="flex items-center gap-6 mt-4 text-xs text-gray-600">
+									<span>Exposure: 45 min read</span>
+									<span>Classification: Technical Binary</span>
+									<span>Visibility: Excellent</span>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Entry 2 -->
+						<div class="border border-indigo-900/40 bg-gradient-to-r from-indigo-950/20 to-transparent relative group hover:border-indigo-700/50 transition-all">
+							<div class="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500/50"></div>
+							<div class="p-6 pl-8">
+								<div class="flex items-start justify-between gap-4">
+									<div>
+										<div class="font-mono text-xs text-indigo-500/60 mb-2">
+											OBSERVATION #2026-031 // 23:12:44 UTC // RA 05h 14m 32s, Dec -08 12 06
+										</div>
+										<h3 class="font-sinistre text-xl text-indigo-100 mb-2 group-hover:text-indigo-200 transition-colors cursor-pointer">
+											Nebula: The Cloud of Microservices
+										</h3>
+										<p class="text-gray-400 leading-relaxed">
+											A vast diffuse structure spanning multiple containers. Core density suggests active service formation. Hydrogen-alpha emissions indicate heavy message queue activity. Several proto-services detected in the outer regions. Warning: gravitational instability in the authentication sector.
+										</p>
+									</div>
+									<div class="flex-shrink-0 w-16 h-16 rounded-full border border-indigo-500/30 flex items-center justify-center bg-indigo-950/30">
+										<div class="text-center">
+											<div class="font-mono text-lg text-indigo-300">2.8</div>
+											<div class="text-[8px] text-indigo-500/60">MAG</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Entry 3 -->
+						<div class="border border-purple-900/40 bg-gradient-to-r from-purple-950/20 to-transparent relative group hover:border-purple-700/50 transition-all">
+							<div class="absolute left-0 top-0 bottom-0 w-1 bg-purple-500/50"></div>
+							<div class="p-6 pl-8">
+								<div class="flex items-start justify-between gap-4">
+									<div>
+										<div class="font-mono text-xs text-purple-500/60 mb-2">
+											OBSERVATION #2026-024 // 04:56:08 UTC // VARIABLE OBJECT
+										</div>
+										<h3 class="font-sinistre text-xl text-purple-100 mb-2 group-hover:text-purple-200 transition-colors cursor-pointer">
+											Variable Star: The Deployment Pipeline
+										</h3>
+										<p class="text-gray-400 leading-relaxed">
+											Irregular variable with a period of approximately 2 weeks. Brightness fluctuates between magnitudes 0.5 (successful deploy) and 6.0 (rollback event). Currently in a stable phase. Next predicted maximum: sprint end.
+										</p>
+									</div>
+									<div class="flex-shrink-0 w-16 h-16 rounded-full border border-purple-500/30 flex items-center justify-center bg-purple-950/30 relative">
+										<div class="absolute inset-0 rounded-full animate-pulse bg-purple-500/10"></div>
+										<div class="text-center relative">
+											<div class="font-mono text-lg text-purple-300">VAR</div>
+											<div class="text-[8px] text-purple-500/60">TYPE</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Observatory footer -->
+					<div class="mt-8 p-4 border border-blue-900/20 bg-blue-950/10 rounded font-mono text-xs text-blue-400/60 text-center">
+						END OF OBSERVATION SESSION // DOME CLOSING // NEXT SESSION: CLEAR SKIES PERMITTING
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 4: THE PATENT OFFICE -->
+		<!-- Blog as patent filing documents -->
+		<!-- ============================================== -->
+		<section id="patents" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden bg-gradient-to-b from-[#0d0e12] to-[#0f100d]">
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰇𐰕</span>
+					The Patent Office
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">Intellectual filings and inventions of the mind. Each idea formally documented.</p>
+				
+				<div class="max-w-4xl mx-auto space-y-8">
+					<!-- Patent 1 -->
+					<div class="border-2 border-gray-700 bg-[#faf9f7]/[0.02] relative">
+						<!-- Patent header -->
+						<div class="border-b-2 border-gray-700 p-4 flex items-center justify-between">
+							<div class="font-mono text-sm">
+								<span class="text-gray-400">INTELLECTUAL PROPERTY FILING</span>
+							</div>
+							<div class="font-mono text-xs text-gray-500">
+								ATD-2026-0142
+							</div>
+						</div>
+						
+						<div class="p-6">
+							<!-- Patent number and classification -->
+							<div class="flex items-start justify-between mb-6">
+								<div>
+									<div class="font-mono text-xs text-gray-600 mb-1">CLASSIFICATION: G06F 8/41</div>
+									<h3 class="font-sinistre text-2xl text-white mb-2">
+										Method and Apparatus for Zero-Copy Message Passing in Distributed Systems
+									</h3>
+									<div class="font-mono text-xs text-gray-500">Inventor: Ahmet Tarik Duyar // Filed: January 15, 2026</div>
+								</div>
+								<div class="flex-shrink-0 w-20 h-20 border-2 border-gray-600 flex items-center justify-center bg-[#0a0b0d]">
+									<span class="font-mono text-xs text-gray-500 text-center">FIG. 1</span>
+								</div>
+							</div>
+							
+							<!-- Abstract -->
+							<div class="mb-6">
+								<div class="font-mono text-xs text-gray-500 mb-2 uppercase tracking-wider">Abstract</div>
+								<p class="text-gray-400 leading-relaxed text-sm border-l-2 border-gray-700 pl-4">
+									A novel approach to inter-process communication that eliminates memory copying overhead through shared memory regions and ownership transfer semantics. The system comprises a memory allocator (10), a message queue (20), and a coordination layer (30) that together enable sub-microsecond message latency while maintaining memory safety guarantees...
+								</p>
+							</div>
+							
+							<!-- Claims -->
+							<div class="mb-6">
+								<div class="font-mono text-xs text-gray-500 mb-2 uppercase tracking-wider">Claims (1-12)</div>
+								<div class="text-sm text-gray-400 space-y-2">
+									<p><span class="text-gray-500">1.</span> A method for transferring data between processes without copying, comprising the steps of...</p>
+									<p><span class="text-gray-500">2.</span> The method of claim 1, wherein the ownership semantics are enforced at compile time...</p>
+									<p class="text-gray-600 italic">[ 10 more claims ]</p>
+								</div>
+							</div>
+							
+							<!-- Status -->
+							<div class="flex items-center justify-between pt-4 border-t border-gray-800">
+								<div class="font-mono text-xs text-emerald-500">STATUS: PUBLISHED</div>
+								<a href="#" class="font-mono text-xs text-blue-400 hover:text-blue-300 transition-colors">VIEW FULL SPECIFICATION</a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Patent 2 -->
+					<div class="border-2 border-gray-700 bg-[#faf9f7]/[0.02] relative">
+						<div class="border-b-2 border-gray-700 p-4 flex items-center justify-between">
+							<div class="font-mono text-sm text-gray-400">INTELLECTUAL PROPERTY FILING</div>
+							<div class="font-mono text-xs text-gray-500">ATD-2025-0089</div>
+						</div>
+						<div class="p-6">
+							<div class="font-mono text-xs text-gray-600 mb-1">CLASSIFICATION: H04N 21/234</div>
+							<h3 class="font-sinistre text-2xl text-white mb-2">
+								Adaptive Bitrate Algorithm for Low-Latency Live Streaming
+							</h3>
+							<div class="font-mono text-xs text-gray-500 mb-4">Inventor: Ahmet Tarik Duyar // Filed: August 22, 2025</div>
+							<p class="text-gray-400 leading-relaxed text-sm border-l-2 border-gray-700 pl-4">
+								An improved ABR algorithm that predicts network conditions using sliding window analysis and adjusts video quality preemptively rather than reactively. Reduces rebuffering events by 73% compared to prior art...
+							</p>
+							<div class="flex items-center justify-between pt-4 mt-4 border-t border-gray-800">
+								<div class="font-mono text-xs text-amber-500">STATUS: PENDING REVIEW</div>
+								<a href="#" class="font-mono text-xs text-blue-400 hover:text-blue-300 transition-colors">VIEW FULL SPECIFICATION</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 5: THE MORGUE (Newspaper Archive) -->
+		<!-- Blog as old newspaper clippings -->
+		<!-- ============================================== -->
+		<section id="morgue" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<!-- Aged paper texture -->
+			<div class="absolute inset-0 opacity-[0.02]" style="background: linear-gradient(45deg, #d4c4a8 25%, transparent 25%), linear-gradient(-45deg, #d4c4a8 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #d4c4a8 75%), linear-gradient(-45deg, transparent 75%, #d4c4a8 75%); background-size: 4px 4px;"></div>
+			
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Morgue
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">The newspaper archive. Where old stories rest, waiting to be rediscovered.</p>
+				
+				<!-- Newspaper clippings -->
+				<div class="max-w-5xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						<!-- Clipping 1 -->
+						<div class="bg-gradient-to-br from-amber-100/10 to-amber-50/5 border border-amber-200/20 p-6 transform rotate-[-1deg] hover:rotate-0 transition-transform shadow-xl relative">
+							<div class="absolute top-2 right-2 w-4 h-4 rounded-full bg-amber-900/20"></div>
+							<div class="text-center border-b border-amber-900/20 pb-3 mb-4">
+								<div class="font-sinistre text-2xl text-amber-200 tracking-wider">THE DAILY COMPILER</div>
+								<div class="font-mono text-[10px] text-amber-400/60 mt-1">SARAJEVO EDITION // JANUARY 2026 // PRICE: FREE</div>
+							</div>
+							<h3 class="font-sinistre text-xl text-amber-100 leading-tight mb-3">
+								LOCAL DEVELOPER ACHIEVES 99.9% UPTIME ON STREAMING PLATFORM
+							</h3>
+							<p class="text-sm text-amber-200/70 leading-relaxed" style="text-align: justify;">
+								A remarkable achievement in system reliability was announced yesterday when the Deniz Egece streaming platform completed its first full year of operation with only 52 minutes of total downtime. The lead developer, speaking from his home office, attributed the success to "obsessive monitoring and a healthy fear of 3 AM pages."
+							</p>
+							<div class="mt-4 pt-3 border-t border-amber-900/20 text-xs text-amber-400/50">
+								Continued on page 7...
+							</div>
+						</div>
+						
+						<!-- Clipping 2 -->
+						<div class="bg-gradient-to-br from-amber-100/10 to-amber-50/5 border border-amber-200/20 p-6 transform rotate-[2deg] hover:rotate-0 transition-transform shadow-xl relative">
+							<div class="absolute top-3 left-3 w-3 h-3 rounded-full bg-amber-900/20"></div>
+							<div class="text-center border-b border-amber-900/20 pb-3 mb-4">
+								<div class="font-sinistre text-xl text-amber-200 tracking-wider">RUST WEEKLY</div>
+								<div class="font-mono text-[10px] text-amber-400/60 mt-1">THE SYSTEMS PROGRAMMER'S JOURNAL</div>
+							</div>
+							<h3 class="font-sinistre text-lg text-amber-100 leading-tight mb-3">
+								BORROW CHECKER DECLARED "STRICT BUT FAIR"
+							</h3>
+							<p class="text-sm text-amber-200/70 leading-relaxed" style="text-align: justify;">
+								In a surprising turn of events, developers worldwide have begun expressing gratitude toward the Rust borrow checker, previously considered an adversary. "It's like having a very pedantic but ultimately helpful code reviewer," said one convert. More inside.
+							</p>
+							<div class="mt-4 pt-3 border-t border-amber-900/20 text-xs text-amber-400/50 italic">
+								Opinion piece by A.T. Duyar
+							</div>
+						</div>
+						
+						<!-- Clipping 3 -->
+						<div class="bg-gradient-to-br from-amber-100/10 to-amber-50/5 border border-amber-200/20 p-6 transform rotate-[-0.5deg] hover:rotate-0 transition-transform shadow-xl relative">
+							<div class="absolute bottom-3 right-3 w-3 h-3 rounded-full bg-amber-900/20"></div>
+							<div class="text-center border-b border-amber-900/20 pb-3 mb-4">
+								<div class="font-sinistre text-xl text-amber-200 tracking-wider">TECH HERALD</div>
+								<div class="font-mono text-[10px] text-amber-400/60 mt-1">DECEMBER 2025</div>
+							</div>
+							<h3 class="font-sinistre text-lg text-amber-100 leading-tight mb-3">
+								POSTGRESQL QUERY OPTIMIZATION: THE UNTOLD STORY
+							</h3>
+							<p class="text-sm text-amber-200/70 leading-relaxed" style="text-align: justify;">
+								What happens when a simple SELECT takes 30 seconds? This investigative piece uncovers the hidden world of query planners, index strategies, and the dark art of EXPLAIN ANALYZE. One developer's journey from O(n) to O(log n).
+							</p>
+						</div>
+						
+						<!-- Clipping 4 -->
+						<div class="bg-gradient-to-br from-amber-100/10 to-amber-50/5 border border-amber-200/20 p-6 transform rotate-[1deg] hover:rotate-0 transition-transform shadow-xl relative md:col-span-2">
+							<div class="text-center border-b border-amber-900/20 pb-3 mb-4">
+								<div class="font-sinistre text-3xl text-amber-200 tracking-[0.2em]">THE KERNEL TIMES</div>
+								<div class="font-mono text-[10px] text-amber-400/60 mt-1">ALL THE NEWS THAT'S FIT TO COMPILE // SPECIAL LINUX EDITION</div>
+							</div>
+							<div class="grid grid-cols-2 gap-6">
+								<div>
+									<h3 class="font-sinistre text-xl text-amber-100 leading-tight mb-3">
+										INSIDE THE LINUX KERNEL: A DEVELOPER'S PILGRIMAGE
+									</h3>
+									<p class="text-sm text-amber-200/70 leading-relaxed" style="text-align: justify;">
+										What drives a young developer to venture into the depths of kernel space? This first-person account details the journey from user-land comfort to the unforgiving realm of ring zero. "The first time I wrote a kernel module that didn't crash, I felt invincible," recalls the author.
+									</p>
+								</div>
+								<div class="border-l border-amber-900/20 pl-6">
+									<h3 class="font-sinistre text-xl text-amber-100 leading-tight mb-3">
+										MEMORY MANAGEMENT: A LOVE LETTER TO MALLOC
+									</h3>
+									<p class="text-sm text-amber-200/70 leading-relaxed" style="text-align: justify;">
+										In an age of garbage collection, one programmer stands firm: "Understanding memory allocation is understanding the machine itself." A meditation on pointers, pages, and the poetry of manual memory management.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Archive drawer label -->
+					<div class="mt-8 text-center">
+						<div class="inline-block border border-amber-900/30 bg-amber-950/20 px-6 py-2">
+							<span class="font-mono text-xs text-amber-600/60">DRAWER 7-C: TECHNICAL WRITINGS, 2024-2026</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 6: THE SPECIMEN DRAWER -->
+		<!-- Blog as naturalist's specimen collection -->
+		<!-- ============================================== -->
+		<section id="specimens" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰼𐱅</span>
+					The Specimen Drawer
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">A naturalist's collection of technical specimens. Carefully catalogued and preserved.</p>
+				
+				<!-- Specimen grid -->
+				<div class="max-w-5xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-amber-900/30">
+						<!-- Specimen 1 -->
+						<div class="border-b border-r border-amber-900/30 p-6 bg-gradient-to-br from-amber-950/10 to-transparent hover:bg-amber-950/20 transition-colors group">
+							<div class="flex items-start justify-between mb-4">
+								<div class="font-mono text-xs text-amber-600/60">SPECIMEN No. 001</div>
+								<div class="w-8 h-8 rounded-full border border-amber-700/30 flex items-center justify-center">
+									<div class="w-4 h-4 rounded-full bg-emerald-500/60"></div>
+								</div>
+							</div>
+							<h3 class="font-sinistre text-lg text-amber-100 mb-2 italic group-hover:text-amber-200 transition-colors cursor-pointer">
+								Algorithmicus Recursivus
+							</h3>
+							<p class="text-xs text-gray-500 mb-3">Common name: The Recursive Function</p>
+							<p class="text-sm text-gray-400 leading-relaxed">
+								A self-referential organism found in most codebases. Exhibits elegant behavior when properly bounded, but can cause stack exhaustion if allowed to grow unchecked. Habitat: functional programming environments.
+							</p>
+							<div class="mt-4 pt-3 border-t border-amber-900/20 flex items-center justify-between text-xs text-amber-700/50">
+								<span>Collected: 2024</span>
+								<span>Status: Common</span>
+							</div>
+						</div>
+						
+						<!-- Specimen 2 -->
+						<div class="border-b border-r border-amber-900/30 p-6 bg-gradient-to-br from-amber-950/10 to-transparent hover:bg-amber-950/20 transition-colors group">
+							<div class="flex items-start justify-between mb-4">
+								<div class="font-mono text-xs text-amber-600/60">SPECIMEN No. 002</div>
+								<div class="w-8 h-8 rounded-full border border-amber-700/30 flex items-center justify-center">
+									<div class="w-4 h-4 rounded-full bg-red-500/60"></div>
+								</div>
+							</div>
+							<h3 class="font-sinistre text-lg text-amber-100 mb-2 italic group-hover:text-amber-200 transition-colors cursor-pointer">
+								Deadlockus Mutexii
+							</h3>
+							<p class="text-xs text-gray-500 mb-3">Common name: The Dining Philosophers Bug</p>
+							<p class="text-sm text-gray-400 leading-relaxed">
+								A parasitic pattern that emerges in concurrent systems. Notable for its ability to cause complete system paralysis. Prevention requires careful resource ordering. First documented by E. Dijkstra, 1965.
+							</p>
+							<div class="mt-4 pt-3 border-t border-amber-900/20 flex items-center justify-between text-xs text-amber-700/50">
+								<span>Collected: 2025</span>
+								<span class="text-red-400/60">Status: Dangerous</span>
+							</div>
+						</div>
+						
+						<!-- Specimen 3 -->
+						<div class="border-b border-amber-900/30 p-6 bg-gradient-to-br from-amber-950/10 to-transparent hover:bg-amber-950/20 transition-colors group">
+							<div class="flex items-start justify-between mb-4">
+								<div class="font-mono text-xs text-amber-600/60">SPECIMEN No. 003</div>
+								<div class="w-8 h-8 rounded-full border border-amber-700/30 flex items-center justify-center">
+									<div class="w-4 h-4 rounded-full bg-blue-500/60"></div>
+								</div>
+							</div>
+							<h3 class="font-sinistre text-lg text-amber-100 mb-2 italic group-hover:text-amber-200 transition-colors cursor-pointer">
+								Promiseus Asyncensis
+							</h3>
+							<p class="text-xs text-gray-500 mb-3">Common name: The Async/Await Pattern</p>
+							<p class="text-sm text-gray-400 leading-relaxed">
+								A highly evolved construct that allows non-blocking behavior. Transforms callback nesting into linear flow. Lifecycle includes pending, fulfilled, and rejected states. Native to JavaScript ecosystems but now widespread.
+							</p>
+							<div class="mt-4 pt-3 border-t border-amber-900/20 flex items-center justify-between text-xs text-amber-700/50">
+								<span>Collected: 2023</span>
+								<span>Status: Thriving</span>
+							</div>
+						</div>
+						
+						<!-- Specimen 4 -->
+						<div class="border-b md:border-b-0 border-r border-amber-900/30 p-6 bg-gradient-to-br from-amber-950/10 to-transparent hover:bg-amber-950/20 transition-colors group">
+							<div class="flex items-start justify-between mb-4">
+								<div class="font-mono text-xs text-amber-600/60">SPECIMEN No. 004</div>
+								<div class="w-8 h-8 rounded-full border border-amber-700/30 flex items-center justify-center">
+									<div class="w-4 h-4 rounded-full bg-amber-500/60"></div>
+								</div>
+							</div>
+							<h3 class="font-sinistre text-lg text-amber-100 mb-2 italic group-hover:text-amber-200 transition-colors cursor-pointer">
+								Singletonis Antipatternicus
+							</h3>
+							<p class="text-xs text-gray-500 mb-3">Common name: The Global State Monster</p>
+							<p class="text-sm text-gray-400 leading-relaxed">
+								Once thought beneficial, now considered an invasive species. Creates hidden dependencies throughout the codebase. Difficult to eradicate once established. Testing specimens shows severe side effects.
+							</p>
+							<div class="mt-4 pt-3 border-t border-amber-900/20 flex items-center justify-between text-xs text-amber-700/50">
+								<span>Collected: 2024</span>
+								<span class="text-amber-400/60">Status: Declining</span>
+							</div>
+						</div>
+						
+						<!-- Specimen 5 -->
+						<div class="border-b md:border-b-0 border-r border-amber-900/30 p-6 bg-gradient-to-br from-amber-950/10 to-transparent hover:bg-amber-950/20 transition-colors group">
+							<div class="flex items-start justify-between mb-4">
+								<div class="font-mono text-xs text-amber-600/60">SPECIMEN No. 005</div>
+								<div class="w-8 h-8 rounded-full border border-amber-700/30 flex items-center justify-center">
+									<div class="w-4 h-4 rounded-full bg-purple-500/60"></div>
+								</div>
+							</div>
+							<h3 class="font-sinistre text-lg text-amber-100 mb-2 italic group-hover:text-amber-200 transition-colors cursor-pointer">
+								Monadicus Functorum
+							</h3>
+							<p class="text-xs text-gray-500 mb-3">Common name: The Monad</p>
+							<p class="text-sm text-gray-400 leading-relaxed">
+								A mysterious mathematical construct that defies simple explanation. Wraps values in computational context. Enables sequential operations while maintaining purity. Native to Haskell, but colonies found in Rust and Scala.
+							</p>
+							<div class="mt-4 pt-3 border-t border-amber-900/20 flex items-center justify-between text-xs text-amber-700/50">
+								<span>Collected: 2025</span>
+								<span>Status: Elusive</span>
+							</div>
+						</div>
+						
+						<!-- Specimen 6 -->
+						<div class="p-6 bg-gradient-to-br from-amber-950/10 to-transparent hover:bg-amber-950/20 transition-colors group">
+							<div class="flex items-start justify-between mb-4">
+								<div class="font-mono text-xs text-amber-600/60">SPECIMEN No. 006</div>
+								<div class="w-8 h-8 rounded-full border border-amber-700/30 flex items-center justify-center">
+									<div class="w-4 h-4 rounded-full bg-cyan-500/60"></div>
+								</div>
+							</div>
+							<h3 class="font-sinistre text-lg text-amber-100 mb-2 italic group-hover:text-amber-200 transition-colors cursor-pointer">
+								Containerus Dockerensis
+							</h3>
+							<p class="text-xs text-gray-500 mb-3">Common name: The Container</p>
+							<p class="text-sm text-gray-400 leading-relaxed">
+								A portable encapsulation organism. Contains its own isolated environment. Reproduces rapidly via orchestration. Forms complex colonies called "clusters." Revolutionized deployment patterns globally.
+							</p>
+							<div class="mt-4 pt-3 border-t border-amber-900/20 flex items-center justify-between text-xs text-amber-700/50">
+								<span>Collected: 2023</span>
+								<span>Status: Dominant</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Collection info -->
+					<div class="mt-6 flex items-center justify-between text-xs text-gray-600 font-mono">
+						<span>CABINET III, DRAWER 7 // COMPUTATION CURIOSITIES</span>
+						<span>CURATOR: A.T. DUYAR</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 7: THE EVIDENCE BOARD -->
+		<!-- Blog as detective investigation board -->
+		<!-- ============================================== -->
+		<section id="evidence" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden bg-gradient-to-b from-[#0d0e12] to-[#0a0908]">
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<div class="flex items-center gap-3 mb-2">
+					<span class="font-mono text-xs text-red-500">CASE FILE: OPEN</span>
+				</div>
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰇𐰕</span>
+					The Evidence Board
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">Connecting the dots. Every bug has a story. Every optimization leaves a trail.</p>
+				
+				<!-- Cork board with pinned items -->
+				<div class="max-w-5xl mx-auto relative" style="background: linear-gradient(45deg, #2d1f14 0%, #1a1410 50%, #2a1a12 100%); min-height: 600px;">
+					<!-- Cork texture overlay -->
+					<div class="absolute inset-0 opacity-20" style="background: url('data:image/svg+xml,%3Csvg width=%2250%22 height=%2250%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22cork%22%3E%3CfeTurbulence baseFrequency=%220.9%22 type=%22fractalNoise%22 numOctaves=%225%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23cork)%22/%3E%3C/svg%3E');"></div>
+					
+					<div class="relative p-8">
+						<!-- String connections (SVG) -->
+						<svg class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 1;">
+							<line x1="20%" y1="15%" x2="60%" y2="25%" stroke="rgba(239,68,68,0.4)" stroke-width="1" stroke-dasharray="4"/>
+							<line x1="60%" y1="25%" x2="80%" y2="60%" stroke="rgba(239,68,68,0.4)" stroke-width="1" stroke-dasharray="4"/>
+							<line x1="20%" y1="15%" x2="15%" y2="65%" stroke="rgba(239,68,68,0.4)" stroke-width="1" stroke-dasharray="4"/>
+							<line x1="40%" y1="70%" x2="60%" y2="25%" stroke="rgba(239,68,68,0.4)" stroke-width="1" stroke-dasharray="4"/>
+						</svg>
+						
+						<!-- Pinned items -->
+						<div class="relative" style="z-index: 2;">
+							<!-- Note 1: Main case -->
+							<div class="absolute left-[5%] top-[5%] w-72 transform -rotate-2" style="z-index: 10;">
+								<div class="relative bg-amber-100 p-4 shadow-lg">
+									<div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-red-600 shadow-md"></div>
+									<div class="text-red-800 font-mono text-xs mb-2 font-bold">CASE #2026-001</div>
+									<h3 class="font-sinistre text-lg text-gray-900 mb-2">The Great Memory Leak of January</h3>
+									<p class="text-xs text-gray-700 leading-relaxed">
+										Production servers experienced gradual memory consumption over 72 hours. Heap dumps revealed thousands of orphaned event listeners. Connection to WebSocket handler suspected.
+									</p>
+									<div class="mt-3 pt-2 border-t border-amber-300 text-xs text-red-700 font-mono">
+										STATUS: SOLVED
+									</div>
+								</div>
+							</div>
+							
+							<!-- Photo evidence -->
+							<div class="absolute right-[10%] top-[10%] transform rotate-3" style="z-index: 11;">
+								<div class="bg-white p-2 shadow-lg w-48">
+									<div class="bg-gray-900 h-32 flex items-center justify-center text-gray-600 font-mono text-xs">
+										[HEAP DUMP VISUALIZATION]
+									</div>
+									<p class="text-[10px] text-gray-700 mt-2 text-center">Exhibit A: Memory graph at T+48h</p>
+								</div>
+							</div>
+							
+							<!-- Note 2 -->
+							<div class="absolute left-[35%] top-[40%] w-64 transform rotate-1" style="z-index: 12;">
+								<div class="relative bg-yellow-100 p-4 shadow-lg">
+									<div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 shadow-md"></div>
+									<h3 class="font-sinistre text-lg text-gray-900 mb-2">The Redis Connection Pool Mystery</h3>
+									<p class="text-xs text-gray-700 leading-relaxed">
+										Intermittent timeout errors traced to exhausted connection pool. But why were connections not being released? The plot thickens...
+									</p>
+									<div class="mt-3 text-xs text-gray-600 italic">See also: async/await investigation</div>
+								</div>
+							</div>
+							
+							<!-- Note 3 -->
+							<div class="absolute left-[5%] top-[55%] w-56 transform -rotate-1" style="z-index: 13;">
+								<div class="relative bg-blue-100 p-4 shadow-lg">
+									<div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-yellow-500 shadow-md"></div>
+									<div class="font-mono text-xs text-blue-800 mb-2">WITNESS STATEMENT</div>
+									<p class="text-xs text-gray-700 leading-relaxed italic">
+										"The error only happens on Tuesdays after 3 PM. I'm not making this up. Check the logs."
+									</p>
+									<p class="text-[10px] text-gray-500 mt-2">- Anonymous Developer, Jan 2026</p>
+								</div>
+							</div>
+							
+							<!-- Note 4: Connected evidence -->
+							<div class="absolute right-[5%] top-[50%] w-64 transform rotate-2" style="z-index: 14;">
+								<div class="relative bg-green-100 p-4 shadow-lg">
+									<div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-green-600 shadow-md"></div>
+									<div class="font-mono text-xs text-green-800 mb-2">RESOLUTION</div>
+									<h3 class="font-sinistre text-lg text-gray-900 mb-2">The Fix</h3>
+									<p class="text-xs text-gray-700 leading-relaxed">
+										Implemented proper cleanup in finally blocks. Added connection pool monitoring. Memory stable for 30 days.
+									</p>
+									<div class="mt-3 pt-2 border-t border-green-300 text-xs text-green-700 font-mono">
+										CASE CLOSED: 2026-01-28
+									</div>
+								</div>
+							</div>
+							
+							<!-- More scattered items -->
+							<div class="absolute left-[55%] top-[75%] transform -rotate-3" style="z-index: 15;">
+								<div class="bg-white p-3 shadow-md text-xs font-mono text-gray-700 w-48">
+									<div class="text-red-600 font-bold mb-1">TODO:</div>
+									<ul class="space-y-1 text-gray-600">
+										<li>- Check GC logs</li>
+										<li>- Profile allocations</li>
+										<li>- Review listener code</li>
+										<li class="line-through">- Cry</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Case summary -->
+				<div class="mt-6 max-w-5xl mx-auto font-mono text-xs text-gray-600">
+					<span>DETECTIVE: A.T. DUYAR // JURISDICTION: PRODUCTION ENVIRONMENT // CLASSIFICATION: TECHNICAL DEBT</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 8: THE SCROLL -->
+		<!-- Blog as ancient papyrus scrolls -->
+		<!-- ============================================== -->
+		<section id="scroll" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰋𐰃𐰠</span>
+					The Scroll
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">Ancient scrolls of programming wisdom. Unroll to reveal their secrets.</p>
+				
+				<!-- Scroll container -->
+				<div class="max-w-3xl mx-auto space-y-8">
+					<!-- Scroll 1 -->
+					<div class="relative">
+						<!-- Left scroll handle -->
+						<div class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-amber-900/60 to-amber-800/40 rounded-l-full z-10 flex items-center justify-center">
+							<div class="w-2 h-20 bg-amber-950/60 rounded-full"></div>
+						</div>
+						
+						<!-- Scroll content -->
+						<div class="mx-8 relative">
+							<div class="bg-gradient-to-b from-amber-100/10 via-amber-50/5 to-amber-100/10 border-y-4 border-amber-800/30 py-8 px-12" style="background-image: url('data:image/svg+xml,%3Csvg width=%22100%22 height=%22100%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22paper%22%3E%3CfeTurbulence baseFrequency=%220.04%22 type=%22fractalNoise%22 numOctaves=%225%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23paper)%22 opacity=%220.03%22/%3E%3C/svg%3E');">
+								<!-- Scroll number -->
+								<div class="text-center mb-6">
+									<span class="font-oldturcic text-3xl text-amber-600/40">𐰃</span>
+									<div class="font-mono text-xs text-amber-600/40 mt-1">SCROLL THE FIRST</div>
+								</div>
+								
+								<h3 class="font-sinistre text-2xl text-amber-200 text-center mb-6">
+									On the Nature of Stateless Services
+								</h3>
+								
+								<div class="text-amber-100/80 leading-loose space-y-4" style="text-align: justify;">
+									<p class="first-letter:text-4xl first-letter:font-sinistre first-letter:text-amber-400 first-letter:float-left first-letter:mr-2">
+										In the age before containers, developers knew not the freedom of horizontal scaling. Each server held its precious state like a dragon guards its hoard. But the wise ones saw a path: separate the ephemeral from the eternal, the session from the service.
+									</p>
+									<p>
+										Thus it was written: Let thy service be as the wind, stateless and free. Store thy sessions in Redis, thy files in object storage, thy secrets in vaults sealed with cryptographic sigils. And lo, when traffic comes like a flood, spawn new instances without fear.
+									</p>
+									<p class="text-amber-400/60 text-center italic mt-6">
+										For verily I say unto thee: that which holds no state cannot lose it.
+									</p>
+								</div>
+								
+								<!-- Seal -->
+								<div class="flex justify-center mt-8">
+									<div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-900/40 to-red-950/60 border-2 border-red-800/40 flex items-center justify-center">
+										<span class="font-oldturcic text-2xl text-red-400/60">𐰚</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Right scroll handle -->
+						<div class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-amber-900/60 to-amber-800/40 rounded-r-full z-10 flex items-center justify-center">
+							<div class="w-2 h-20 bg-amber-950/60 rounded-full"></div>
+						</div>
+					</div>
+					
+					<!-- Scroll 2 -->
+					<div class="relative">
+						<div class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-amber-900/60 to-amber-800/40 rounded-l-full z-10 flex items-center justify-center">
+							<div class="w-2 h-20 bg-amber-950/60 rounded-full"></div>
+						</div>
+						<div class="mx-8 relative">
+							<div class="bg-gradient-to-b from-amber-100/10 via-amber-50/5 to-amber-100/10 border-y-4 border-amber-800/30 py-8 px-12">
+								<div class="text-center mb-6">
+									<span class="font-oldturcic text-3xl text-amber-600/40">𐰃𐰃</span>
+									<div class="font-mono text-xs text-amber-600/40 mt-1">SCROLL THE SECOND</div>
+								</div>
+								
+								<h3 class="font-sinistre text-2xl text-amber-200 text-center mb-6">
+									The Parable of the Premature Optimization
+								</h3>
+								
+								<div class="text-amber-100/80 leading-loose space-y-4" style="text-align: justify;">
+									<p class="first-letter:text-4xl first-letter:font-sinistre first-letter:text-amber-400 first-letter:float-left first-letter:mr-2">
+										A young programmer came to the master and said, "I have spent three moons optimizing this loop, shaving nanoseconds from each iteration." The master looked at the code and asked, "How many times does this loop execute?" The student replied, "Once, at startup."
+									</p>
+									<p>
+										The master closed the scroll and spoke: "First make it work, then make it right, then make it fast. And only then, when the profiler has spoken, and the bottleneck revealed itself through measurement, not intuition."
+									</p>
+								</div>
+								
+								<div class="flex justify-center mt-8">
+									<div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-900/40 to-red-950/60 border-2 border-red-800/40 flex items-center justify-center">
+										<span class="font-oldturcic text-2xl text-red-400/60">𐰠</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-amber-900/60 to-amber-800/40 rounded-r-full z-10 flex items-center justify-center">
+							<div class="w-2 h-20 bg-amber-950/60 rounded-full"></div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Archive note -->
+				<div class="mt-8 text-center font-mono text-xs text-amber-700/40">
+					FROM THE ARCHIVES OF THE ANCIENT ORDER OF PROGRAMMERS // HANDLE WITH CARE
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 9: THE TRANSMISSION -->
+		<!-- Blog as encrypted spy communications -->
+		<!-- ============================================== -->
+		<section id="transmission" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden bg-gradient-to-b from-[#0d0e12] to-[#080a08]">
+			<!-- Scan line effect -->
+			<div class="absolute inset-0 pointer-events-none opacity-10" style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,0,0.03) 2px, rgba(0,255,0,0.03) 4px);"></div>
+			
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<div class="flex items-center gap-3 mb-2">
+					<span class="font-mono text-xs text-emerald-500 animate-pulse">SECURE CHANNEL</span>
+					<div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+				</div>
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Transmission
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12 font-mono text-sm">ENCRYPTED COMMUNICATIONS // EYES ONLY // CLASSIFICATION: TOP SECRET//SCI</p>
+				
+				<div class="max-w-4xl mx-auto space-y-6">
+					<!-- Transmission 1 -->
+					<div class="border border-emerald-900/40 bg-[#0a0b08] font-mono">
+						<div class="border-b border-emerald-900/40 px-4 py-2 flex items-center justify-between bg-emerald-950/20">
+							<div class="flex items-center gap-3">
+								<span class="text-xs text-emerald-500">INCOMING</span>
+								<span class="text-xs text-gray-600">|</span>
+								<span class="text-xs text-emerald-600/60">MSG-2026-0142</span>
+							</div>
+							<div class="text-xs text-emerald-600/40">DECRYPTED</div>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-2 gap-4 text-xs mb-4">
+								<div>
+									<span class="text-emerald-700">FROM:</span>
+									<span class="text-emerald-400/80 ml-2">STATION_BACKEND</span>
+								</div>
+								<div>
+									<span class="text-emerald-700">TO:</span>
+									<span class="text-emerald-400/80 ml-2">OPERATIVE_DUYAR</span>
+								</div>
+								<div>
+									<span class="text-emerald-700">DATE:</span>
+									<span class="text-emerald-400/80 ml-2">2026-02-08 03:42:17Z</span>
+								</div>
+								<div>
+									<span class="text-emerald-700">PRIORITY:</span>
+									<span class="text-amber-400 ml-2">HIGH</span>
+								</div>
+							</div>
+							
+							<div class="border-t border-emerald-900/30 pt-4">
+								<div class="text-emerald-700 text-xs mb-2">// BEGIN ENCRYPTED MESSAGE //</div>
+								<h3 class="text-lg text-emerald-300 mb-3">RE: Operation Async Cascade</h3>
+								<p class="text-emerald-100/80 leading-relaxed text-sm">
+									Intelligence suggests Promise chains in Sector-7 are causing timeline anomalies. Recommend immediate deployment of async/await constructs. Previous agents have reported "callback hell" casualties. Proceed with extreme caution. Trust no unhandled rejection.
+								</p>
+								<div class="mt-4 p-3 bg-emerald-950/30 border border-emerald-800/30">
+									<div class="text-[10px] text-emerald-600/60 mb-1">ATTACHED INTEL:</div>
+									<p class="text-xs text-emerald-400/70">
+										Stack trace analysis complete. Memory leak vector identified at coordinates (heap:0x7fff, line:847). Recommend surgical intervention during low-traffic window.
+									</p>
+								</div>
+								<div class="text-emerald-700 text-xs mt-4">// END ENCRYPTED MESSAGE //</div>
+							</div>
+							
+							<div class="mt-4 pt-4 border-t border-emerald-900/30 flex items-center justify-between text-xs">
+								<span class="text-emerald-700">CHECKSUM: SHA256:a3f2b...</span>
+								<span class="text-emerald-500">VERIFIED</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Transmission 2 -->
+					<div class="border border-emerald-900/40 bg-[#0a0b08] font-mono">
+						<div class="border-b border-emerald-900/40 px-4 py-2 flex items-center justify-between bg-emerald-950/20">
+							<div class="flex items-center gap-3">
+								<span class="text-xs text-blue-400">OUTGOING</span>
+								<span class="text-xs text-gray-600">|</span>
+								<span class="text-xs text-emerald-600/60">MSG-2026-0143</span>
+							</div>
+							<div class="text-xs text-emerald-600/40">ENCRYPTING...</div>
+						</div>
+						<div class="p-6">
+							<div class="grid grid-cols-2 gap-4 text-xs mb-4">
+								<div>
+									<span class="text-emerald-700">FROM:</span>
+									<span class="text-emerald-400/80 ml-2">OPERATIVE_DUYAR</span>
+								</div>
+								<div>
+									<span class="text-emerald-700">TO:</span>
+									<span class="text-emerald-400/80 ml-2">COMMAND</span>
+								</div>
+							</div>
+							
+							<div class="border-t border-emerald-900/30 pt-4">
+								<h3 class="text-lg text-emerald-300 mb-3">SITREP: Rust Migration Complete</h3>
+								<p class="text-emerald-100/80 leading-relaxed text-sm">
+									Mission successful. Legacy C modules have been safely extracted and replaced with Rust equivalents. Borrow checker has eliminated 47 potential memory vulnerabilities. Zero runtime panics in 30-day observation period. The codebase is secure. Recommending this approach for all future critical infrastructure.
+								</p>
+								<p class="text-emerald-400/60 text-sm mt-4 italic">
+									- DUYAR, signing off
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Intercepted fragment -->
+					<div class="border border-red-900/40 bg-[#0a0808] font-mono opacity-80">
+						<div class="border-b border-red-900/40 px-4 py-2 flex items-center justify-between bg-red-950/20">
+							<div class="flex items-center gap-3">
+								<span class="text-xs text-red-500">INTERCEPTED</span>
+								<span class="text-xs text-gray-600">|</span>
+								<span class="text-xs text-red-600/60">FRAGMENT</span>
+							</div>
+							<div class="text-xs text-red-600/40">PARTIAL DECRYPT</div>
+						</div>
+						<div class="p-6">
+							<p class="text-red-300/60 text-sm leading-relaxed">
+								<span class="text-red-500">[CORRUPTED]</span> ...the database schema is not what it seems. Hidden triggers in <span class="text-red-500">[REDACTED]</span> suggest deeper manipulation. Recommend full audit of <span class="text-red-500">[DATA LOST]</span> before proceeding with migration. Trust no ORM...
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Terminal footer -->
+				<div class="mt-8 max-w-4xl mx-auto font-mono text-xs text-emerald-700/50 flex items-center justify-between">
+					<span>SECURE TERMINAL // SESSION: 0x7F3A</span>
+					<span>CONNECTION: ENCRYPTED // LATENCY: 23ms</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================== -->
+		<!-- BLOG DESIGN 10: THE CONSTELLATION -->
+		<!-- Blog as star maps connecting ideas -->
+		<!-- ============================================== -->
+		<section id="constellation" class="py-20 relative overflow-hidden min-h-screen" style="background: radial-gradient(ellipse at center, #0d1020 0%, #0a0b0d 100%);">
+			<!-- Dense star field -->
+			<div class="absolute inset-0">
+				<div class="absolute inset-0" style="background: radial-gradient(1px 1px at 10px 20px, white, transparent), radial-gradient(1px 1px at 30px 60px, rgba(255,255,255,0.9), transparent), radial-gradient(1px 1px at 50px 80px, rgba(255,255,255,0.7), transparent), radial-gradient(1.5px 1.5px at 70px 30px, rgba(150,180,255,0.9), transparent), radial-gradient(1px 1px at 90px 90px, white, transparent), radial-gradient(1px 1px at 110px 40px, rgba(255,255,255,0.8), transparent), radial-gradient(1px 1px at 130px 110px, rgba(255,200,150,0.8), transparent), radial-gradient(1px 1px at 150px 70px, white, transparent), radial-gradient(2px 2px at 170px 20px, rgba(200,220,255,1), transparent), radial-gradient(1px 1px at 190px 100px, rgba(255,255,255,0.6), transparent); background-size: 200px 120px; opacity: 0.6;"></div>
+			</div>
+			
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰼𐱅</span>
+					The Constellation
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">Map of interconnected thoughts. Each star a concept, each line a connection.</p>
+				
+				<!-- Star map -->
+				<div class="max-w-5xl mx-auto relative" style="min-height: 600px;">
+					<!-- Constellation lines (SVG) -->
+					<svg class="absolute inset-0 w-full h-full" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet">
+						<!-- Constellation: The Architect -->
+						<g class="constellation-lines" stroke="rgba(147,197,253,0.3)" stroke-width="1">
+							<!-- Main constellation -->
+							<line x1="150" y1="100" x2="300" y2="150"/>
+							<line x1="300" y1="150" x2="400" y2="80"/>
+							<line x1="300" y1="150" x2="350" y2="280"/>
+							<line x1="350" y1="280" x2="500" y2="300"/>
+							<line x1="500" y1="300" x2="600" y2="200"/>
+							<line x1="600" y1="200" x2="750" y2="250"/>
+							<line x1="500" y1="300" x2="450" y2="450"/>
+							<line x1="450" y1="450" x2="600" y2="500"/>
+							<line x1="600" y1="500" x2="800" y2="400"/>
+							<line x1="800" y1="400" x2="750" y2="250"/>
+						</g>
+					</svg>
+					
+					<!-- Star nodes (blog posts) -->
+					<div class="relative" style="height: 600px;">
+						<!-- Star 1: Major -->
+						<div class="absolute left-[13%] top-[12%] group cursor-pointer">
+							<div class="w-4 h-4 rounded-full bg-blue-300 shadow-[0_0_20px_rgba(147,197,253,0.8)] group-hover:shadow-[0_0_30px_rgba(147,197,253,1)] transition-all"></div>
+							<div class="absolute left-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+								<div class="bg-[#0d0e12]/90 border border-blue-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-blue-200">Alpha Architecturae</h3>
+									<p class="text-xs text-gray-400 mt-1">The Foundation: System Design Principles</p>
+									<span class="text-[10px] text-blue-400/60 mt-2 block">Magnitude: 1.2 // Jan 2026</span>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Star 2 -->
+						<div class="absolute left-[28%] top-[22%] group cursor-pointer">
+							<div class="w-3 h-3 rounded-full bg-blue-200 shadow-[0_0_15px_rgba(147,197,253,0.7)] group-hover:shadow-[0_0_25px_rgba(147,197,253,1)] transition-all"></div>
+							<div class="absolute left-5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+								<div class="bg-[#0d0e12]/90 border border-blue-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-blue-200">Beta Rustii</h3>
+									<p class="text-xs text-gray-400 mt-1">On Memory Safety and Ownership</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Star 3 -->
+						<div class="absolute left-[38%] top-[10%] group cursor-pointer">
+							<div class="w-2 h-2 rounded-full bg-white/80 shadow-[0_0_10px_rgba(255,255,255,0.6)] group-hover:shadow-[0_0_20px_rgba(255,255,255,0.9)] transition-all"></div>
+							<div class="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+								<div class="bg-[#0d0e12]/90 border border-blue-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-blue-200">Gamma Minor</h3>
+									<p class="text-xs text-gray-400 mt-1">Quick Note: Terminal Tips</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Star 4: Central node -->
+						<div class="absolute left-[33%] top-[43%] group cursor-pointer">
+							<div class="w-5 h-5 rounded-full bg-amber-300 shadow-[0_0_25px_rgba(251,191,36,0.9)] group-hover:shadow-[0_0_40px_rgba(251,191,36,1)] transition-all"></div>
+							<div class="absolute left-7 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+								<div class="bg-[#0d0e12]/90 border border-amber-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-amber-200">Sol Centralis</h3>
+									<p class="text-xs text-gray-400 mt-1">The Philosophy of Code</p>
+									<span class="text-[10px] text-amber-400/60 mt-2 block">Hub article // 15 connections</span>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Star 5 -->
+						<div class="absolute left-[48%] top-[47%] group cursor-pointer">
+							<div class="w-3 h-3 rounded-full bg-blue-200 shadow-[0_0_15px_rgba(147,197,253,0.7)] group-hover:shadow-[0_0_25px_rgba(147,197,253,1)] transition-all"></div>
+							<div class="absolute left-5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+								<div class="bg-[#0d0e12]/90 border border-blue-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-blue-200">Delta Postgresii</h3>
+									<p class="text-xs text-gray-400 mt-1">Database Optimization Tales</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Star 6 -->
+						<div class="absolute left-[58%] top-[30%] group cursor-pointer">
+							<div class="w-3 h-3 rounded-full bg-purple-300 shadow-[0_0_15px_rgba(196,181,253,0.7)] group-hover:shadow-[0_0_25px_rgba(196,181,253,1)] transition-all"></div>
+							<div class="absolute left-5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+								<div class="bg-[#0d0e12]/90 border border-purple-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-purple-200">Epsilon Asyncii</h3>
+									<p class="text-xs text-gray-400 mt-1">Concurrent Programming Patterns</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Star 7 -->
+						<div class="absolute left-[73%] top-[38%] group cursor-pointer">
+							<div class="w-4 h-4 rounded-full bg-cyan-300 shadow-[0_0_20px_rgba(103,232,249,0.8)] group-hover:shadow-[0_0_30px_rgba(103,232,249,1)] transition-all"></div>
+							<div class="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+								<div class="bg-[#0d0e12]/90 border border-cyan-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-cyan-200">Zeta Cloudii</h3>
+									<p class="text-xs text-gray-400 mt-1">Cloud Infrastructure Deep Dive</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Star 8 -->
+						<div class="absolute left-[43%] top-[72%] group cursor-pointer">
+							<div class="w-3 h-3 rounded-full bg-emerald-300 shadow-[0_0_15px_rgba(110,231,183,0.7)] group-hover:shadow-[0_0_25px_rgba(110,231,183,1)] transition-all"></div>
+							<div class="absolute left-5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+								<div class="bg-[#0d0e12]/90 border border-emerald-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-emerald-200">Eta Linuxii</h3>
+									<p class="text-xs text-gray-400 mt-1">Kernel Exploration Journal</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Star 9 -->
+						<div class="absolute left-[58%] top-[80%] group cursor-pointer">
+							<div class="w-2 h-2 rounded-full bg-rose-300 shadow-[0_0_12px_rgba(253,164,175,0.7)] group-hover:shadow-[0_0_20px_rgba(253,164,175,1)] transition-all"></div>
+							<div class="absolute left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+								<div class="bg-[#0d0e12]/90 border border-rose-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-rose-200">Theta Debugii</h3>
+									<p class="text-xs text-gray-400 mt-1">War Stories from Production</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Star 10 -->
+						<div class="absolute left-[78%] top-[63%] group cursor-pointer">
+							<div class="w-4 h-4 rounded-full bg-orange-300 shadow-[0_0_20px_rgba(253,186,116,0.8)] group-hover:shadow-[0_0_30px_rgba(253,186,116,1)] transition-all"></div>
+							<div class="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+								<div class="bg-[#0d0e12]/90 border border-orange-400/30 px-4 py-3 rounded">
+									<h3 class="font-sinistre text-lg text-orange-200">Iota Streamii</h3>
+									<p class="text-xs text-gray-400 mt-1">Building the Streaming Platform</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Constellation legend -->
+					<div class="absolute bottom-0 left-0 right-0 flex items-center justify-center gap-8 text-xs text-gray-500">
+						<div class="flex items-center gap-2">
+							<div class="w-2 h-2 rounded-full bg-blue-300"></div>
+							<span>Technical</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-2 h-2 rounded-full bg-amber-300"></div>
+							<span>Philosophy</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-2 h-2 rounded-full bg-emerald-300"></div>
+							<span>Systems</span>
+						</div>
+						<div class="flex items-center gap-2">
+							<div class="w-2 h-2 rounded-full bg-purple-300"></div>
+							<span>Patterns</span>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Astronomical note -->
+				<div class="mt-12 text-center font-mono text-xs text-blue-400/40">
+					CONSTELLATION: ARCHITECTUS MAJOR // OBSERVED FROM LAT 43.8N, LONG 18.4E // EPOCH J2026.0
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="py-12 px-4 md:px-8 lg:px-16 border-t border-[#90c5ff14]">
+			<div class="flex flex-col md:flex-row items-center justify-between gap-6">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-xl text-blue-400/30">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</span>
+					<span class="text-gray-500">|</span>
+					<span class="font-sinistre text-gray-400">Ahmet Tarik Duyar</span>
+				</div>
+				<div class="text-sm text-gray-600 font-mono">
+					10 BLOG DESIGNS // ITERATION 13 // 2026
+				</div>
+				<div class="flex items-center gap-4 text-sm text-gray-500">
+					<a href="https://github.com/atduyar" target="_blank" class="hover:text-blue-400 transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+					<a href="mailto:contact@atduyar.com" class="hover:text-blue-400 transition-colors">Contact</a>
+				</div>
+			</div>
+		</footer>
+	</main>
+</BaseLayout>
+
+<style>
+	@keyframes fade-in {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	
+	@keyframes slide-up {
+		from { opacity: 0; transform: translateY(20px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	
+	.animate-fade-in {
+		animation: fade-in 0.8s ease-out forwards;
+		opacity: 0;
+	}
+	
+	.animate-slide-up {
+		animation: slide-up 0.6s ease-out forwards;
+		opacity: 0;
+	}
+	
+	/* Star twinkle effect */
+	@keyframes twinkle {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.5; }
+	}
+	
+	.constellation-lines line {
+		animation: twinkle 3s ease-in-out infinite;
+	}
+</style>
