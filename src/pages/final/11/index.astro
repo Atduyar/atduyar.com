@@ -1,0 +1,1155 @@
+---
+import BackgroundMarquee from "../../../components/BackgroundMarquee.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Ahmet Tarik Duyar" description="Full-Stack Software Engineer Portfolio" bodyClass="bg-[#0a0b0d] text-white w-screen overflow-x-hidden">
+	<main class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-7xl mx-auto min-h-dvh relative">
+		<!-- Subtle noise overlay -->
+		<div class="fixed inset-0 pointer-events-none opacity-[0.015] z-50" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+		
+		<!-- Navigation -->
+		<nav class="py-6 px-4 md:px-8 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
+			<div class="flex justify-between items-center">
+				<a href="#hero" class="group flex items-center gap-3">
+					<div class="w-10 h-10 rounded-full border border-blue-400/30 flex items-center justify-center group-hover:border-blue-400/60 transition-colors relative overflow-hidden">
+						<div class="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors"></div>
+						<img src="/favicon.svg" alt="Logo" class="w-6 h-6 relative z-10" />
+					</div>
+					<span class="font-sinistre text-xl tracking-wide hidden sm:block">Atduyar</span>
+				</a>
+				<ul class="flex gap-3 md:gap-6 text-sm">
+					<li><a href="#chronicle" class="nav-link font-sinistre hover:text-blue-300 transition-all">Chronicle</a></li>
+					<li><a href="#casefile" class="nav-link font-sinistre hover:text-blue-300 transition-all">Case File</a></li>
+					<li><a href="#terminal" class="nav-link font-sinistre hover:text-blue-300 transition-all">Terminal</a></li>
+					<li><a href="#beacon" class="nav-link font-sinistre px-4 py-1 border border-blue-500/30 hover:bg-blue-600/10 rounded-full">Signal</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section id="hero" class="min-h-[85vh] flex flex-col justify-center px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="absolute inset-0">
+				<div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px]"></div>
+				<div class="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px]"></div>
+			</div>
+			
+			<div class="relative z-10">
+				<p class="font-oldturcic text-blue-400/50 text-lg mb-4 tracking-[0.4em] animate-fade-in leading-none">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</p>
+				<h1 class="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-sinistre leading-[0.9] mb-8">
+					<span class="block animate-slide-up" style="animation-delay: 0.1s;">I'm Ahmet</span>
+					<span class="block animate-slide-up" style="animation-delay: 0.2s;">
+						<span class="text-blue-300">Tarik</span> Duyar
+					</span>
+				</h1>
+				<p class="text-lg md:text-xl text-gray-400 max-w-xl animate-fade-in leading-relaxed" style="animation-delay: 0.5s;">
+					Building robust backend architectures and scalable systems. 
+					Passionate about C, Rust, and Linux.
+				</p>
+				<div class="flex gap-4 mt-10 animate-fade-in" style="animation-delay: 0.7s;">
+					<a href="#casefile" class="group px-6 py-3 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 hover:border-blue-400/50 transition-all font-sinistre text-lg rounded-sm">
+						View Case Files
+					</a>
+					<a href="#beacon" class="px-6 py-3 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all font-sinistre text-lg rounded-sm">
+						Send Signal
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 1: THE CHRONICLE - Blog as Newspaper -->
+		<section id="chronicle" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰋𐰃𐰠</span>
+					The Chronicle
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8 font-mono text-sm">DISPATCHES FROM THE ENGINEERING FRONT</p>
+				
+				<!-- Newspaper layout -->
+				<div class="border border-[#90c5ff14] bg-[#0a0b0d]">
+					<!-- Masthead -->
+					<div class="border-b-4 border-double border-[#90c5ff20] px-6 py-4 text-center">
+						<h3 class="font-sinistre text-4xl tracking-[0.2em] text-blue-100">THE DEVELOPER TIMES</h3>
+						<div class="flex justify-center gap-8 mt-2 text-xs font-mono text-gray-500">
+							<span>EST. 2022</span>
+							<span>SARAJEVO EDITION</span>
+							<span>VOL. III, NO. 27</span>
+						</div>
+					</div>
+					
+					<!-- Articles grid -->
+					<div class="grid grid-cols-1 md:grid-cols-12 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#90c5ff14]">
+						<!-- Lead article -->
+						<article class="md:col-span-7 p-6">
+							<span class="text-xs font-mono text-blue-400 mb-2 block">FEATURED</span>
+							<h4 class="font-sinistre text-2xl mb-3 leading-tight hover:text-blue-300 transition-colors cursor-pointer">
+								Why Rust Changed How I Think About Memory Safety
+							</h4>
+							<p class="text-sm text-gray-400 leading-relaxed mb-4 first-letter:text-4xl first-letter:font-sinistre first-letter:float-left first-letter:mr-2 first-letter:text-blue-300">
+								After years of writing C and dealing with segmentation faults at 3 AM, discovering Rust felt like finding a map in a maze. The borrow checker, initially frustrating, became a trusted companion that catches mistakes before they become production incidents.
+							</p>
+							<p class="text-sm text-gray-500 leading-relaxed mb-4">
+								In this article, I explore the mental shift required to embrace ownership semantics and how it has influenced my approach to system design across all languages.
+							</p>
+							<div class="flex items-center justify-between text-xs text-gray-600">
+								<span>5 min read</span>
+								<a href="#" class="text-blue-400 hover:text-blue-300 transition-colors">Read full article →</a>
+							</div>
+						</article>
+						
+						<!-- Side articles -->
+						<div class="md:col-span-5 divide-y divide-[#90c5ff14]">
+							<article class="p-6">
+								<span class="text-xs font-mono text-gray-500 mb-2 block">SYSTEMS</span>
+								<h4 class="font-sinistre text-lg mb-2 leading-tight hover:text-blue-300 transition-colors cursor-pointer">
+									Building a Custom Linux Kernel Module: Lessons Learned
+								</h4>
+								<p class="text-xs text-gray-500 leading-relaxed">
+									What happens when you decide to dive into kernel space for the first time...
+								</p>
+								<span class="text-xs text-gray-600 mt-2 block">3 min read</span>
+							</article>
+							
+							<article class="p-6">
+								<span class="text-xs font-mono text-gray-500 mb-2 block">ARCHITECTURE</span>
+								<h4 class="font-sinistre text-lg mb-2 leading-tight hover:text-blue-300 transition-colors cursor-pointer">
+									Scaling to 17K Users: Database Decisions That Mattered
+								</h4>
+								<p class="text-xs text-gray-500 leading-relaxed">
+									Not all indexes are created equal. A retrospective on the streaming platform...
+								</p>
+								<span class="text-xs text-gray-600 mt-2 block">7 min read</span>
+							</article>
+							
+							<article class="p-6">
+								<span class="text-xs font-mono text-gray-500 mb-2 block">OPINION</span>
+								<h4 class="font-sinistre text-lg mb-2 leading-tight hover:text-blue-300 transition-colors cursor-pointer">
+									The Case for Learning C in 2026
+								</h4>
+								<p class="text-xs text-gray-500 leading-relaxed">
+									In an age of high-level abstractions, understanding the machine still matters...
+								</p>
+								<span class="text-xs text-gray-600 mt-2 block">4 min read</span>
+							</article>
+						</div>
+					</div>
+					
+					<!-- Footer ticker -->
+					<div class="border-t border-[#90c5ff14] bg-[#90c5ff05] px-6 py-2 overflow-hidden">
+						<div class="flex whitespace-nowrap animate-scroll-ticker text-xs text-gray-500">
+							<span class="px-8">NEW: PostgreSQL 17 Deep Dive Coming Soon</span>
+							<span class="px-8">TUTORIAL: Async Rust Patterns</span>
+							<span class="px-8">REVIEW: Neovim vs Helix for Rust Development</span>
+							<span class="px-8">GUIDE: Zero-Downtime Deployments</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 2: CASE FILE - Project Deep Dive -->
+		<section id="casefile" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰼𐱅</span>
+					Case File
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Detailed analysis of a major engineering undertaking.</p>
+				
+				<!-- Case Study: Streaming Platform -->
+				<div class="border border-[#90c5ff20] bg-[#0a0b0d]">
+					<!-- Case header -->
+					<div class="bg-gradient-to-r from-blue-900/20 to-transparent border-b border-[#90c5ff14] px-8 py-6">
+						<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+							<div>
+								<span class="font-mono text-xs text-blue-400 bg-blue-500/20 px-2 py-1 rounded-full">CASE STUDY</span>
+								<h3 class="font-sinistre text-3xl mt-3 text-blue-100">Streaming Platform</h3>
+								<p class="text-gray-400 mt-1">Deniz Egece Co. Ltd. | 2023-Present</p>
+							</div>
+							<div class="flex gap-6 text-center">
+								<div>
+									<div class="text-3xl font-sinistre text-blue-300">17K+</div>
+									<div class="text-xs text-gray-500">Users</div>
+								</div>
+								<div>
+									<div class="text-3xl font-sinistre text-emerald-300">99.9%</div>
+									<div class="text-xs text-gray-500">Uptime</div>
+								</div>
+								<div>
+									<div class="text-3xl font-sinistre text-amber-300">40%</div>
+									<div class="text-xs text-gray-500">Faster</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Case body -->
+					<div class="p-8 space-y-8">
+						<!-- The Challenge -->
+						<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+							<div class="lg:col-span-4">
+								<div class="sticky top-24">
+									<h4 class="font-sinistre text-xl text-red-300 mb-2 flex items-center gap-2">
+										<span class="w-8 h-px bg-red-400/50"></span>
+										The Challenge
+									</h4>
+								</div>
+							</div>
+							<div class="lg:col-span-8">
+								<p class="text-gray-300 leading-relaxed mb-4">
+									The company needed a complete streaming solution capable of handling thousands of concurrent users with minimal latency. The existing infrastructure was fragmented, with video processing happening on unreliable third-party services.
+								</p>
+								<ul class="space-y-2 text-sm text-gray-400">
+									<li class="flex items-start gap-2">
+										<span class="text-red-400 mt-1">—</span>
+										<span>No unified video transcoding pipeline</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-red-400 mt-1">—</span>
+										<span>Payment system scattered across multiple providers</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-red-400 mt-1">—</span>
+										<span>Zero visibility into user behavior and system health</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+						<!-- The Solution -->
+						<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8 border-t border-[#90c5ff10]">
+							<div class="lg:col-span-4">
+								<h4 class="font-sinistre text-xl text-emerald-300 mb-2 flex items-center gap-2">
+									<span class="w-8 h-px bg-emerald-400/50"></span>
+									The Solution
+								</h4>
+							</div>
+							<div class="lg:col-span-8">
+								<p class="text-gray-300 leading-relaxed mb-4">
+									I designed and implemented a unified platform from scratch, taking ownership of the entire stack from database schema to deployment pipelines.
+								</p>
+								<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+									<div class="border border-[#90c5ff14] p-4 bg-[#90c5ff05]">
+										<h5 class="font-sinistre text-emerald-200 mb-2">Video Pipeline</h5>
+										<p class="text-xs text-gray-400">Custom FFmpeg wrapper with adaptive bitrate encoding, thumbnail generation, and HLS packaging.</p>
+									</div>
+									<div class="border border-[#90c5ff14] p-4 bg-[#90c5ff05]">
+										<h5 class="font-sinistre text-emerald-200 mb-2">Payment Hub</h5>
+										<p class="text-xs text-gray-400">Unified payment abstraction supporting multiple providers with automatic failover.</p>
+									</div>
+									<div class="border border-[#90c5ff14] p-4 bg-[#90c5ff05]">
+										<h5 class="font-sinistre text-emerald-200 mb-2">Analytics Engine</h5>
+										<p class="text-xs text-gray-400">Real-time dashboard tracking user engagement, revenue, and system metrics.</p>
+									</div>
+									<div class="border border-[#90c5ff14] p-4 bg-[#90c5ff05]">
+										<h5 class="font-sinistre text-emerald-200 mb-2">Auth System</h5>
+										<p class="text-xs text-gray-400">Multi-platform authentication with JWT tokens and session management.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Tech Stack -->
+						<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8 border-t border-[#90c5ff10]">
+							<div class="lg:col-span-4">
+								<h4 class="font-sinistre text-xl text-blue-300 mb-2 flex items-center gap-2">
+									<span class="w-8 h-px bg-blue-400/50"></span>
+									Architecture
+								</h4>
+							</div>
+							<div class="lg:col-span-8">
+								<!-- Architecture diagram -->
+								<div class="border border-[#90c5ff14] p-6 bg-[#0d0e12] font-mono text-xs">
+									<pre class="text-gray-400 overflow-x-auto">
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│   Client    │────▶│   CDN/LB    │────▶│   Node.js   │
+│  (Web/App)  │     │ Cloudflare  │     │   Backend   │
+└─────────────┘     └─────────────┘     └──────┬──────┘
+                                               │
+                    ┌──────────────────────────┼──────────────────────────┐
+                    │                          │                          │
+              ┌─────▼─────┐            ┌───────▼───────┐          ┌───────▼───────┐
+              │ PostgreSQL│            │  Redis Cache  │          │    FFmpeg     │
+              │    (DB)   │            │   (Sessions)  │          │  (Transcode)  │
+              └───────────┘            └───────────────┘          └───────────────┘
+									</pre>
+								</div>
+								<div class="flex flex-wrap gap-2 mt-4">
+									<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">Node.js</span>
+									<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">PostgreSQL</span>
+									<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">Redis</span>
+									<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">FFmpeg</span>
+									<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">Docker</span>
+									<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">Cloudflare</span>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Results -->
+						<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8 border-t border-[#90c5ff10]">
+							<div class="lg:col-span-4">
+								<h4 class="font-sinistre text-xl text-amber-300 mb-2 flex items-center gap-2">
+									<span class="w-8 h-px bg-amber-400/50"></span>
+									Results
+								</h4>
+							</div>
+							<div class="lg:col-span-8">
+								<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+									<div class="text-center p-4 border border-amber-500/20 bg-amber-500/5">
+										<div class="text-2xl font-sinistre text-amber-300">17,000+</div>
+										<div class="text-xs text-gray-500 mt-1">Paid Users</div>
+									</div>
+									<div class="text-center p-4 border border-amber-500/20 bg-amber-500/5">
+										<div class="text-2xl font-sinistre text-amber-300">99.9%</div>
+										<div class="text-xs text-gray-500 mt-1">Uptime</div>
+									</div>
+									<div class="text-center p-4 border border-amber-500/20 bg-amber-500/5">
+										<div class="text-2xl font-sinistre text-amber-300">40%</div>
+										<div class="text-xs text-gray-500 mt-1">Faster Load</div>
+									</div>
+									<div class="text-center p-4 border border-amber-500/20 bg-amber-500/5">
+										<div class="text-2xl font-sinistre text-amber-300">3</div>
+										<div class="text-xs text-gray-500 mt-1">Platforms</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 3: THE TERMINAL - Fun Interactive Area -->
+		<section id="terminal" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Terminal
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Try some commands. Not all paths lead somewhere useful.</p>
+				
+				<!-- Terminal window -->
+				<div class="max-w-3xl mx-auto">
+					<div class="border border-[#90c5ff20] rounded-t-lg overflow-hidden">
+						<!-- Terminal header -->
+						<div class="bg-[#1a1b1f] px-4 py-2 flex items-center gap-2">
+							<div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+							<div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+							<div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+							<span class="ml-4 font-mono text-xs text-gray-500">atduyar@portfolio:~</span>
+						</div>
+						
+						<!-- Terminal body -->
+						<div class="bg-[#0a0b0d] p-6 font-mono text-sm min-h-[400px]" id="terminal-body">
+							<div class="terminal-output space-y-2 text-gray-300">
+								<p class="text-emerald-400">Welcome to atduyar's terminal v1.0.0</p>
+								<p class="text-gray-500">Type 'help' to see available commands.</p>
+								<p class="text-gray-500">---</p>
+								<br/>
+								<div class="command-history" id="command-history"></div>
+							</div>
+							
+							<!-- Input line -->
+							<div class="flex items-center gap-2 mt-4">
+								<span class="text-emerald-400">$</span>
+								<input 
+									type="text" 
+									id="terminal-input" 
+									class="flex-1 bg-transparent outline-none text-gray-100 caret-emerald-400"
+									placeholder="type a command..."
+									autocomplete="off"
+								/>
+								<span class="animate-blink text-emerald-400">_</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Command hints -->
+					<div class="bg-[#1a1b1f] border border-t-0 border-[#90c5ff20] rounded-b-lg px-4 py-3">
+						<div class="flex flex-wrap gap-4 text-xs font-mono text-gray-500">
+							<span class="hover:text-blue-300 cursor-pointer" onclick="runCommand('help')">help</span>
+							<span class="hover:text-blue-300 cursor-pointer" onclick="runCommand('whoami')">whoami</span>
+							<span class="hover:text-blue-300 cursor-pointer" onclick="runCommand('skills')">skills</span>
+							<span class="hover:text-blue-300 cursor-pointer" onclick="runCommand('projects')">projects</span>
+							<span class="hover:text-blue-300 cursor-pointer" onclick="runCommand('contact')">contact</span>
+							<span class="hover:text-blue-300 cursor-pointer" onclick="runCommand('fortune')">fortune</span>
+							<span class="hover:text-blue-300 cursor-pointer" onclick="runCommand('clear')">clear</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 4: THE STACK - Tech Stack as Geological Layers -->
+		<section id="stack" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰇𐰕</span>
+					The Stack
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Layers of technology, from bedrock to surface.</p>
+				
+				<!-- Geological stack -->
+				<div class="max-w-3xl mx-auto space-y-0">
+					<!-- Surface: Frontend -->
+					<div class="stratum group relative">
+						<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-400 to-emerald-600"></div>
+						<div class="border border-emerald-500/30 bg-gradient-to-r from-emerald-900/20 to-transparent p-6 pl-8 hover:from-emerald-900/30 transition-colors">
+							<div class="flex items-center justify-between">
+								<div>
+									<span class="font-mono text-xs text-emerald-400">SURFACE LAYER</span>
+									<h4 class="font-sinistre text-xl text-emerald-200 mt-1">Frontend</h4>
+									<p class="text-sm text-gray-400 mt-2">The visible interface, where users interact.</p>
+								</div>
+								<div class="flex gap-3 text-xs text-gray-500">
+									<span class="border border-emerald-500/30 px-2 py-1 rounded">React</span>
+									<span class="border border-emerald-500/30 px-2 py-1 rounded">TypeScript</span>
+									<span class="border border-emerald-500/30 px-2 py-1 rounded">Tailwind</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- API Layer -->
+					<div class="stratum group relative">
+						<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-blue-600"></div>
+						<div class="border border-blue-500/30 border-t-0 bg-gradient-to-r from-blue-900/20 to-transparent p-6 pl-8 hover:from-blue-900/30 transition-colors">
+							<div class="flex items-center justify-between">
+								<div>
+									<span class="font-mono text-xs text-blue-400">APPLICATION LAYER</span>
+									<h4 class="font-sinistre text-xl text-blue-200 mt-1">Backend APIs</h4>
+									<p class="text-sm text-gray-400 mt-2">Business logic and request handling.</p>
+								</div>
+								<div class="flex gap-3 text-xs text-gray-500">
+									<span class="border border-blue-500/30 px-2 py-1 rounded">Node.js</span>
+									<span class="border border-blue-500/30 px-2 py-1 rounded">Rust</span>
+									<span class="border border-blue-500/30 px-2 py-1 rounded">Go</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Data Layer -->
+					<div class="stratum group relative">
+						<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-400 to-indigo-600"></div>
+						<div class="border border-indigo-500/30 border-t-0 bg-gradient-to-r from-indigo-900/20 to-transparent p-6 pl-8 hover:from-indigo-900/30 transition-colors">
+							<div class="flex items-center justify-between">
+								<div>
+									<span class="font-mono text-xs text-indigo-400">DATA LAYER</span>
+									<h4 class="font-sinistre text-xl text-indigo-200 mt-1">Databases</h4>
+									<p class="text-sm text-gray-400 mt-2">Persistent storage and caching systems.</p>
+								</div>
+								<div class="flex gap-3 text-xs text-gray-500">
+									<span class="border border-indigo-500/30 px-2 py-1 rounded">PostgreSQL</span>
+									<span class="border border-indigo-500/30 px-2 py-1 rounded">Redis</span>
+									<span class="border border-indigo-500/30 px-2 py-1 rounded">MongoDB</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Infrastructure Layer -->
+					<div class="stratum group relative">
+						<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-400 to-purple-600"></div>
+						<div class="border border-purple-500/30 border-t-0 bg-gradient-to-r from-purple-900/20 to-transparent p-6 pl-8 hover:from-purple-900/30 transition-colors">
+							<div class="flex items-center justify-between">
+								<div>
+									<span class="font-mono text-xs text-purple-400">INFRASTRUCTURE LAYER</span>
+									<h4 class="font-sinistre text-xl text-purple-200 mt-1">DevOps</h4>
+									<p class="text-sm text-gray-400 mt-2">Containerization and orchestration.</p>
+								</div>
+								<div class="flex gap-3 text-xs text-gray-500">
+									<span class="border border-purple-500/30 px-2 py-1 rounded">Docker</span>
+									<span class="border border-purple-500/30 px-2 py-1 rounded">Kubernetes</span>
+									<span class="border border-purple-500/30 px-2 py-1 rounded">AWS</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Bedrock: Systems -->
+					<div class="stratum group relative">
+						<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-gray-400 to-gray-600"></div>
+						<div class="border border-gray-500/30 border-t-0 bg-gradient-to-r from-gray-900/40 to-transparent p-6 pl-8 hover:from-gray-900/50 transition-colors rounded-b-sm">
+							<div class="flex items-center justify-between">
+								<div>
+									<span class="font-mono text-xs text-gray-400">BEDROCK</span>
+									<h4 class="font-sinistre text-xl text-gray-200 mt-1">Systems</h4>
+									<p class="text-sm text-gray-400 mt-2">The foundation. Low-level and operating systems.</p>
+								</div>
+								<div class="flex gap-3 text-xs text-gray-500">
+									<span class="border border-gray-500/30 px-2 py-1 rounded">C</span>
+									<span class="border border-gray-500/30 px-2 py-1 rounded">Linux</span>
+									<span class="border border-gray-500/30 px-2 py-1 rounded">Networking</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 5: THE LIBRARY - Reading List as Book Spines -->
+		<section id="library" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰋𐰃𐰠</span>
+					The Library
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Books that shaped how I think about software.</p>
+				
+				<!-- Bookshelf -->
+				<div class="border-b-8 border-amber-900/40 bg-gradient-to-t from-amber-950/20 to-transparent p-8 pt-4">
+					<!-- Book spines -->
+					<div class="flex gap-1 justify-center items-end h-48 overflow-x-auto pb-4">
+						<!-- Book 1 -->
+						<div class="book-spine group flex-shrink-0 w-10 h-44 bg-gradient-to-r from-blue-700 to-blue-800 rounded-r-sm cursor-pointer hover:-translate-y-2 transition-transform relative shadow-lg">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<span class="font-sinistre text-xs text-white writing-mode-vertical transform rotate-180 whitespace-nowrap">The Pragmatic Programmer</span>
+							</div>
+							<div class="absolute bottom-2 left-0 right-0 text-center text-[6px] text-blue-200/60">Hunt</div>
+						</div>
+						
+						<!-- Book 2 -->
+						<div class="book-spine group flex-shrink-0 w-12 h-40 bg-gradient-to-r from-red-800 to-red-900 rounded-r-sm cursor-pointer hover:-translate-y-2 transition-transform relative shadow-lg">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<span class="font-sinistre text-xs text-white writing-mode-vertical transform rotate-180 whitespace-nowrap">Clean Code</span>
+							</div>
+							<div class="absolute bottom-2 left-0 right-0 text-center text-[6px] text-red-200/60">Martin</div>
+						</div>
+						
+						<!-- Book 3 -->
+						<div class="book-spine group flex-shrink-0 w-14 h-46 bg-gradient-to-r from-orange-700 to-orange-800 rounded-r-sm cursor-pointer hover:-translate-y-2 transition-transform relative shadow-lg" style="height: 184px;">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<span class="font-sinistre text-xs text-white writing-mode-vertical transform rotate-180 whitespace-nowrap">The Rust Programming Language</span>
+							</div>
+							<div class="absolute bottom-2 left-0 right-0 text-center text-[6px] text-orange-200/60">Klabnik</div>
+						</div>
+						
+						<!-- Book 4 -->
+						<div class="book-spine group flex-shrink-0 w-10 h-38 bg-gradient-to-r from-green-800 to-green-900 rounded-r-sm cursor-pointer hover:-translate-y-2 transition-transform relative shadow-lg" style="height: 152px;">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<span class="font-sinistre text-xs text-white writing-mode-vertical transform rotate-180 whitespace-nowrap">SICP</span>
+							</div>
+							<div class="absolute bottom-2 left-0 right-0 text-center text-[6px] text-green-200/60">Abelson</div>
+						</div>
+						
+						<!-- Book 5 -->
+						<div class="book-spine group flex-shrink-0 w-11 h-42 bg-gradient-to-r from-purple-700 to-purple-800 rounded-r-sm cursor-pointer hover:-translate-y-2 transition-transform relative shadow-lg" style="height: 168px;">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<span class="font-sinistre text-xs text-white writing-mode-vertical transform rotate-180 whitespace-nowrap">Design Patterns</span>
+							</div>
+							<div class="absolute bottom-2 left-0 right-0 text-center text-[6px] text-purple-200/60">GoF</div>
+						</div>
+						
+						<!-- Book 6 -->
+						<div class="book-spine group flex-shrink-0 w-9 h-36 bg-gradient-to-r from-cyan-700 to-cyan-800 rounded-r-sm cursor-pointer hover:-translate-y-2 transition-transform relative shadow-lg" style="height: 144px;">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<span class="font-sinistre text-[10px] text-white writing-mode-vertical transform rotate-180 whitespace-nowrap">Linux Kernel</span>
+							</div>
+							<div class="absolute bottom-2 left-0 right-0 text-center text-[6px] text-cyan-200/60">Love</div>
+						</div>
+						
+						<!-- Book 7 -->
+						<div class="book-spine group flex-shrink-0 w-12 h-44 bg-gradient-to-r from-yellow-700 to-yellow-800 rounded-r-sm cursor-pointer hover:-translate-y-2 transition-transform relative shadow-lg">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<span class="font-sinistre text-xs text-white writing-mode-vertical transform rotate-180 whitespace-nowrap">Designing Data-Intensive Apps</span>
+							</div>
+							<div class="absolute bottom-2 left-0 right-0 text-center text-[6px] text-yellow-200/60">Kleppmann</div>
+						</div>
+						
+						<!-- Book 8 -->
+						<div class="book-spine group flex-shrink-0 w-8 h-40 bg-gradient-to-r from-gray-600 to-gray-700 rounded-r-sm cursor-pointer hover:-translate-y-2 transition-transform relative shadow-lg">
+							<div class="absolute inset-0 flex items-center justify-center">
+								<span class="font-sinistre text-[10px] text-white writing-mode-vertical transform rotate-180 whitespace-nowrap">The C Book</span>
+							</div>
+							<div class="absolute bottom-2 left-0 right-0 text-center text-[6px] text-gray-200/60">K&R</div>
+						</div>
+					</div>
+					
+					<!-- Shelf -->
+					<div class="h-2 bg-gradient-to-b from-amber-800/40 to-amber-900/60 rounded-sm"></div>
+				</div>
+				
+				<!-- Currently reading -->
+				<div class="mt-8 text-center">
+					<span class="font-mono text-xs text-gray-500">CURRENTLY READING:</span>
+					<p class="font-sinistre text-lg text-blue-300 mt-1">"Programming Rust" by Blandy & Orendorff</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 6: THE TICKER - Live Stats as Stock Market -->
+		<section id="ticker" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰼𐱅</span>
+					The Ticker
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Real-time developer metrics and indices.</p>
+				
+				<!-- Stock ticker display -->
+				<div class="border border-[#90c5ff20] bg-[#0a0b0d] overflow-hidden">
+					<!-- Ticker header -->
+					<div class="bg-[#1a1b1f] px-4 py-2 flex items-center justify-between border-b border-[#90c5ff14]">
+						<div class="flex items-center gap-2">
+							<div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+							<span class="font-mono text-xs text-emerald-400">LIVE</span>
+						</div>
+						<span class="font-mono text-xs text-gray-500">DEV EXCHANGE</span>
+					</div>
+					
+					<!-- Ticker tape -->
+					<div class="bg-[#0d0e12] border-b border-[#90c5ff14] py-2 overflow-hidden">
+						<div class="flex whitespace-nowrap animate-scroll-ticker font-mono text-sm">
+							<span class="px-6 text-emerald-400">RUST +12.5%</span>
+							<span class="px-6 text-emerald-400">NODE +3.2%</span>
+							<span class="px-6 text-red-400">SLEEP -45.0%</span>
+							<span class="px-6 text-emerald-400">COFFEE +89.1%</span>
+							<span class="px-6 text-emerald-400">COMMITS +7.8%</span>
+							<span class="px-6 text-gray-400">BUGS 0.0%</span>
+							<span class="px-6 text-emerald-400">LINUX +5.5%</span>
+						</div>
+					</div>
+					
+					<!-- Main indices -->
+					<div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#90c5ff14]">
+						<div class="p-6 text-center">
+							<span class="font-mono text-xs text-gray-500 block">COMMIT INDEX</span>
+							<span class="font-mono text-3xl text-emerald-400">1,247</span>
+							<span class="font-mono text-xs text-emerald-400 block mt-1">+127 this month</span>
+						</div>
+						<div class="p-6 text-center">
+							<span class="font-mono text-xs text-gray-500 block">LOC WRITTEN</span>
+							<span class="font-mono text-3xl text-blue-400">84.5K</span>
+							<span class="font-mono text-xs text-blue-400 block mt-1">+2.3K this week</span>
+						</div>
+						<div class="p-6 text-center">
+							<span class="font-mono text-xs text-gray-500 block">BUGS SQUASHED</span>
+							<span class="font-mono text-3xl text-amber-400">342</span>
+							<span class="font-mono text-xs text-amber-400 block mt-1">99.2% resolution</span>
+						</div>
+						<div class="p-6 text-center">
+							<span class="font-mono text-xs text-gray-500 block">UPTIME</span>
+							<span class="font-mono text-3xl text-emerald-400">99.9%</span>
+							<span class="font-mono text-xs text-emerald-400 block mt-1">All systems nominal</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 7: THE PROCESS - How I Work as Assembly Line -->
+		<section id="process" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰇𐰕</span>
+					The Process
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">How ideas become production-ready code.</p>
+				
+				<!-- Assembly line -->
+				<div class="relative">
+					<!-- Conveyor belt line -->
+					<div class="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500/30 to-transparent -translate-y-1/2 hidden md:block"></div>
+					
+					<div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-4">
+						<!-- Step 1 -->
+						<div class="process-step group relative">
+							<div class="border border-[#90c5ff20] bg-[#0d0e12] p-6 text-center hover:border-blue-400/40 transition-all relative z-10">
+								<div class="w-12 h-12 mx-auto mb-4 border border-blue-400/30 rounded-full flex items-center justify-center text-blue-400 font-mono text-lg">1</div>
+								<h4 class="font-sinistre text-lg mb-2">Discover</h4>
+								<p class="text-xs text-gray-500">Understand the problem deeply before writing any code.</p>
+							</div>
+							<div class="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 text-blue-400/40 z-20">→</div>
+						</div>
+						
+						<!-- Step 2 -->
+						<div class="process-step group relative">
+							<div class="border border-[#90c5ff20] bg-[#0d0e12] p-6 text-center hover:border-blue-400/40 transition-all relative z-10">
+								<div class="w-12 h-12 mx-auto mb-4 border border-blue-400/30 rounded-full flex items-center justify-center text-blue-400 font-mono text-lg">2</div>
+								<h4 class="font-sinistre text-lg mb-2">Design</h4>
+								<p class="text-xs text-gray-500">Architect the solution with scalability in mind.</p>
+							</div>
+							<div class="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 text-blue-400/40 z-20">→</div>
+						</div>
+						
+						<!-- Step 3 -->
+						<div class="process-step group relative">
+							<div class="border border-[#90c5ff20] bg-[#0d0e12] p-6 text-center hover:border-blue-400/40 transition-all relative z-10">
+								<div class="w-12 h-12 mx-auto mb-4 border border-blue-400/30 rounded-full flex items-center justify-center text-blue-400 font-mono text-lg">3</div>
+								<h4 class="font-sinistre text-lg mb-2">Build</h4>
+								<p class="text-xs text-gray-500">Write clean, tested, documented code.</p>
+							</div>
+							<div class="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 text-blue-400/40 z-20">→</div>
+						</div>
+						
+						<!-- Step 4 -->
+						<div class="process-step group relative">
+							<div class="border border-[#90c5ff20] bg-[#0d0e12] p-6 text-center hover:border-blue-400/40 transition-all relative z-10">
+								<div class="w-12 h-12 mx-auto mb-4 border border-blue-400/30 rounded-full flex items-center justify-center text-blue-400 font-mono text-lg">4</div>
+								<h4 class="font-sinistre text-lg mb-2">Deploy</h4>
+								<p class="text-xs text-gray-500">Ship with confidence using CI/CD pipelines.</p>
+							</div>
+							<div class="hidden md:block absolute -right-2 top-1/2 -translate-y-1/2 text-blue-400/40 z-20">→</div>
+						</div>
+						
+						<!-- Step 5 -->
+						<div class="process-step group relative">
+							<div class="border border-emerald-500/30 bg-[#0d0e12] p-6 text-center hover:border-emerald-400/40 transition-all relative z-10">
+								<div class="w-12 h-12 mx-auto mb-4 border border-emerald-400/30 rounded-full flex items-center justify-center text-emerald-400 font-mono text-lg">5</div>
+								<h4 class="font-sinistre text-lg mb-2 text-emerald-300">Iterate</h4>
+								<p class="text-xs text-gray-500">Monitor, learn, and continuously improve.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 8: THE MENU - Services as Restaurant Menu -->
+		<section id="menu" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Menu
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Services available for your next project.</p>
+				
+				<!-- Menu card -->
+				<div class="max-w-2xl mx-auto border-4 border-double border-[#90c5ff20] bg-[#0a0b0d] p-8">
+					<!-- Menu header -->
+					<div class="text-center border-b border-[#90c5ff14] pb-6 mb-6">
+						<h3 class="font-sinistre text-3xl tracking-wider">Services</h3>
+						<p class="text-xs text-gray-500 mt-2 italic">Crafted with care since 2022</p>
+					</div>
+					
+					<!-- Appetizers -->
+					<div class="mb-8">
+						<h4 class="font-sinistre text-lg text-blue-300 mb-4 tracking-wider">— Consultations —</h4>
+						<div class="space-y-4">
+							<div class="flex justify-between items-baseline border-b border-dotted border-gray-700 pb-2">
+								<div>
+									<span class="font-sinistre">Technical Review</span>
+									<p class="text-xs text-gray-500">Code audit, architecture assessment, recommendations</p>
+								</div>
+								<span class="text-blue-300 font-mono text-sm ml-4 flex-shrink-0">Available</span>
+							</div>
+							<div class="flex justify-between items-baseline border-b border-dotted border-gray-700 pb-2">
+								<div>
+									<span class="font-sinistre">System Design Session</span>
+									<p class="text-xs text-gray-500">Planning scalable architectures for your needs</p>
+								</div>
+								<span class="text-blue-300 font-mono text-sm ml-4 flex-shrink-0">Available</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Main Courses -->
+					<div class="mb-8">
+						<h4 class="font-sinistre text-lg text-emerald-300 mb-4 tracking-wider">— Development —</h4>
+						<div class="space-y-4">
+							<div class="flex justify-between items-baseline border-b border-dotted border-gray-700 pb-2">
+								<div>
+									<span class="font-sinistre">Backend Development</span>
+									<p class="text-xs text-gray-500">APIs, microservices, database design</p>
+								</div>
+								<span class="text-emerald-300 font-mono text-sm ml-4 flex-shrink-0">Signature</span>
+							</div>
+							<div class="flex justify-between items-baseline border-b border-dotted border-gray-700 pb-2">
+								<div>
+									<span class="font-sinistre">Full-Stack Applications</span>
+									<p class="text-xs text-gray-500">End-to-end solutions, from concept to deployment</p>
+								</div>
+								<span class="text-emerald-300 font-mono text-sm ml-4 flex-shrink-0">Signature</span>
+							</div>
+							<div class="flex justify-between items-baseline border-b border-dotted border-gray-700 pb-2">
+								<div>
+									<span class="font-sinistre">Systems Programming</span>
+									<p class="text-xs text-gray-500">Low-level, performance-critical applications</p>
+								</div>
+								<span class="text-amber-300 font-mono text-sm ml-4 flex-shrink-0">Specialty</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Sides -->
+					<div>
+						<h4 class="font-sinistre text-lg text-amber-300 mb-4 tracking-wider">— Extras —</h4>
+						<div class="space-y-4">
+							<div class="flex justify-between items-baseline border-b border-dotted border-gray-700 pb-2">
+								<div>
+									<span class="font-sinistre">DevOps Setup</span>
+									<p class="text-xs text-gray-500">CI/CD, containerization, cloud deployment</p>
+								</div>
+								<span class="text-gray-400 font-mono text-sm ml-4 flex-shrink-0">Add-on</span>
+							</div>
+							<div class="flex justify-between items-baseline border-b border-dotted border-gray-700 pb-2">
+								<div>
+									<span class="font-sinistre">Performance Optimization</span>
+									<p class="text-xs text-gray-500">Making your existing code faster</p>
+								</div>
+								<span class="text-gray-400 font-mono text-sm ml-4 flex-shrink-0">Add-on</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Footer -->
+					<div class="text-center mt-8 pt-6 border-t border-[#90c5ff14]">
+						<p class="text-xs text-gray-500 italic">All services include ongoing support and documentation.</p>
+						<p class="text-xs text-gray-600 mt-2">Contact for custom requirements.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 9: THE PLAYBILL - Testimonials as Theater Credits -->
+		<section id="playbill" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰋𐰃𐰠</span>
+					The Playbill
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">What the critics are saying.</p>
+				
+				<!-- Playbill layout -->
+				<div class="max-w-3xl mx-auto">
+					<!-- Marquee style header -->
+					<div class="bg-gradient-to-r from-amber-900/20 via-amber-800/30 to-amber-900/20 border border-amber-500/30 p-6 text-center mb-6">
+						<div class="text-amber-400/60 font-mono text-xs mb-2">NOW SHOWING</div>
+						<h3 class="font-sinistre text-3xl text-amber-200">The Atduyar Review</h3>
+						<div class="text-amber-400/40 font-mono text-xs mt-2">A Collection of Professional Testimonials</div>
+					</div>
+					
+					<!-- Reviews -->
+					<div class="space-y-6">
+						<!-- Review 1 -->
+						<div class="border-l-4 border-amber-500/40 bg-gradient-to-r from-[#90c5ff05] to-transparent p-6">
+							<blockquote class="text-gray-300 italic leading-relaxed mb-4">
+								"Exceptional technical skills combined with a deep understanding of business requirements. Ahmet delivered our streaming platform ahead of schedule with remarkable quality."
+							</blockquote>
+							<div class="flex items-center gap-4">
+								<div class="w-10 h-10 rounded-full bg-blue-500/20 border border-blue-400/30 flex items-center justify-center font-sinistre text-blue-300">DE</div>
+								<div>
+									<div class="font-sinistre text-white">Deniz Egece</div>
+									<div class="text-xs text-gray-500">CEO, Deniz Egece Co. Ltd.</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Review 2 -->
+						<div class="border-l-4 border-blue-500/40 bg-gradient-to-r from-[#90c5ff05] to-transparent p-6">
+							<blockquote class="text-gray-300 italic leading-relaxed mb-4">
+								"One of the most dedicated students I've had. Combines theoretical knowledge with practical skills in a way that's rare to see at this stage."
+							</blockquote>
+							<div class="flex items-center gap-4">
+								<div class="w-10 h-10 rounded-full bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center font-sinistre text-indigo-300">IU</div>
+								<div>
+									<div class="font-sinistre text-white">Faculty Member</div>
+									<div class="text-xs text-gray-500">International University of Sarajevo</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Review 3 (Placeholder for future) -->
+						<div class="border-l-4 border-gray-500/40 bg-gradient-to-r from-gray-500/5 to-transparent p-6 opacity-60">
+							<blockquote class="text-gray-400 italic leading-relaxed mb-4">
+								"Your testimonial could be here. Let's build something great together."
+							</blockquote>
+							<div class="flex items-center gap-4">
+								<div class="w-10 h-10 rounded-full bg-gray-500/20 border border-gray-400/30 border-dashed flex items-center justify-center font-sinistre text-gray-400">?</div>
+								<div>
+									<div class="font-sinistre text-gray-400">Future Collaborator</div>
+									<div class="text-xs text-gray-600">Could be you</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 10: THE BEACON - Contact as Lighthouse -->
+		<section id="beacon" class="px-4 md:px-8 lg:px-16 py-24 relative overflow-hidden group">
+			<BackgroundMarquee class="group-has-[button:hover]:text-blue-300/30 duration-700 transition-all">
+				𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰖𐰸: 𐰼𐰾𐰼: 𐰸𐰆𐰯: 𐰇𐰠𐱅𐰲𐰃: 𐰼𐱅𐰏𐰕: 𐰃𐰤𐰢: 𐰚𐰇𐰠𐱅𐰃𐰏𐰤
+			</BackgroundMarquee>
+			
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Beacon
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">The light is always on. Send your signal.</p>
+				
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<!-- Lighthouse visualization -->
+					<div class="hidden lg:flex justify-center">
+						<div class="relative">
+							<!-- Lighthouse tower -->
+							<div class="w-20 h-64 bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 relative">
+								<!-- Stripes -->
+								<div class="absolute inset-0">
+									<div class="h-8 bg-red-900/40"></div>
+									<div class="h-8 bg-white/10"></div>
+									<div class="h-8 bg-red-900/40"></div>
+									<div class="h-8 bg-white/10"></div>
+									<div class="h-8 bg-red-900/40"></div>
+								</div>
+							</div>
+							<!-- Lantern room -->
+							<div class="absolute -top-16 left-1/2 -translate-x-1/2">
+								<div class="w-24 h-16 bg-[#1a1b1f] border-2 border-blue-400/30 rounded-t-lg relative">
+									<!-- Light beam -->
+									<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-amber-300 rounded-full blur-sm animate-pulse"></div>
+									<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full"></div>
+									<!-- Light rays -->
+									<div class="absolute top-1/2 left-full -translate-y-1/2 w-32 h-1 bg-gradient-to-r from-amber-400/60 to-transparent animate-pulse"></div>
+									<div class="absolute top-1/2 right-full -translate-y-1/2 w-32 h-1 bg-gradient-to-l from-amber-400/60 to-transparent animate-pulse"></div>
+								</div>
+								<!-- Dome -->
+								<div class="w-20 h-8 bg-gray-600 rounded-t-full mx-auto -mt-1"></div>
+							</div>
+							<!-- Base -->
+							<div class="w-32 h-8 bg-gray-900 -ml-6 rounded-b"></div>
+							<!-- Water reflection -->
+							<div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-40 h-6 bg-gradient-to-b from-blue-500/20 to-transparent blur-sm"></div>
+						</div>
+					</div>
+					
+					<!-- Contact form -->
+					<div class="border border-[#90c5ff20] bg-[#0a0b0d] p-8">
+						<h3 class="font-sinistre text-2xl mb-6">Send a Signal</h3>
+						<form class="space-y-5">
+							<div>
+								<label for="name" class="font-mono text-xs text-gray-500 block mb-2">IDENTIFIER</label>
+								<input type="text" id="name" class="w-full bg-[#0d0e12] border border-[#90c5ff20] focus:border-blue-400/50 outline-none py-3 px-4 transition-colors rounded-sm" placeholder="Your name" />
+							</div>
+							<div>
+								<label for="email" class="font-mono text-xs text-gray-500 block mb-2">RETURN FREQUENCY</label>
+								<input type="email" id="email" class="w-full bg-[#0d0e12] border border-[#90c5ff20] focus:border-blue-400/50 outline-none py-3 px-4 transition-colors rounded-sm" placeholder="your@email.com" />
+							</div>
+							<div>
+								<label for="message" class="font-mono text-xs text-gray-500 block mb-2">MESSAGE</label>
+								<textarea id="message" rows="4" class="w-full bg-[#0d0e12] border border-[#90c5ff20] focus:border-blue-400/50 outline-none py-3 px-4 transition-colors rounded-sm resize-none" placeholder="Your message..."></textarea>
+							</div>
+							<button type="submit" class="w-full px-8 py-4 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 hover:border-blue-400/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] transition-all font-sinistre text-lg rounded-sm">
+								Transmit Signal
+							</button>
+						</form>
+						
+						<!-- Alternative channels -->
+						<div class="mt-8 pt-6 border-t border-[#90c5ff14]">
+							<div class="font-mono text-xs text-gray-500 mb-4">DIRECT CHANNELS</div>
+							<div class="flex gap-6">
+								<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-gray-400 hover:text-blue-300 transition-colors text-sm">GitHub</a>
+								<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-400 hover:text-blue-300 transition-colors text-sm">LinkedIn</a>
+								<a href="mailto:contact@atduyar.com" class="text-gray-400 hover:text-blue-300 transition-colors text-sm">Email</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Radial effect on hover -->
+			<div class="select-none pointer-events-none absolute left-0 top-0 h-full w-full transition-[--x] duration-600 ease-out [--x:0%] group-has-[button:hover]:[--x:100%] to-30% opacity-30 from-blue-600 to-transparent mix-blend-hard-light bg-radial-[circle_at_50%_80%,var(--tw-gradient-from)_var(--x)] group-has-[button:hover]:opacity-60"></div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="px-4 md:px-8 lg:px-16 py-12 border-t border-[#90c5ff14]">
+			<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-blue-400/40 text-lg leading-none">𐱅𐰭𐰼𐰃</span>
+					<span class="font-sinistre">Ahmet Tarik Duyar</span>
+				</div>
+				<div class="flex gap-6">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors">LinkedIn</a>
+					<a href="mailto:contact@atduyar.com" class="text-gray-500 hover:text-white transition-colors">Email</a>
+				</div>
+				<p class="text-gray-600 text-sm">&copy; 2026 All rights reserved.</p>
+			</div>
+		</footer>
+	</main>
+</BaseLayout>
+
+<script>
+	// Terminal functionality
+	const commands = {
+		help: `Available commands:
+  whoami     - Learn about me
+  skills     - View my technical skills
+  projects   - See my projects
+  contact    - Get contact information
+  fortune    - Get a random dev wisdom
+  neofetch   - System information
+  clear      - Clear the terminal
+  sudo rm -rf / - Don't even try it`,
+		
+		whoami: `Ahmet Tarik Duyar
+Full-Stack Software Engineer
+Location: Sarajevo, Bosnia
+Status: Open for opportunities`,
+		
+		skills: `TECHNICAL SKILLS
+├── Backend: Node.js, Rust, Go, Python
+├── Database: PostgreSQL, Redis, MongoDB
+├── Systems: C, Linux, Networking
+├── Frontend: React, TypeScript, Tailwind
+└── DevOps: Docker, K8s, AWS, Cloudflare`,
+		
+		projects: `FEATURED PROJECTS
+[1] Streaming Platform @ Deniz Egece Co.
+    └── 17K+ users, 99.9% uptime
+[2] Personal Portfolio @ atduyar.com
+    └── Custom design, Astro + Tailwind`,
+		
+		contact: `CONTACT INFORMATION
+Email:    contact@atduyar.com
+GitHub:   github.com/atduyar
+LinkedIn: linkedin.com/in/atduyar`,
+		
+		fortune: () => {
+			const fortunes = [
+				'"There are only two hard things in CS: cache invalidation and naming things."',
+				'"It works on my machine." - Every developer ever',
+				'"Give a man a program, frustrate him for a day. Teach a man to program, frustrate him for a lifetime."',
+				'"A good programmer is someone who always looks both ways before crossing a one-way street."',
+				'"The best code is no code at all."',
+				'"First, solve the problem. Then, write the code."',
+				'"Weeks of coding can save you hours of planning."',
+			];
+			return fortunes[Math.floor(Math.random() * fortunes.length)];
+		},
+		
+		neofetch: `       ▄▄▄▄▄▄▄       atduyar@portfolio
+      ██▀▀▀▀▀██      ─────────────────
+     ██      ██      OS: Arch btw
+     ██  ▄▄  ██      Kernel: 6.7.0-arch1
+     ██ ████ ██      Shell: zsh 5.9
+      ████████       Editor: Neovim
+       ▀████▀        Languages: Rust, C, TS
+                     Coffee: Always`,
+		
+		'sudo rm -rf /': 'Nice try. Permission denied. Also, why would you do that?',
+		
+		'exit': 'You cannot escape. The terminal is eternal.',
+		
+		'ls': `drwxr-xr-x  projects/
+drwxr-xr-x  skills/
+-rw-r--r--  about.md
+-rw-r--r--  contact.txt`,
+	};
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const input = document.getElementById('terminal-input');
+		const history = document.getElementById('command-history');
+		
+		if (input && history) {
+			input.addEventListener('keydown', (e) => {
+				if (e.key === 'Enter') {
+					const cmd = input.value.trim().toLowerCase();
+					if (cmd) {
+						// Add command to history
+						const cmdLine = document.createElement('div');
+						cmdLine.innerHTML = `<span class="text-emerald-400">$</span> ${cmd}`;
+						history.appendChild(cmdLine);
+						
+						// Get response
+						let response;
+						if (cmd === 'clear') {
+							history.innerHTML = '';
+							input.value = '';
+							return;
+						} else if (commands[cmd]) {
+							response = typeof commands[cmd] === 'function' ? commands[cmd]() : commands[cmd];
+						} else {
+							response = `Command not found: ${cmd}. Type 'help' for available commands.`;
+						}
+						
+						// Add response to history
+						const responseLine = document.createElement('pre');
+						responseLine.className = 'text-gray-400 text-xs mt-1 mb-3 whitespace-pre-wrap';
+						responseLine.textContent = response;
+						history.appendChild(responseLine);
+						
+						// Clear input and scroll
+						input.value = '';
+						history.scrollTop = history.scrollHeight;
+					}
+				}
+			});
+		}
+	});
+
+	// Helper to run command from hint buttons
+	function runCommand(cmd) {
+		const input = document.getElementById('terminal-input');
+		if (input) {
+			input.value = cmd;
+			input.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+		}
+	}
+</script>
+
+<style>
+	@keyframes fade-in {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	
+	@keyframes slide-up {
+		from { 
+			opacity: 0;
+			transform: translateY(40px);
+		}
+		to { 
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+	@keyframes scroll-ticker {
+		from { transform: translateX(0); }
+		to { transform: translateX(-50%); }
+	}
+	
+	@keyframes blink {
+		0%, 50% { opacity: 1; }
+		51%, 100% { opacity: 0; }
+	}
+	
+	.animate-fade-in {
+		animation: fade-in 1s ease-out forwards;
+		opacity: 0;
+	}
+	
+	.animate-slide-up {
+		animation: slide-up 0.8s ease-out forwards;
+		opacity: 0;
+	}
+	
+	.animate-scroll-ticker {
+		animation: scroll-ticker 30s linear infinite;
+	}
+	
+	.animate-blink {
+		animation: blink 1s step-end infinite;
+	}
+	
+	/* Vertical text for book spines */
+	.writing-mode-vertical {
+		writing-mode: vertical-rl;
+	}
+</style>
