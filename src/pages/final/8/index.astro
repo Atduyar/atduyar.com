@@ -12,48 +12,59 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 		<nav class="py-6 px-4 md:px-8 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
 			<div class="flex justify-between items-center">
 				<a href="#hero" class="group flex items-center gap-3">
-					<img src="/favicon.svg" alt="Logo" class="w-8 h-8 transition-transform group-hover:rotate-12" />
+					<div class="w-10 h-10 rounded-full border border-blue-400/30 flex items-center justify-center group-hover:border-blue-400/60 transition-colors relative overflow-hidden">
+						<div class="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors"></div>
+						<img src="/favicon.svg" alt="Logo" class="w-6 h-6 relative z-10" />
+					</div>
 					<span class="font-sinistre text-xl tracking-wide hidden sm:block">Atduyar</span>
 				</a>
 				<ul class="flex gap-4 md:gap-8">
-					<li><a href="#about" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all">About</a></li>
-					<li><a href="#codex" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all">Codex</a></li>
-					<li><a href="#forge" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all">Forge</a></li>
-					<li><a href="#summon" class="nav-link font-sinistre text-lg px-4 py-1 border border-blue-500/30 hover:bg-blue-600/10 transition-all">Summon</a></li>
+					<li><a href="#blueprint" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all">Blueprint</a></li>
+					<li><a href="#expedition" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all">Expedition</a></li>
+					<li><a href="#vault" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all">Vault</a></li>
+					<li><a href="#coordinates" class="nav-link font-sinistre text-lg px-4 py-1 border border-blue-500/30 hover:bg-blue-600/10 rounded-full">Locate</a></li>
 				</ul>
 			</div>
 		</nav>
 
 		<!-- Hero Section -->
-		<section id="hero" class="min-h-[80vh] flex flex-col justify-center px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
-			<div class="absolute inset-0 opacity-5">
-				<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-[128px]"></div>
-				<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-[128px]"></div>
+		<section id="hero" class="min-h-[85vh] flex flex-col justify-center px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="absolute inset-0">
+				<div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px]"></div>
+				<div class="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px]"></div>
 			</div>
 			
-			<div class="absolute inset-0 overflow-hidden pointer-events-none">
-				<span class="absolute top-1/4 left-[10%] font-oldturcic text-6xl md:text-8xl text-blue-400/[0.06] leading-none animate-float-1">𐰚</span>
-				<span class="absolute top-1/3 right-[15%] font-oldturcic text-5xl md:text-6xl text-blue-400/[0.06] leading-none animate-float-2">𐰇</span>
-				<span class="absolute bottom-1/4 left-[20%] font-oldturcic text-5xl md:text-7xl text-blue-400/[0.06] leading-none animate-float-3">𐰠</span>
-				<span class="absolute bottom-1/3 right-[25%] font-oldturcic text-7xl md:text-9xl text-blue-400/[0.06] leading-none animate-float-1">𐱅</span>
+			<!-- Compass decoration -->
+			<div class="absolute top-20 right-10 w-32 h-32 opacity-20 hidden lg:block">
+				<svg viewBox="0 0 100 100" class="w-full h-full animate-spin-very-slow">
+					<circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="0.5" class="text-blue-400"/>
+					<circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="0.3" class="text-blue-400"/>
+					<line x1="50" y1="5" x2="50" y2="15" stroke="currentColor" stroke-width="1" class="text-blue-400"/>
+					<line x1="50" y1="85" x2="50" y2="95" stroke="currentColor" stroke-width="1" class="text-blue-400"/>
+					<line x1="5" y1="50" x2="15" y2="50" stroke="currentColor" stroke-width="1" class="text-blue-400"/>
+					<line x1="85" y1="50" x2="95" y2="50" stroke="currentColor" stroke-width="1" class="text-blue-400"/>
+					<text x="50" y="12" text-anchor="middle" class="text-[6px] fill-blue-300">N</text>
+				</svg>
 			</div>
 			
 			<div class="relative z-10">
-				<p class="font-oldturcic text-blue-400/40 text-lg mb-4 tracking-[0.4em] animate-fade-in leading-none">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</p>
+				<p class="font-oldturcic text-blue-400/50 text-lg mb-4 tracking-[0.4em] animate-fade-in leading-none">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</p>
 				<h1 class="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-sinistre leading-[0.9] mb-8">
 					<span class="block animate-slide-up" style="animation-delay: 0.1s;">I'm Ahmet</span>
-					<span class="block animate-slide-up text-blue-300" style="animation-delay: 0.2s;">Tarik Duyar</span>
+					<span class="block animate-slide-up" style="animation-delay: 0.2s;">
+						<span class="text-blue-300">Tarik</span> Duyar
+					</span>
 				</h1>
-				<p class="text-lg md:text-xl text-gray-400 max-w-xl animate-fade-in" style="animation-delay: 0.5s;">
+				<p class="text-lg md:text-xl text-gray-400 max-w-xl animate-fade-in leading-relaxed" style="animation-delay: 0.5s;">
 					Building robust backend architectures and scalable systems. 
 					Passionate about C, Rust, and Linux.
 				</p>
 				<div class="flex gap-4 mt-10 animate-fade-in" style="animation-delay: 0.7s;">
-					<a href="#forge" class="px-6 py-3 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 hover:border-blue-400/50 transition-all font-sinistre text-lg rounded-sm">
-						View Creations
+					<a href="#expedition" class="group px-6 py-3 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 hover:border-blue-400/50 transition-all font-sinistre text-lg rounded-sm">
+						View Expeditions
 					</a>
-					<a href="#summon" class="px-6 py-3 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all font-sinistre text-lg rounded-sm">
-						Summon Me
+					<a href="#coordinates" class="px-6 py-3 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all font-sinistre text-lg rounded-sm">
+						Find Me
 					</a>
 				</div>
 			</div>
@@ -73,303 +84,266 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 							I'm a Full-Stack Software Engineer with a year of professional experience specializing in building robust backend architectures, designing scalable databases, and managing critical systems.
 						</p>
 						<p>
-							During my time at <span class="text-white">Deniz Egece Co. Ltd.</span>, I took ownership of architecting and deploying a streaming platform serving over <span class="text-blue-300">17,000 paid users</span>.
+							During my time at <span class="text-white">Deniz Egece Co. Ltd.</span>, I took ownership of architecting and deploying a streaming platform serving over <span class="text-blue-300">17,000 paid users</span>, demonstrating my ability to deliver end-to-end solutions across various platforms.
 						</p>
 						<p>
-							As an <span class="text-white">Honor Student</span> in Software Engineering at the International University of Sarajevo, I'm deeply focused on computer science fundamentals.
+							As an <span class="text-white">Honor Student</span> in Software Engineering at the International University of Sarajevo, I'm deeply focused on computer science fundamentals while actively exploring C, Rust, JavaScript, and Linux.
 						</p>
 					</div>
 				</div>
 				<div class="w-full lg:w-80 flex-shrink-0">
-					<div class="aspect-square bg-gradient-to-br from-[#90c5ff08] to-transparent border border-[#90c5ff14] rounded-sm p-8 flex items-center justify-center relative">
-						<img src="/favicon.svg" alt="Logo" class="w-full h-full opacity-80" />
-						<div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-blue-400/30"></div>
-						<div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-blue-400/30"></div>
-						<div class="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-blue-400/30"></div>
-						<div class="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-blue-400/30"></div>
+					<div class="aspect-square rounded-sm p-8 flex items-center justify-center relative group border border-[#90c5ff14]">
+						<img src="/favicon.svg" alt="Logo" class="w-full h-full opacity-80 relative z-10" />
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- CODEX SECTION - Skills as Ancient Manuscript -->
-		<section id="codex" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative">
-			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
-				<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰋𐰃𐰠𐰼</span>
-				The Codex
-				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
-			</h2>
-			<p class="text-gray-500 mb-12 max-w-xl">Ancient knowledge inscribed in digital parchment. Each entry a mastery earned through study and practice.</p>
+		<!-- THE BLUEPRINT - Skills as Architectural Drawings -->
+		<section id="blueprint" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<!-- Blueprint grid background -->
+			<div class="absolute inset-0 opacity-[0.06]" style="background-image: linear-gradient(rgba(96,165,250,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(96,165,250,0.4) 1px, transparent 1px); background-size: 20px 20px;"></div>
+			<div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(96,165,250,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(96,165,250,0.3) 1px, transparent 1px); background-size: 100px 100px;"></div>
 			
-			<!-- Manuscript style layout -->
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-				<!-- Page 1 -->
-				<div class="codex-page relative p-8 border border-[#90c5ff14] bg-gradient-to-br from-[#0d0e12] to-[#0a0b0d]">
-					<!-- Page number -->
-					<div class="absolute top-4 right-4 font-oldturcic text-blue-400/20 text-sm leading-none">I</div>
-					
-					<!-- Entry 1 - Backend -->
-					<article class="mb-8 pb-8 border-b border-[#90c5ff10]">
-						<div class="flex items-start gap-4">
-							<!-- Illuminated Letter -->
-							<div class="w-16 h-16 flex items-center justify-center border-2 border-blue-400/30 bg-gradient-to-br from-blue-500/10 to-transparent flex-shrink-0">
-								<span class="font-oldturcic text-3xl text-blue-400 leading-none">𐰋</span>
-							</div>
-							<div class="flex-1">
-								<h3 class="font-sinistre text-xl text-blue-300 mb-2">On the Art of Backend</h3>
-								<p class="text-gray-400 text-sm leading-relaxed italic">
-									"In the depths of servers, where logic flows like ancient rivers, one masters Node.js, Rust, Go, and Python. These are the tongues of the machine, spoken with precision and purpose."
-								</p>
-								<div class="flex gap-2 mt-3">
-									<span class="text-xs text-blue-400/50">Node.js</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-blue-400/50">Rust</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-blue-400/50">Go</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-blue-400/50">Python</span>
-								</div>
-							</div>
-						</div>
-					</article>
-					
-					<!-- Entry 2 - Database -->
-					<article class="mb-8 pb-8 border-b border-[#90c5ff10]">
-						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 flex items-center justify-center border-2 border-indigo-400/30 bg-gradient-to-br from-indigo-500/10 to-transparent flex-shrink-0">
-								<span class="font-oldturcic text-3xl text-indigo-400 leading-none">𐰃</span>
-							</div>
-							<div class="flex-1">
-								<h3 class="font-sinistre text-xl text-indigo-300 mb-2">The Doctrine of Data</h3>
-								<p class="text-gray-400 text-sm leading-relaxed italic">
-									"As the scribe guards sacred texts, so must one protect and structure data. PostgreSQL for the relational truths, Redis for swift memory, MongoDB for flexible forms."
-								</p>
-								<div class="flex gap-2 mt-3">
-									<span class="text-xs text-indigo-400/50">PostgreSQL</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-indigo-400/50">Redis</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-indigo-400/50">MongoDB</span>
-								</div>
-							</div>
-						</div>
-					</article>
-					
-					<!-- Entry 3 - Systems -->
-					<article>
-						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 flex items-center justify-center border-2 border-cyan-400/30 bg-gradient-to-br from-cyan-500/10 to-transparent flex-shrink-0">
-								<span class="font-oldturcic text-3xl text-cyan-400 leading-none">𐰠</span>
-							</div>
-							<div class="flex-1">
-								<h3 class="font-sinistre text-xl text-cyan-300 mb-2">Systems Arcana</h3>
-								<p class="text-gray-400 text-sm leading-relaxed italic">
-									"To truly understand, one must descend to the metal itself. C for the foundations, Rust for safe power, Linux as the eternal realm where all computation dwells."
-								</p>
-								<div class="flex gap-2 mt-3">
-									<span class="text-xs text-cyan-400/50">C</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-cyan-400/50">Rust</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-cyan-400/50">Linux</span>
-								</div>
-							</div>
-						</div>
-					</article>
-					
-					<!-- Decorative corner flourishes -->
-					<div class="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-blue-400/20"></div>
-					<div class="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-blue-400/20"></div>
-				</div>
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Blueprint
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12 max-w-2xl font-mono text-sm">TECHNICAL SPECIFICATIONS // REV 2.4 // SCALE 1:1</p>
 				
-				<!-- Page 2 -->
-				<div class="codex-page relative p-8 border border-[#90c5ff14] bg-gradient-to-br from-[#0d0e12] to-[#0a0b0d]">
-					<div class="absolute top-4 right-4 font-oldturcic text-blue-400/20 text-sm leading-none">II</div>
-					
-					<!-- Entry 4 - Frontend -->
-					<article class="mb-8 pb-8 border-b border-[#90c5ff10]">
-						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 flex items-center justify-center border-2 border-emerald-400/30 bg-gradient-to-br from-emerald-500/10 to-transparent flex-shrink-0">
-								<span class="font-oldturcic text-3xl text-emerald-400 leading-none">𐱅</span>
-							</div>
-							<div class="flex-1">
-								<h3 class="font-sinistre text-xl text-emerald-300 mb-2">The Visible Layer</h3>
-								<p class="text-gray-400 text-sm leading-relaxed italic">
-									"What the eye perceives must be crafted with care. React for dynamic interfaces, TypeScript for disciplined code, Tailwind for swift styling of the digital canvas."
-								</p>
-								<div class="flex gap-2 mt-3">
-									<span class="text-xs text-emerald-400/50">React</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-emerald-400/50">TypeScript</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-emerald-400/50">Tailwind</span>
-								</div>
-							</div>
-						</div>
-					</article>
-					
-					<!-- Entry 5 - Cloud -->
-					<article class="mb-8 pb-8 border-b border-[#90c5ff10]">
-						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 flex items-center justify-center border-2 border-amber-400/30 bg-gradient-to-br from-amber-500/10 to-transparent flex-shrink-0">
-								<span class="font-oldturcic text-3xl text-amber-400 leading-none">𐰏</span>
-							</div>
-							<div class="flex-1">
-								<h3 class="font-sinistre text-xl text-amber-300 mb-2">Heavenly Infrastructure</h3>
-								<p class="text-gray-400 text-sm leading-relaxed italic">
-									"Above the earth, in digital clouds, containers sail like ships. Docker for vessels, Kubernetes for fleets, AWS for the vast sky itself."
-								</p>
-								<div class="flex gap-2 mt-3">
-									<span class="text-xs text-amber-400/50">Docker</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-amber-400/50">Kubernetes</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-amber-400/50">AWS</span>
-								</div>
-							</div>
-						</div>
-					</article>
-					
-					<!-- Entry 6 - Streaming -->
-					<article>
-						<div class="flex items-start gap-4">
-							<div class="w-16 h-16 flex items-center justify-center border-2 border-rose-400/30 bg-gradient-to-br from-rose-500/10 to-transparent flex-shrink-0">
-								<span class="font-oldturcic text-3xl text-rose-400 leading-none">𐰚</span>
-							</div>
-							<div class="flex-1">
-								<h3 class="font-sinistre text-xl text-rose-300 mb-2">Rivers of Light</h3>
-								<p class="text-gray-400 text-sm leading-relaxed italic">
-									"Video flows like water through channels unseen. FFmpeg transforms, HLS delivers, and real-time systems ensure the stream never falters."
-								</p>
-								<div class="flex gap-2 mt-3">
-									<span class="text-xs text-rose-400/50">FFmpeg</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-rose-400/50">HLS</span>
-									<span class="text-xs text-gray-600">|</span>
-									<span class="text-xs text-rose-400/50">Real-time</span>
-								</div>
-							</div>
-						</div>
-					</article>
-					
-					<div class="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-blue-400/20"></div>
-					<div class="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-blue-400/20"></div>
-				</div>
-			</div>
-		</section>
-
-		<!-- THE FORGE SECTION - Projects as Crafted Artifacts -->
-		<section id="forge" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
-			<!-- Heat glow background -->
-			<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-t from-orange-500/5 via-blue-500/5 to-transparent blur-3xl pointer-events-none"></div>
-			
-			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
-				<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰸𐰆𐰯</span>
-				The Forge
-				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
-			</h2>
-			<p class="text-gray-500 mb-12 max-w-xl">Where raw ideas are hammered into existence. Each artifact tempered through countless iterations.</p>
-			
-			<div class="space-y-8 relative z-10">
-				<!-- Artifact 1 - Streaming Platform -->
-				<div class="group artifact-card relative overflow-hidden">
-					<!-- Glowing ember effect -->
-					<div class="absolute inset-0 bg-gradient-to-r from-orange-500/0 via-orange-500/5 to-orange-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-					<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-orange-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-					
-					<div class="border border-[#90c5ff14] group-hover:border-orange-400/30 transition-all p-8">
-						<div class="flex items-center gap-4 mb-6">
-							<!-- Artifact symbol -->
-							<div class="w-20 h-20 relative">
-								<div class="absolute inset-0 border-2 border-orange-400/30 rotate-45 group-hover:border-orange-400/60 transition-colors"></div>
-								<div class="absolute inset-2 border border-blue-400/20 rotate-45"></div>
-								<div class="absolute inset-0 flex items-center justify-center">
-									<span class="font-oldturcic text-2xl text-orange-400 leading-none group-hover:animate-pulse">𐰇𐰕</span>
-								</div>
-							</div>
-							<div>
-								<div class="flex items-center gap-3 mb-1">
-									<h3 class="font-sinistre text-2xl md:text-3xl group-hover:text-orange-200 transition-colors">Streaming Platform</h3>
-									<span class="text-xs text-orange-400/60 uppercase tracking-wider border border-orange-400/30 px-2 py-0.5">Masterwork</span>
-								</div>
-								<p class="text-blue-400/60 text-sm">Forged for Deniz Egece Co. Ltd. | 2023</p>
-							</div>
-						</div>
+				<!-- Blueprint style skills -->
+				<div class="space-y-8">
+					<!-- Backend Architecture -->
+					<div class="blueprint-item group relative border border-blue-400/20 hover:border-blue-400/40 transition-all p-6 bg-[#0a0b0d]/50">
+						<!-- Corner markers -->
+						<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-blue-400/40"></div>
+						<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-blue-400/40"></div>
+						<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-blue-400/40"></div>
+						<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-blue-400/40"></div>
 						
-						<p class="text-gray-400 leading-relaxed mb-6">
-							A grand artifact serving 17,000+ souls. Video transcoding hammered to perfection, payment systems forged with security, analytics polished to reveal hidden truths.
-						</p>
-						
-						<!-- Forge specifications -->
-						<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-							<div class="p-3 bg-[#90c5ff05] border border-[#90c5ff10] text-center">
-								<div class="text-xs text-gray-500 mb-1">Material</div>
-								<div class="text-sm text-blue-300">Node.js</div>
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="flex-1">
+								<div class="flex items-center gap-4 mb-4">
+									<div class="font-mono text-xs text-blue-400/60 border border-blue-400/30 px-2 py-1">SECTION A</div>
+									<h3 class="font-sinistre text-2xl text-blue-200">Backend Architecture</h3>
+								</div>
+								<p class="text-gray-400 text-sm leading-relaxed mb-4">
+									Primary structural framework. Load-bearing systems designed for high throughput and fault tolerance.
+								</p>
+								<div class="flex gap-3 flex-wrap font-mono text-xs">
+									<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">Node.js</span>
+									<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">Rust</span>
+									<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">Go</span>
+									<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">Python</span>
+								</div>
 							</div>
-							<div class="p-3 bg-[#90c5ff05] border border-[#90c5ff10] text-center">
-								<div class="text-xs text-gray-500 mb-1">Foundation</div>
-								<div class="text-sm text-blue-300">PostgreSQL</div>
-							</div>
-							<div class="p-3 bg-[#90c5ff05] border border-[#90c5ff10] text-center">
-								<div class="text-xs text-gray-500 mb-1">Enchantment</div>
-								<div class="text-sm text-blue-300">FFmpeg</div>
-							</div>
-							<div class="p-3 bg-[#90c5ff05] border border-[#90c5ff10] text-center">
-								<div class="text-xs text-gray-500 mb-1">Binding</div>
-								<div class="text-sm text-blue-300">Redis</div>
+							<!-- Measurement annotations -->
+							<div class="md:w-48 flex flex-col justify-center gap-2 font-mono text-xs text-gray-500">
+								<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+									<span>Capacity:</span>
+									<span class="text-blue-300">17k+ users</span>
+								</div>
+								<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+									<span>Uptime:</span>
+									<span class="text-emerald-300">99.9%</span>
+								</div>
+								<div class="flex justify-between">
+									<span>Load:</span>
+									<span class="text-amber-300">High</span>
+								</div>
 							</div>
 						</div>
+					</div>
+					
+					<!-- Database Layer -->
+					<div class="blueprint-item group relative border border-indigo-400/20 hover:border-indigo-400/40 transition-all p-6 bg-[#0a0b0d]/50">
+						<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-indigo-400/40"></div>
+						<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-indigo-400/40"></div>
+						<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-indigo-400/40"></div>
+						<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-indigo-400/40"></div>
 						
-						<!-- Heat indicator -->
-						<div class="flex items-center gap-3">
-							<span class="text-xs text-gray-500">Forge Heat</span>
-							<div class="flex-1 h-2 bg-[#90c5ff10] overflow-hidden">
-								<div class="h-full w-full bg-gradient-to-r from-blue-500 via-orange-500 to-red-500 group-hover:animate-heat-pulse"></div>
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="flex-1">
+								<div class="flex items-center gap-4 mb-4">
+									<div class="font-mono text-xs text-indigo-400/60 border border-indigo-400/30 px-2 py-1">SECTION B</div>
+									<h3 class="font-sinistre text-2xl text-indigo-200">Database Layer</h3>
+								</div>
+								<p class="text-gray-400 text-sm leading-relaxed mb-4">
+									Foundation systems. Data persistence and retrieval optimized for complex relational queries.
+								</p>
+								<div class="flex gap-3 flex-wrap font-mono text-xs">
+									<span class="text-purple-400 border-b border-purple-400/30 pb-0.5">PostgreSQL</span>
+									<span class="text-purple-400 border-b border-purple-400/30 pb-0.5">Redis</span>
+									<span class="text-purple-400 border-b border-purple-400/30 pb-0.5">MongoDB</span>
+								</div>
 							</div>
-							<span class="text-xs text-orange-400">Maximum</span>
+							<div class="md:w-48 flex flex-col justify-center gap-2 font-mono text-xs text-gray-500">
+								<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+									<span>Indexing:</span>
+									<span class="text-indigo-300">Optimized</span>
+								</div>
+								<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+									<span>Sharding:</span>
+									<span class="text-emerald-300">Enabled</span>
+								</div>
+								<div class="flex justify-between">
+									<span>Backup:</span>
+									<span class="text-amber-300">Hourly</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Systems & Infrastructure -->
+					<div class="blueprint-item group relative border border-cyan-400/20 hover:border-cyan-400/40 transition-all p-6 bg-[#0a0b0d]/50">
+						<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-cyan-400/40"></div>
+						<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-cyan-400/40"></div>
+						<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-cyan-400/40"></div>
+						<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-cyan-400/40"></div>
+						
+						<div class="flex flex-col md:flex-row gap-6">
+							<div class="flex-1">
+								<div class="flex items-center gap-4 mb-4">
+									<div class="font-mono text-xs text-cyan-400/60 border border-cyan-400/30 px-2 py-1">SECTION C</div>
+									<h3 class="font-sinistre text-2xl text-cyan-200">Systems & Infrastructure</h3>
+								</div>
+								<p class="text-gray-400 text-sm leading-relaxed mb-4">
+									Low-level engineering. Operating system internals and hardware-software interface optimization.
+								</p>
+								<div class="flex gap-3 flex-wrap font-mono text-xs">
+									<span class="text-teal-400 border-b border-teal-400/30 pb-0.5">C</span>
+									<span class="text-teal-400 border-b border-teal-400/30 pb-0.5">Rust</span>
+									<span class="text-teal-400 border-b border-teal-400/30 pb-0.5">Linux</span>
+									<span class="text-teal-400 border-b border-teal-400/30 pb-0.5">Docker</span>
+								</div>
+							</div>
+							<div class="md:w-48 flex flex-col justify-center gap-2 font-mono text-xs text-gray-500">
+								<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+									<span>Memory:</span>
+									<span class="text-cyan-300">Optimized</span>
+								</div>
+								<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+									<span>Latency:</span>
+									<span class="text-emerald-300">&lt;10ms</span>
+								</div>
+								<div class="flex justify-between">
+									<span>Threads:</span>
+									<span class="text-amber-300">Async</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				
-				<!-- Artifact 2 - Portfolio -->
-				<div class="group artifact-card relative overflow-hidden">
-					<div class="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-indigo-500/5 to-indigo-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-					<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-indigo-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-					
-					<div class="border border-[#90c5ff14] group-hover:border-indigo-400/30 transition-all p-8">
-						<div class="flex items-center gap-4 mb-6">
-							<div class="w-20 h-20 relative">
-								<div class="absolute inset-0 border-2 border-indigo-400/30 rotate-45 group-hover:border-indigo-400/60 transition-colors"></div>
-								<div class="absolute inset-2 border border-blue-400/20 rotate-45"></div>
-								<div class="absolute inset-0 flex items-center justify-center">
-									<span class="font-oldturcic text-2xl text-indigo-400 leading-none group-hover:animate-pulse">𐰋𐰃</span>
-								</div>
-							</div>
-							<div>
-								<div class="flex items-center gap-3 mb-1">
-									<h3 class="font-sinistre text-2xl md:text-3xl group-hover:text-indigo-200 transition-colors">Digital Monument</h3>
-									<span class="text-xs text-indigo-400/60 uppercase tracking-wider border border-indigo-400/30 px-2 py-0.5">Artisan</span>
-								</div>
-								<p class="text-indigo-400/60 text-sm">Personal creation | 2024</p>
-							</div>
+				<!-- Blueprint stamp -->
+				<div class="mt-8 flex justify-end">
+					<div class="border-2 border-blue-400/30 px-4 py-2 rotate-[-3deg]">
+						<div class="font-mono text-xs text-blue-400/60">APPROVED FOR CONSTRUCTION</div>
+						<div class="font-sinistre text-lg text-blue-300">A.T.D. // 2026</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- EXPEDITION LOG - Experience as Explorer's Journal -->
+		<section id="expedition" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰼𐱅</span>
+					Expedition Log
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12 max-w-2xl italic">"Every journey through code is a discovery of new territories."</p>
+				
+				<!-- Journal entries -->
+				<div class="space-y-12">
+					<!-- Entry 1 -->
+					<div class="journal-entry relative pl-8 border-l-2 border-blue-400/30">
+						<!-- Date marker -->
+						<div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-[#0d0e12] border-2 border-blue-400/50 flex items-center justify-center">
+							<div class="w-2 h-2 rounded-full bg-blue-400"></div>
 						</div>
 						
-						<p class="text-gray-400 leading-relaxed mb-6">
-							A monument to heritage, forged with unique typography honoring Old Turkic scripts. Each interaction carefully tempered, each animation precisely timed.
-						</p>
+						<div class="bg-gradient-to-r from-[#90c5ff05] to-transparent p-6 border border-[#90c5ff14] hover:border-blue-400/30 transition-all">
+							<div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+								<div class="flex items-center gap-3">
+									<span class="font-mono text-sm text-blue-400/80 bg-blue-500/10 px-3 py-1 rounded-full">2023 - Present</span>
+									<span class="text-2xl">🧭</span>
+								</div>
+								<div class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent hidden md:block"></div>
+								<span class="font-mono text-xs text-gray-500">LAT 43.8563° N, LONG 18.4131° E</span>
+							</div>
+							
+							<h3 class="font-sinistre text-2xl mb-2">Deniz Egece Co. Ltd.</h3>
+							<p class="text-blue-300/80 text-sm mb-4 font-mono">Full-Stack Developer</p>
+							
+							<div class="text-gray-400 leading-relaxed space-y-3 italic">
+								<p>
+									"Day 1: Arrived at the frontier. The terrain is challenging - a streaming platform serving thousands requires careful navigation. 
+									I've begun mapping the database architecture..."
+								</p>
+								<p>
+									"Month 6: Major milestone achieved. The platform now serves over 17,000 paid users. 
+									Implemented video transcoding pipelines that reduced processing time by 40%."
+								</p>
+								<p>
+									"Present: Continuing to expand the territory. Real-time analytics dashboard deployed. 
+									Payment integrations running smoothly across multiple regions."
+								</p>
+							</div>
+							
+							<!-- Collected artifacts -->
+							<div class="mt-6 pt-4 border-t border-[#90c5ff14]">
+								<span class="font-mono text-xs text-gray-500">ARTIFACTS COLLECTED:</span>
+								<div class="flex gap-2 mt-2 flex-wrap">
+									<span class="px-3 py-1 text-xs bg-blue-500/10 border border-blue-400/20 rounded-full">Node.js</span>
+									<span class="px-3 py-1 text-xs bg-blue-500/10 border border-blue-400/20 rounded-full">PostgreSQL</span>
+									<span class="px-3 py-1 text-xs bg-blue-500/10 border border-blue-400/20 rounded-full">FFmpeg</span>
+									<span class="px-3 py-1 text-xs bg-blue-500/10 border border-blue-400/20 rounded-full">AWS</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Entry 2 -->
+					<div class="journal-entry relative pl-8 border-l-2 border-indigo-400/30">
+						<div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-[#0d0e12] border-2 border-indigo-400/50 flex items-center justify-center">
+							<div class="w-2 h-2 rounded-full bg-indigo-400"></div>
+						</div>
 						
-						<div class="grid grid-cols-3 gap-4 mb-6">
-							<div class="p-3 bg-[#90c5ff05] border border-[#90c5ff10] text-center">
-								<div class="text-xs text-gray-500 mb-1">Material</div>
-								<div class="text-sm text-indigo-300">Astro</div>
+						<div class="bg-gradient-to-r from-indigo-500/5 to-transparent p-6 border border-[#90c5ff14] hover:border-indigo-400/30 transition-all">
+							<div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+								<div class="flex items-center gap-3">
+									<span class="font-mono text-sm text-indigo-400/80 bg-indigo-500/10 px-3 py-1 rounded-full">2022 - Present</span>
+									<span class="text-2xl">🎓</span>
+								</div>
+								<div class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent hidden md:block"></div>
+								<span class="font-mono text-xs text-gray-500">SARAJEVO, BOSNIA</span>
 							</div>
-							<div class="p-3 bg-[#90c5ff05] border border-[#90c5ff10] text-center">
-								<div class="text-xs text-gray-500 mb-1">Polish</div>
-								<div class="text-sm text-indigo-300">Tailwind</div>
+							
+							<h3 class="font-sinistre text-2xl mb-2">International University of Sarajevo</h3>
+							<p class="text-indigo-300/80 text-sm mb-4 font-mono">Software Engineering (Honor Student)</p>
+							
+							<div class="text-gray-400 leading-relaxed space-y-3 italic">
+								<p>
+									"The academy provides the theoretical maps for the journeys ahead. 
+									Computer science fundamentals serve as the compass for all future expeditions."
+								</p>
+								<p>
+									"Deep exploration into algorithms, data structures, and system design. 
+									Each semester reveals new territories to conquer."
+								</p>
 							</div>
-							<div class="p-3 bg-[#90c5ff05] border border-[#90c5ff10] text-center">
-								<div class="text-xs text-gray-500 mb-1">Deployment</div>
-								<div class="text-sm text-indigo-300">Cloudflare</div>
+							
+							<div class="mt-6 pt-4 border-t border-[#90c5ff14]">
+								<span class="font-mono text-xs text-gray-500">KNOWLEDGE ACQUIRED:</span>
+								<div class="flex gap-2 mt-2 flex-wrap">
+									<span class="px-3 py-1 text-xs bg-indigo-500/10 border border-indigo-400/20 rounded-full">Algorithms</span>
+									<span class="px-3 py-1 text-xs bg-indigo-500/10 border border-indigo-400/20 rounded-full">Data Structures</span>
+									<span class="px-3 py-1 text-xs bg-indigo-500/10 border border-indigo-400/20 rounded-full">System Design</span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -377,74 +351,184 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 			</div>
 		</section>
 
-		<!-- Experience Section -->
-		<section id="experience" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14]">
-			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-12 flex items-center gap-4">
-				<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰇𐰕</span>
-				Journey
-				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
-			</h2>
-			<div class="relative">
-				<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#90c5ff30] via-[#90c5ff14] to-transparent"></div>
+		<!-- NEW SECTION: THE VAULT - Achievements/Certifications -->
+		<section id="vault" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰇𐰕</span>
+					The Vault
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12 max-w-2xl">Secured achievements and milestones from the journey.</p>
 				
-				<div class="relative pl-8 md:pl-0 md:w-1/2 md:pr-12 mb-12">
-					<div class="absolute left-0 md:left-auto md:right-0 top-2 w-2 h-2 rounded-full bg-blue-400 md:translate-x-1/2"></div>
-					<div class="p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all">
-						<span class="text-blue-400/80 text-sm">2023 - Present</span>
-						<h3 class="font-sinistre text-xl mt-2">Full-Stack Developer</h3>
-						<p class="text-gray-500 text-sm mb-3">Deniz Egece Co. Ltd.</p>
-						<p class="text-gray-400 text-sm">Led development of streaming infrastructure, database architecture, and user-facing applications.</p>
+				<!-- Vault items grid -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					<!-- Vault Item 1 -->
+					<div class="vault-item group relative">
+						<div class="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
+						<div class="border border-amber-400/20 hover:border-amber-400/40 transition-all p-6 rounded-sm relative">
+							<!-- Lock icon -->
+							<div class="absolute top-4 right-4 text-amber-400/40 group-hover:text-amber-400/60 transition-colors">
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+								</svg>
+							</div>
+							
+							<div class="text-3xl mb-4">🏆</div>
+							<h3 class="font-sinistre text-xl mb-2 text-amber-200">Honor Student</h3>
+							<p class="text-gray-500 text-sm mb-3">International University of Sarajevo</p>
+							<p class="text-gray-400 text-sm">Maintained academic excellence throughout software engineering program.</p>
+							
+							<div class="mt-4 pt-3 border-t border-amber-400/10">
+								<span class="font-mono text-xs text-amber-400/60">UNLOCKED: 2022</span>
+							</div>
+						</div>
 					</div>
-				</div>
-				
-				<div class="relative pl-8 md:pl-0 md:w-1/2 md:ml-auto md:pl-12">
-					<div class="absolute left-0 md:left-0 top-2 w-2 h-2 rounded-full bg-indigo-400 md:-translate-x-1/2"></div>
-					<div class="p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all">
-						<span class="text-indigo-400/80 text-sm">2022 - Present</span>
-						<h3 class="font-sinistre text-xl mt-2">Software Engineering</h3>
-						<p class="text-gray-500 text-sm mb-3">International University of Sarajevo</p>
-						<p class="text-gray-400 text-sm">Honor Student. Deep focus on computer science fundamentals.</p>
+					
+					<!-- Vault Item 2 -->
+					<div class="vault-item group relative">
+						<div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
+						<div class="border border-emerald-400/20 hover:border-emerald-400/40 transition-all p-6 rounded-sm relative">
+							<div class="absolute top-4 right-4 text-emerald-400/40 group-hover:text-emerald-400/60 transition-colors">
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+								</svg>
+							</div>
+							
+							<div class="text-3xl mb-4">📊</div>
+							<h3 class="font-sinistre text-xl mb-2 text-emerald-200">17K+ Users Milestone</h3>
+							<p class="text-gray-500 text-sm mb-3">Streaming Platform</p>
+							<p class="text-gray-400 text-sm">Successfully scaled platform architecture to serve over 17,000 paid subscribers.</p>
+							
+							<div class="mt-4 pt-3 border-t border-emerald-400/10">
+								<span class="font-mono text-xs text-emerald-400/60">UNLOCKED: 2024</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Vault Item 3 -->
+					<div class="vault-item group relative">
+						<div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent rounded-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
+						<div class="border border-blue-400/20 hover:border-blue-400/40 transition-all p-6 rounded-sm relative">
+							<div class="absolute top-4 right-4 text-blue-400/40 group-hover:text-blue-400/60 transition-colors">
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+								</svg>
+							</div>
+							
+							<div class="text-3xl mb-4">🔧</div>
+							<h3 class="font-sinistre text-xl mb-2 text-blue-200">Full-Stack Mastery</h3>
+							<p class="text-gray-500 text-sm mb-3">Professional Development</p>
+							<p class="text-gray-400 text-sm">End-to-end ownership of production systems from database to deployment.</p>
+							
+							<div class="mt-4 pt-3 border-t border-blue-400/10">
+								<span class="font-mono text-xs text-blue-400/60">UNLOCKED: 2023</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Summon Section -->
-		<section id="summon" class="px-4 md:px-8 lg:px-16 py-24 relative group">
-			<BackgroundMarquee class="group-has-[a:hover]:text-white duration-500 transition-all">
-				𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰖𐰸: 𐰼𐰾𐰼: 𐰸𐰆𐰯:
+		<!-- NEW SECTION: COORDINATES - Location/Availability as Nautical Map -->
+		<section id="coordinates" class="px-4 md:px-8 lg:px-16 py-24 relative overflow-hidden group">
+			<BackgroundMarquee class="group-has-[button:hover]:text-blue-300/30 duration-700 transition-all">
+				𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰖𐰸: 𐰼𐰾𐰼: 𐰸𐰆𐰯: 𐰇𐰠𐱅𐰲𐰃: 𐰼𐱅𐰏𐰕: 𐰃𐰤𐰢: 𐰚𐰇𐰠𐱅𐰃𐰏𐰤
 			</BackgroundMarquee>
 			
-			<div class="font-oldturcic text-xl text-blue-400/20 mb-6 tracking-[0.4em] leading-none text-center">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</div>
-			
-			<h2 class="text-4xl sm:text-5xl lg:text-6xl font-sinistre mb-8 text-center">
-				<span class="text-blue-300">Summon</span> <span class="text-gray-600">Me</span>
-			</h2>
-			
-			<p class="text-gray-400 text-lg mb-10 text-center max-w-xl mx-auto">
-				Commission a new artifact? Seek consultation on ancient techniques? Send word.
-			</p>
-			
-			<div class="flex justify-center">
-				<a href="mailto:contact@atduyar.com" class="px-10 py-4 border-2 border-blue-400 text-blue-300 font-sinistre text-xl hover:bg-blue-400 hover:text-[#0d0e12] transition-all duration-300">
-					Send Word
-				</a>
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					Coordinates
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12 max-w-2xl">Current position and available communication channels.</p>
+				
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+					<!-- Location Info -->
+					<div class="space-y-6">
+						<!-- Current Position -->
+						<div class="border border-[#90c5ff20] bg-[#0a0b0d] p-6 rounded-sm">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
+								<span class="font-mono text-sm text-emerald-400">CURRENTLY ACTIVE</span>
+							</div>
+							
+							<div class="space-y-4">
+								<div class="flex justify-between items-center border-b border-[#90c5ff14] pb-3">
+									<span class="text-gray-500 font-mono text-sm">PRIMARY BASE</span>
+									<span class="text-white font-sinistre">Sarajevo, Bosnia</span>
+								</div>
+								<div class="flex justify-between items-center border-b border-[#90c5ff14] pb-3">
+									<span class="text-gray-500 font-mono text-sm">COORDINATES</span>
+									<span class="text-blue-300 font-mono text-sm">43.8563° N, 18.4131° E</span>
+								</div>
+								<div class="flex justify-between items-center border-b border-[#90c5ff14] pb-3">
+									<span class="text-gray-500 font-mono text-sm">TIMEZONE</span>
+									<span class="text-white font-mono text-sm">CET (UTC+1)</span>
+								</div>
+								<div class="flex justify-between items-center">
+									<span class="text-gray-500 font-mono text-sm">AVAILABILITY</span>
+									<span class="text-emerald-300 font-mono text-sm">Open for Remote</span>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Communication Channels -->
+						<div class="border border-[#90c5ff20] bg-[#0a0b0d] p-6 rounded-sm">
+							<h3 class="font-sinistre text-xl mb-4">Communication Channels</h3>
+							<div class="space-y-3">
+								<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="flex items-center justify-between p-3 border border-[#90c5ff14] hover:border-blue-400/30 transition-all rounded-sm group">
+									<div class="flex items-center gap-3">
+										<span class="text-lg">📡</span>
+										<span class="font-mono text-sm">GitHub</span>
+									</div>
+									<span class="text-gray-500 group-hover:text-blue-300 transition-colors">→</span>
+								</a>
+								<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="flex items-center justify-between p-3 border border-[#90c5ff14] hover:border-blue-400/30 transition-all rounded-sm group">
+									<div class="flex items-center gap-3">
+										<span class="text-lg">🔗</span>
+										<span class="font-mono text-sm">LinkedIn</span>
+									</div>
+									<span class="text-gray-500 group-hover:text-blue-300 transition-colors">→</span>
+								</a>
+								<a href="mailto:contact@atduyar.com" class="flex items-center justify-between p-3 border border-[#90c5ff14] hover:border-blue-400/30 transition-all rounded-sm group">
+									<div class="flex items-center gap-3">
+										<span class="text-lg">✉️</span>
+										<span class="font-mono text-sm">contact@atduyar.com</span>
+									</div>
+									<span class="text-gray-500 group-hover:text-blue-300 transition-colors">→</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Contact Form -->
+					<div class="border border-[#90c5ff20] bg-[#0a0b0d] p-6 rounded-sm">
+						<h3 class="font-sinistre text-xl mb-6">Send Transmission</h3>
+						<form class="space-y-5">
+							<div>
+								<label for="name" class="font-mono text-xs text-gray-500 block mb-2">YOUR IDENTIFIER</label>
+								<input type="text" id="name" class="w-full bg-[#0d0e12] border border-[#90c5ff20] focus:border-blue-400/50 outline-none py-3 px-4 transition-colors rounded-sm" placeholder="Name" />
+							</div>
+							<div>
+								<label for="email" class="font-mono text-xs text-gray-500 block mb-2">RETURN ADDRESS</label>
+								<input type="email" id="email" class="w-full bg-[#0d0e12] border border-[#90c5ff20] focus:border-blue-400/50 outline-none py-3 px-4 transition-colors rounded-sm" placeholder="email@example.com" />
+							</div>
+							<div>
+								<label for="message" class="font-mono text-xs text-gray-500 block mb-2">MESSAGE</label>
+								<textarea id="message" rows="4" class="w-full bg-[#0d0e12] border border-[#90c5ff20] focus:border-blue-400/50 outline-none py-3 px-4 transition-colors rounded-sm resize-none" placeholder="Your message..."></textarea>
+							</div>
+							<button type="submit" class="w-full px-8 py-3 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 hover:border-blue-400/50 transition-all font-sinistre text-lg rounded-sm">
+								Send Message
+							</button>
+						</form>
+					</div>
+				</div>
 			</div>
 			
-			<div class="flex justify-center gap-10 mt-12">
-				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors flex items-center gap-2">
-					<span class="font-oldturcic text-lg leading-none">𐰋</span>
-					<span>GitHub</span>
-				</a>
-				<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors flex items-center gap-2">
-					<span class="font-oldturcic text-lg leading-none">𐰠</span>
-					<span>LinkedIn</span>
-				</a>
-			</div>
-			
-			<div class="font-oldturcic text-xl text-blue-400/20 mt-12 tracking-[0.4em] leading-none text-center">𐰉𐰆𐰡𐰃 𐰇𐰕𐰢 𐰽𐰴𐰦𐰢</div>
-			
-			<div class="select-none pointer-events-none absolute left-0 top-0 h-full w-full transition-[--x] duration-600 ease-out [--x:0%] group-has-[a:hover]:[--x:100%] to-30% opacity-50 from-blue-900 to-transparent mix-blend-hard-light bg-radial-[circle_at_50%_50%,var(--tw-gradient-from)_var(--x)] group-has-[a:hover]:opacity-100"></div>
+			<!-- Radial effect on hover -->
+			<div class="select-none pointer-events-none absolute left-0 top-0 h-full w-full transition-[--x] duration-600 ease-out [--x:0%] group-has-[button:hover]:[--x:100%] to-30% opacity-30 from-blue-600 to-transparent mix-blend-hard-light bg-radial-[circle_at_50%_80%,var(--tw-gradient-from)_var(--x)] group-has-[button:hover]:opacity-60"></div>
 		</section>
 
 		<!-- Footer -->
@@ -453,6 +537,11 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 				<div class="flex items-center gap-3">
 					<span class="font-oldturcic text-blue-400/40 text-lg leading-none">𐱅𐰭𐰼𐰃</span>
 					<span class="font-sinistre">Ahmet Tarik Duyar</span>
+				</div>
+				<div class="flex gap-6">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors">LinkedIn</a>
+					<a href="mailto:contact@atduyar.com" class="text-gray-500 hover:text-white transition-colors">Email</a>
 				</div>
 				<p class="text-gray-600 text-sm">&copy; 2026 All rights reserved.</p>
 			</div>
@@ -467,34 +556,32 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 	}
 	
 	@keyframes slide-up {
-		from { opacity: 0; transform: translateY(40px); }
-		to { opacity: 1; transform: translateY(0); }
+		from { 
+			opacity: 0;
+			transform: translateY(40px);
+		}
+		to { 
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 	
-	@keyframes float-1 {
-		0%, 100% { transform: translateY(0) rotate(0deg); }
-		50% { transform: translateY(-20px) rotate(5deg); }
+	@keyframes spin-very-slow {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
 	}
 	
-	@keyframes float-2 {
-		0%, 100% { transform: translateY(0) rotate(0deg); }
-		50% { transform: translateY(15px) rotate(-3deg); }
+	.animate-fade-in {
+		animation: fade-in 1s ease-out forwards;
+		opacity: 0;
 	}
 	
-	@keyframes float-3 {
-		0%, 100% { transform: translateY(0) rotate(0deg); }
-		50% { transform: translateY(-25px) rotate(8deg); }
+	.animate-slide-up {
+		animation: slide-up 0.8s ease-out forwards;
+		opacity: 0;
 	}
 	
-	@keyframes heat-pulse {
-		0%, 100% { opacity: 1; }
-		50% { opacity: 0.7; }
+	.animate-spin-very-slow {
+		animation: spin-very-slow 60s linear infinite;
 	}
-	
-	.animate-fade-in { animation: fade-in 1s ease-out forwards; opacity: 0; }
-	.animate-slide-up { animation: slide-up 0.8s ease-out forwards; opacity: 0; }
-	.animate-float-1 { animation: float-1 8s ease-in-out infinite; }
-	.animate-float-2 { animation: float-2 10s ease-in-out infinite; }
-	.animate-float-3 { animation: float-3 12s ease-in-out infinite; }
-	.animate-heat-pulse { animation: heat-pulse 2s ease-in-out infinite; }
 </style>
