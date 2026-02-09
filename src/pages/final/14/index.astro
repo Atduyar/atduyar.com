@@ -1,0 +1,962 @@
+---
+import BackgroundMarquee from "../../../components/BackgroundMarquee.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Ahmet Tarik Duyar - Blog Explorations" description="10 Integrated Blog Section Designs" bodyClass="bg-[#0a0b0d] text-white w-screen overflow-x-hidden">
+	<main class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-7xl mx-auto min-h-dvh relative">
+		<!-- Subtle noise overlay -->
+		<div class="fixed inset-0 pointer-events-none opacity-[0.015] z-50" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+		
+		<!-- Navigation -->
+		<nav class="py-6 px-4 md:px-8 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
+			<div class="flex justify-between items-center">
+				<a href="#hero" class="group flex items-center gap-3">
+					<div class="w-10 h-10 rounded-full border border-blue-400/30 flex items-center justify-center group-hover:border-blue-400/60 transition-colors relative overflow-hidden">
+						<div class="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors"></div>
+						<img src="/favicon.svg" alt="Logo" class="w-6 h-6 relative z-10" />
+					</div>
+					<span class="font-sinistre text-xl tracking-wide hidden sm:block">Atduyar</span>
+				</a>
+				<div class="flex items-center gap-4">
+					<span class="text-xs text-gray-500 font-mono hidden md:block">INTEGRATED DESIGNS</span>
+					<span class="text-xs text-blue-400/60 font-mono">/final/14</span>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section id="hero" class="min-h-[50vh] flex flex-col justify-center px-4 md:px-8 lg:px-16 py-16 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="absolute inset-0">
+				<div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px]"></div>
+			</div>
+			
+			<div class="relative z-10">
+				<p class="font-oldturcic text-blue-400/50 text-lg mb-4 tracking-[0.4em] leading-none">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</p>
+				<h1 class="text-4xl sm:text-5xl lg:text-6xl font-sinistre leading-[0.9] mb-6">
+					<span class="text-blue-300">Integrated</span> Blog Designs
+				</h1>
+				<p class="text-lg text-gray-400 max-w-xl leading-relaxed">
+					10 layouts that feel native to this site. Breaking containers, asymmetric compositions, typography-focused UX.
+				</p>
+			</div>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 1: THE BLEED -->
+		<!-- Full-width posts that break out of container -->
+		<!-- ============================================== -->
+		<section class="relative">
+			<!-- Section label - floating -->
+			<div class="absolute left-4 md:left-8 top-8 z-20">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-xl text-blue-400/30">𐰃</span>
+					<span class="font-sinistre text-sm text-gray-500 tracking-wider">THE BLEED</span>
+				</div>
+			</div>
+			
+			<!-- Featured post - bleeds to edges -->
+			<article class="pt-24 pb-0">
+				<!-- Full-width gradient bar -->
+				<div class="h-px w-full bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"></div>
+				
+				<!-- Post content that bleeds -->
+				<div class="grid grid-cols-12 min-h-[70vh]">
+					<!-- Left bleed area with accent -->
+					<div class="col-span-12 lg:col-span-5 bg-gradient-to-br from-blue-950/40 via-blue-900/20 to-transparent relative">
+						<div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent"></div>
+						<div class="sticky top-24 p-8 lg:p-12 h-fit">
+							<div class="text-xs text-blue-400/60 font-mono mb-4">2026.02.09</div>
+							<h2 class="font-sinistre text-3xl lg:text-4xl xl:text-5xl leading-[1.1] mb-6 text-white">
+								Why I Stopped Using ORMs and Started Writing SQL Again
+							</h2>
+							<p class="text-gray-400 leading-relaxed mb-6">
+								After years of abstracting away the database, I returned to raw SQL. Here's what I learned about control, performance, and understanding your data.
+							</p>
+							<div class="flex items-center gap-4 text-sm text-gray-500">
+								<span>12 min read</span>
+								<span class="w-1 h-1 rounded-full bg-gray-600"></span>
+								<span>Database</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Right content area -->
+					<div class="col-span-12 lg:col-span-7 p-8 lg:p-12 lg:pl-16 border-l border-[#90c5ff14]">
+						<div class="prose prose-invert max-w-none">
+							<p class="text-lg text-gray-300 leading-relaxed first-letter:text-5xl first-letter:font-sinistre first-letter:text-blue-300 first-letter:float-left first-letter:mr-3 first-letter:mt-1">
+								The abstraction was comfortable. ActiveRecord, Prisma, SQLAlchemy they all promised the same thing: write less SQL, think in objects, let the framework handle the messy details. And for years, I believed them.
+							</p>
+							<p class="text-gray-400 leading-relaxed mt-6">
+								Then I inherited a system where a single API endpoint took 8 seconds to respond. The ORM had generated a query with 14 JOINs, none of them indexed properly. The fix took 30 minutes of writing raw SQL and understanding the actual data relationships.
+							</p>
+							<blockquote class="border-l-2 border-blue-500/50 pl-6 my-8 text-xl text-blue-100/80 italic">
+								"The database is not an implementation detail. It's the foundation of your system."
+							</blockquote>
+							<p class="text-gray-400 leading-relaxed">
+								This isn't an argument against all abstraction. It's an argument for understanding what you're abstracting. When you write SQL, you think about indexes. You think about query plans. You think about data access patterns. The ORM hides these concerns until they become emergencies.
+							</p>
+						</div>
+					</div>
+				</div>
+			</article>
+			
+			<div class="h-px w-full bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 2: THE RIVER -->
+		<!-- Flowing content with no hard boundaries -->
+		<!-- ============================================== -->
+		<section class="relative py-32">
+			<!-- Floating section indicator -->
+			<div class="absolute right-4 md:right-8 top-8">
+				<div class="flex items-center gap-3">
+					<span class="font-sinistre text-sm text-gray-500 tracking-wider">THE RIVER</span>
+					<span class="font-oldturcic text-xl text-blue-400/30">𐰃𐰃</span>
+				</div>
+			</div>
+			
+			<!-- Continuous flowing content -->
+			<div class="max-w-4xl mx-auto px-4 md:px-8">
+				<!-- Post flows into post with date markers -->
+				<div class="relative">
+					<!-- Flowing vertical line -->
+					<div class="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#90c5ff20] to-transparent"></div>
+					
+					<!-- Entry 1 -->
+					<div class="pl-8 mb-24 relative">
+						<div class="absolute left-0 top-2 w-2 h-2 rounded-full bg-blue-400/60 -translate-x-1/2"></div>
+						<time class="text-xs text-blue-400/50 font-mono">February 2026</time>
+						<h3 class="font-sinistre text-2xl mt-2 mb-4 text-white hover:text-blue-200 transition-colors cursor-pointer">
+							The Borrow Checker Changed How I Think
+						</h3>
+						<p class="text-gray-400 leading-loose">
+							Six months into Rust, something shifted. I started seeing ownership patterns everywhere even in languages without a borrow checker. Python code that felt fine now revealed hidden dangers. JavaScript callbacks triggered mental alarms about dangling references. The compiler had rewired my brain.
+						</p>
+					</div>
+					
+					<!-- Entry 2 - flows naturally from 1 -->
+					<div class="pl-8 mb-24 relative">
+						<div class="absolute left-0 top-2 w-2 h-2 rounded-full bg-blue-400/40 -translate-x-1/2"></div>
+						<time class="text-xs text-blue-400/50 font-mono">January 2026</time>
+						<h3 class="font-sinistre text-2xl mt-2 mb-4 text-white hover:text-blue-200 transition-colors cursor-pointer">
+							Debugging at 3 AM: A Meditation
+						</h3>
+						<p class="text-gray-400 leading-loose">
+							There's a particular clarity that comes at 3 AM. The world is quiet. Slack is silent. The only sounds are the hum of your machine and the occasional tick of the radiator. In this space, bugs reveal themselves differently. You're not fighting the problem you're sitting with it.
+						</p>
+						<p class="text-gray-500 leading-loose mt-4 pl-6 border-l border-[#90c5ff14]">
+							I've solved more production incidents in these hours than in any daytime debugging session. There's something about the stillness that lets you see patterns you'd otherwise miss...
+						</p>
+					</div>
+					
+					<!-- Entry 3 -->
+					<div class="pl-8 mb-24 relative">
+						<div class="absolute left-0 top-2 w-2 h-2 rounded-full bg-blue-400/30 -translate-x-1/2"></div>
+						<time class="text-xs text-blue-400/50 font-mono">December 2025</time>
+						<h3 class="font-sinistre text-2xl mt-2 mb-4 text-white hover:text-blue-200 transition-colors cursor-pointer">
+							On Simplicity and Complexity
+						</h3>
+						<p class="text-gray-400 leading-loose">
+							The senior engineers I admire most share one trait: they make complex things simple. Not by ignoring complexity, but by understanding it so deeply they can explain it in plain terms. Simplicity isn't the absence of complexity it's complexity that's been fully digested.
+						</p>
+					</div>
+					
+					<!-- Entry 4 - fading into the past -->
+					<div class="pl-8 relative opacity-60">
+						<div class="absolute left-0 top-2 w-2 h-2 rounded-full bg-blue-400/20 -translate-x-1/2"></div>
+						<time class="text-xs text-blue-400/40 font-mono">November 2025</time>
+						<h3 class="font-sinistre text-xl mt-2 mb-3 text-gray-300 hover:text-blue-200 transition-colors cursor-pointer">
+							First Kernel Module: A Journey
+						</h3>
+						<p class="text-gray-500 leading-loose text-sm">
+							The moment it loaded without crashing the system, I understood why people spend careers in this space...
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 3: THE OVERLAP -->
+		<!-- Stacked cards with depth and shadow -->
+		<!-- ============================================== -->
+		<section class="py-20 px-4 md:px-8 lg:px-16 relative">
+			<div class="flex items-center gap-3 mb-16">
+				<span class="font-oldturcic text-xl text-blue-400/30">𐰃𐰃𐰃</span>
+				<span class="font-sinistre text-sm text-gray-500 tracking-wider">THE OVERLAP</span>
+				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+			</div>
+			
+			<!-- Overlapping card stack -->
+			<div class="max-w-5xl mx-auto relative" style="height: 600px;">
+				<!-- Card 3 (back) -->
+				<article class="absolute left-[10%] top-[15%] w-[70%] bg-[#12141a] border border-[#90c5ff14] p-8 shadow-2xl transform rotate-[-2deg] hover:rotate-0 hover:scale-[1.02] transition-all duration-300 cursor-pointer z-10">
+					<div class="text-xs text-gray-600 font-mono mb-3">Technical Deep Dive</div>
+					<h3 class="font-sinistre text-xl text-gray-400 mb-3">Building a Lock-Free Queue in Rust</h3>
+					<p class="text-gray-600 text-sm leading-relaxed">
+						Atomic operations, memory ordering, and the subtle art of concurrent data structures...
+					</p>
+				</article>
+				
+				<!-- Card 2 (middle) -->
+				<article class="absolute left-[5%] top-[25%] w-[75%] bg-[#0f1116] border border-[#90c5ff20] p-10 shadow-2xl transform rotate-[1deg] hover:rotate-0 hover:scale-[1.02] transition-all duration-300 cursor-pointer z-20">
+					<div class="text-xs text-blue-400/50 font-mono mb-3">Architecture</div>
+					<h3 class="font-sinistre text-2xl text-gray-300 mb-4">Event Sourcing: Two Years Later</h3>
+					<p class="text-gray-500 leading-relaxed">
+						We rebuilt our core system around event sourcing. The good, the bad, and the migrations that haunt my dreams.
+					</p>
+					<div class="mt-6 flex items-center gap-4 text-sm text-gray-600">
+						<span>15 min</span>
+						<span class="w-1 h-1 rounded-full bg-gray-700"></span>
+						<span>2025</span>
+					</div>
+				</article>
+				
+				<!-- Card 1 (front - featured) -->
+				<article class="absolute left-0 top-[35%] w-[80%] bg-gradient-to-br from-[#0d0f14] to-[#0a0c10] border border-blue-500/20 p-12 shadow-[0_25px_80px_-15px_rgba(0,100,255,0.15)] transform rotate-[-1deg] hover:rotate-0 hover:scale-[1.02] transition-all duration-300 cursor-pointer z-30 group">
+					<div class="flex items-center gap-2 mb-4">
+						<div class="w-2 h-2 rounded-full bg-blue-400"></div>
+						<span class="text-xs text-blue-400/70 font-mono">Featured</span>
+					</div>
+					<h3 class="font-sinistre text-3xl text-white mb-4 group-hover:text-blue-100 transition-colors">
+						The Hidden Cost of Microservices
+					</h3>
+					<p class="text-gray-400 leading-relaxed text-lg">
+						We split our monolith into 23 services. Our deployment time went from 5 minutes to 2 hours. This is the story of how we found the balance.
+					</p>
+					<div class="mt-8 flex items-center justify-between">
+						<div class="flex items-center gap-4 text-sm text-gray-500">
+							<span>20 min read</span>
+							<span class="w-1 h-1 rounded-full bg-gray-600"></span>
+							<span>January 2026</span>
+						</div>
+						<div class="text-blue-400/60 group-hover:text-blue-400 transition-colors font-sinistre text-sm">
+							Read more
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 4: THE SPLIT -->
+		<!-- Asymmetric split-screen layout -->
+		<!-- ============================================== -->
+		<section class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+			<!-- Left: Fixed accent panel -->
+			<div class="bg-gradient-to-br from-blue-950/60 via-indigo-950/40 to-[#0d0e12] p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden lg:sticky lg:top-0 lg:h-screen">
+				<!-- Decorative elements -->
+				<div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[100px]"></div>
+				<div class="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/10 rounded-full blur-[80px]"></div>
+				
+				<div class="relative z-10">
+					<div class="flex items-center gap-3 mb-8">
+						<span class="font-oldturcic text-xl text-blue-400/40">𐰃𐰋</span>
+						<span class="font-sinistre text-sm text-blue-300/60 tracking-wider">THE SPLIT</span>
+					</div>
+					
+					<h2 class="font-sinistre text-4xl lg:text-5xl xl:text-6xl text-white leading-[1.1] mb-6">
+						Thoughts on
+						<span class="text-blue-300">Systems</span>
+					</h2>
+					
+					<p class="text-gray-400 leading-relaxed max-w-md">
+						Long-form explorations of system design, performance optimization, and the philosophy of building software that lasts.
+					</p>
+					
+					<div class="mt-12 flex flex-col gap-2 text-sm text-gray-500">
+						<span>12 articles</span>
+						<span>~4 hours of reading</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Right: Scrolling posts -->
+			<div class="divide-y divide-[#90c5ff14]">
+				<!-- Post 1 -->
+				<article class="p-8 lg:p-12 hover:bg-[#90c5ff05] transition-colors cursor-pointer group">
+					<time class="text-xs text-gray-600 font-mono">Feb 2026</time>
+					<h3 class="font-sinistre text-2xl mt-2 mb-3 text-white group-hover:text-blue-200 transition-colors">
+						Zero-Copy Networking in User Space
+					</h3>
+					<p class="text-gray-500 leading-relaxed">
+						How io_uring and eBPF are changing the game for high-performance network applications.
+					</p>
+					<div class="mt-4 text-sm text-blue-400/50 group-hover:text-blue-400/80 transition-colors">
+						18 min read
+					</div>
+				</article>
+				
+				<!-- Post 2 -->
+				<article class="p-8 lg:p-12 hover:bg-[#90c5ff05] transition-colors cursor-pointer group">
+					<time class="text-xs text-gray-600 font-mono">Jan 2026</time>
+					<h3 class="font-sinistre text-2xl mt-2 mb-3 text-white group-hover:text-blue-200 transition-colors">
+						The Database Connection Pool Problem
+					</h3>
+					<p class="text-gray-500 leading-relaxed">
+						Why your pool is probably misconfigured and how to actually size it for your workload.
+					</p>
+					<div class="mt-4 text-sm text-blue-400/50 group-hover:text-blue-400/80 transition-colors">
+						10 min read
+					</div>
+				</article>
+				
+				<!-- Post 3 -->
+				<article class="p-8 lg:p-12 hover:bg-[#90c5ff05] transition-colors cursor-pointer group">
+					<time class="text-xs text-gray-600 font-mono">Dec 2025</time>
+					<h3 class="font-sinistre text-2xl mt-2 mb-3 text-white group-hover:text-blue-200 transition-colors">
+						What PostgreSQL Taught Me About Consistency
+					</h3>
+					<p class="text-gray-500 leading-relaxed">
+						MVCC, isolation levels, and the subtle bugs that hide in your understanding of transactions.
+					</p>
+					<div class="mt-4 text-sm text-blue-400/50 group-hover:text-blue-400/80 transition-colors">
+						14 min read
+					</div>
+				</article>
+				
+				<!-- Post 4 -->
+				<article class="p-8 lg:p-12 hover:bg-[#90c5ff05] transition-colors cursor-pointer group">
+					<time class="text-xs text-gray-600 font-mono">Nov 2025</time>
+					<h3 class="font-sinistre text-2xl mt-2 mb-3 text-white group-hover:text-blue-200 transition-colors">
+						Latency: The User Experience Metric
+					</h3>
+					<p class="text-gray-500 leading-relaxed">
+						100ms feels instant. 300ms feels sluggish. The psychology and engineering of perceived performance.
+					</p>
+					<div class="mt-4 text-sm text-blue-400/50 group-hover:text-blue-400/80 transition-colors">
+						8 min read
+					</div>
+				</article>
+			</div>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 5: THE MARGIN -->
+		<!-- Wide layout with side annotations -->
+		<!-- ============================================== -->
+		<section class="py-24 relative">
+			<!-- Section header -->
+			<div class="px-4 md:px-8 lg:px-16 mb-16">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-xl text-blue-400/30">𐰋</span>
+					<span class="font-sinistre text-sm text-gray-500 tracking-wider">THE MARGIN</span>
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</div>
+			</div>
+			
+			<!-- Wide article with margins -->
+			<article class="grid grid-cols-12 gap-0">
+				<!-- Left margin annotations -->
+				<div class="col-span-2 hidden lg:block">
+					<div class="sticky top-24 text-right pr-8 space-y-8">
+						<div class="text-xs text-gray-600">
+							<div class="text-blue-400/50 font-mono mb-1">Published</div>
+							<div>Feb 8, 2026</div>
+						</div>
+						<div class="text-xs text-gray-600">
+							<div class="text-blue-400/50 font-mono mb-1">Reading</div>
+							<div>22 minutes</div>
+						</div>
+						<div class="text-xs text-gray-600">
+							<div class="text-blue-400/50 font-mono mb-1">Topics</div>
+							<div class="space-y-1 mt-2">
+								<div>Rust</div>
+								<div>Memory</div>
+								<div>Performance</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Main content -->
+				<div class="col-span-12 lg:col-span-6 px-4 lg:px-0">
+					<h2 class="font-sinistre text-3xl lg:text-4xl text-white mb-8 leading-tight">
+						Unsafe Rust: When and Why to Cross the Line
+					</h2>
+					
+					<div class="prose prose-invert max-w-none">
+						<p class="text-lg text-gray-300 leading-relaxed">
+							Rust's safety guarantees are its defining feature. The borrow checker, lifetimes, the type system they all conspire to prevent entire categories of bugs at compile time. But sometimes, you need to step outside these guarantees. The question is: when is it worth it?
+						</p>
+						
+						<h3 class="font-sinistre text-xl text-white mt-12 mb-4">The Performance Imperative</h3>
+						<p class="text-gray-400 leading-relaxed">
+							In our streaming platform, a critical hot path was processing 50,000 packets per second. The safe Rust version worked, but profiling revealed that bounds checks were consuming 12% of CPU time. Moving to unsafe with manual bounds verification in strategic locations cut that to 2%.
+						</p>
+						
+						<div class="my-8 p-6 bg-blue-950/20 border-l-2 border-blue-500/50">
+							<p class="text-blue-100/80 italic">
+								"Unsafe doesn't mean unreviewed. Every unsafe block in our codebase requires a comment explaining the invariants being upheld."
+							</p>
+						</div>
+						
+						<h3 class="font-sinistre text-xl text-white mt-12 mb-4">The FFI Boundary</h3>
+						<p class="text-gray-400 leading-relaxed">
+							When calling C libraries or writing code that will be called from C, unsafe is unavoidable. The key is to wrap it in safe abstractions as quickly as possible. A thin unsafe layer with a thick safe API on top.
+						</p>
+					</div>
+				</div>
+				
+				<!-- Right margin with pull quotes and notes -->
+				<div class="col-span-4 hidden lg:block">
+					<div class="sticky top-24 pl-12 space-y-12">
+						<!-- Pull quote -->
+						<div class="border-l border-blue-500/30 pl-6">
+							<p class="text-blue-200/60 italic text-sm leading-relaxed">
+								"Every use of unsafe should come with a proof argument explaining why the invariants are maintained."
+							</p>
+						</div>
+						
+						<!-- Side note -->
+						<div class="text-xs text-gray-600 leading-relaxed">
+							<div class="text-blue-400/50 font-mono mb-2">Note</div>
+							<p>
+								The Rust compiler team is actively working on reducing the need for unsafe in performance-critical code. Features like portable SIMD are making safe high-performance code more accessible.
+							</p>
+						</div>
+						
+						<!-- Related link -->
+						<div class="text-xs">
+							<div class="text-blue-400/50 font-mono mb-2">See also</div>
+							<a href="#" class="text-gray-400 hover:text-blue-300 transition-colors">
+								The Rustonomicon: Dark Arts of Unsafe
+							</a>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 6: THE GRID BREAK -->
+		<!-- Mixed grid with full-width breaking elements -->
+		<!-- ============================================== -->
+		<section class="py-20 border-t border-[#90c5ff14]">
+			<div class="px-4 md:px-8 lg:px-16 mb-12">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-xl text-blue-400/30">𐰋𐰃</span>
+					<span class="font-sinistre text-sm text-gray-500 tracking-wider">THE GRID BREAK</span>
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</div>
+			</div>
+			
+			<div class="px-4 md:px-8 lg:px-16">
+				<!-- Normal grid items -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+					<article class="border border-[#90c5ff14] p-6 hover:border-blue-500/30 transition-colors cursor-pointer group">
+						<time class="text-xs text-gray-600 font-mono">Feb 2026</time>
+						<h3 class="font-sinistre text-xl mt-2 mb-2 text-white group-hover:text-blue-200 transition-colors">
+							Container Security Fundamentals
+						</h3>
+						<p class="text-gray-500 text-sm leading-relaxed">
+							Beyond scanning: runtime protection, network policies, and the principle of least privilege.
+						</p>
+					</article>
+					
+					<article class="border border-[#90c5ff14] p-6 hover:border-blue-500/30 transition-colors cursor-pointer group">
+						<time class="text-xs text-gray-600 font-mono">Feb 2026</time>
+						<h3 class="font-sinistre text-xl mt-2 mb-2 text-white group-hover:text-blue-200 transition-colors">
+							Kubernetes Operators: Build vs Buy
+						</h3>
+						<p class="text-gray-500 text-sm leading-relaxed">
+							When does it make sense to write your own operator? A framework for the decision.
+						</p>
+					</article>
+				</div>
+			</div>
+			
+			<!-- FULL WIDTH BREAK - Feature post -->
+			<article class="bg-gradient-to-r from-indigo-950/30 via-blue-950/20 to-indigo-950/30 py-16 px-4 md:px-8 lg:px-16 my-6 cursor-pointer group">
+				<div class="max-w-4xl">
+					<div class="flex items-center gap-2 mb-4">
+						<div class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></div>
+						<span class="text-xs text-indigo-300/70 font-mono uppercase tracking-wider">Deep Dive</span>
+					</div>
+					<h3 class="font-sinistre text-3xl lg:text-4xl text-white mb-4 group-hover:text-indigo-100 transition-colors">
+						Inside the Linux Scheduler: A Practical Guide
+					</h3>
+					<p class="text-gray-400 leading-relaxed max-w-2xl mb-6">
+						Understanding CFS, deadline scheduling, and how to tune your system for different workloads. With real production examples from our streaming infrastructure.
+					</p>
+					<div class="flex items-center gap-6 text-sm text-gray-500">
+						<span>45 min read</span>
+						<span class="text-indigo-400/60">Part of the Linux Internals series</span>
+					</div>
+				</div>
+			</article>
+			
+			<div class="px-4 md:px-8 lg:px-16">
+				<!-- More grid items -->
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<article class="border border-[#90c5ff14] p-6 hover:border-blue-500/30 transition-colors cursor-pointer group">
+						<time class="text-xs text-gray-600 font-mono">Jan 2026</time>
+						<h3 class="font-sinistre text-lg mt-2 mb-2 text-white group-hover:text-blue-200 transition-colors">
+							Quick Tip: Using perf
+						</h3>
+						<p class="text-gray-500 text-sm">5 min</p>
+					</article>
+					
+					<article class="border border-[#90c5ff14] p-6 hover:border-blue-500/30 transition-colors cursor-pointer group">
+						<time class="text-xs text-gray-600 font-mono">Jan 2026</time>
+						<h3 class="font-sinistre text-lg mt-2 mb-2 text-white group-hover:text-blue-200 transition-colors">
+							eBPF for Observability
+						</h3>
+						<p class="text-gray-500 text-sm">12 min</p>
+					</article>
+					
+					<article class="border border-[#90c5ff14] p-6 hover:border-blue-500/30 transition-colors cursor-pointer group">
+						<time class="text-xs text-gray-600 font-mono">Jan 2026</time>
+						<h3 class="font-sinistre text-lg mt-2 mb-2 text-white group-hover:text-blue-200 transition-colors">
+							Memory Allocators Compared
+						</h3>
+						<p class="text-gray-500 text-sm">18 min</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 7: THE TIMELINE -->
+		<!-- Vertical timeline with branching posts -->
+		<!-- ============================================== -->
+		<section class="py-24 px-4 md:px-8 lg:px-16 relative overflow-hidden">
+			<div class="flex items-center gap-3 mb-16">
+				<span class="font-oldturcic text-xl text-blue-400/30">𐰋𐰃𐰃</span>
+				<span class="font-sinistre text-sm text-gray-500 tracking-wider">THE TIMELINE</span>
+				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+			</div>
+			
+			<!-- Timeline container -->
+			<div class="max-w-5xl mx-auto relative">
+				<!-- Central line -->
+				<div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500/50 via-blue-400/30 to-transparent -translate-x-1/2"></div>
+				
+				<!-- Timeline entries -->
+				<div class="space-y-24">
+					<!-- Entry 1 - Right -->
+					<div class="grid grid-cols-2 gap-8">
+						<div class="text-right pr-8">
+							<time class="text-sm text-blue-400/60 font-mono">2026</time>
+						</div>
+						<div class="relative pl-8">
+							<div class="absolute left-0 top-2 w-3 h-3 rounded-full bg-blue-400 border-4 border-[#0d0e12] -translate-x-1/2"></div>
+							<article class="cursor-pointer group">
+								<h3 class="font-sinistre text-2xl text-white group-hover:text-blue-200 transition-colors mb-2">
+									The Streaming Platform Retrospective
+								</h3>
+								<p class="text-gray-500 leading-relaxed">
+									Two years, 17,000 users, 99.9% uptime. What we built, what we learned, what we'd do differently.
+								</p>
+							</article>
+						</div>
+					</div>
+					
+					<!-- Entry 2 - Left -->
+					<div class="grid grid-cols-2 gap-8">
+						<div class="text-right pr-8">
+							<article class="cursor-pointer group">
+								<h3 class="font-sinistre text-2xl text-white group-hover:text-blue-200 transition-colors mb-2">
+									Migrating to Rust: A Post-Mortem
+								</h3>
+								<p class="text-gray-500 leading-relaxed">
+									We rewrote our video transcoding pipeline. The timeline, the challenges, the results.
+								</p>
+							</article>
+						</div>
+						<div class="relative pl-8">
+							<div class="absolute left-0 top-2 w-3 h-3 rounded-full bg-blue-400/70 border-4 border-[#0d0e12] -translate-x-1/2"></div>
+							<time class="text-sm text-blue-400/50 font-mono">Late 2025</time>
+						</div>
+					</div>
+					
+					<!-- Entry 3 - Right -->
+					<div class="grid grid-cols-2 gap-8">
+						<div class="text-right pr-8">
+							<time class="text-sm text-blue-400/40 font-mono">Mid 2025</time>
+						</div>
+						<div class="relative pl-8">
+							<div class="absolute left-0 top-2 w-3 h-3 rounded-full bg-blue-400/50 border-4 border-[#0d0e12] -translate-x-1/2"></div>
+							<article class="cursor-pointer group">
+								<h3 class="font-sinistre text-xl text-gray-300 group-hover:text-blue-200 transition-colors mb-2">
+									Learning Go: First Impressions
+								</h3>
+								<p class="text-gray-600 leading-relaxed text-sm">
+									Coming from Node.js, Go felt like a breath of fresh air. Simple, fast, opinionated.
+								</p>
+							</article>
+						</div>
+					</div>
+					
+					<!-- Entry 4 - Left -->
+					<div class="grid grid-cols-2 gap-8">
+						<div class="text-right pr-8">
+							<article class="cursor-pointer group opacity-60">
+								<h3 class="font-sinistre text-xl text-gray-400 group-hover:text-blue-200 transition-colors mb-2">
+									The Node.js Years
+								</h3>
+								<p class="text-gray-600 leading-relaxed text-sm">
+									Where it all started. Express, callbacks, and learning to love the event loop.
+								</p>
+							</article>
+						</div>
+						<div class="relative pl-8">
+							<div class="absolute left-0 top-2 w-3 h-3 rounded-full bg-blue-400/30 border-4 border-[#0d0e12] -translate-x-1/2"></div>
+							<time class="text-sm text-blue-400/30 font-mono">2024</time>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 8: THE STAGGER -->
+		<!-- Dramatically offset alternating layout -->
+		<!-- ============================================== -->
+		<section class="py-24 border-t border-[#90c5ff14] overflow-hidden">
+			<div class="px-4 md:px-8 lg:px-16 mb-16">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-xl text-blue-400/30">𐰋𐰃𐰃𐰃</span>
+					<span class="font-sinistre text-sm text-gray-500 tracking-wider">THE STAGGER</span>
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</div>
+			</div>
+			
+			<div class="space-y-20">
+				<!-- Post 1 - Far left -->
+				<article class="max-w-2xl ml-4 md:ml-8 lg:ml-16 cursor-pointer group">
+					<time class="text-xs text-gray-600 font-mono block mb-2">Feb 2026</time>
+					<h3 class="font-sinistre text-3xl text-white group-hover:text-blue-200 transition-colors mb-3">
+						Redis Internals: The Skip List
+					</h3>
+					<p class="text-gray-500 leading-relaxed">
+						How Redis sorted sets achieve O(log n) complexity with a beautifully simple data structure.
+					</p>
+					<div class="h-px w-32 bg-gradient-to-r from-blue-500/50 to-transparent mt-6"></div>
+				</article>
+				
+				<!-- Post 2 - Far right -->
+				<article class="max-w-2xl ml-auto mr-4 md:mr-8 lg:mr-16 text-right cursor-pointer group">
+					<time class="text-xs text-gray-600 font-mono block mb-2">Jan 2026</time>
+					<h3 class="font-sinistre text-3xl text-white group-hover:text-blue-200 transition-colors mb-3">
+						The Case Against DRY
+					</h3>
+					<p class="text-gray-500 leading-relaxed">
+						Sometimes repetition is clarity. When abstraction hurts more than it helps.
+					</p>
+					<div class="h-px w-32 bg-gradient-to-l from-blue-500/50 to-transparent mt-6 ml-auto"></div>
+				</article>
+				
+				<!-- Post 3 - Center-left -->
+				<article class="max-w-2xl mx-auto lg:ml-[20%] cursor-pointer group">
+					<time class="text-xs text-gray-600 font-mono block mb-2">Jan 2026</time>
+					<h3 class="font-sinistre text-3xl text-white group-hover:text-blue-200 transition-colors mb-3">
+						Debugging Memory Leaks in Production
+					</h3>
+					<p class="text-gray-500 leading-relaxed">
+						A systematic approach: from symptoms to root cause in a live system.
+					</p>
+					<div class="h-px w-32 bg-gradient-to-r from-blue-500/50 to-transparent mt-6"></div>
+				</article>
+				
+				<!-- Post 4 - Center-right -->
+				<article class="max-w-2xl mx-auto lg:mr-[15%] lg:ml-auto text-right cursor-pointer group">
+					<time class="text-xs text-gray-600 font-mono block mb-2">Dec 2025</time>
+					<h3 class="font-sinistre text-3xl text-white group-hover:text-blue-200 transition-colors mb-3">
+						GraphQL: Lessons from the Trenches
+					</h3>
+					<p class="text-gray-500 leading-relaxed">
+						It's not REST. Stop treating it like REST. A mindset shift for API design.
+					</p>
+					<div class="h-px w-32 bg-gradient-to-l from-blue-500/50 to-transparent mt-6 ml-auto"></div>
+				</article>
+			</div>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 9: THE EXPAND -->
+		<!-- Minimal list that expands on interaction -->
+		<!-- ============================================== -->
+		<section class="py-24 px-4 md:px-8 lg:px-16">
+			<div class="flex items-center gap-3 mb-16">
+				<span class="font-oldturcic text-xl text-blue-400/30">𐰃𐰏</span>
+				<span class="font-sinistre text-sm text-gray-500 tracking-wider">THE EXPAND</span>
+				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+			</div>
+			
+			<div class="max-w-3xl mx-auto">
+				<!-- Expandable items -->
+				<div class="divide-y divide-[#90c5ff14]">
+					<!-- Item 1 -->
+					<details class="group py-6">
+						<summary class="flex items-center justify-between cursor-pointer list-none">
+							<div class="flex items-center gap-4">
+								<span class="font-mono text-xs text-gray-600">01</span>
+								<h3 class="font-sinistre text-xl text-white group-hover:text-blue-200 transition-colors">
+									Monorepo or Polyrepo?
+								</h3>
+							</div>
+							<div class="w-6 h-6 rounded-full border border-[#90c5ff30] flex items-center justify-center group-open:rotate-45 transition-transform">
+								<span class="text-blue-400/60">+</span>
+							</div>
+						</summary>
+						<div class="pt-6 pl-12 pr-6">
+							<p class="text-gray-400 leading-relaxed mb-4">
+								After managing both, here's my take: monorepos win for teams under 50 developers. The coordination overhead of polyrepos isn't worth it until you hit serious scale. But there's nuance...
+							</p>
+							<div class="flex items-center gap-4 text-sm text-gray-600">
+								<span>8 min read</span>
+								<span class="text-blue-400/50 hover:text-blue-400 transition-colors cursor-pointer">Continue reading</span>
+							</div>
+						</div>
+					</details>
+					
+					<!-- Item 2 -->
+					<details class="group py-6">
+						<summary class="flex items-center justify-between cursor-pointer list-none">
+							<div class="flex items-center gap-4">
+								<span class="font-mono text-xs text-gray-600">02</span>
+								<h3 class="font-sinistre text-xl text-white group-hover:text-blue-200 transition-colors">
+									Testing in Production
+								</h3>
+							</div>
+							<div class="w-6 h-6 rounded-full border border-[#90c5ff30] flex items-center justify-center group-open:rotate-45 transition-transform">
+								<span class="text-blue-400/60">+</span>
+							</div>
+						</summary>
+						<div class="pt-6 pl-12 pr-6">
+							<p class="text-gray-400 leading-relaxed mb-4">
+								Not as reckless as it sounds. Feature flags, canary deployments, and observability make production testing safer than staging that doesn't reflect reality.
+							</p>
+							<div class="flex items-center gap-4 text-sm text-gray-600">
+								<span>12 min read</span>
+								<span class="text-blue-400/50 hover:text-blue-400 transition-colors cursor-pointer">Continue reading</span>
+							</div>
+						</div>
+					</details>
+					
+					<!-- Item 3 -->
+					<details class="group py-6">
+						<summary class="flex items-center justify-between cursor-pointer list-none">
+							<div class="flex items-center gap-4">
+								<span class="font-mono text-xs text-gray-600">03</span>
+								<h3 class="font-sinistre text-xl text-white group-hover:text-blue-200 transition-colors">
+									The Myth of the 10x Developer
+								</h3>
+							</div>
+							<div class="w-6 h-6 rounded-full border border-[#90c5ff30] flex items-center justify-center group-open:rotate-45 transition-transform">
+								<span class="text-blue-400/60">+</span>
+							</div>
+						</summary>
+						<div class="pt-6 pl-12 pr-6">
+							<p class="text-gray-400 leading-relaxed mb-4">
+								The best engineers I've worked with aren't 10x faster at coding. They're 10x better at knowing what not to build, what to simplify, and when to say no.
+							</p>
+							<div class="flex items-center gap-4 text-sm text-gray-600">
+								<span>6 min read</span>
+								<span class="text-blue-400/50 hover:text-blue-400 transition-colors cursor-pointer">Continue reading</span>
+							</div>
+						</div>
+					</details>
+					
+					<!-- Item 4 -->
+					<details class="group py-6">
+						<summary class="flex items-center justify-between cursor-pointer list-none">
+							<div class="flex items-center gap-4">
+								<span class="font-mono text-xs text-gray-600">04</span>
+								<h3 class="font-sinistre text-xl text-white group-hover:text-blue-200 transition-colors">
+									WebSockets at Scale
+								</h3>
+							</div>
+							<div class="w-6 h-6 rounded-full border border-[#90c5ff30] flex items-center justify-center group-open:rotate-45 transition-transform">
+								<span class="text-blue-400/60">+</span>
+							</div>
+						</summary>
+						<div class="pt-6 pl-12 pr-6">
+							<p class="text-gray-400 leading-relaxed mb-4">
+								10,000 concurrent connections per server. How we architected our real-time infrastructure and the lessons learned about heartbeats, reconnection, and state sync.
+							</p>
+							<div class="flex items-center gap-4 text-sm text-gray-600">
+								<span>15 min read</span>
+								<span class="text-blue-400/50 hover:text-blue-400 transition-colors cursor-pointer">Continue reading</span>
+							</div>
+						</div>
+					</details>
+					
+					<!-- Item 5 -->
+					<details class="group py-6">
+						<summary class="flex items-center justify-between cursor-pointer list-none">
+							<div class="flex items-center gap-4">
+								<span class="font-mono text-xs text-gray-600">05</span>
+								<h3 class="font-sinistre text-xl text-white group-hover:text-blue-200 transition-colors">
+									Why I Still Use Make
+								</h3>
+							</div>
+							<div class="w-6 h-6 rounded-full border border-[#90c5ff30] flex items-center justify-center group-open:rotate-45 transition-transform">
+								<span class="text-blue-400/60">+</span>
+							</div>
+						</summary>
+						<div class="pt-6 pl-12 pr-6">
+							<p class="text-gray-400 leading-relaxed mb-4">
+								In an age of task runners and build tools, Make remains my go-to. Universal, dependency-aware, and available on every Unix system since 1976.
+							</p>
+							<div class="flex items-center gap-4 text-sm text-gray-600">
+								<span>5 min read</span>
+								<span class="text-blue-400/50 hover:text-blue-400 transition-colors cursor-pointer">Continue reading</span>
+							</div>
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- ============================================== -->
+		<!-- BLOG 10: THE FLOAT -->
+		<!-- Magazine-style with pull quotes and sidebar -->
+		<!-- ============================================== -->
+		<section class="py-24 border-t border-[#90c5ff14] relative">
+			<div class="px-4 md:px-8 lg:px-16 mb-16">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-xl text-blue-400/30">𐰏</span>
+					<span class="font-sinistre text-sm text-gray-500 tracking-wider">THE FLOAT</span>
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</div>
+			</div>
+			
+			<article class="px-4 md:px-8 lg:px-16">
+				<div class="max-w-6xl mx-auto relative">
+					<!-- Floating pull quote - positioned absolutely on larger screens -->
+					<div class="lg:absolute lg:right-0 lg:top-0 lg:w-64 xl:w-80 mb-8 lg:mb-0">
+						<div class="lg:sticky lg:top-24 p-6 border-l-2 border-blue-500/50 bg-gradient-to-r from-blue-950/20 to-transparent">
+							<p class="text-xl text-blue-100/80 italic leading-relaxed font-sinistre">
+								"The best code is the code you don't have to write."
+							</p>
+							<p class="text-sm text-gray-600 mt-4">From this article</p>
+						</div>
+					</div>
+					
+					<!-- Main content with room for float -->
+					<div class="lg:max-w-[calc(100%-20rem)] xl:max-w-[calc(100%-24rem)]">
+						<header class="mb-12">
+							<time class="text-sm text-gray-600 font-mono block mb-4">February 2026</time>
+							<h2 class="font-sinistre text-4xl lg:text-5xl text-white leading-tight mb-6">
+								The Art of Deleting Code
+							</h2>
+							<p class="text-xl text-gray-400 leading-relaxed">
+								In three years, we deleted 40% of our codebase. Our velocity doubled. This is the story of learning to let go.
+							</p>
+						</header>
+						
+						<div class="prose prose-invert max-w-none">
+							<p class="text-gray-300 leading-loose text-lg">
+								Every line of code is a liability. It has to be understood, maintained, tested, and eventually replaced. Yet we treat code like an asset, celebrating additions and fearing deletions. This mindset is backwards.
+							</p>
+							
+							<p class="text-gray-400 leading-loose mt-6">
+								When I joined the team, our codebase was 180,000 lines. Most of it worked. Some of it was dead code nobody dared to touch. Much of it was "defensive" code written for edge cases that never materialized. The fear of deletion had created a sedimentary layer of complexity.
+							</p>
+							
+							<!-- Inline callout box -->
+							<div class="my-10 p-6 bg-[#0a0b0d] border border-[#90c5ff14] relative">
+								<div class="absolute -top-3 left-6 bg-[#0d0e12] px-2 text-xs text-blue-400/60 font-mono">INSIGHT</div>
+								<p class="text-gray-300">
+									We measured code quality by what we removed, not what we added. Every PR that reduced net lines of code got celebrated.
+								</p>
+							</div>
+							
+							<h3 class="font-sinistre text-2xl text-white mt-12 mb-4">The Three-Month Rule</h3>
+							<p class="text-gray-400 leading-loose">
+								If a feature hasn't been used in three months, we delete it. No archiving, no commenting out, no "we might need it later." Delete. If we need it again, we'll build it better with fresh understanding. This simple rule eliminated 15,000 lines of code in the first quarter.
+							</p>
+							
+							<h3 class="font-sinistre text-2xl text-white mt-12 mb-4">The Result</h3>
+							<p class="text-gray-400 leading-loose">
+								Today our codebase is 110,000 lines. Build times dropped 40%. New developers onboard in days, not weeks. Bug density fell by half. The code that remains is the code that matters.
+							</p>
+						</div>
+						
+						<!-- Article footer -->
+						<footer class="mt-16 pt-8 border-t border-[#90c5ff14] flex items-center justify-between">
+							<div class="flex items-center gap-4">
+								<div class="w-10 h-10 rounded-full bg-blue-500/20 border border-blue-400/30 flex items-center justify-center">
+									<span class="font-sinistre text-sm text-blue-300">AT</span>
+								</div>
+								<div>
+									<div class="text-white font-sinistre">Ahmet Tarik Duyar</div>
+									<div class="text-xs text-gray-600">Full-Stack Engineer</div>
+								</div>
+							</div>
+							<div class="text-sm text-gray-600">
+								18 min read
+							</div>
+						</footer>
+					</div>
+				</div>
+			</article>
+		</section>
+
+
+		<!-- Footer -->
+		<footer class="py-16 px-4 md:px-8 lg:px-16 border-t border-[#90c5ff14]">
+			<div class="flex flex-col md:flex-row items-center justify-between gap-6">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-xl text-blue-400/30">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</span>
+					<span class="text-gray-500">|</span>
+					<span class="font-sinistre text-gray-400">Ahmet Tarik Duyar</span>
+				</div>
+				<div class="text-sm text-gray-600 font-mono">
+					10 INTEGRATED BLOG DESIGNS // /final/14
+				</div>
+				<div class="flex items-center gap-4 text-sm text-gray-500">
+					<a href="https://github.com/atduyar" target="_blank" class="hover:text-blue-400 transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" class="hover:text-blue-400 transition-colors">LinkedIn</a>
+					<a href="mailto:contact@atduyar.com" class="hover:text-blue-400 transition-colors">Contact</a>
+				</div>
+			</div>
+		</footer>
+	</main>
+</BaseLayout>
+
+<style>
+	@keyframes fade-in {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	
+	@keyframes slide-up {
+		from { opacity: 0; transform: translateY(20px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	
+	.animate-fade-in {
+		animation: fade-in 0.8s ease-out forwards;
+		opacity: 0;
+	}
+	
+	.animate-slide-up {
+		animation: slide-up 0.6s ease-out forwards;
+		opacity: 0;
+	}
+	
+	/* Custom prose styles */
+	.prose p {
+		margin-bottom: 0;
+	}
+	
+	/* Details marker removal */
+	details summary::-webkit-details-marker {
+		display: none;
+	}
+</style>
