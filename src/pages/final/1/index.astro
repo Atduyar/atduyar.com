@@ -1,0 +1,326 @@
+---
+import BackgroundMarquee from "../../../components/BackgroundMarquee.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Ahmet Tarik Duyar" description="Full-Stack Software Engineer Portfolio" bodyClass="bg-[#f5f0e8] text-[#1a1a1a] w-screen overflow-x-hidden selection:bg-[#ff3333] selection:text-white">
+	<main class="max-w-[1600px] mx-auto min-h-dvh relative">
+		<!-- Exposed grid lines -->
+		<div class="fixed inset-0 pointer-events-none z-10 opacity-20">
+			<div class="absolute left-1/4 top-0 bottom-0 w-px bg-[#1a1a1a]"></div>
+			<div class="absolute left-1/2 top-0 bottom-0 w-px bg-[#1a1a1a]"></div>
+			<div class="absolute left-3/4 top-0 bottom-0 w-px bg-[#1a1a1a]"></div>
+		</div>
+
+		<!-- Navigation -->
+		<nav class="py-6 px-4 md:px-8 border-b-2 border-[#1a1a1a] sticky top-0 bg-[#f5f0e8] z-40">
+			<div class="flex justify-between items-center">
+				<a href="#hero" class="group flex items-center gap-3">
+					<div class="w-12 h-12 border-2 border-[#1a1a1a] bg-[#ff3333] flex items-center justify-center rotate-3 group-hover:rotate-0 transition-transform">
+						<span class="font-sinistre text-2xl text-white">AT</span>
+					</div>
+				</a>
+				<ul class="flex gap-2 md:gap-6">
+					<li><a href="#about" class="nav-link font-sinistre text-sm md:text-lg uppercase tracking-[0.3em] hover:bg-[#1a1a1a] hover:text-[#f5f0e8] px-3 py-2 transition-all border border-transparent hover:border-[#1a1a1a]">About</a></li>
+					<li><a href="#work" class="nav-link font-sinistre text-sm md:text-lg uppercase tracking-[0.3em] hover:bg-[#1a1a1a] hover:text-[#f5f0e8] px-3 py-2 transition-all border border-transparent hover:border-[#1a1a1a]">Work</a></li>
+					<li><a href="#contact" class="nav-link font-sinistre text-sm md:text-lg uppercase tracking-[0.3em] hover:bg-[#ff3333] hover:text-white px-3 py-2 transition-all border border-transparent hover:border-[#ff3333]">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Hero Section - Brutalist Editorial -->
+		<section id="hero" class="min-h-[90vh] flex flex-col justify-between border-b-2 border-[#1a1a1a] relative overflow-hidden">
+			<div class="grid grid-cols-12 flex-1">
+				<!-- Left column - Issue info -->
+				<div class="col-span-12 md:col-span-3 border-r-2 border-[#1a1a1a] p-4 md:p-8 flex flex-col justify-between">
+					<div>
+						<p class="font-oldturcic text-[#1a1a1a]/40 text-xs tracking-[0.5em] uppercase mb-2">Vol. I</p>
+						<p class="font-sinistre text-6xl md:text-8xl leading-none">26</p>
+						<p class="font-sinistre text-xl uppercase tracking-widest">Feb</p>
+					</div>
+					<div class="hidden md:block">
+						<p class="text-xs uppercase tracking-[0.2em] text-[#1a1a1a]/60 mb-2">Discipline</p>
+						<p class="font-sinistre text-lg">Software</p>
+						<p class="font-sinistre text-lg">Engineering</p>
+					</div>
+				</div>
+
+				<!-- Main content -->
+				<div class="col-span-12 md:col-span-9 p-4 md:p-8 lg:p-16 flex flex-col justify-center relative">
+					<div class="absolute -top-20 -right-20 w-96 h-96 bg-[#ff3333] opacity-10 rounded-full blur-[100px]"></div>
+					
+					<p class="text-xs uppercase tracking-[0.5em] mb-8 flex items-center gap-4">
+						<span class="w-12 h-px bg-[#1a1a1a]"></span>
+						Full-Stack Developer
+					</p>
+					
+					<h1 class="text-[12vw] md:text-[10vw] lg:text-[8vw] font-sinistre leading-[0.85] mb-8 -ml-1">
+						<span class="block animate-hero-reveal" style="animation-delay: 0.1s;">AHMET</span>
+						<span class="block animate-hero-reveal text-[#ff3333] -mt-4 md:-mt-6" style="animation-delay: 0.2s;">TARIK</span>
+						<span class="block animate-hero-reveal" style="animation-delay: 0.3s;">DUYAR</span>
+					</h1>
+					
+					<div class="flex flex-col md:flex-row gap-8 items-start mt-auto">
+						<p class="text-lg md:text-xl max-w-md leading-relaxed opacity-0 animate-fade-in" style="animation-delay: 0.6s;">
+							Building robust systems and scalable architectures. Passionate about low-level programming, Linux, and elegant solutions.
+						</p>
+						<div class="flex gap-4 opacity-0 animate-fade-in" style="animation-delay: 0.8s;">
+							<a href="#work" class="px-8 py-4 bg-[#1a1a1a] text-[#f5f0e8] font-sinistre text-lg uppercase tracking-widest hover:bg-[#ff3333] transition-colors">
+								See Work
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Bottom strip -->
+			<div class="border-t-2 border-[#1a1a1a] py-4 px-4 md:px-8 flex justify-between items-center text-xs uppercase tracking-[0.2em]">
+				<span>Scroll to explore</span>
+				<span class="hidden md:block">Based in Sarajevo</span>
+				<span>2024</span>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="border-b-2 border-[#1a1a1a]">
+			<div class="grid grid-cols-12">
+				<!-- Section label -->
+				<div class="col-span-12 md:col-span-2 border-r-2 border-[#1a1a1a] p-4 md:p-8 border-b-2 md:border-b-0">
+					<p class="font-sinistre text-6xl md:text-8xl md:vertical-rl md:rotate-180">01</p>
+					<p class="font-sinistre text-xl uppercase tracking-widest mt-4">About</p>
+				</div>
+				
+				<!-- Content -->
+				<div class="col-span-12 md:col-span-10 p-4 md:p-8 lg:p-16">
+					<h2 class="text-4xl md:text-6xl lg:text-7xl font-sinistre mb-12 leading-tight">
+						A developer who builds <span class="text-[#ff3333]">systems</span> that scale
+					</h2>
+					
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+						<div class="space-y-6 text-lg leading-relaxed">
+							<p>
+								I'm a Full-Stack Software Engineer specializing in backend architectures, database design, and critical systems management.
+							</p>
+							<p>
+								At <strong>Deniz Egece Co. Ltd.</strong>, I architected a streaming platform serving <span class="bg-[#ff3333] text-white px-2">17,000+ paid users</span>, handling video transcoding, payment systems, and real-time analytics.
+							</p>
+						</div>
+						<div class="space-y-6 text-lg leading-relaxed">
+							<p>
+								Currently an <strong>Honor Student</strong> in Software Engineering at International University of Sarajevo, focused on computer science fundamentals.
+							</p>
+							<p>
+								My toolkit: <strong>C, Rust, TypeScript, Linux</strong>. I believe in writing code that lasts.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills Section -->
+		<section class="border-b-2 border-[#1a1a1a] bg-[#1a1a1a] text-[#f5f0e8]">
+			<div class="grid grid-cols-12">
+				<div class="col-span-12 md:col-span-2 border-r-2 border-[#f5f0e8]/20 p-4 md:p-8 border-b-2 md:border-b-0 border-[#f5f0e8]/20">
+					<p class="font-sinistre text-6xl md:text-8xl md:vertical-rl md:rotate-180 text-[#ff3333]">02</p>
+					<p class="font-sinistre text-xl uppercase tracking-widest mt-4">Skills</p>
+				</div>
+				
+				<div class="col-span-12 md:col-span-10 p-4 md:p-8 lg:p-16">
+					<div class="grid grid-cols-2 md:grid-cols-3 gap-0 border-2 border-[#f5f0e8]/20">
+						{[
+							{ title: "Backend", desc: "Node.js, Rust, Go", accent: true },
+							{ title: "Database", desc: "PostgreSQL, Redis" },
+							{ title: "Systems", desc: "C, Linux, Low-level" },
+							{ title: "Frontend", desc: "React, TypeScript" },
+							{ title: "DevOps", desc: "Docker, K8s, AWS" },
+							{ title: "Streaming", desc: "FFmpeg, Real-time", accent: true }
+						].map((skill, i) => (
+							<div class={`p-6 md:p-8 border border-[#f5f0e8]/20 group hover:bg-[#ff3333] transition-colors cursor-default ${skill.accent ? 'bg-[#ff3333]' : ''}`}>
+								<p class="font-sinistre text-2xl md:text-3xl mb-2">{skill.title}</p>
+								<p class="text-sm opacity-60 group-hover:opacity-100">{skill.desc}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="work" class="border-b-2 border-[#1a1a1a]">
+			<div class="grid grid-cols-12">
+				<div class="col-span-12 md:col-span-2 border-r-2 border-[#1a1a1a] p-4 md:p-8 border-b-2 md:border-b-0">
+					<p class="font-sinistre text-6xl md:text-8xl md:vertical-rl md:rotate-180">03</p>
+					<p class="font-sinistre text-xl uppercase tracking-widest mt-4">Work</p>
+				</div>
+				
+				<div class="col-span-12 md:col-span-10">
+					<!-- Project 1 -->
+					<div class="border-b-2 border-[#1a1a1a] group hover:bg-[#1a1a1a] hover:text-[#f5f0e8] transition-colors">
+						<div class="p-4 md:p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+							<div class="lg:col-span-2">
+								<p class="text-xs uppercase tracking-[0.3em] mb-4 opacity-60">Featured Project</p>
+								<h3 class="font-sinistre text-4xl md:text-5xl lg:text-6xl mb-6">Streaming Platform</h3>
+								<p class="text-lg leading-relaxed max-w-xl">
+									Full-featured streaming platform serving 17,000+ paid users. Video transcoding pipelines, payment integrations, and real-time analytics.
+								</p>
+							</div>
+							<div class="flex flex-col justify-between">
+								<div class="flex flex-wrap gap-2">
+									<span class="px-3 py-1 text-xs uppercase tracking-wider border border-current">Node.js</span>
+									<span class="px-3 py-1 text-xs uppercase tracking-wider border border-current">PostgreSQL</span>
+									<span class="px-3 py-1 text-xs uppercase tracking-wider border border-current">FFmpeg</span>
+								</div>
+								<p class="text-sm uppercase tracking-widest mt-4 opacity-60">Deniz Egece Co.</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Project 2 -->
+					<div class="group hover:bg-[#ff3333] hover:text-white transition-colors">
+						<div class="p-4 md:p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-3 gap-8">
+							<div class="lg:col-span-2">
+								<p class="text-xs uppercase tracking-[0.3em] mb-4 opacity-60">Personal Project</p>
+								<h3 class="font-sinistre text-4xl md:text-5xl lg:text-6xl mb-6">This Portfolio</h3>
+								<p class="text-lg leading-relaxed max-w-xl">
+									Custom portfolio with Sinistre variable font, Old Turkic script heritage elements, and meticulously crafted interactions.
+								</p>
+							</div>
+							<div class="flex flex-col justify-between">
+								<div class="flex flex-wrap gap-2">
+									<span class="px-3 py-1 text-xs uppercase tracking-wider border border-current">Astro</span>
+									<span class="px-3 py-1 text-xs uppercase tracking-wider border border-current">Tailwind</span>
+									<span class="px-3 py-1 text-xs uppercase tracking-wider border border-current">Cloudflare</span>
+								</div>
+								<p class="text-sm uppercase tracking-widest mt-4 opacity-60">atduyar.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Experience Section -->
+		<section class="border-b-2 border-[#1a1a1a]">
+			<div class="grid grid-cols-12">
+				<div class="col-span-12 md:col-span-2 border-r-2 border-[#1a1a1a] p-4 md:p-8 border-b-2 md:border-b-0">
+					<p class="font-sinistre text-6xl md:text-8xl md:vertical-rl md:rotate-180">04</p>
+					<p class="font-sinistre text-xl uppercase tracking-widest mt-4">Path</p>
+				</div>
+				
+				<div class="col-span-12 md:col-span-10 p-4 md:p-8 lg:p-16">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+						<div class="border-2 border-[#1a1a1a] p-8 hover:bg-[#1a1a1a] hover:text-[#f5f0e8] transition-colors group">
+							<p class="text-xs uppercase tracking-[0.3em] mb-4 text-[#ff3333] group-hover:text-[#ff3333]">2023 - Present</p>
+							<h3 class="font-sinistre text-3xl mb-2">Full-Stack Developer</h3>
+							<p class="text-sm opacity-60 mb-4">Deniz Egece Co. Ltd.</p>
+							<p class="text-sm leading-relaxed">Led streaming infrastructure, database architecture, and user-facing applications.</p>
+						</div>
+						<div class="border-2 border-[#1a1a1a] border-l-0 md:border-l-0 border-t-0 md:border-t-2 p-8 hover:bg-[#ff3333] hover:text-white transition-colors group">
+							<p class="text-xs uppercase tracking-[0.3em] mb-4 text-[#ff3333] group-hover:text-white">2022 - Present</p>
+							<h3 class="font-sinistre text-3xl mb-2">Software Engineering</h3>
+							<p class="text-sm opacity-60 mb-4">Int'l University of Sarajevo</p>
+							<p class="text-sm leading-relaxed">Honor Student. Deep focus on CS fundamentals, algorithms, and system design.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="relative group">
+			<BackgroundMarquee class="group-has-[button:hover]:text-[#1a1a1a] duration-500 transition-all opacity-10">
+				𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰖𐰸: 𐰼𐰾𐰼: 𐰸𐰆𐰯: 𐰇𐰠𐱅𐰲𐰃: 𐰼𐱅𐰏𐰕: 𐰃𐰤𐰢: 𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰚𐰼𐰏𐰚: 𐰉𐰆𐰡𐰃: 𐰇𐰕𐰢: 𐰽𐰴𐰦𐰢: 𐰚𐰇𐰼𐰇𐰼: 𐰚𐰇𐰕𐰢: 𐰚𐰇𐰼𐰢𐰕: 𐱅𐰏: 𐰋𐰃𐰠𐰼: 𐰋𐰃𐰠𐰏𐰢: 𐰋𐰃𐰠𐰢𐰕: 𐱅𐰏: 𐰉𐰆𐰡𐰃: 𐰇𐰕𐰢: 𐰽𐰴𐰦𐰢: 𐰇𐰓: 𐱅𐰭𐰼𐰃: 𐰖𐰽𐰺: 𐰚𐰃𐰾𐰃: 𐰆𐰍𐰞𐰃: 𐰸𐰆𐰯: 𐰇𐰠𐰏𐰠𐰃: 𐱅𐰇𐰼𐰇𐰢𐰾:
+			</BackgroundMarquee>
+			
+			<div class="grid grid-cols-12 min-h-[80vh]">
+				<div class="col-span-12 md:col-span-2 border-r-2 border-[#1a1a1a] p-4 md:p-8 border-b-2 md:border-b-0">
+					<p class="font-sinistre text-6xl md:text-8xl md:vertical-rl md:rotate-180 text-[#ff3333]">05</p>
+					<p class="font-sinistre text-xl uppercase tracking-widest mt-4">Contact</p>
+				</div>
+				
+				<div class="col-span-12 md:col-span-10 p-4 md:p-8 lg:p-16 flex flex-col justify-center">
+					<h2 class="text-5xl md:text-7xl lg:text-8xl font-sinistre mb-8 leading-tight">
+						Let's build<br/>something <span class="text-[#ff3333]">great</span>
+					</h2>
+					
+					<form class="max-w-2xl space-y-8">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+							<div>
+								<label for="name" class="font-sinistre text-xs uppercase tracking-[0.3em] block mb-4">Your Name</label>
+								<input type="text" id="name" class="w-full bg-transparent border-b-2 border-[#1a1a1a] focus:border-[#ff3333] outline-none py-3 text-lg transition-colors" placeholder="John Doe" />
+							</div>
+							<div>
+								<label for="email" class="font-sinistre text-xs uppercase tracking-[0.3em] block mb-4">Email</label>
+								<input type="email" id="email" class="w-full bg-transparent border-b-2 border-[#1a1a1a] focus:border-[#ff3333] outline-none py-3 text-lg transition-colors" placeholder="john@example.com" />
+							</div>
+						</div>
+						<div>
+							<label for="message" class="font-sinistre text-xs uppercase tracking-[0.3em] block mb-4">Message</label>
+							<textarea id="message" rows="4" class="w-full bg-transparent border-b-2 border-[#1a1a1a] focus:border-[#ff3333] outline-none py-3 text-lg transition-colors resize-none" placeholder="Your message..."></textarea>
+						</div>
+						<div>
+							<button type="submit" class="px-12 py-4 bg-[#1a1a1a] text-[#f5f0e8] font-sinistre text-lg uppercase tracking-widest hover:bg-[#ff3333] transition-colors group">
+								Send Message
+								<span class="inline-block ml-3 transition-transform group-hover:translate-x-2">&rarr;</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<!-- Hover effect -->
+			<div class="select-none pointer-events-none absolute left-0 top-0 h-full w-full transition-[--x] duration-600 ease-out [--x:0%] group-has-[button:hover]:[--x:100%] opacity-20 from-[#ff3333] to-transparent mix-blend-multiply bg-radial-[circle_at_100%_100%,var(--tw-gradient-from)_var(--x)] group-has-[button:hover]:opacity-40"></div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="py-8 px-4 md:px-8 border-t-2 border-[#1a1a1a] bg-[#1a1a1a] text-[#f5f0e8]">
+			<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+				<div class="flex items-center gap-4">
+					<div class="w-10 h-10 border-2 border-[#f5f0e8] bg-[#ff3333] flex items-center justify-center">
+						<span class="font-sinistre text-lg text-white">AT</span>
+					</div>
+					<span class="font-sinistre uppercase tracking-widest">Ahmet Tarik Duyar</span>
+				</div>
+				<div class="flex gap-8 text-sm uppercase tracking-widest">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="hover:text-[#ff3333] transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="hover:text-[#ff3333] transition-colors">LinkedIn</a>
+					<a href="mailto:contact@atduyar.com" class="hover:text-[#ff3333] transition-colors">Email</a>
+				</div>
+				<p class="text-xs opacity-60">&copy; 2026</p>
+			</div>
+		</footer>
+	</main>
+</BaseLayout>
+
+<style>
+	@keyframes hero-reveal {
+		from { 
+			opacity: 0;
+			transform: translateY(100px) skewY(5deg);
+		}
+		to { 
+			opacity: 1;
+			transform: translateY(0) skewY(0deg);
+		}
+	}
+	
+	@keyframes fade-in {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	
+	.animate-hero-reveal {
+		animation: hero-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+		opacity: 0;
+	}
+	
+	.animate-fade-in {
+		animation: fade-in 0.8s ease-out forwards;
+	}
+	
+	/* Vertical text for section numbers */
+	.vertical-rl {
+		writing-mode: vertical-rl;
+	}
+</style>

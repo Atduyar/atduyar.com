@@ -1,0 +1,404 @@
+---
+import BackgroundMarquee from "../../../components/BackgroundMarquee.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Ahmet Tarik Duyar" description="Full-Stack Software Engineer Portfolio" bodyClass="bg-[#05050a] text-white w-screen overflow-x-hidden">
+	<!-- Aurora background -->
+	<div class="fixed inset-0 overflow-hidden pointer-events-none">
+		<div class="aurora aurora-1"></div>
+		<div class="aurora aurora-2"></div>
+		<div class="aurora aurora-3"></div>
+		<!-- Stars -->
+		<div class="stars"></div>
+	</div>
+
+	<main class="relative z-10 max-w-6xl mx-auto min-h-dvh">
+		<!-- Glass Navigation -->
+		<nav class="py-6 px-6 sticky top-4 mx-4 z-40 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl mt-4">
+			<div class="flex justify-between items-center">
+				<a href="#hero" class="group flex items-center gap-3">
+					<div class="w-10 h-10 rounded-full bg-gradient-to-br from-violet-500 via-fuchsia-500 to-cyan-400 p-[2px]">
+						<div class="w-full h-full rounded-full bg-[#05050a] flex items-center justify-center">
+							<img src="/favicon.svg" alt="Logo" class="w-6 h-6 group-hover:scale-110 transition-transform" />
+						</div>
+					</div>
+					<span class="font-sinistre text-lg tracking-wide bg-gradient-to-r from-violet-300 to-cyan-300 bg-clip-text text-transparent">Atduyar</span>
+				</a>
+				<ul class="flex gap-2 md:gap-6">
+					<li><a href="#about" class="nav-link font-sinistre text-sm md:text-base text-white/60 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/5">About</a></li>
+					<li><a href="#skills" class="nav-link font-sinistre text-sm md:text-base text-white/60 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/5">Skills</a></li>
+					<li><a href="#work" class="nav-link font-sinistre text-sm md:text-base text-white/60 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/5">Work</a></li>
+					<li><a href="#contact" class="nav-link font-sinistre text-sm md:text-base bg-gradient-to-r from-violet-500/20 to-cyan-500/20 border border-violet-500/30 px-4 py-2 rounded-lg hover:from-violet-500/30 hover:to-cyan-500/30 transition-all">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section id="hero" class="min-h-[90vh] flex flex-col justify-center px-6 py-24 relative">
+			<div class="max-w-4xl">
+				<div class="flex items-center gap-4 mb-8 animate-float-in" style="animation-delay: 0.1s;">
+					<div class="h-px w-12 bg-gradient-to-r from-violet-500 to-transparent"></div>
+					<p class="font-oldturcic text-violet-300/60 text-sm tracking-[0.4em] uppercase">Software Engineer</p>
+				</div>
+				
+				<h1 class="text-5xl sm:text-7xl lg:text-8xl font-sinistre leading-[0.95] mb-8">
+					<span class="block animate-float-in" style="animation-delay: 0.2s;">Hello, I'm</span>
+					<span class="block animate-float-in bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent" style="animation-delay: 0.3s;">Ahmet Tarik</span>
+					<span class="block animate-float-in" style="animation-delay: 0.4s;">Duyar</span>
+				</h1>
+				
+				<p class="text-xl text-white/60 max-w-lg mb-12 animate-float-in leading-relaxed" style="animation-delay: 0.6s;">
+					Crafting elegant backend systems and scalable architectures. Passionate about C, Rust, and the depths of Linux.
+				</p>
+				
+				<div class="flex flex-wrap gap-4 animate-float-in" style="animation-delay: 0.8s;">
+					<a href="#work" class="group relative px-8 py-4 rounded-xl overflow-hidden">
+						<div class="absolute inset-0 bg-gradient-to-r from-violet-600 to-fuchsia-600 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+						<div class="absolute inset-0 bg-gradient-to-r from-violet-600 to-fuchsia-600 blur-xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
+						<span class="relative font-sinistre text-lg">View Projects</span>
+					</a>
+					<a href="#contact" class="px-8 py-4 rounded-xl border border-white/20 backdrop-blur-sm hover:bg-white/5 hover:border-white/30 transition-all font-sinistre text-lg">
+						Get in Touch
+					</a>
+				</div>
+			</div>
+			
+			<!-- Floating orb -->
+			<div class="absolute right-10 top-1/2 -translate-y-1/2 w-72 h-72 hidden lg:block">
+				<div class="relative w-full h-full animate-float">
+					<div class="absolute inset-0 rounded-full bg-gradient-to-br from-violet-500/30 via-fuchsia-500/20 to-cyan-500/30 blur-3xl"></div>
+					<div class="absolute inset-8 rounded-full bg-gradient-to-br from-violet-600/50 to-transparent backdrop-blur-sm border border-white/10"></div>
+					<div class="absolute inset-16 rounded-full bg-[#05050a] flex items-center justify-center">
+						<img src="/favicon.svg" alt="Logo" class="w-16 h-16 opacity-80" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="px-6 py-24 relative">
+			<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1/2 h-96 bg-gradient-to-r from-violet-600/10 to-transparent blur-3xl pointer-events-none"></div>
+			
+			<div class="relative">
+				<div class="flex items-center gap-4 mb-12">
+					<h2 class="text-4xl md:text-5xl font-sinistre bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">About Me</h2>
+					<div class="flex-1 h-px bg-gradient-to-r from-violet-500/50 to-transparent"></div>
+				</div>
+				
+				<div class="grid lg:grid-cols-5 gap-12">
+					<div class="lg:col-span-3 space-y-6 text-lg text-white/70 leading-relaxed">
+						<p>
+							I'm a Full-Stack Software Engineer with a year of professional experience building robust backend architectures and scalable systems.
+						</p>
+						<p>
+							At <span class="text-white">Deniz Egece Co. Ltd.</span>, I architected a streaming platform serving over <span class="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent font-semibold">17,000 paid users</span>, handling everything from video transcoding to real-time analytics.
+						</p>
+						<p>
+							Currently an <span class="text-white">Honor Student</span> at International University of Sarajevo, diving deep into computer science fundamentals while exploring <span class="text-cyan-300">C, Rust</span>, and <span class="text-cyan-300">Linux</span>.
+						</p>
+					</div>
+					
+					<div class="lg:col-span-2">
+						<div class="aspect-square rounded-3xl bg-gradient-to-br from-violet-500/10 via-fuchsia-500/5 to-cyan-500/10 border border-white/10 backdrop-blur-sm p-8 flex items-center justify-center relative overflow-hidden">
+							<div class="absolute inset-0 bg-gradient-to-br from-violet-600/20 to-transparent opacity-50"></div>
+							<img src="/favicon.svg" alt="Logo" class="w-2/3 h-2/3 opacity-60 relative z-10" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills Section -->
+		<section id="skills" class="px-6 py-24">
+			<div class="flex items-center gap-4 mb-12">
+				<h2 class="text-4xl md:text-5xl font-sinistre bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Skills</h2>
+				<div class="flex-1 h-px bg-gradient-to-r from-cyan-500/50 to-transparent"></div>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{[
+					{ title: "Backend Development", desc: "Node.js, Rust, Go, Python. Building scalable APIs and microservices.", color: "violet" },
+					{ title: "Database Design", desc: "PostgreSQL, Redis, MongoDB. Efficient data modeling and optimization.", color: "fuchsia" },
+					{ title: "Systems Programming", desc: "C, Rust, Linux. Low-level optimization and system architecture.", color: "cyan" },
+					{ title: "Frontend Development", desc: "React, TypeScript, Tailwind. Modern responsive interfaces.", color: "violet" },
+					{ title: "DevOps & Cloud", desc: "Docker, Kubernetes, AWS, Cloudflare. Infrastructure as code.", color: "fuchsia" },
+					{ title: "Streaming Tech", desc: "Video streaming, real-time systems. Platform architecture.", color: "cyan" }
+				].map((skill) => (
+					<div class="group relative p-6 rounded-2xl border border-white/10 backdrop-blur-sm overflow-hidden hover:border-white/20 transition-all">
+						<div class={`absolute inset-0 bg-gradient-to-br from-${skill.color}-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity`}></div>
+						<div class={`absolute -top-12 -right-12 w-24 h-24 bg-${skill.color}-500/20 rounded-full blur-2xl group-hover:bg-${skill.color}-500/40 transition-colors`}></div>
+						<div class="relative">
+							<div class="flex items-center gap-3 mb-4">
+								<div class={`w-2 h-2 rounded-full bg-${skill.color}-400`}></div>
+								<h3 class="font-sinistre text-xl">{skill.title}</h3>
+							</div>
+							<p class="text-white/50 text-sm">{skill.desc}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="work" class="px-6 py-24">
+			<div class="flex items-center gap-4 mb-12">
+				<h2 class="text-4xl md:text-5xl font-sinistre bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Featured Work</h2>
+				<div class="flex-1 h-px bg-gradient-to-r from-fuchsia-500/50 to-transparent"></div>
+			</div>
+			
+			<div class="space-y-8">
+				<!-- Project 1 -->
+				<div class="group relative rounded-3xl border border-white/10 backdrop-blur-sm overflow-hidden hover:border-white/20 transition-all">
+					<div class="absolute inset-0 bg-gradient-to-r from-violet-600/10 via-fuchsia-600/5 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative p-8 md:p-12">
+						<div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
+							<div>
+								<p class="text-violet-400/80 text-sm mb-2 font-sinistre">Featured Project</p>
+								<h3 class="font-sinistre text-3xl md:text-4xl mb-2">Streaming Platform</h3>
+								<p class="text-white/40 text-sm">Deniz Egece Co. Ltd.</p>
+							</div>
+							<div class="flex gap-2 flex-wrap">
+								<span class="px-4 py-1.5 text-xs rounded-full bg-white/5 border border-white/10">Node.js</span>
+								<span class="px-4 py-1.5 text-xs rounded-full bg-white/5 border border-white/10">PostgreSQL</span>
+								<span class="px-4 py-1.5 text-xs rounded-full bg-white/5 border border-white/10">FFmpeg</span>
+							</div>
+						</div>
+						<p class="text-white/60 text-lg leading-relaxed max-w-2xl">
+							Architected and deployed a full-featured streaming platform serving 17,000+ paid users. 
+							Implemented video transcoding pipelines, payment integrations, and real-time analytics dashboard.
+						</p>
+					</div>
+				</div>
+				
+				<!-- Project 2 -->
+				<div class="group relative rounded-3xl border border-white/10 backdrop-blur-sm overflow-hidden hover:border-white/20 transition-all">
+					<div class="absolute inset-0 bg-gradient-to-r from-cyan-600/10 via-violet-600/5 to-fuchsia-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+					<div class="relative p-8 md:p-12">
+						<div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
+							<div>
+								<p class="text-cyan-400/80 text-sm mb-2 font-sinistre">Personal Project</p>
+								<h3 class="font-sinistre text-3xl md:text-4xl mb-2">This Portfolio</h3>
+								<p class="text-white/40 text-sm">atduyar.com</p>
+							</div>
+							<div class="flex gap-2 flex-wrap">
+								<span class="px-4 py-1.5 text-xs rounded-full bg-white/5 border border-white/10">Astro</span>
+								<span class="px-4 py-1.5 text-xs rounded-full bg-white/5 border border-white/10">Tailwind</span>
+								<span class="px-4 py-1.5 text-xs rounded-full bg-white/5 border border-white/10">Cloudflare</span>
+							</div>
+						</div>
+						<p class="text-white/60 text-lg leading-relaxed max-w-2xl">
+							Custom portfolio featuring unique typography with Sinistre variable font,
+							Old Turkic script elements paying homage to heritage, and meticulously crafted interactions.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Experience Section -->
+		<section class="px-6 py-24">
+			<div class="flex items-center gap-4 mb-12">
+				<h2 class="text-4xl md:text-5xl font-sinistre bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Experience</h2>
+				<div class="flex-1 h-px bg-gradient-to-r from-violet-500/50 to-transparent"></div>
+			</div>
+			
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="relative p-8 rounded-2xl border border-white/10 backdrop-blur-sm group hover:border-violet-500/30 transition-all">
+					<div class="absolute top-0 left-8 w-px h-full bg-gradient-to-b from-violet-500/50 to-transparent"></div>
+					<div class="absolute top-8 left-8 w-3 h-3 rounded-full bg-violet-500 -translate-x-1/2 ring-4 ring-[#05050a]"></div>
+					<div class="pl-8">
+						<p class="text-violet-400/80 text-sm mb-2">2023 - Present</p>
+						<h3 class="font-sinistre text-2xl mb-1">Full-Stack Developer</h3>
+						<p class="text-white/40 text-sm mb-4">Deniz Egece Co. Ltd.</p>
+						<p class="text-white/60 text-sm leading-relaxed">Led development of streaming infrastructure, database architecture, and user-facing applications.</p>
+					</div>
+				</div>
+				
+				<div class="relative p-8 rounded-2xl border border-white/10 backdrop-blur-sm group hover:border-cyan-500/30 transition-all">
+					<div class="absolute top-0 left-8 w-px h-full bg-gradient-to-b from-cyan-500/50 to-transparent"></div>
+					<div class="absolute top-8 left-8 w-3 h-3 rounded-full bg-cyan-500 -translate-x-1/2 ring-4 ring-[#05050a]"></div>
+					<div class="pl-8">
+						<p class="text-cyan-400/80 text-sm mb-2">2022 - Present</p>
+						<h3 class="font-sinistre text-2xl mb-1">Software Engineering</h3>
+						<p class="text-white/40 text-sm mb-4">Int'l University of Sarajevo</p>
+						<p class="text-white/60 text-sm leading-relaxed">Honor Student. Deep focus on computer science fundamentals, algorithms, and system design.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="px-6 py-24 relative group">
+			<BackgroundMarquee class="group-has-[button:hover]:text-white/20 duration-700 transition-all opacity-5">
+				𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰖𐰸: 𐰼𐰾𐰼: 𐰸𐰆𐰯: 𐰇𐰠𐱅𐰲𐰃: 𐰼𐱅𐰏𐰕: 𐰃𐰤𐰢: 𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰚𐰼𐰏𐰚: 𐰉𐰆𐰡𐰃: 𐰇𐰕𐰢: 𐰽𐰴𐰦𐰢: 𐰚𐰇𐰼𐰇𐰼: 𐰚𐰇𐰕𐰢: 𐰚𐰇𐰼𐰢𐰕: 𐱅𐰏: 𐰋𐰃𐰠𐰼: 𐰋𐰃𐰠𐰏𐰢: 𐰋𐰃𐰠𐰢𐰕: 𐱅𐰏: 𐰉𐰆𐰡𐰃: 𐰇𐰕𐰢: 𐰽𐰴𐰦𐰢: 𐰇𐰓: 𐱅𐰭𐰼𐰃: 𐰖𐰽𐰺: 𐰚𐰃𐰾𐰃: 𐰆𐰍𐰞𐰃: 𐰸𐰆𐰯: 𐰇𐰠𐰏𐰠𐰃: 𐱅𐰇𐰼𐰇𐰢𐰾:
+			</BackgroundMarquee>
+			
+			<div class="relative">
+				<div class="flex items-center gap-4 mb-12">
+					<h2 class="text-4xl md:text-5xl font-sinistre bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Let's Connect</h2>
+					<div class="flex-1 h-px bg-gradient-to-r from-fuchsia-500/50 to-transparent"></div>
+				</div>
+				
+				<div class="max-w-2xl">
+					<p class="text-white/60 text-lg mb-10 leading-relaxed">
+						Interested in working together? I'm always open to discussing new opportunities, collaborations, or just having a friendly chat about technology.
+					</p>
+					
+					<form class="space-y-8">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div class="relative">
+								<input type="text" id="name" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 focus:border-violet-500/50 rounded-xl px-5 py-4 outline-none transition-colors placeholder:text-white/30" />
+							</div>
+							<div class="relative">
+								<input type="email" id="email" placeholder="Email Address" class="w-full bg-white/5 border border-white/10 focus:border-violet-500/50 rounded-xl px-5 py-4 outline-none transition-colors placeholder:text-white/30" />
+							</div>
+						</div>
+						<div>
+							<textarea id="message" rows="5" placeholder="Your message..." class="w-full bg-white/5 border border-white/10 focus:border-violet-500/50 rounded-xl px-5 py-4 outline-none transition-colors resize-none placeholder:text-white/30"></textarea>
+						</div>
+						<div>
+							<button type="submit" class="group relative px-10 py-4 rounded-xl overflow-hidden font-sinistre text-lg">
+								<div class="absolute inset-0 bg-gradient-to-r from-violet-600 via-fuchsia-600 to-cyan-600 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+								<div class="absolute inset-0 bg-gradient-to-r from-violet-600 via-fuchsia-600 to-cyan-600 blur-xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
+								<span class="relative flex items-center gap-3">
+									Send Message
+									<span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+								</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+			<!-- Radial glow on hover -->
+			<div class="select-none pointer-events-none absolute right-0 bottom-0 w-1/2 h-1/2 transition-opacity duration-700 opacity-0 group-has-[button:hover]:opacity-100">
+				<div class="absolute inset-0 bg-gradient-to-tl from-fuchsia-600/20 via-violet-600/10 to-transparent blur-3xl"></div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="py-12 px-6 border-t border-white/10">
+			<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+				<div class="flex items-center gap-4">
+					<div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-cyan-500 p-[2px]">
+						<div class="w-full h-full rounded-full bg-[#05050a] flex items-center justify-center">
+							<img src="/favicon.svg" alt="Logo" class="w-4 h-4" />
+						</div>
+					</div>
+					<span class="font-sinistre bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">Ahmet Tarik Duyar</span>
+				</div>
+				<div class="flex gap-8">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-white/40 hover:text-white transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-white/40 hover:text-white transition-colors">LinkedIn</a>
+					<a href="mailto:contact@atduyar.com" class="text-white/40 hover:text-white transition-colors">Email</a>
+				</div>
+				<p class="text-white/30 text-sm">&copy; 2026 All rights reserved.</p>
+			</div>
+		</footer>
+	</main>
+</BaseLayout>
+
+<style>
+	/* Aurora effects */
+	.aurora {
+		position: absolute;
+		width: 150%;
+		height: 50%;
+		opacity: 0.3;
+		filter: blur(100px);
+		animation: aurora-drift 20s ease-in-out infinite;
+	}
+	
+	.aurora-1 {
+		top: -20%;
+		left: -25%;
+		background: linear-gradient(135deg, #7c3aed 0%, #c026d3 50%, #06b6d4 100%);
+		animation-delay: 0s;
+	}
+	
+	.aurora-2 {
+		top: 30%;
+		right: -25%;
+		background: linear-gradient(225deg, #06b6d4 0%, #a855f7 50%, #ec4899 100%);
+		animation-delay: -7s;
+		animation-duration: 25s;
+	}
+	
+	.aurora-3 {
+		bottom: -10%;
+		left: 0%;
+		background: linear-gradient(45deg, #8b5cf6 0%, #d946ef 50%, #22d3ee 100%);
+		animation-delay: -14s;
+		animation-duration: 30s;
+	}
+	
+	@keyframes aurora-drift {
+		0%, 100% {
+			transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+		}
+		25% {
+			transform: translateX(5%) translateY(-5%) rotate(2deg) scale(1.05);
+		}
+		50% {
+			transform: translateX(-3%) translateY(3%) rotate(-1deg) scale(0.98);
+		}
+		75% {
+			transform: translateX(-5%) translateY(-3%) rotate(1deg) scale(1.02);
+		}
+	}
+	
+	/* Stars background */
+	.stars {
+		position: absolute;
+		inset: 0;
+		background-image: 
+			radial-gradient(1px 1px at 20px 30px, white, transparent),
+			radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.8), transparent),
+			radial-gradient(1px 1px at 50px 160px, rgba(255,255,255,0.6), transparent),
+			radial-gradient(1px 1px at 90px 40px, white, transparent),
+			radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.7), transparent),
+			radial-gradient(1.5px 1.5px at 160px 120px, white, transparent),
+			radial-gradient(1px 1px at 200px 50px, rgba(255,255,255,0.5), transparent),
+			radial-gradient(1px 1px at 250px 150px, white, transparent),
+			radial-gradient(1px 1px at 300px 100px, rgba(255,255,255,0.8), transparent);
+		background-size: 350px 200px;
+		animation: twinkle 8s ease-in-out infinite;
+	}
+	
+	@keyframes twinkle {
+		0%, 100% { opacity: 0.5; }
+		50% { opacity: 0.8; }
+	}
+	
+	/* Float-in animation */
+	@keyframes float-in {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+	.animate-float-in {
+		animation: float-in 0.8s ease-out forwards;
+		opacity: 0;
+	}
+	
+	/* Floating animation */
+	@keyframes float {
+		0%, 100% {
+			transform: translateY(0) rotate(0deg);
+		}
+		50% {
+			transform: translateY(-20px) rotate(3deg);
+		}
+	}
+	
+	.animate-float {
+		animation: float 6s ease-in-out infinite;
+	}
+</style>
