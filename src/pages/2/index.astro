@@ -1,0 +1,289 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="atduyar.exe" description="Ahmet Tarik Duyar - Terminal Portfolio" bodyClass="bg-[#0a0a0a] text-[#00ff41] font-mono min-h-screen overflow-x-hidden">
+	<!-- Scanlines overlay -->
+	<div class="fixed inset-0 pointer-events-none z-50 opacity-[0.03]" style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,65,0.03) 2px, rgba(0,255,65,0.03) 4px);"></div>
+	
+	<!-- CRT flicker effect -->
+	<div class="fixed inset-0 pointer-events-none z-40 animate-flicker opacity-[0.02] bg-[#00ff41]"></div>
+	
+	<!-- Terminal window -->
+	<main class="max-w-5xl mx-auto p-4 md:p-8">
+		<!-- Terminal header -->
+		<header class="border border-[#00ff41]/30 mb-0">
+			<div class="flex items-center gap-2 px-4 py-2 border-b border-[#00ff41]/30 bg-[#00ff41]/5">
+				<div class="w-3 h-3 rounded-full border border-[#ff5f56]"></div>
+				<div class="w-3 h-3 rounded-full border border-[#ffbd2e]"></div>
+				<div class="w-3 h-3 rounded-full border border-[#27ca40]"></div>
+				<span class="ml-4 text-sm opacity-60">atduyar@portfolio:~</span>
+			</div>
+		</header>
+		
+		<!-- Terminal body -->
+		<div class="border-x border-b border-[#00ff41]/30 p-6 md:p-8 space-y-8 bg-[#0a0a0a]/80 min-h-[80vh]">
+			<!-- Boot sequence -->
+			<div class="space-y-1 text-sm opacity-60 animate-type-in">
+				<p>[OK] Starting portfolio.service...</p>
+				<p>[OK] Loading modules...</p>
+				<p>[OK] System ready.</p>
+			</div>
+			
+			<!-- ASCII Art Name -->
+			<pre class="text-[#00ff41] text-xs sm:text-sm md:text-base leading-tight overflow-x-auto">
+ █████╗ ████████╗██████╗ ██╗   ██╗██╗   ██╗ █████╗ ██████╗ 
+██╔══██╗╚══██╔══╝██╔══██╗██║   ██║╚██╗ ██╔╝██╔══██╗██╔══██╗
+███████║   ██║   ██║  ██║██║   ██║ ╚████╔╝ ███████║██████╔╝
+██╔══██║   ██║   ██║  ██║██║   ██║  ╚██╔╝  ██╔══██║██╔══██╗
+██║  ██║   ██║   ██████╔╝╚██████╔╝   ██║   ██║  ██║██║  ██║
+╚═╝  ╚═╝   ╚═╝   ╚═════╝  ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝
+			</pre>
+			
+			<!-- whoami -->
+			<section class="space-y-2">
+				<div class="flex items-center gap-2">
+					<span class="text-[#ff6b6b]">$</span>
+					<span class="animate-cursor">whoami</span>
+				</div>
+				<div class="pl-4 border-l border-[#00ff41]/20 ml-2 space-y-2">
+					<p class="text-white/90">Ahmet Tarik Duyar</p>
+					<p class="opacity-70">Full-Stack Software Engineer | Systems Programmer</p>
+					<p class="opacity-70">Location: Sarajevo, Bosnia and Herzegovina</p>
+				</div>
+			</section>
+			
+			<!-- cat about.txt -->
+			<section class="space-y-2">
+				<div class="flex items-center gap-2">
+					<span class="text-[#ff6b6b]">$</span>
+					<span>cat about.txt</span>
+				</div>
+				<div class="pl-4 border-l border-[#00ff41]/20 ml-2">
+					<p class="text-white/80 leading-relaxed max-w-3xl">
+						Software engineer with professional experience in backend architecture, 
+						database design, and critical system management. Built and deployed a 
+						streaming platform serving 17,000+ users at Deniz Egece Co. Ltd.
+						<br /><br />
+						Currently an Honor Student at International University of Sarajevo, 
+						exploring the depths of C, Rust, and Linux kernel development.
+					</p>
+				</div>
+			</section>
+			
+			<!-- ls skills/ -->
+			<section class="space-y-2">
+				<div class="flex items-center gap-2">
+					<span class="text-[#ff6b6b]">$</span>
+					<span>ls -la skills/</span>
+				</div>
+				<div class="pl-4 ml-2 font-mono text-sm">
+					<table class="w-full">
+						<tbody>
+							<tr class="hover:bg-[#00ff41]/5">
+								<td class="py-1 text-[#6bff6b]">drwxr-xr-x</td>
+								<td class="px-4">backend/</td>
+								<td class="opacity-60">Node.js, Rust, Go, Python</td>
+							</tr>
+							<tr class="hover:bg-[#00ff41]/5">
+								<td class="py-1 text-[#6bff6b]">drwxr-xr-x</td>
+								<td class="px-4">frontend/</td>
+								<td class="opacity-60">React, TypeScript, Astro</td>
+							</tr>
+							<tr class="hover:bg-[#00ff41]/5">
+								<td class="py-1 text-[#6bff6b]">drwxr-xr-x</td>
+								<td class="px-4">database/</td>
+								<td class="opacity-60">PostgreSQL, Redis, MongoDB</td>
+							</tr>
+							<tr class="hover:bg-[#00ff41]/5">
+								<td class="py-1 text-[#6bff6b]">drwxr-xr-x</td>
+								<td class="px-4">systems/</td>
+								<td class="opacity-60">C, Rust, Linux, Assembly</td>
+							</tr>
+							<tr class="hover:bg-[#00ff41]/5">
+								<td class="py-1 text-[#6bff6b]">drwxr-xr-x</td>
+								<td class="px-4">devops/</td>
+								<td class="opacity-60">Docker, K8s, AWS, Cloudflare</td>
+							</tr>
+							<tr class="hover:bg-[#00ff41]/5">
+								<td class="py-1 text-[#ff6b6b]">-rwxr-xr-x</td>
+								<td class="px-4">streaming.so</td>
+								<td class="opacity-60">FFmpeg, HLS, Real-time</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			
+			<!-- tree projects/ -->
+			<section class="space-y-2">
+				<div class="flex items-center gap-2">
+					<span class="text-[#ff6b6b]">$</span>
+					<span>tree projects/</span>
+				</div>
+				<div class="pl-4 ml-2 text-sm space-y-4">
+					<div class="group">
+						<p class="text-[#ffbd2e]">projects/</p>
+						<div class="pl-4 border-l border-[#00ff41]/20">
+							<p class="text-[#6bff6b] group-hover:text-white transition-colors">├── streaming-platform/</p>
+							<div class="pl-4 opacity-70 text-xs">
+								<p>│   ├── 17,000+ paid users</p>
+								<p>│   ├── Video transcoding pipeline</p>
+								<p>│   ├── Payment integrations</p>
+								<p>│   └── Real-time analytics</p>
+							</div>
+							<p class="text-[#6bff6b] mt-2 group-hover:text-white transition-colors">├── portfolio-site/</p>
+							<div class="pl-4 opacity-70 text-xs">
+								<p>│   ├── Astro + Tailwind</p>
+								<p>│   ├── Custom Sinistre font</p>
+								<p>│   └── Old Turkic heritage</p>
+							</div>
+							<p class="text-[#6bff6b] mt-2 group-hover:text-white transition-colors">└── open-source/</p>
+							<div class="pl-4 opacity-70 text-xs">
+								<p>    └── Various contributions</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- experience -->
+			<section class="space-y-2">
+				<div class="flex items-center gap-2">
+					<span class="text-[#ff6b6b]">$</span>
+					<span>cat /var/log/experience.log</span>
+				</div>
+				<div class="pl-4 ml-2 text-sm space-y-3">
+					<div class="border border-[#00ff41]/20 p-4 hover:border-[#00ff41]/40 transition-colors">
+						<p class="text-[#ffbd2e]">[2023-PRESENT] Full-Stack Developer @ Deniz Egece Co. Ltd.</p>
+						<p class="opacity-70 mt-1">Led streaming infrastructure development. Architected databases.</p>
+						<p class="opacity-70">Managed critical production systems serving thousands of users.</p>
+					</div>
+					<div class="border border-[#00ff41]/20 p-4 hover:border-[#00ff41]/40 transition-colors">
+						<p class="text-[#6bff6b]">[2022-PRESENT] Software Engineering @ IUS</p>
+						<p class="opacity-70 mt-1">Honor Student. Focus on CS fundamentals, algorithms, systems.</p>
+						<p class="opacity-70">Deep dive into C, Rust, and Linux internals.</p>
+					</div>
+				</div>
+			</section>
+			
+			<!-- contact -->
+			<section class="space-y-2">
+				<div class="flex items-center gap-2">
+					<span class="text-[#ff6b6b]">$</span>
+					<span>./contact --interactive</span>
+				</div>
+				<div class="pl-4 ml-2">
+					<p class="mb-4 opacity-70">Initializing contact form...</p>
+					<form class="space-y-4 max-w-lg">
+						<div>
+							<label class="block mb-1 text-sm">
+								<span class="text-[#ffbd2e]">name:</span>
+							</label>
+							<input type="text" class="w-full bg-transparent border border-[#00ff41]/30 p-2 focus:border-[#00ff41] outline-none transition-colors" placeholder="Enter your name" />
+						</div>
+						<div>
+							<label class="block mb-1 text-sm">
+								<span class="text-[#ffbd2e]">email:</span>
+							</label>
+							<input type="email" class="w-full bg-transparent border border-[#00ff41]/30 p-2 focus:border-[#00ff41] outline-none transition-colors" placeholder="you@example.com" />
+						</div>
+						<div>
+							<label class="block mb-1 text-sm">
+								<span class="text-[#ffbd2e]">message:</span>
+							</label>
+							<textarea rows="4" class="w-full bg-transparent border border-[#00ff41]/30 p-2 focus:border-[#00ff41] outline-none transition-colors resize-none" placeholder="Your message..."></textarea>
+						</div>
+						<button type="submit" class="px-6 py-2 border border-[#00ff41] hover:bg-[#00ff41] hover:text-[#0a0a0a] transition-all font-mono">
+							[SEND]
+						</button>
+					</form>
+				</div>
+			</section>
+			
+			<!-- Links -->
+			<section class="space-y-2">
+				<div class="flex items-center gap-2">
+					<span class="text-[#ff6b6b]">$</span>
+					<span>cat .links</span>
+				</div>
+				<div class="pl-4 ml-2 flex flex-wrap gap-4 text-sm">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="hover:text-white transition-colors border-b border-[#00ff41]/30 hover:border-[#00ff41] pb-1">
+						github.com/atduyar
+					</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="hover:text-white transition-colors border-b border-[#00ff41]/30 hover:border-[#00ff41] pb-1">
+						linkedin.com/in/atduyar
+					</a>
+					<a href="mailto:contact@atduyar.com" class="hover:text-white transition-colors border-b border-[#00ff41]/30 hover:border-[#00ff41] pb-1">
+						contact@atduyar.com
+					</a>
+				</div>
+			</section>
+			
+			<!-- Blinking cursor -->
+			<div class="flex items-center gap-2 pt-8">
+				<span class="text-[#ff6b6b]">$</span>
+				<span class="w-3 h-5 bg-[#00ff41] animate-blink"></span>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<footer class="border-x border-b border-[#00ff41]/30 p-4 text-center text-sm opacity-60">
+			<p>Process completed. Exit code: 0</p>
+			<p class="mt-1">&copy; 2026 atduyar. All rights reserved.</p>
+		</footer>
+	</main>
+</BaseLayout>
+
+<style>
+	@keyframes blink {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0; }
+	}
+	
+	@keyframes flicker {
+		0%, 100% { opacity: 0.02; }
+		50% { opacity: 0.04; }
+	}
+	
+	@keyframes type-in {
+		from { opacity: 0; }
+		to { opacity: 0.6; }
+	}
+	
+	.animate-blink {
+		animation: blink 1s step-end infinite;
+	}
+	
+	.animate-flicker {
+		animation: flicker 0.15s infinite;
+	}
+	
+	.animate-type-in {
+		animation: type-in 0.5s ease-out forwards;
+	}
+	
+	.animate-cursor::after {
+		content: '_';
+		animation: blink 1s step-end infinite;
+	}
+	
+	/* Custom scrollbar for terminal feel */
+	::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+	
+	::-webkit-scrollbar-track {
+		background: #0a0a0a;
+	}
+	
+	::-webkit-scrollbar-thumb {
+		background: #00ff41;
+		opacity: 0.3;
+	}
+	
+	::-webkit-scrollbar-thumb:hover {
+		background: #00ff41;
+	}
+</style>
