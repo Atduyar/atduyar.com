@@ -1,0 +1,242 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="DUYAR" description="Ahmet Tarik Duyar - Software Engineer" bodyClass="bg-black text-white min-h-screen overflow-x-hidden font-mono">
+	<!-- Grain overlay -->
+	<div class="fixed inset-0 pointer-events-none opacity-[0.04] z-50" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+
+	<main class="relative z-10">
+		<!-- Fixed header -->
+		<header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 py-6 flex justify-between items-center mix-blend-difference">
+			<span class="text-sm tracking-[0.5em] uppercase">Duyar</span>
+			<a href="#contact" class="text-sm tracking-widest uppercase hover:line-through">Contact</a>
+		</header>
+
+		<!-- Hero - Full bleed typography -->
+		<section class="min-h-screen flex flex-col justify-between px-4 sm:px-8 pt-24 pb-8">
+			<div></div>
+			
+			<div>
+				<h1 class="font-sinistre text-[18vw] sm:text-[15vw] md:text-[12vw] leading-[0.8] tracking-tighter -ml-[0.03em]">
+					<span class="block hover:italic transition-all cursor-default">AHMET</span>
+					<span class="block hover:italic transition-all cursor-default text-white/20">TARIK</span>
+					<span class="block hover:italic transition-all cursor-default">DUYAR</span>
+				</h1>
+			</div>
+			
+			<div class="flex flex-col sm:flex-row justify-between gap-8 pt-8 border-t border-white/20">
+				<div>
+					<span class="text-xs text-white/40 uppercase tracking-widest">Role</span>
+					<p class="mt-1">Software Engineer</p>
+				</div>
+				<div>
+					<span class="text-xs text-white/40 uppercase tracking-widest">Location</span>
+					<p class="mt-1">Sarajevo, BA</p>
+				</div>
+				<div>
+					<span class="text-xs text-white/40 uppercase tracking-widest">Status</span>
+					<p class="mt-1">Available</p>
+				</div>
+				<div>
+					<span class="text-xs text-white/40 uppercase tracking-widest">Scroll</span>
+					<p class="mt-1">&darr;</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- About - Brutal grid -->
+		<section class="px-4 sm:px-8 py-20 border-t border-white/20">
+			<div class="grid grid-cols-12 gap-4">
+				<div class="col-span-12 md:col-span-2">
+					<span class="text-xs text-white/40 uppercase tracking-widest">(01)</span>
+				</div>
+				<div class="col-span-12 md:col-span-4">
+					<h2 class="font-sinistre text-4xl mb-6">ABOUT</h2>
+				</div>
+				<div class="col-span-12 md:col-span-6">
+					<p class="text-white/60 leading-relaxed mb-6">
+						Full-Stack Software Engineer with professional experience building robust backend architectures, designing scalable databases, and managing critical systems.
+					</p>
+					<p class="text-white/60 leading-relaxed mb-6">
+						At Deniz Egece Co. Ltd., architected a streaming platform serving 17,000+ paid users. Video transcoding pipelines, payment integrations, real-time analytics.
+					</p>
+					<p class="text-white/60 leading-relaxed">
+						Honor Student at IUS. Deep dive into C, Rust, Linux kernel development. Building systems that last.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills - Raw list -->
+		<section class="px-4 sm:px-8 py-20 border-t border-white/20">
+			<div class="grid grid-cols-12 gap-4">
+				<div class="col-span-12 md:col-span-2">
+					<span class="text-xs text-white/40 uppercase tracking-widest">(02)</span>
+				</div>
+				<div class="col-span-12 md:col-span-4">
+					<h2 class="font-sinistre text-4xl mb-6">STACK</h2>
+				</div>
+				<div class="col-span-12 md:col-span-6">
+					<div class="grid grid-cols-2 gap-x-8 gap-y-2 text-sm">
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>Node.js</span>
+							<span class="text-white/30">Backend</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>Rust</span>
+							<span class="text-white/30">Systems</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>Go</span>
+							<span class="text-white/30">Backend</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>C</span>
+							<span class="text-white/30">Systems</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>PostgreSQL</span>
+							<span class="text-white/30">Data</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>Redis</span>
+							<span class="text-white/30">Cache</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>Docker</span>
+							<span class="text-white/30">DevOps</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>Kubernetes</span>
+							<span class="text-white/30">DevOps</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>FFmpeg</span>
+							<span class="text-white/30">Media</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>Linux</span>
+							<span class="text-white/30">Systems</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>TypeScript</span>
+							<span class="text-white/30">Frontend</span>
+						</div>
+						<div class="py-2 border-b border-white/10 flex justify-between">
+							<span>React</span>
+							<span class="text-white/30">Frontend</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Work - Brutalist cards -->
+		<section class="px-4 sm:px-8 py-20 border-t border-white/20">
+			<div class="grid grid-cols-12 gap-4 mb-12">
+				<div class="col-span-12 md:col-span-2">
+					<span class="text-xs text-white/40 uppercase tracking-widest">(03)</span>
+				</div>
+				<div class="col-span-12 md:col-span-10">
+					<h2 class="font-sinistre text-4xl">WORK</h2>
+				</div>
+			</div>
+			
+			<div class="space-y-4">
+				<article class="group border border-white/20 hover:border-white hover:bg-white hover:text-black transition-all duration-300">
+					<div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between gap-6">
+						<div>
+							<span class="text-xs uppercase tracking-widest opacity-50">Deniz Egece / 2023</span>
+							<h3 class="font-sinistre text-3xl mt-2">STREAMING PLATFORM</h3>
+							<p class="mt-4 opacity-60 max-w-xl">
+								Full architecture of video streaming service. 17,000+ paid users. Video transcoding, payments, analytics.
+							</p>
+						</div>
+						<div class="flex items-center">
+							<span class="text-4xl group-hover:rotate-45 transition-transform">&rarr;</span>
+						</div>
+					</div>
+				</article>
+				
+				<article class="group border border-white/20 hover:border-white hover:bg-white hover:text-black transition-all duration-300">
+					<div class="p-6 sm:p-8 flex flex-col md:flex-row justify-between gap-6">
+						<div>
+							<span class="text-xs uppercase tracking-widest opacity-50">Personal / 2024</span>
+							<h3 class="font-sinistre text-3xl mt-2">PORTFOLIO WEBSITE</h3>
+							<p class="mt-4 opacity-60 max-w-xl">
+								Custom portfolio with Sinistre font, Old Turkic heritage elements, and crafted animations.
+							</p>
+						</div>
+						<div class="flex items-center">
+							<span class="text-4xl group-hover:rotate-45 transition-transform">&rarr;</span>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<!-- Experience -->
+		<section class="px-4 sm:px-8 py-20 border-t border-white/20">
+			<div class="grid grid-cols-12 gap-4 mb-12">
+				<div class="col-span-12 md:col-span-2">
+					<span class="text-xs text-white/40 uppercase tracking-widest">(04)</span>
+				</div>
+				<div class="col-span-12 md:col-span-10">
+					<h2 class="font-sinistre text-4xl">EXPERIENCE</h2>
+				</div>
+			</div>
+			
+			<div class="grid grid-cols-12 gap-4">
+				<div class="col-span-12 md:col-span-6 border-l border-white/20 pl-6">
+					<span class="text-xs text-white/40 uppercase tracking-widest">2023 — Present</span>
+					<h3 class="font-sinistre text-2xl mt-2">Full-Stack Developer</h3>
+					<p class="text-white/40 mt-1">Deniz Egece Co. Ltd.</p>
+				</div>
+				<div class="col-span-12 md:col-span-6 border-l border-white/20 pl-6">
+					<span class="text-xs text-white/40 uppercase tracking-widest">2022 — Present</span>
+					<h3 class="font-sinistre text-2xl mt-2">Software Engineering</h3>
+					<p class="text-white/40 mt-1">International University of Sarajevo</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact - Bold -->
+		<section id="contact" class="px-4 sm:px-8 py-20 border-t border-white/20">
+			<div class="grid grid-cols-12 gap-4 mb-12">
+				<div class="col-span-12 md:col-span-2">
+					<span class="text-xs text-white/40 uppercase tracking-widest">(05)</span>
+				</div>
+				<div class="col-span-12 md:col-span-10">
+					<h2 class="font-sinistre text-4xl">CONTACT</h2>
+				</div>
+			</div>
+			
+			<div class="max-w-2xl">
+				<p class="text-xl text-white/60 mb-8">
+					Available for collaborations, freelance, and full-time opportunities.
+				</p>
+				
+				<a href="mailto:contact@atduyar.com" class="font-sinistre text-4xl sm:text-5xl md:text-6xl hover:line-through transition-all block mb-12">
+					CONTACT@ATDUYAR.COM
+				</a>
+				
+				<div class="flex gap-8 text-sm">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="hover:line-through transition-all uppercase tracking-widest">
+						GitHub
+					</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="hover:line-through transition-all uppercase tracking-widest">
+						LinkedIn
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="px-4 sm:px-8 py-8 border-t border-white/20 flex flex-col sm:flex-row justify-between gap-4 text-xs text-white/40 uppercase tracking-widest">
+			<span>&copy; 2026</span>
+			<span>Ahmet Tarik Duyar</span>
+			<span>All Rights Reserved</span>
+		</footer>
+	</main>
+</BaseLayout>

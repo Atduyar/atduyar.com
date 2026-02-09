@@ -1,0 +1,218 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="𐰇𐰕 | Duyar" description="Ahmet Tarik Duyar - Steppe Coder" bodyClass="bg-[#0d0b08] text-[#d4c8b8] min-h-screen overflow-x-hidden">
+	<!-- Parchment texture overlay -->
+	<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-0" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 100 100%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.4%22 numOctaves=%224%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%220.5%22/%3E%3C/svg%3E');"></div>
+
+	<main class="relative z-10">
+		<!-- Vertical Turkic text sidebar -->
+		<aside class="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden xl:block">
+			<div class="font-oldturcic text-[#b8860b]/30 text-2xl writing-vertical tracking-[0.5em] leading-none">
+				𐰚𐰇𐰠𐱅𐰃𐰏𐰤𐰖𐰸𐰼𐰾𐰼
+			</div>
+		</aside>
+
+		<!-- Minimal nav -->
+		<nav class="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6">
+			<div class="max-w-6xl mx-auto flex justify-between items-center">
+				<div class="flex items-center gap-4">
+					<img src="/favicon.svg" alt="Seal" class="w-10 h-10 opacity-70" />
+					<span class="font-oldturcic text-xl text-[#b8860b] leading-none hidden sm:block">𐱅𐰭𐰼𐰃</span>
+				</div>
+				<div class="flex items-center gap-6 text-sm tracking-wider">
+					<a href="#chronicle" class="text-[#d4c8b8]/50 hover:text-[#b8860b] transition-colors uppercase">Chronicle</a>
+					<a href="#summon" class="px-4 py-2 border border-[#b8860b]/40 text-[#b8860b] uppercase hover:bg-[#b8860b]/10 transition-all">Summon</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero - Vertical scroll reveal -->
+		<section class="min-h-screen flex items-center justify-center relative px-6">
+			<div class="text-center max-w-4xl">
+				<!-- Decorative top ornament -->
+				<div class="flex items-center justify-center gap-4 mb-8">
+					<div class="w-16 h-px bg-gradient-to-r from-transparent to-[#b8860b]/50"></div>
+					<span class="font-oldturcic text-lg text-[#b8860b]/40 leading-none">𐰋𐰃𐰠𐰼</span>
+					<div class="w-16 h-px bg-gradient-to-l from-transparent to-[#b8860b]/50"></div>
+				</div>
+				
+				<h1 class="font-sinistre text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] mb-6">
+					<span class="block text-[#d4c8b8]">Ahmet Tarik</span>
+					<span class="block text-[#b8860b]">Duyar</span>
+				</h1>
+				
+				<p class="font-oldturcic text-xl text-[#b8860b]/50 mb-8 tracking-[0.3em] leading-none">
+					𐰖𐰕𐰺 𐰆𐰍𐰞𐰃
+				</p>
+				
+				<p class="text-lg text-[#d4c8b8]/60 max-w-xl mx-auto leading-relaxed">
+					From the endless steppe to silicon valleys, forging systems that endure through ages.
+				</p>
+				
+				<!-- Decorative bottom ornament -->
+				<div class="flex items-center justify-center gap-4 mt-12">
+					<div class="w-24 h-px bg-gradient-to-r from-transparent via-[#b8860b]/30 to-transparent"></div>
+				</div>
+			</div>
+			
+			<!-- Scroll prompt -->
+			<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
+				<span class="text-xs tracking-widest uppercase text-[#d4c8b8]/30">Descend</span>
+				<div class="w-px h-12 bg-gradient-to-b from-[#b8860b]/50 to-transparent animate-pulse"></div>
+			</div>
+		</section>
+
+		<!-- Chronicle Section -->
+		<section id="chronicle" class="py-24 px-6 md:px-12">
+			<div class="max-w-4xl mx-auto">
+				<!-- Section header -->
+				<div class="flex items-center gap-6 mb-16">
+					<span class="font-oldturcic text-3xl text-[#b8860b]/30 leading-none">𐰇𐰕</span>
+					<h2 class="font-sinistre text-4xl md:text-5xl text-[#b8860b]">Chronicle</h2>
+					<div class="flex-1 h-px bg-gradient-to-r from-[#b8860b]/30 to-transparent"></div>
+				</div>
+				
+				<!-- Timeline entries -->
+				<div class="space-y-16">
+					<article class="relative pl-8 border-l border-[#b8860b]/20">
+						<div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-[#b8860b] -translate-x-1/2"></div>
+						<span class="text-sm text-[#b8860b]/60 tracking-wider">The Beginning</span>
+						<h3 class="font-sinistre text-2xl mt-2 mb-4">Software Engineering @ IUS</h3>
+						<p class="text-[#d4c8b8]/60 leading-relaxed">
+							Honor Student pursuing the ancient arts of computation. Deep study of algorithms, data structures, and the foundations upon which all systems are built. Mastery of C, Rust, and the Linux kernel.
+						</p>
+					</article>
+					
+					<article class="relative pl-8 border-l border-[#b8860b]/20">
+						<div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-[#b8860b] -translate-x-1/2"></div>
+						<span class="text-sm text-[#b8860b]/60 tracking-wider">The First Campaign</span>
+						<h3 class="font-sinistre text-2xl mt-2 mb-4">Streaming Platform @ Deniz Egece</h3>
+						<p class="text-[#d4c8b8]/60 leading-relaxed mb-4">
+							Architected a fortress of streaming serving 17,000+ warriors. Video transcoding pipelines flowing like rivers, payment gates guarding the treasury, analytics watching over all.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1 text-xs border border-[#b8860b]/20 text-[#b8860b]/60">Node.js</span>
+							<span class="px-3 py-1 text-xs border border-[#b8860b]/20 text-[#b8860b]/60">PostgreSQL</span>
+							<span class="px-3 py-1 text-xs border border-[#b8860b]/20 text-[#b8860b]/60">FFmpeg</span>
+							<span class="px-3 py-1 text-xs border border-[#b8860b]/20 text-[#b8860b]/60">Redis</span>
+						</div>
+					</article>
+					
+					<article class="relative pl-8 border-l border-[#b8860b]/20">
+						<div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-[#b8860b] -translate-x-1/2"></div>
+						<span class="text-sm text-[#b8860b]/60 tracking-wider">The Heritage</span>
+						<h3 class="font-sinistre text-2xl mt-2 mb-4">Portfolio of the Steppe</h3>
+						<p class="text-[#d4c8b8]/60 leading-relaxed mb-4">
+							A digital monument honoring the ancient Turkic scripts while embracing the modern web. Custom typography, cultural references woven through code.
+						</p>
+						<div class="flex flex-wrap gap-2">
+							<span class="px-3 py-1 text-xs border border-[#b8860b]/20 text-[#b8860b]/60">Astro</span>
+							<span class="px-3 py-1 text-xs border border-[#b8860b]/20 text-[#b8860b]/60">Tailwind</span>
+							<span class="px-3 py-1 text-xs border border-[#b8860b]/20 text-[#b8860b]/60">Cloudflare</span>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- Arsenal/Skills -->
+		<section class="py-24 px-6 md:px-12 border-t border-[#b8860b]/10">
+			<div class="max-w-4xl mx-auto">
+				<div class="flex items-center gap-6 mb-16">
+					<span class="font-oldturcic text-3xl text-[#b8860b]/30 leading-none">𐰸𐰆𐰯</span>
+					<h2 class="font-sinistre text-4xl md:text-5xl text-[#b8860b]">Arsenal</h2>
+					<div class="flex-1 h-px bg-gradient-to-r from-[#b8860b]/30 to-transparent"></div>
+				</div>
+				
+				<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+					<div class="text-center p-6 border border-[#b8860b]/10 hover:border-[#b8860b]/30 transition-colors">
+						<span class="font-oldturcic text-2xl text-[#b8860b]/40 block mb-3 leading-none">𐰋</span>
+						<h3 class="font-sinistre text-lg text-[#b8860b] mb-2">Backend</h3>
+						<p class="text-xs text-[#d4c8b8]/50">Node, Rust, Go, Python</p>
+					</div>
+					<div class="text-center p-6 border border-[#b8860b]/10 hover:border-[#b8860b]/30 transition-colors">
+						<span class="font-oldturcic text-2xl text-[#b8860b]/40 block mb-3 leading-none">𐰃</span>
+						<h3 class="font-sinistre text-lg text-[#b8860b] mb-2">Data</h3>
+						<p class="text-xs text-[#d4c8b8]/50">PostgreSQL, Redis, MongoDB</p>
+					</div>
+					<div class="text-center p-6 border border-[#b8860b]/10 hover:border-[#b8860b]/30 transition-colors">
+						<span class="font-oldturcic text-2xl text-[#b8860b]/40 block mb-3 leading-none">𐰠</span>
+						<h3 class="font-sinistre text-lg text-[#b8860b] mb-2">Systems</h3>
+						<p class="text-xs text-[#d4c8b8]/50">C, Rust, Linux</p>
+					</div>
+					<div class="text-center p-6 border border-[#b8860b]/10 hover:border-[#b8860b]/30 transition-colors">
+						<span class="font-oldturcic text-2xl text-[#b8860b]/40 block mb-3 leading-none">𐱅</span>
+						<h3 class="font-sinistre text-lg text-[#b8860b] mb-2">Cloud</h3>
+						<p class="text-xs text-[#d4c8b8]/50">Docker, K8s, AWS</p>
+					</div>
+					<div class="text-center p-6 border border-[#b8860b]/10 hover:border-[#b8860b]/30 transition-colors">
+						<span class="font-oldturcic text-2xl text-[#b8860b]/40 block mb-3 leading-none">𐰏</span>
+						<h3 class="font-sinistre text-lg text-[#b8860b] mb-2">Streaming</h3>
+						<p class="text-xs text-[#d4c8b8]/50">FFmpeg, HLS, WebRTC</p>
+					</div>
+					<div class="text-center p-6 border border-[#b8860b]/10 hover:border-[#b8860b]/30 transition-colors">
+						<span class="font-oldturcic text-2xl text-[#b8860b]/40 block mb-3 leading-none">𐰚</span>
+						<h3 class="font-sinistre text-lg text-[#b8860b] mb-2">Frontend</h3>
+						<p class="text-xs text-[#d4c8b8]/50">React, TypeScript, Astro</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Summon -->
+		<section id="summon" class="py-24 px-6 md:px-12 border-t border-[#b8860b]/10">
+			<div class="max-w-2xl mx-auto text-center">
+				<!-- Ornamental header -->
+				<div class="font-oldturcic text-2xl text-[#b8860b]/20 mb-6 tracking-[0.5em] leading-none">
+					𐰚𐰇𐰠𐱅𐰃𐰏𐰤
+				</div>
+				
+				<h2 class="font-sinistre text-4xl md:text-6xl mb-6">
+					<span class="text-[#b8860b]">Send</span> <span class="text-[#d4c8b8]/30">Word</span>
+				</h2>
+				
+				<p class="text-lg text-[#d4c8b8]/50 mb-10">
+					Ready to forge alliances? Reach out for collaborations, opportunities, or tales from the code.
+				</p>
+				
+				<a href="mailto:contact@atduyar.com" class="inline-block px-10 py-4 border-2 border-[#b8860b] text-[#b8860b] font-sinistre text-xl hover:bg-[#b8860b] hover:text-[#0d0b08] transition-all duration-300">
+					Summon Me
+				</a>
+				
+				<div class="flex justify-center gap-10 mt-12">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-[#d4c8b8]/40 hover:text-[#b8860b] transition-colors">
+						GitHub
+					</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-[#d4c8b8]/40 hover:text-[#b8860b] transition-colors">
+						LinkedIn
+					</a>
+				</div>
+				
+				<!-- Bottom ornament -->
+				<div class="font-oldturcic text-2xl text-[#b8860b]/20 mt-12 tracking-[0.5em] leading-none">
+					𐰉𐰆𐰡𐰃𐰇𐰕𐰢
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="py-8 px-6 md:px-12 border-t border-[#b8860b]/10">
+			<div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-[#d4c8b8]/40">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-[#b8860b]/40 leading-none">𐱅𐰭𐰼𐰃</span>
+					<span>&copy; 2026 Ahmet Tarik Duyar</span>
+				</div>
+				<span class="font-oldturcic text-xs text-[#b8860b]/20 leading-none">𐰼𐱅𐰏𐰕𐰃𐰤𐰢</span>
+			</div>
+		</footer>
+	</main>
+</BaseLayout>
+
+<style>
+	.writing-vertical {
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+	}
+</style>

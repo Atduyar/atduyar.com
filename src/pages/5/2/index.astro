@@ -1,0 +1,238 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="𐰃𐰤𐰢 | Atduyar" description="Ahmet Tarik Duyar - Tengri's Coder" bodyClass="min-h-screen overflow-x-hidden">
+	<!-- Split screen layout - dark/light -->
+	<div class="fixed inset-0 grid grid-cols-1 lg:grid-cols-2 pointer-events-none z-0">
+		<div class="bg-[#0a0908]"></div>
+		<div class="bg-[#e8e4dc] hidden lg:block"></div>
+	</div>
+	
+	<!-- Golden border accent -->
+	<div class="fixed top-0 bottom-0 left-1/2 w-px bg-[#b8860b]/30 hidden lg:block z-10"></div>
+
+	<main class="relative z-20 min-h-screen">
+		<!-- Navigation -->
+		<nav class="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-6">
+			<div class="flex justify-between items-center">
+				<a href="#" class="flex items-center gap-3">
+					<img src="/favicon.svg" alt="Logo" class="w-10 h-10 opacity-80" />
+					<span class="font-oldturcic text-xl text-[#b8860b] leading-none">𐱅𐰭𐰼𐰃</span>
+				</a>
+				<div class="flex items-center gap-6 text-sm">
+					<a href="#about" class="text-[#e8e4dc]/60 hover:text-[#b8860b] lg:text-[#0a0908]/60 lg:hover:text-[#b8860b] transition-colors uppercase tracking-wider">About</a>
+					<a href="#contact" class="px-4 py-2 bg-[#b8860b] text-[#0a0908] uppercase tracking-wider hover:bg-[#d4a854] transition-colors">Contact</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero - Split content -->
+		<section class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+			<!-- Left side - Dark -->
+			<div class="flex flex-col justify-center px-6 md:px-12 lg:pr-16 py-32 text-[#e8e4dc]">
+				<div class="font-oldturcic text-2xl text-[#b8860b]/50 mb-6 tracking-[0.3em] leading-none">
+					𐰚𐰇𐰠𐱅𐰃𐰏𐰤
+				</div>
+				
+				<h1 class="font-sinistre text-5xl sm:text-6xl lg:text-7xl leading-[0.9] mb-8">
+					<span class="block">Ahmet</span>
+					<span class="block text-[#b8860b]">Tarik</span>
+					<span class="block text-[#e8e4dc]/30">Duyar</span>
+				</h1>
+				
+				<p class="text-lg text-[#e8e4dc]/60 max-w-md leading-relaxed mb-10">
+					Full-Stack Software Engineer. Building systems that bridge ancient wisdom with modern technology.
+				</p>
+				
+				<div class="flex flex-wrap gap-4">
+					<a href="#projects" class="px-8 py-4 bg-[#b8860b] text-[#0a0908] font-medium hover:bg-[#d4a854] transition-colors">
+						View Works
+					</a>
+					<a href="#about" class="px-8 py-4 border border-[#e8e4dc]/20 hover:border-[#b8860b] hover:text-[#b8860b] transition-all">
+						Learn More
+					</a>
+				</div>
+			</div>
+			
+			<!-- Right side - Light (visible on lg+) -->
+			<div class="hidden lg:flex flex-col justify-center px-16 py-32 text-[#0a0908]">
+				<div class="space-y-8">
+					<div class="flex items-center gap-4">
+						<div class="w-12 h-12 rounded-full bg-[#b8860b]/20 flex items-center justify-center">
+							<span class="font-oldturcic text-xl text-[#b8860b] leading-none">𐰋</span>
+						</div>
+						<div>
+							<span class="text-2xl font-sinistre">17,000+</span>
+							<p class="text-sm text-[#0a0908]/50">Users Served</p>
+						</div>
+					</div>
+					
+					<div class="flex items-center gap-4">
+						<div class="w-12 h-12 rounded-full bg-[#b8860b]/20 flex items-center justify-center">
+							<span class="font-oldturcic text-xl text-[#b8860b] leading-none">𐰃</span>
+						</div>
+						<div>
+							<span class="text-2xl font-sinistre">Honor</span>
+							<p class="text-sm text-[#0a0908]/50">Student @ IUS</p>
+						</div>
+					</div>
+					
+					<div class="flex items-center gap-4">
+						<div class="w-12 h-12 rounded-full bg-[#b8860b]/20 flex items-center justify-center">
+							<span class="font-oldturcic text-xl text-[#b8860b] leading-none">𐰠</span>
+						</div>
+						<div>
+							<span class="text-2xl font-sinistre">Sarajevo</span>
+							<p class="text-sm text-[#0a0908]/50">Based in Bosnia</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About - Full width dark -->
+		<section id="about" class="bg-[#0a0908] text-[#e8e4dc] py-24 px-6 md:px-12">
+			<div class="max-w-6xl mx-auto">
+				<div class="flex items-center gap-6 mb-16">
+					<span class="font-oldturcic text-3xl text-[#b8860b]/40 leading-none">𐰇𐰕</span>
+					<h2 class="font-sinistre text-4xl md:text-5xl">Origin Story</h2>
+				</div>
+				
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+					<div class="space-y-6 text-lg text-[#e8e4dc]/70 leading-relaxed">
+						<p>
+							A Software Engineer carrying the precision of ancient scripts into modern architecture. At <span class="text-[#b8860b]">Deniz Egece Co. Ltd.</span>, I built a streaming fortress serving <span class="text-[#b8860b]">17,000+ warriors</span>.
+						</p>
+						<p>
+							Now an Honor Student at the International University of Sarajevo, delving into the roots of computation: C, Rust, and the Linux kernel.
+						</p>
+					</div>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="p-6 border border-[#b8860b]/20 hover:border-[#b8860b]/40 transition-colors">
+							<span class="font-oldturcic text-xl text-[#b8860b]/50 leading-none">𐰋</span>
+							<h3 class="font-sinistre text-lg mt-3 mb-1 text-[#b8860b]">Backend</h3>
+							<p class="text-sm text-[#e8e4dc]/50">Node, Rust, Go</p>
+						</div>
+						<div class="p-6 border border-[#b8860b]/20 hover:border-[#b8860b]/40 transition-colors">
+							<span class="font-oldturcic text-xl text-[#b8860b]/50 leading-none">𐰃</span>
+							<h3 class="font-sinistre text-lg mt-3 mb-1 text-[#b8860b]">Data</h3>
+							<p class="text-sm text-[#e8e4dc]/50">PostgreSQL, Redis</p>
+						</div>
+						<div class="p-6 border border-[#b8860b]/20 hover:border-[#b8860b]/40 transition-colors">
+							<span class="font-oldturcic text-xl text-[#b8860b]/50 leading-none">𐰠</span>
+							<h3 class="font-sinistre text-lg mt-3 mb-1 text-[#b8860b]">Systems</h3>
+							<p class="text-sm text-[#e8e4dc]/50">C, Rust, Linux</p>
+						</div>
+						<div class="p-6 border border-[#b8860b]/20 hover:border-[#b8860b]/40 transition-colors">
+							<span class="font-oldturcic text-xl text-[#b8860b]/50 leading-none">𐱅</span>
+							<h3 class="font-sinistre text-lg mt-3 mb-1 text-[#b8860b]">Cloud</h3>
+							<p class="text-sm text-[#e8e4dc]/50">Docker, K8s, AWS</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects - Alternating -->
+		<section id="projects" class="py-24">
+			<!-- Project 1 - Dark left -->
+			<div class="grid grid-cols-1 lg:grid-cols-2">
+				<div class="bg-[#0a0908] text-[#e8e4dc] p-8 md:p-16 flex flex-col justify-center">
+					<span class="font-oldturcic text-xl text-[#b8860b]/50 mb-4 leading-none">𐰇𐰕</span>
+					<h3 class="font-sinistre text-3xl md:text-4xl mb-4 text-[#b8860b]">Streaming Platform</h3>
+					<p class="text-[#e8e4dc]/60 mb-6 leading-relaxed">
+						Full architecture of video streaming service. 17,000+ paid users. Video transcoding, payments, analytics dashboard.
+					</p>
+					<div class="flex flex-wrap gap-2">
+						<span class="px-3 py-1 text-xs border border-[#b8860b]/30 text-[#b8860b]/70">Node.js</span>
+						<span class="px-3 py-1 text-xs border border-[#b8860b]/30 text-[#b8860b]/70">PostgreSQL</span>
+						<span class="px-3 py-1 text-xs border border-[#b8860b]/30 text-[#b8860b]/70">FFmpeg</span>
+					</div>
+				</div>
+				<div class="bg-[#e8e4dc] text-[#0a0908] p-8 md:p-16 flex items-center justify-center min-h-[300px]">
+					<div class="text-center">
+						<span class="font-oldturcic text-6xl text-[#b8860b]/30 leading-none">𐰚</span>
+						<p class="text-sm text-[#0a0908]/40 mt-4 tracking-widest uppercase">Deniz Egece / 2023</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Project 2 - Light left -->
+			<div class="grid grid-cols-1 lg:grid-cols-2">
+				<div class="bg-[#e8e4dc] text-[#0a0908] p-8 md:p-16 flex items-center justify-center min-h-[300px] order-2 lg:order-1">
+					<div class="text-center">
+						<span class="font-oldturcic text-6xl text-[#b8860b]/30 leading-none">𐰋</span>
+						<p class="text-sm text-[#0a0908]/40 mt-4 tracking-widest uppercase">Personal / 2024</p>
+					</div>
+				</div>
+				<div class="bg-[#0a0908] text-[#e8e4dc] p-8 md:p-16 flex flex-col justify-center order-1 lg:order-2">
+					<span class="font-oldturcic text-xl text-[#b8860b]/50 mb-4 leading-none">𐰋𐰃</span>
+					<h3 class="font-sinistre text-3xl md:text-4xl mb-4 text-[#b8860b]">Portfolio Website</h3>
+					<p class="text-[#e8e4dc]/60 mb-6 leading-relaxed">
+						Digital monument honoring Old Turkic heritage. Custom Sinistre typography, cultural elements, crafted animations.
+					</p>
+					<div class="flex flex-wrap gap-2">
+						<span class="px-3 py-1 text-xs border border-[#b8860b]/30 text-[#b8860b]/70">Astro</span>
+						<span class="px-3 py-1 text-xs border border-[#b8860b]/30 text-[#b8860b]/70">Tailwind</span>
+						<span class="px-3 py-1 text-xs border border-[#b8860b]/30 text-[#b8860b]/70">Cloudflare</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact - Split -->
+		<section id="contact" class="grid grid-cols-1 lg:grid-cols-2 min-h-[60vh]">
+			<div class="bg-[#0a0908] text-[#e8e4dc] p-8 md:p-16 flex flex-col justify-center">
+				<div class="font-oldturcic text-2xl text-[#b8860b]/30 mb-6 tracking-[0.3em] leading-none">
+					𐰽𐰴𐰦𐰢
+				</div>
+				<h2 class="font-sinistre text-4xl md:text-6xl mb-6">
+					<span class="text-[#b8860b]">Summon</span> <span class="text-[#e8e4dc]/30">Me</span>
+				</h2>
+				<p class="text-lg text-[#e8e4dc]/50 mb-8 max-w-md">
+					Ready to forge something legendary? Available for collaborations and opportunities.
+				</p>
+				<a href="mailto:contact@atduyar.com" class="inline-block w-fit px-10 py-4 bg-[#b8860b] text-[#0a0908] font-sinistre text-xl hover:bg-[#d4a854] transition-colors">
+					Send Word
+				</a>
+			</div>
+			<div class="bg-[#e8e4dc] text-[#0a0908] p-8 md:p-16 flex flex-col justify-center">
+				<div class="space-y-6">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="flex items-center justify-between py-4 border-b border-[#0a0908]/10 hover:border-[#b8860b] transition-colors group">
+						<span class="flex items-center gap-3">
+							<span class="font-oldturcic text-[#b8860b] leading-none">𐰋</span>
+							<span>GitHub</span>
+						</span>
+						<span class="group-hover:translate-x-2 transition-transform">&rarr;</span>
+					</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="flex items-center justify-between py-4 border-b border-[#0a0908]/10 hover:border-[#b8860b] transition-colors group">
+						<span class="flex items-center gap-3">
+							<span class="font-oldturcic text-[#b8860b] leading-none">𐰠</span>
+							<span>LinkedIn</span>
+						</span>
+						<span class="group-hover:translate-x-2 transition-transform">&rarr;</span>
+					</a>
+					<a href="mailto:contact@atduyar.com" class="flex items-center justify-between py-4 border-b border-[#0a0908]/10 hover:border-[#b8860b] transition-colors group">
+						<span class="flex items-center gap-3">
+							<span class="font-oldturcic text-[#b8860b] leading-none">𐰃</span>
+							<span>Email</span>
+						</span>
+						<span class="group-hover:translate-x-2 transition-transform">&rarr;</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-[#0a0908] py-8 px-6 md:px-12 border-t border-[#b8860b]/10">
+			<div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-[#e8e4dc]/40">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-[#b8860b]/40 leading-none">𐱅𐰭𐰼𐰃</span>
+					<span>&copy; 2026 Ahmet Tarik Duyar</span>
+				</div>
+				<span class="font-oldturcic text-xs text-[#b8860b]/20 leading-none">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</span>
+			</div>
+		</footer>
+	</main>
+</BaseLayout>

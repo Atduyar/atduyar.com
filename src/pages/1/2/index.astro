@@ -1,0 +1,233 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="ATD | Portfolio" description="Ahmet Tarik Duyar - Software Engineer" bodyClass="bg-[#0c0c0c] text-white min-h-screen overflow-x-hidden">
+	<!-- Dot matrix background -->
+	<div class="fixed inset-0 pointer-events-none opacity-30" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 32px 32px;"></div>
+
+	<main class="relative z-10 max-w-6xl mx-auto px-6">
+		<!-- Side navigation -->
+		<nav class="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4">
+			<a href="#hero" class="w-3 h-3 rounded-full bg-white/20 hover:bg-white transition-colors" title="Home"></a>
+			<a href="#about" class="w-3 h-3 rounded-full bg-white/20 hover:bg-white transition-colors" title="About"></a>
+			<a href="#skills" class="w-3 h-3 rounded-full bg-white/20 hover:bg-white transition-colors" title="Skills"></a>
+			<a href="#work" class="w-3 h-3 rounded-full bg-white/20 hover:bg-white transition-colors" title="Work"></a>
+			<a href="#contact" class="w-3 h-3 rounded-full bg-white/20 hover:bg-white transition-colors" title="Contact"></a>
+		</nav>
+
+		<!-- Top bar -->
+		<header class="py-8 flex justify-between items-center">
+			<a href="#" class="font-sinistre text-2xl tracking-wider">ATD</a>
+			<div class="flex items-center gap-6">
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-white/50 hover:text-white text-sm transition-colors">GitHub</a>
+				<a href="mailto:contact@atduyar.com" class="px-5 py-2.5 bg-white text-black text-sm font-medium rounded-sm hover:bg-white/90 transition-colors">
+					Contact
+				</a>
+			</div>
+		</header>
+
+		<!-- Hero - Asymmetric layout -->
+		<section id="hero" class="min-h-[90vh] flex items-center py-20">
+			<div class="grid lg:grid-cols-2 gap-12 items-center w-full">
+				<div>
+					<div class="flex items-center gap-3 mb-6">
+						<div class="w-12 h-px bg-white/30"></div>
+						<span class="text-sm text-white/50 tracking-widest uppercase">Software Engineer</span>
+					</div>
+					
+					<h1 class="font-sinistre text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.9] mb-8">
+						<span class="block">Ahmet</span>
+						<span class="block text-white/30">Tarik</span>
+						<span class="block">Duyar</span>
+					</h1>
+					
+					<p class="text-lg text-white/50 max-w-md mb-10 leading-relaxed">
+						Building robust backend architectures and scalable systems. Specializing in streaming, databases, and systems programming.
+					</p>
+					
+					<div class="flex flex-wrap gap-4">
+						<a href="#work" class="px-8 py-4 bg-white text-black font-medium rounded-sm hover:bg-white/90 transition-colors">
+							View Work
+						</a>
+						<a href="#about" class="px-8 py-4 border border-white/20 rounded-sm hover:bg-white/5 transition-colors">
+							Learn More
+						</a>
+					</div>
+				</div>
+				
+				<div class="relative hidden lg:block">
+					<!-- Abstract geometric shape -->
+					<div class="aspect-square relative">
+						<div class="absolute inset-0 border border-white/10 rotate-45 transform-gpu"></div>
+						<div class="absolute inset-8 border border-white/20 rotate-45 transform-gpu"></div>
+						<div class="absolute inset-16 border border-white/30 rotate-45 transform-gpu"></div>
+						<div class="absolute inset-24 bg-gradient-to-br from-white/5 to-transparent rotate-45 transform-gpu"></div>
+						<div class="absolute inset-0 flex items-center justify-center">
+							<img src="/favicon.svg" alt="Logo" class="w-24 h-24 opacity-60" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About - Split screen -->
+		<section id="about" class="py-32 border-t border-white/10">
+			<div class="grid lg:grid-cols-2 gap-16">
+				<div>
+					<span class="text-sm text-white/30 tracking-widest uppercase">01 / About</span>
+					<h2 class="font-sinistre text-4xl md:text-5xl mt-4 mb-8">Background</h2>
+				</div>
+				<div class="space-y-6">
+					<p class="text-lg text-white/70 leading-relaxed">
+						Full-Stack Software Engineer with professional experience in backend architecture, database design, and critical system management.
+					</p>
+					<p class="text-lg text-white/70 leading-relaxed">
+						At <span class="text-white">Deniz Egece Co. Ltd.</span>, I architected a streaming platform serving <span class="text-white">17,000+ paid users</span>, handling everything from video transcoding to payment integrations.
+					</p>
+					<p class="text-lg text-white/70 leading-relaxed">
+						Honor Student in Software Engineering at IUS, with deep focus on C, Rust, and Linux kernel development.
+					</p>
+					
+					<div class="pt-8 grid grid-cols-2 gap-8">
+						<div>
+							<span class="text-4xl font-sinistre text-white">17K+</span>
+							<p class="text-sm text-white/40 mt-2">Users Served</p>
+						</div>
+						<div>
+							<span class="text-4xl font-sinistre text-white">1+</span>
+							<p class="text-sm text-white/40 mt-2">Years Experience</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills - Horizontal scroll feel -->
+		<section id="skills" class="py-32 border-t border-white/10">
+			<div class="mb-16">
+				<span class="text-sm text-white/30 tracking-widest uppercase">02 / Skills</span>
+				<h2 class="font-sinistre text-4xl md:text-5xl mt-4">Technical Expertise</h2>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
+				<div class="bg-[#0c0c0c] p-8 hover:bg-white/5 transition-colors group">
+					<span class="text-3xl mb-4 block opacity-50 group-hover:opacity-100 transition-opacity">&#9670;</span>
+					<h3 class="font-sinistre text-xl mb-2">Backend</h3>
+					<p class="text-sm text-white/40">Node.js, Rust, Go, Python</p>
+				</div>
+				<div class="bg-[#0c0c0c] p-8 hover:bg-white/5 transition-colors group">
+					<span class="text-3xl mb-4 block opacity-50 group-hover:opacity-100 transition-opacity">&#9671;</span>
+					<h3 class="font-sinistre text-xl mb-2">Databases</h3>
+					<p class="text-sm text-white/40">PostgreSQL, Redis, MongoDB</p>
+				</div>
+				<div class="bg-[#0c0c0c] p-8 hover:bg-white/5 transition-colors group">
+					<span class="text-3xl mb-4 block opacity-50 group-hover:opacity-100 transition-opacity">&#9672;</span>
+					<h3 class="font-sinistre text-xl mb-2">Systems</h3>
+					<p class="text-sm text-white/40">C, Rust, Linux, Assembly</p>
+				</div>
+				<div class="bg-[#0c0c0c] p-8 hover:bg-white/5 transition-colors group">
+					<span class="text-3xl mb-4 block opacity-50 group-hover:opacity-100 transition-opacity">&#9673;</span>
+					<h3 class="font-sinistre text-xl mb-2">Cloud</h3>
+					<p class="text-sm text-white/40">AWS, Docker, Kubernetes</p>
+				</div>
+				<div class="bg-[#0c0c0c] p-8 hover:bg-white/5 transition-colors group">
+					<span class="text-3xl mb-4 block opacity-50 group-hover:opacity-100 transition-opacity">&#9674;</span>
+					<h3 class="font-sinistre text-xl mb-2">Streaming</h3>
+					<p class="text-sm text-white/40">FFmpeg, HLS, Real-time</p>
+				</div>
+				<div class="bg-[#0c0c0c] p-8 hover:bg-white/5 transition-colors group">
+					<span class="text-3xl mb-4 block opacity-50 group-hover:opacity-100 transition-opacity">&#9675;</span>
+					<h3 class="font-sinistre text-xl mb-2">Frontend</h3>
+					<p class="text-sm text-white/40">React, TypeScript, Tailwind</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Work -->
+		<section id="work" class="py-32 border-t border-white/10">
+			<div class="mb-16">
+				<span class="text-sm text-white/30 tracking-widest uppercase">03 / Work</span>
+				<h2 class="font-sinistre text-4xl md:text-5xl mt-4">Selected Projects</h2>
+			</div>
+			
+			<div class="space-y-1">
+				<a href="#" class="block py-8 border-b border-white/10 group">
+					<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+						<div>
+							<span class="text-sm text-white/30">Deniz Egece</span>
+							<h3 class="font-sinistre text-2xl md:text-3xl mt-1 group-hover:translate-x-4 transition-transform">Streaming Platform</h3>
+						</div>
+						<div class="flex items-center gap-6">
+							<span class="text-white/30 text-sm">2023</span>
+							<span class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+								&rarr;
+							</span>
+						</div>
+					</div>
+				</a>
+				
+				<a href="#" class="block py-8 border-b border-white/10 group">
+					<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+						<div>
+							<span class="text-sm text-white/30">Personal</span>
+							<h3 class="font-sinistre text-2xl md:text-3xl mt-1 group-hover:translate-x-4 transition-transform">Portfolio Site</h3>
+						</div>
+						<div class="flex items-center gap-6">
+							<span class="text-white/30 text-sm">2024</span>
+							<span class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+								&rarr;
+							</span>
+						</div>
+					</div>
+				</a>
+				
+				<a href="#" class="block py-8 group">
+					<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+						<div>
+							<span class="text-sm text-white/30">Open Source</span>
+							<h3 class="font-sinistre text-2xl md:text-3xl mt-1 group-hover:translate-x-4 transition-transform">Contributions</h3>
+						</div>
+						<div class="flex items-center gap-6">
+							<span class="text-white/30 text-sm">Ongoing</span>
+							<span class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+								&rarr;
+							</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section id="contact" class="py-32 border-t border-white/10">
+			<div class="grid lg:grid-cols-2 gap-16 items-center">
+				<div>
+					<span class="text-sm text-white/30 tracking-widest uppercase">04 / Contact</span>
+					<h2 class="font-sinistre text-5xl md:text-6xl mt-4 mb-6">Let's Work<br />Together</h2>
+					<p class="text-lg text-white/50 mb-8">
+						Available for freelance projects, collaborations, and full-time opportunities.
+					</p>
+					<a href="mailto:contact@atduyar.com" class="text-2xl border-b-2 border-white pb-2 hover:text-white/70 transition-colors">
+						contact@atduyar.com
+					</a>
+				</div>
+				
+				<div class="flex flex-col gap-6 lg:items-end">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-lg text-white/50 hover:text-white transition-colors">
+						GitHub &rarr;
+					</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-lg text-white/50 hover:text-white transition-colors">
+						LinkedIn &rarr;
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="py-8 border-t border-white/10 flex justify-between items-center text-sm text-white/30">
+			<span>&copy; 2026</span>
+			<span>Ahmet Tarik Duyar</span>
+		</footer>
+	</main>
+</BaseLayout>
