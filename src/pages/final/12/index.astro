@@ -1,0 +1,1116 @@
+---
+import BackgroundMarquee from "../../../components/BackgroundMarquee.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Ahmet Tarik Duyar" description="Full-Stack Software Engineer Portfolio" bodyClass="bg-[#0a0b0d] text-white w-screen overflow-x-hidden">
+	<main class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-7xl mx-auto min-h-dvh relative">
+		<!-- Subtle noise overlay -->
+		<div class="fixed inset-0 pointer-events-none opacity-[0.015] z-50" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+		
+		<!-- Navigation -->
+		<nav class="py-6 px-4 md:px-8 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
+			<div class="flex justify-between items-center">
+				<a href="#hero" class="group flex items-center gap-3">
+					<div class="w-10 h-10 rounded-full border border-blue-400/30 flex items-center justify-center group-hover:border-blue-400/60 transition-colors relative overflow-hidden">
+						<div class="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors"></div>
+						<img src="/favicon.svg" alt="Logo" class="w-6 h-6 relative z-10" />
+					</div>
+					<span class="font-sinistre text-xl tracking-wide hidden sm:block">Atduyar</span>
+				</a>
+				<ul class="flex gap-3 md:gap-6 text-sm">
+					<li><a href="#codex" class="nav-link font-sinistre hover:text-blue-300 transition-all">Codex</a></li>
+					<li><a href="#schematic" class="nav-link font-sinistre hover:text-blue-300 transition-all">Schematic</a></li>
+					<li><a href="#jukebox" class="nav-link font-sinistre hover:text-blue-300 transition-all">Jukebox</a></li>
+					<li><a href="#postcard" class="nav-link font-sinistre px-4 py-1 border border-blue-500/30 hover:bg-blue-600/10 rounded-full">Write</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section id="hero" class="min-h-[85vh] flex flex-col justify-center px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="absolute inset-0">
+				<div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px]"></div>
+				<div class="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[120px]"></div>
+			</div>
+			
+			<div class="relative z-10">
+				<p class="font-oldturcic text-blue-400/50 text-lg mb-4 tracking-[0.4em] animate-fade-in leading-none">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</p>
+				<h1 class="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-sinistre leading-[0.9] mb-8">
+					<span class="block animate-slide-up" style="animation-delay: 0.1s;">I'm Ahmet</span>
+					<span class="block animate-slide-up" style="animation-delay: 0.2s;">
+						<span class="text-blue-300">Tarik</span> Duyar
+					</span>
+				</h1>
+				<p class="text-lg md:text-xl text-gray-400 max-w-xl animate-fade-in leading-relaxed" style="animation-delay: 0.5s;">
+					Building robust backend architectures and scalable systems. 
+					Passionate about C, Rust, and Linux.
+				</p>
+				<div class="flex gap-4 mt-10 animate-fade-in" style="animation-delay: 0.7s;">
+					<a href="#codex" class="group px-6 py-3 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 hover:border-blue-400/50 transition-all font-sinistre text-lg rounded-sm">
+						Read the Codex
+					</a>
+					<a href="#postcard" class="px-6 py-3 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all font-sinistre text-lg rounded-sm">
+						Send Postcard
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 1: THE CODEX - Blog as Illuminated Manuscript -->
+		<section id="codex" class="py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<!-- Parchment texture background -->
+			<div class="absolute inset-0 opacity-[0.03]" style="background: url('data:image/svg+xml,%3Csvg width=%22100%22 height=%22100%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence baseFrequency=%220.4%22 type=%22fractalNoise%22 numOctaves=%223%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+			
+			<div class="px-4 md:px-8 lg:px-16 relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰋𐰃𐰠</span>
+					The Codex
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12 italic">Wisdom inscribed for those who seek knowledge.</p>
+			</div>
+			
+			<!-- Manuscript container - full width with asymmetric layout -->
+			<div class="relative">
+				<!-- Decorative margin lines -->
+				<div class="absolute left-[5%] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-red-900/30 to-transparent"></div>
+				<div class="absolute left-[7%] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-red-900/20 to-transparent"></div>
+				
+				<!-- Main manuscript area -->
+				<div class="grid grid-cols-12 gap-0">
+					<!-- Left marginalia column -->
+					<div class="col-span-2 pr-4 hidden lg:block">
+						<div class="sticky top-24 space-y-8 text-right">
+							<!-- Marginalia notes -->
+							<div class="text-xs text-amber-600/40 italic leading-relaxed">
+								<p>Anno Domini</p>
+								<p>MMXXVI</p>
+							</div>
+							<div class="text-xs text-red-700/30 italic">
+								<p>Nota bene:</p>
+								<p>Systems must</p>
+								<p>be understood</p>
+								<p>from first</p>
+								<p>principles.</p>
+							</div>
+							<!-- Decorative seal -->
+							<div class="w-12 h-12 ml-auto rounded-full bg-gradient-to-br from-red-900/40 to-red-950/60 border border-red-800/30 flex items-center justify-center">
+								<span class="font-oldturcic text-red-400/50 text-lg">𐰚</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Main content column -->
+					<div class="col-span-12 lg:col-span-7 px-4 lg:px-8 border-l border-amber-900/10 lg:border-l-0">
+						<!-- Article 1: Featured with illuminated capital -->
+						<article class="mb-16 relative">
+							<!-- Chapter number -->
+							<div class="absolute -left-16 top-0 font-sinistre text-6xl text-amber-900/20 hidden lg:block">I</div>
+							
+							<div class="flex gap-6">
+								<!-- Illuminated capital letter -->
+								<div class="flex-shrink-0 w-24 h-24 border-2 border-amber-700/30 bg-gradient-to-br from-amber-900/10 to-blue-900/10 flex items-center justify-center relative">
+									<!-- Decorative corners -->
+									<div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-amber-600/40"></div>
+									<div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-amber-600/40"></div>
+									<div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-amber-600/40"></div>
+									<div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-amber-600/40"></div>
+									<!-- The capital -->
+									<span class="font-sinistre text-5xl text-transparent bg-clip-text bg-gradient-to-br from-amber-400 via-amber-600 to-red-700">W</span>
+									<!-- Decorative flourishes -->
+									<div class="absolute -bottom-2 -right-2 w-6 h-6 border-r border-b border-amber-700/30"></div>
+								</div>
+								
+								<div class="flex-1">
+									<h3 class="font-sinistre text-2xl mb-3 text-amber-100 hover:text-amber-200 transition-colors cursor-pointer">
+										Why Memory Safety Will Define the Next Decade of Systems Programming
+									</h3>
+									<p class="text-gray-400 leading-loose" style="text-align: justify; hyphens: auto;">
+										<span class="text-amber-200/80">hen I first encountered Rust's borrow checker,</span> I dismissed it as an unnecessary complexity. Having written C for years, I believed that careful programming was sufficient. I was wrong. The mental overhead of tracking lifetimes manually across a codebase of thousands of lines is not just difficult—it is fundamentally opposed to how human cognition works. We are pattern matchers, not state machines.
+									</p>
+								</div>
+							</div>
+							
+							<div class="mt-6 pl-0 lg:pl-32 text-gray-400 leading-loose space-y-4" style="text-align: justify;">
+								<p>
+									The revelation came during a midnight debugging session. A segmentation fault that had eluded me for three days turned out to be a use-after-free buried deep in a callback chain. In Rust, this code would not have compiled. The compiler, that tireless sentinel, would have caught my error before it ever reached production.
+								</p>
+								<p>
+									This is not merely about preventing bugs. It is about changing how we think about systems. When memory safety is guaranteed by the type system, we are free to reason about higher-level concerns: architecture, performance characteristics, user experience. The cognitive load shifts from defensive programming to creative problem-solving.
+								</p>
+								<!-- Annotation in the margin style -->
+								<div class="border-l-2 border-amber-700/30 pl-4 my-6 text-amber-200/60 italic text-sm">
+									"The borrow checker is not a constraint. It is a collaborator that catches mistakes before they become incidents."
+								</div>
+								<p>
+									For those beginning this journey, I offer this counsel: embrace the friction. The compiler's complaints are not obstacles but teachings. Each error message is a lesson in thinking about ownership, about the flow of data through your system. In time, you will find that your C code improves too—you will see potential issues before they manifest, trained by the discipline Rust demands.
+								</p>
+							</div>
+							
+							<!-- Article footer with date and reading time -->
+							<div class="mt-8 pt-4 border-t border-amber-900/20 flex items-center justify-between text-xs text-gray-600">
+								<span class="italic">Inscribed on the 15th day of January, Year of Our Lord 2026</span>
+								<span>XII minutes of contemplation</span>
+							</div>
+						</article>
+						
+						<!-- Decorative divider -->
+						<div class="flex items-center gap-4 my-12">
+							<div class="flex-1 h-px bg-gradient-to-r from-transparent via-amber-900/30 to-transparent"></div>
+							<span class="font-oldturcic text-amber-700/30">𐰠𐱅𐰃</span>
+							<div class="flex-1 h-px bg-gradient-to-r from-transparent via-amber-900/30 to-transparent"></div>
+						</div>
+						
+						<!-- Article 2 -->
+						<article class="mb-16 relative">
+							<div class="absolute -left-16 top-0 font-sinistre text-6xl text-amber-900/20 hidden lg:block">II</div>
+							
+							<div class="flex gap-6">
+								<div class="flex-shrink-0 w-24 h-24 border-2 border-blue-700/30 bg-gradient-to-br from-blue-900/10 to-indigo-900/10 flex items-center justify-center relative">
+									<div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-blue-600/40"></div>
+									<div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-blue-600/40"></div>
+									<div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-blue-600/40"></div>
+									<div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-blue-600/40"></div>
+									<span class="font-sinistre text-5xl text-transparent bg-clip-text bg-gradient-to-br from-blue-400 via-blue-600 to-indigo-700">T</span>
+								</div>
+								
+								<div class="flex-1">
+									<h3 class="font-sinistre text-2xl mb-3 text-blue-100 hover:text-blue-200 transition-colors cursor-pointer">
+										The Database as a Living System: Lessons from Scaling PostgreSQL
+									</h3>
+									<p class="text-gray-400 leading-loose" style="text-align: justify;">
+										<span class="text-blue-200/80">he greatest error one can make</span> when designing a database schema is to treat it as a static artifact. A database is a living system, breathing with every query, growing with every insert. It must be nurtured, observed, and occasionally—with great care—restructured.
+									</p>
+								</div>
+							</div>
+							
+							<div class="mt-6 pl-0 lg:pl-32 text-gray-400 leading-loose space-y-4" style="text-align: justify;">
+								<p>
+									When our streaming platform reached ten thousand users, the cracks began to show. Queries that once returned in milliseconds now took seconds. The dashboard, once responsive, became a source of frustration. The database was telling us something, if only we would listen.
+								</p>
+								<p>
+									The solution was not merely to add indexes—though we did. It was to understand the access patterns, to see the database not as a storage mechanism but as a query-answering machine. We denormalized where it made sense. We introduced materialized views for complex aggregations. We learned to read EXPLAIN ANALYZE as one reads poetry.
+								</p>
+							</div>
+							
+							<div class="mt-8 pt-4 border-t border-blue-900/20 flex items-center justify-between text-xs text-gray-600">
+								<span class="italic">Inscribed on the 3rd day of February, Year of Our Lord 2026</span>
+								<span>VIII minutes of contemplation</span>
+							</div>
+						</article>
+						
+						<!-- Article 3: Shorter entry -->
+						<article class="mb-16 relative">
+							<div class="absolute -left-16 top-0 font-sinistre text-6xl text-amber-900/20 hidden lg:block">III</div>
+							
+							<div class="flex gap-6">
+								<div class="flex-shrink-0 w-24 h-24 border-2 border-emerald-700/30 bg-gradient-to-br from-emerald-900/10 to-teal-900/10 flex items-center justify-center relative">
+									<div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-emerald-600/40"></div>
+									<div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-emerald-600/40"></div>
+									<div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-emerald-600/40"></div>
+									<div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-emerald-600/40"></div>
+									<span class="font-sinistre text-5xl text-transparent bg-clip-text bg-gradient-to-br from-emerald-400 via-emerald-600 to-teal-700">I</span>
+								</div>
+								
+								<div class="flex-1">
+									<h3 class="font-sinistre text-2xl mb-3 text-emerald-100 hover:text-emerald-200 transition-colors cursor-pointer">
+										In Defense of the Monolith: When Microservices Are Not the Answer
+									</h3>
+									<p class="text-gray-400 leading-loose" style="text-align: justify;">
+										<span class="text-emerald-200/80">n an age of distributed systems,</span> it has become heresy to speak well of the monolith. Yet I will make this case: for many applications, a well-structured monolith is not merely acceptable—it is optimal. The complexity tax of microservices is paid in debugging, in deployment, in the cognitive overhead of distributed tracing.
+									</p>
+								</div>
+							</div>
+							
+							<div class="mt-8 pt-4 border-t border-emerald-900/20 flex items-center justify-between text-xs text-gray-600">
+								<span class="italic">Inscribed on the 20th day of December, Year of Our Lord 2025</span>
+								<span>V minutes of contemplation</span>
+							</div>
+						</article>
+					</div>
+					
+					<!-- Right annotation column -->
+					<div class="col-span-3 pl-8 hidden lg:block border-l border-amber-900/10">
+						<div class="sticky top-24 space-y-12">
+							<!-- Index of topics -->
+							<div>
+								<h4 class="font-sinistre text-sm text-amber-600/60 mb-4 tracking-wider">INDEX</h4>
+								<ul class="space-y-2 text-xs text-gray-500">
+									<li class="hover:text-amber-300 cursor-pointer transition-colors">I. Memory Safety</li>
+									<li class="hover:text-amber-300 cursor-pointer transition-colors">II. Database Systems</li>
+									<li class="hover:text-amber-300 cursor-pointer transition-colors">III. Architecture</li>
+									<li class="text-gray-700">IV. Coming soon...</li>
+									<li class="text-gray-700">V. Coming soon...</li>
+								</ul>
+							</div>
+							
+							<!-- Glossary -->
+							<div>
+								<h4 class="font-sinistre text-sm text-amber-600/60 mb-4 tracking-wider">GLOSSARY</h4>
+								<div class="space-y-3 text-xs">
+									<div>
+										<span class="text-amber-300/60">Borrow Checker</span>
+										<p class="text-gray-600 mt-1">Rust's compile-time analysis that enforces ownership rules</p>
+									</div>
+									<div>
+										<span class="text-amber-300/60">EXPLAIN ANALYZE</span>
+										<p class="text-gray-600 mt-1">PostgreSQL command revealing query execution plans</p>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Decorative element -->
+							<div class="border border-amber-900/20 p-4 bg-gradient-to-br from-amber-950/20 to-transparent">
+								<p class="text-xs text-amber-700/40 italic text-center leading-relaxed">
+									"The wise developer writes code for the maintainer who follows, for that maintainer may be oneself."
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 2: THE WIRE - Incoming Messages as Telegraph -->
+		<section id="wire" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Wire
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Incoming transmissions from the field.</p>
+				
+				<!-- Telegraph machine frame -->
+				<div class="max-w-3xl mx-auto border border-amber-900/30 bg-[#0a0b0d]">
+					<!-- Machine header -->
+					<div class="bg-amber-950/30 border-b border-amber-900/30 px-6 py-3 flex items-center justify-between">
+						<div class="flex items-center gap-3">
+							<div class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
+							<span class="font-mono text-xs text-amber-400/80">RECEIVING</span>
+						</div>
+						<span class="font-mono text-xs text-amber-700/60">WIRE SERVICE // ATDUYAR DISPATCH</span>
+					</div>
+					
+					<!-- Tape output -->
+					<div class="p-6 space-y-4 font-mono text-sm">
+						<!-- Message 1 -->
+						<div class="border-b border-amber-900/20 pb-4">
+							<div class="flex items-center gap-2 text-amber-600/60 text-xs mb-2">
+								<span>---</span>
+								<span>2026.02.09</span>
+								<span>21:45:00 UTC</span>
+								<span>---</span>
+							</div>
+							<p class="text-amber-100/80 uppercase tracking-wider">
+								PORTFOLIO V12 DEPLOYED STOP ALL SYSTEMS NOMINAL STOP LIGHTHOUSE BEACON ACTIVE STOP
+							</p>
+						</div>
+						
+						<!-- Message 2 -->
+						<div class="border-b border-amber-900/20 pb-4">
+							<div class="flex items-center gap-2 text-amber-600/60 text-xs mb-2">
+								<span>---</span>
+								<span>2026.02.01</span>
+								<span>14:22:00 UTC</span>
+								<span>---</span>
+							</div>
+							<p class="text-amber-100/80 uppercase tracking-wider">
+								NEW BLOG ENTRY COMMITTED STOP TOPIC MEMORY SAFETY STOP RUST BORROW CHECKER ANALYSIS COMPLETE STOP
+							</p>
+						</div>
+						
+						<!-- Message 3 -->
+						<div class="border-b border-amber-900/20 pb-4">
+							<div class="flex items-center gap-2 text-amber-600/60 text-xs mb-2">
+								<span>---</span>
+								<span>2026.01.15</span>
+								<span>09:00:00 UTC</span>
+								<span>---</span>
+							</div>
+							<p class="text-amber-100/80 uppercase tracking-wider">
+								STREAMING PLATFORM MILESTONE STOP SEVENTEEN THOUSAND USERS REACHED STOP UPTIME NINETY NINE POINT NINE PERCENT STOP
+							</p>
+						</div>
+						
+						<!-- Message 4: Incoming animation -->
+						<div class="text-amber-500/60">
+							<span class="animate-pulse">AWAITING NEXT TRANSMISSION...</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 3: THE SCHEMATIC - Skills as Circuit Board -->
+		<section id="schematic" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<!-- Circuit trace pattern -->
+			<div class="absolute inset-0 opacity-[0.03]">
+				<svg class="w-full h-full" viewBox="0 0 800 400">
+					<defs>
+						<pattern id="circuit" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+							<path d="M0,50 L30,50 L30,30 L70,30 L70,50 L100,50" stroke="#60a5fa" fill="none" stroke-width="0.5"/>
+							<path d="M50,0 L50,30 M50,70 L50,100" stroke="#60a5fa" fill="none" stroke-width="0.5"/>
+							<circle cx="30" cy="30" r="3" fill="none" stroke="#60a5fa" stroke-width="0.5"/>
+							<circle cx="70" cy="30" r="3" fill="none" stroke="#60a5fa" stroke-width="0.5"/>
+						</pattern>
+					</defs>
+					<rect width="100%" height="100%" fill="url(#circuit)"/>
+				</svg>
+			</div>
+			
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰼𐱅</span>
+					The Schematic
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8 font-mono text-xs">INTEGRATED SKILL CIRCUIT // REV 3.1</p>
+				
+				<!-- Circuit board layout -->
+				<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+					<!-- Component: Backend IC -->
+					<div class="component group">
+						<div class="border-2 border-blue-500/30 bg-[#0a0b0d] p-4 relative hover:border-blue-400/60 transition-all">
+							<!-- IC pins -->
+							<div class="absolute -left-1 top-1/4 w-2 h-1 bg-blue-500/40"></div>
+							<div class="absolute -left-1 top-2/4 w-2 h-1 bg-blue-500/40"></div>
+							<div class="absolute -left-1 top-3/4 w-2 h-1 bg-blue-500/40"></div>
+							<div class="absolute -right-1 top-1/4 w-2 h-1 bg-blue-500/40"></div>
+							<div class="absolute -right-1 top-2/4 w-2 h-1 bg-blue-500/40"></div>
+							<div class="absolute -right-1 top-3/4 w-2 h-1 bg-blue-500/40"></div>
+							<!-- Component label -->
+							<div class="text-center">
+								<div class="font-mono text-xs text-blue-400 mb-1">IC-001</div>
+								<div class="font-sinistre text-lg text-blue-200">Backend</div>
+								<div class="font-mono text-[8px] text-gray-600 mt-2">Node.js</div>
+								<div class="font-mono text-[8px] text-gray-600">Rust</div>
+								<div class="font-mono text-[8px] text-gray-600">Go</div>
+							</div>
+							<!-- LED indicator -->
+							<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.5)] group-hover:animate-pulse"></div>
+						</div>
+					</div>
+					
+					<!-- Component: Database IC -->
+					<div class="component group">
+						<div class="border-2 border-indigo-500/30 bg-[#0a0b0d] p-4 relative hover:border-indigo-400/60 transition-all">
+							<div class="absolute -left-1 top-1/4 w-2 h-1 bg-indigo-500/40"></div>
+							<div class="absolute -left-1 top-2/4 w-2 h-1 bg-indigo-500/40"></div>
+							<div class="absolute -left-1 top-3/4 w-2 h-1 bg-indigo-500/40"></div>
+							<div class="absolute -right-1 top-1/4 w-2 h-1 bg-indigo-500/40"></div>
+							<div class="absolute -right-1 top-2/4 w-2 h-1 bg-indigo-500/40"></div>
+							<div class="absolute -right-1 top-3/4 w-2 h-1 bg-indigo-500/40"></div>
+							<div class="text-center">
+								<div class="font-mono text-xs text-indigo-400 mb-1">IC-002</div>
+								<div class="font-sinistre text-lg text-indigo-200">Database</div>
+								<div class="font-mono text-[8px] text-gray-600 mt-2">PostgreSQL</div>
+								<div class="font-mono text-[8px] text-gray-600">Redis</div>
+								<div class="font-mono text-[8px] text-gray-600">MongoDB</div>
+							</div>
+							<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.5)] group-hover:animate-pulse"></div>
+						</div>
+					</div>
+					
+					<!-- Component: Systems IC -->
+					<div class="component group">
+						<div class="border-2 border-cyan-500/30 bg-[#0a0b0d] p-4 relative hover:border-cyan-400/60 transition-all">
+							<div class="absolute -left-1 top-1/4 w-2 h-1 bg-cyan-500/40"></div>
+							<div class="absolute -left-1 top-2/4 w-2 h-1 bg-cyan-500/40"></div>
+							<div class="absolute -left-1 top-3/4 w-2 h-1 bg-cyan-500/40"></div>
+							<div class="absolute -right-1 top-1/4 w-2 h-1 bg-cyan-500/40"></div>
+							<div class="absolute -right-1 top-2/4 w-2 h-1 bg-cyan-500/40"></div>
+							<div class="absolute -right-1 top-3/4 w-2 h-1 bg-cyan-500/40"></div>
+							<div class="text-center">
+								<div class="font-mono text-xs text-cyan-400 mb-1">IC-003</div>
+								<div class="font-sinistre text-lg text-cyan-200">Systems</div>
+								<div class="font-mono text-[8px] text-gray-600 mt-2">C</div>
+								<div class="font-mono text-[8px] text-gray-600">Linux</div>
+								<div class="font-mono text-[8px] text-gray-600">Kernel</div>
+							</div>
+							<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.5)] group-hover:animate-pulse"></div>
+						</div>
+					</div>
+					
+					<!-- Component: Frontend IC -->
+					<div class="component group">
+						<div class="border-2 border-emerald-500/30 bg-[#0a0b0d] p-4 relative hover:border-emerald-400/60 transition-all">
+							<div class="absolute -left-1 top-1/4 w-2 h-1 bg-emerald-500/40"></div>
+							<div class="absolute -left-1 top-2/4 w-2 h-1 bg-emerald-500/40"></div>
+							<div class="absolute -left-1 top-3/4 w-2 h-1 bg-emerald-500/40"></div>
+							<div class="absolute -right-1 top-1/4 w-2 h-1 bg-emerald-500/40"></div>
+							<div class="absolute -right-1 top-2/4 w-2 h-1 bg-emerald-500/40"></div>
+							<div class="absolute -right-1 top-3/4 w-2 h-1 bg-emerald-500/40"></div>
+							<div class="text-center">
+								<div class="font-mono text-xs text-emerald-400 mb-1">IC-004</div>
+								<div class="font-sinistre text-lg text-emerald-200">Frontend</div>
+								<div class="font-mono text-[8px] text-gray-600 mt-2">React</div>
+								<div class="font-mono text-[8px] text-gray-600">TypeScript</div>
+								<div class="font-mono text-[8px] text-gray-600">Tailwind</div>
+							</div>
+							<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.5)] group-hover:animate-pulse"></div>
+						</div>
+					</div>
+					
+					<!-- Component: DevOps IC -->
+					<div class="component group">
+						<div class="border-2 border-amber-500/30 bg-[#0a0b0d] p-4 relative hover:border-amber-400/60 transition-all">
+							<div class="absolute -left-1 top-1/4 w-2 h-1 bg-amber-500/40"></div>
+							<div class="absolute -left-1 top-2/4 w-2 h-1 bg-amber-500/40"></div>
+							<div class="absolute -left-1 top-3/4 w-2 h-1 bg-amber-500/40"></div>
+							<div class="absolute -right-1 top-1/4 w-2 h-1 bg-amber-500/40"></div>
+							<div class="absolute -right-1 top-2/4 w-2 h-1 bg-amber-500/40"></div>
+							<div class="absolute -right-1 top-3/4 w-2 h-1 bg-amber-500/40"></div>
+							<div class="text-center">
+								<div class="font-mono text-xs text-amber-400 mb-1">IC-005</div>
+								<div class="font-sinistre text-lg text-amber-200">DevOps</div>
+								<div class="font-mono text-[8px] text-gray-600 mt-2">Docker</div>
+								<div class="font-mono text-[8px] text-gray-600">K8s</div>
+								<div class="font-mono text-[8px] text-gray-600">AWS</div>
+							</div>
+							<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.5)] group-hover:animate-pulse"></div>
+						</div>
+					</div>
+					
+					<!-- Component: Media IC -->
+					<div class="component group">
+						<div class="border-2 border-rose-500/30 bg-[#0a0b0d] p-4 relative hover:border-rose-400/60 transition-all">
+							<div class="absolute -left-1 top-1/4 w-2 h-1 bg-rose-500/40"></div>
+							<div class="absolute -left-1 top-2/4 w-2 h-1 bg-rose-500/40"></div>
+							<div class="absolute -left-1 top-3/4 w-2 h-1 bg-rose-500/40"></div>
+							<div class="absolute -right-1 top-1/4 w-2 h-1 bg-rose-500/40"></div>
+							<div class="absolute -right-1 top-2/4 w-2 h-1 bg-rose-500/40"></div>
+							<div class="absolute -right-1 top-3/4 w-2 h-1 bg-rose-500/40"></div>
+							<div class="text-center">
+								<div class="font-mono text-xs text-rose-400 mb-1">IC-006</div>
+								<div class="font-sinistre text-lg text-rose-200">Media</div>
+								<div class="font-mono text-[8px] text-gray-600 mt-2">FFmpeg</div>
+								<div class="font-mono text-[8px] text-gray-600">HLS</div>
+								<div class="font-mono text-[8px] text-gray-600">Streaming</div>
+							</div>
+							<div class="absolute top-2 right-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.5)] group-hover:animate-pulse"></div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Board info -->
+				<div class="mt-8 flex justify-between items-center text-xs font-mono text-gray-600">
+					<span>PCB-ATDUYAR-2026-R3</span>
+					<span>ALL COMPONENTS OPERATIONAL</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 4: THE JUKEBOX - Fun Interactive Area -->
+		<section id="jukebox" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰇𐰕</span>
+					The Jukebox
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Select a track. Every developer has a playlist.</p>
+				
+				<!-- Jukebox machine -->
+				<div class="max-w-2xl mx-auto">
+					<!-- Jukebox frame -->
+					<div class="border-4 border-amber-800/40 rounded-t-[40px] bg-gradient-to-b from-amber-950/30 via-[#0a0b0d] to-[#0a0b0d] p-8 relative overflow-hidden">
+						<!-- Decorative arch -->
+						<div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-20 border-b-4 border-amber-700/30 rounded-b-full"></div>
+						
+						<!-- Display window -->
+						<div class="mt-12 border-2 border-amber-600/30 bg-gradient-to-b from-amber-900/20 to-[#0a0b0d] rounded-lg p-6">
+							<div class="text-center mb-6">
+								<div id="now-playing" class="font-sinistre text-2xl text-amber-200">Select a Track</div>
+								<div id="track-artist" class="text-sm text-amber-600/60 mt-1">---</div>
+							</div>
+							
+							<!-- Visualizer bars -->
+							<div class="flex justify-center gap-1 h-16 items-end" id="visualizer">
+								<div class="w-2 bg-amber-500/60 rounded-t h-4 visualizer-bar"></div>
+								<div class="w-2 bg-amber-500/60 rounded-t h-8 visualizer-bar"></div>
+								<div class="w-2 bg-amber-500/60 rounded-t h-6 visualizer-bar"></div>
+								<div class="w-2 bg-amber-500/60 rounded-t h-12 visualizer-bar"></div>
+								<div class="w-2 bg-amber-500/60 rounded-t h-8 visualizer-bar"></div>
+								<div class="w-2 bg-amber-500/60 rounded-t h-10 visualizer-bar"></div>
+								<div class="w-2 bg-amber-500/60 rounded-t h-6 visualizer-bar"></div>
+								<div class="w-2 bg-amber-500/60 rounded-t h-14 visualizer-bar"></div>
+								<div class="w-2 bg-amber-500/60 rounded-t h-8 visualizer-bar"></div>
+								<div class="w-2 bg-amber-500/60 rounded-t h-4 visualizer-bar"></div>
+							</div>
+						</div>
+						
+						<!-- Track selection buttons -->
+						<div class="grid grid-cols-2 gap-3 mt-6">
+							<button onclick="playTrack('Deep Focus', 'Lo-Fi Beats')" class="jukebox-btn border border-amber-700/40 bg-amber-950/30 hover:bg-amber-900/40 px-4 py-3 text-left transition-all group">
+								<span class="font-mono text-xs text-amber-500/60">A1</span>
+								<div class="font-sinistre text-amber-200 group-hover:text-amber-100">Deep Focus</div>
+								<div class="text-xs text-gray-600">Lo-Fi Beats</div>
+							</button>
+							<button onclick="playTrack('Binary Sunset', 'Synthwave')" class="jukebox-btn border border-amber-700/40 bg-amber-950/30 hover:bg-amber-900/40 px-4 py-3 text-left transition-all group">
+								<span class="font-mono text-xs text-amber-500/60">A2</span>
+								<div class="font-sinistre text-amber-200 group-hover:text-amber-100">Binary Sunset</div>
+								<div class="text-xs text-gray-600">Synthwave</div>
+							</button>
+							<button onclick="playTrack('Kernel Panic', 'Dark Ambient')" class="jukebox-btn border border-amber-700/40 bg-amber-950/30 hover:bg-amber-900/40 px-4 py-3 text-left transition-all group">
+								<span class="font-mono text-xs text-amber-500/60">B1</span>
+								<div class="font-sinistre text-amber-200 group-hover:text-amber-100">Kernel Panic</div>
+								<div class="text-xs text-gray-600">Dark Ambient</div>
+							</button>
+							<button onclick="playTrack('Compile Time', 'Electronic')" class="jukebox-btn border border-amber-700/40 bg-amber-950/30 hover:bg-amber-900/40 px-4 py-3 text-left transition-all group">
+								<span class="font-mono text-xs text-amber-500/60">B2</span>
+								<div class="font-sinistre text-amber-200 group-hover:text-amber-100">Compile Time</div>
+								<div class="text-xs text-gray-600">Electronic</div>
+							</button>
+						</div>
+					</div>
+					
+					<!-- Jukebox base -->
+					<div class="h-8 bg-gradient-to-b from-amber-900/40 to-amber-950/60 rounded-b-lg border-x-4 border-b-4 border-amber-800/40"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 5: THE FORECAST - Availability as Weather Report -->
+		<section id="forecast" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Forecast
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Current conditions and outlook.</p>
+				
+				<!-- Weather display -->
+				<div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+					<!-- Current conditions -->
+					<div class="md:col-span-2 border border-[#90c5ff20] bg-[#0a0b0d] p-6">
+						<div class="flex items-center justify-between mb-6">
+							<div>
+								<div class="font-mono text-xs text-gray-500">CURRENT CONDITIONS</div>
+								<div class="font-sinistre text-3xl mt-1">Open for Work</div>
+							</div>
+							<div class="text-6xl opacity-80">
+								<!-- Sun icon as text -->
+								<svg class="w-16 h-16 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+									<circle cx="12" cy="12" r="5"/>
+									<path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" fill="none"/>
+								</svg>
+							</div>
+						</div>
+						
+						<div class="grid grid-cols-3 gap-4 text-center">
+							<div>
+								<div class="text-3xl font-mono text-blue-300">100%</div>
+								<div class="text-xs text-gray-500 mt-1">Availability</div>
+							</div>
+							<div>
+								<div class="text-3xl font-mono text-emerald-300">HIGH</div>
+								<div class="text-xs text-gray-500 mt-1">Energy</div>
+							</div>
+							<div>
+								<div class="text-3xl font-mono text-amber-300">CET</div>
+								<div class="text-xs text-gray-500 mt-1">Timezone</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 5-day forecast -->
+					<div class="border border-[#90c5ff20] bg-[#0a0b0d] p-6">
+						<div class="font-mono text-xs text-gray-500 mb-4">EXTENDED OUTLOOK</div>
+						<div class="space-y-3">
+							<div class="flex justify-between items-center">
+								<span class="text-sm">Q1 2026</span>
+								<span class="text-emerald-400 text-sm">Available</span>
+							</div>
+							<div class="flex justify-between items-center">
+								<span class="text-sm">Q2 2026</span>
+								<span class="text-emerald-400 text-sm">Available</span>
+							</div>
+							<div class="flex justify-between items-center">
+								<span class="text-sm">Q3 2026</span>
+								<span class="text-amber-400 text-sm">Booking</span>
+							</div>
+							<div class="flex justify-between items-center">
+								<span class="text-sm text-gray-600">Q4 2026</span>
+								<span class="text-gray-600 text-sm">TBD</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 6: THE RECIPE - Process as Cooking Instructions -->
+		<section id="recipe" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰼𐱅</span>
+					The Recipe
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">How to cook up a successful project.</p>
+				
+				<!-- Recipe card -->
+				<div class="max-w-2xl mx-auto border border-[#90c5ff20] bg-[#0a0b0d]">
+					<!-- Recipe header -->
+					<div class="border-b border-[#90c5ff14] p-6 text-center">
+						<h3 class="font-sinistre text-3xl">Production-Ready Application</h3>
+						<div class="flex justify-center gap-8 mt-4 text-sm text-gray-500">
+							<span>Prep: 1-2 weeks</span>
+							<span>Cook: 4-8 weeks</span>
+							<span>Serves: 10K+ users</span>
+						</div>
+					</div>
+					
+					<div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-[#90c5ff14]">
+						<!-- Ingredients -->
+						<div class="p-6">
+							<h4 class="font-sinistre text-lg mb-4 text-amber-200">Ingredients</h4>
+							<ul class="space-y-2 text-sm text-gray-400">
+								<li class="flex gap-2">
+									<span class="text-amber-400">1</span>
+									<span>Clear project requirements</span>
+								</li>
+								<li class="flex gap-2">
+									<span class="text-amber-400">2 cups</span>
+									<span>Well-structured code</span>
+								</li>
+								<li class="flex gap-2">
+									<span class="text-amber-400">1 tbsp</span>
+									<span>Comprehensive tests</span>
+								</li>
+								<li class="flex gap-2">
+									<span class="text-amber-400">1 dash</span>
+									<span>CI/CD pipeline</span>
+								</li>
+								<li class="flex gap-2">
+									<span class="text-amber-400">To taste</span>
+									<span>Documentation</span>
+								</li>
+								<li class="flex gap-2">
+									<span class="text-amber-400">Generous</span>
+									<span>Communication</span>
+								</li>
+							</ul>
+						</div>
+						
+						<!-- Instructions -->
+						<div class="p-6">
+							<h4 class="font-sinistre text-lg mb-4 text-blue-200">Instructions</h4>
+							<ol class="space-y-3 text-sm text-gray-400">
+								<li class="flex gap-3">
+									<span class="font-mono text-blue-400 flex-shrink-0">01.</span>
+									<span>Begin by thoroughly understanding the requirements. Let them simmer until fully absorbed.</span>
+								</li>
+								<li class="flex gap-3">
+									<span class="font-mono text-blue-400 flex-shrink-0">02.</span>
+									<span>In a large architecture bowl, combine database schema with API design. Mix until consistent.</span>
+								</li>
+								<li class="flex gap-3">
+									<span class="font-mono text-blue-400 flex-shrink-0">03.</span>
+									<span>Fold in the code carefully, testing frequently. Do not over-engineer.</span>
+								</li>
+								<li class="flex gap-3">
+									<span class="font-mono text-blue-400 flex-shrink-0">04.</span>
+									<span>Bake in production environment until golden. Monitor heat levels closely.</span>
+								</li>
+								<li class="flex gap-3">
+									<span class="font-mono text-blue-400 flex-shrink-0">05.</span>
+									<span>Serve immediately. Pairs well with user feedback.</span>
+								</li>
+							</ol>
+						</div>
+					</div>
+					
+					<!-- Chef's notes -->
+					<div class="border-t border-[#90c5ff14] p-6 bg-[#90c5ff05]">
+						<div class="text-xs text-gray-500 italic">
+							<strong>Chef's Note:</strong> For best results, maintain constant communication with stakeholders. If the build starts to burn, check your tests immediately. Can be scaled to serve millions with proper infrastructure seasoning.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 7: THE TAPE - Experience as Cassette -->
+		<section id="tape" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰇𐰕</span>
+					The Tape
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Recorded experiences, Side A and Side B.</p>
+				
+				<!-- Cassette tape -->
+				<div class="max-w-lg mx-auto">
+					<!-- Cassette body -->
+					<div class="border-4 border-gray-700 rounded-lg bg-gradient-to-b from-gray-800 to-gray-900 p-6 relative">
+						<!-- Screw holes -->
+						<div class="absolute top-3 left-3 w-2 h-2 rounded-full bg-gray-600"></div>
+						<div class="absolute top-3 right-3 w-2 h-2 rounded-full bg-gray-600"></div>
+						<div class="absolute bottom-3 left-3 w-2 h-2 rounded-full bg-gray-600"></div>
+						<div class="absolute bottom-3 right-3 w-2 h-2 rounded-full bg-gray-600"></div>
+						
+						<!-- Label -->
+						<div class="bg-gradient-to-r from-amber-100 to-amber-50 rounded p-4 text-gray-900 mb-6">
+							<div class="text-center">
+								<div class="font-sinistre text-xl">ATDUYAR</div>
+								<div class="text-xs mt-1">GREATEST HITS 2022-2026</div>
+							</div>
+							<div class="flex justify-between mt-4 text-xs">
+								<div>
+									<div class="font-bold">SIDE A</div>
+									<div class="mt-1 space-y-0.5">
+										<p>1. Full-Stack Developer</p>
+										<p>2. Streaming Platform</p>
+										<p>3. 17K Users</p>
+									</div>
+								</div>
+								<div class="text-right">
+									<div class="font-bold">SIDE B</div>
+									<div class="mt-1 space-y-0.5">
+										<p>1. Honor Student</p>
+										<p>2. Rust Journey</p>
+										<p>3. Linux Exploration</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Tape window -->
+						<div class="flex justify-center gap-8">
+							<!-- Left spool -->
+							<div class="w-16 h-16 rounded-full border-4 border-gray-600 bg-gray-900 relative">
+								<div class="absolute inset-2 rounded-full border-2 border-gray-700 bg-gray-800"></div>
+								<div class="absolute inset-0 flex items-center justify-center">
+									<div class="w-4 h-4 bg-gray-600 rounded-sm"></div>
+								</div>
+								<!-- Tape lines -->
+								<div class="absolute inset-4 rounded-full border border-amber-900/60"></div>
+								<div class="absolute inset-5 rounded-full border border-amber-900/40"></div>
+							</div>
+							
+							<!-- Tape window center -->
+							<div class="w-8 h-16 bg-gray-950 flex flex-col justify-center">
+								<div class="h-1 bg-amber-900/60"></div>
+								<div class="h-1 bg-amber-900/60 mt-1"></div>
+							</div>
+							
+							<!-- Right spool -->
+							<div class="w-16 h-16 rounded-full border-4 border-gray-600 bg-gray-900 relative animate-spin-very-slow">
+								<div class="absolute inset-2 rounded-full border-2 border-gray-700 bg-gray-800"></div>
+								<div class="absolute inset-0 flex items-center justify-center">
+									<div class="w-4 h-4 bg-gray-600 rounded-sm"></div>
+								</div>
+								<div class="absolute inset-3 rounded-full border border-amber-900/80"></div>
+								<div class="absolute inset-4 rounded-full border border-amber-900/60"></div>
+								<div class="absolute inset-5 rounded-full border border-amber-900/40"></div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Cassette case edge -->
+					<div class="h-2 bg-gradient-to-b from-gray-600 to-gray-700 rounded-b-lg mx-2"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 8: THE DIAL - Quick Links as Rotary Phone -->
+		<section id="dial" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰋𐰃𐰠</span>
+					The Dial
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-8">Direct lines to important destinations.</p>
+				
+				<!-- Rotary dial -->
+				<div class="max-w-xs mx-auto">
+					<div class="relative w-64 h-64 mx-auto">
+						<!-- Dial base -->
+						<div class="absolute inset-0 rounded-full bg-gradient-to-b from-gray-700 to-gray-900 border-8 border-gray-600"></div>
+						
+						<!-- Dial holes -->
+						<div class="absolute inset-4">
+							<!-- Center -->
+							<div class="absolute inset-0 m-auto w-16 h-16 rounded-full bg-gray-800 border-2 border-gray-600 flex items-center justify-center">
+								<span class="font-sinistre text-gray-400 text-sm">ATD</span>
+							</div>
+							
+							<!-- GitHub - position 1 -->
+							<a href="https://github.com/atduyar" target="_blank" class="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-gray-950 border-2 border-gray-600 flex items-center justify-center hover:bg-blue-900/50 hover:border-blue-400/50 transition-all group">
+								<span class="text-xs text-gray-400 group-hover:text-blue-300">GH</span>
+							</a>
+							
+							<!-- LinkedIn - position 2 -->
+							<a href="https://linkedin.com/in/atduyar" target="_blank" class="absolute top-8 right-4 w-10 h-10 rounded-full bg-gray-950 border-2 border-gray-600 flex items-center justify-center hover:bg-blue-900/50 hover:border-blue-400/50 transition-all group">
+								<span class="text-xs text-gray-400 group-hover:text-blue-300">LI</span>
+							</a>
+							
+							<!-- Email - position 3 -->
+							<a href="mailto:contact@atduyar.com" class="absolute bottom-8 right-4 w-10 h-10 rounded-full bg-gray-950 border-2 border-gray-600 flex items-center justify-center hover:bg-blue-900/50 hover:border-blue-400/50 transition-all group">
+								<span class="text-xs text-gray-400 group-hover:text-blue-300">@</span>
+							</a>
+							
+							<!-- Blog - position 4 -->
+							<a href="#codex" class="absolute bottom-2 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-gray-950 border-2 border-gray-600 flex items-center justify-center hover:bg-amber-900/50 hover:border-amber-400/50 transition-all group">
+								<span class="text-xs text-gray-400 group-hover:text-amber-300">B</span>
+							</a>
+							
+							<!-- Projects - position 5 -->
+							<a href="#schematic" class="absolute bottom-8 left-4 w-10 h-10 rounded-full bg-gray-950 border-2 border-gray-600 flex items-center justify-center hover:bg-emerald-900/50 hover:border-emerald-400/50 transition-all group">
+								<span class="text-xs text-gray-400 group-hover:text-emerald-300">P</span>
+							</a>
+							
+							<!-- Contact - position 6 -->
+							<a href="#postcard" class="absolute top-8 left-4 w-10 h-10 rounded-full bg-gray-950 border-2 border-gray-600 flex items-center justify-center hover:bg-rose-900/50 hover:border-rose-400/50 transition-all group">
+								<span class="text-xs text-gray-400 group-hover:text-rose-300">C</span>
+							</a>
+						</div>
+					</div>
+					
+					<!-- Legend -->
+					<div class="mt-8 grid grid-cols-3 gap-2 text-xs text-center text-gray-500">
+						<div>GH = GitHub</div>
+						<div>LI = LinkedIn</div>
+						<div>@ = Email</div>
+						<div>B = Blog</div>
+						<div>P = Projects</div>
+						<div>C = Contact</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 9: THE POSTCARD - Contact as Vintage Postcard -->
+		<section id="postcard" class="px-4 md:px-8 lg:px-16 py-24 relative overflow-hidden group">
+			<BackgroundMarquee class="group-has-[button:hover]:text-blue-300/30 duration-700 transition-all">
+				𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰖𐰸: 𐰼𐰾𐰼: 𐰸𐰆𐰯: 𐰇𐰠𐱅𐰲𐰃: 𐰼𐱅𐰏𐰕: 𐰃𐰤𐰢: 𐰚𐰇𐰠𐱅𐰃𐰏𐰤
+			</BackgroundMarquee>
+			
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰽𐰴</span>
+					The Postcard
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-12">Write me a message. Old-fashioned way.</p>
+				
+				<!-- Postcard -->
+				<div class="max-w-4xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-2 border-4 border-amber-100/20 bg-gradient-to-br from-amber-50/5 to-amber-100/5">
+						<!-- Left side: Message area -->
+						<div class="p-8 border-b md:border-b-0 md:border-r border-amber-100/20 border-dashed">
+							<div class="font-sinistre text-sm text-amber-200/60 mb-4">MESSAGE</div>
+							<form class="space-y-4">
+								<div>
+									<input type="text" placeholder="Your name" class="w-full bg-transparent border-b border-amber-200/20 focus:border-amber-200/40 outline-none py-2 text-amber-100/80 placeholder:text-amber-100/30 font-sinistre" />
+								</div>
+								<div>
+									<input type="email" placeholder="Your email" class="w-full bg-transparent border-b border-amber-200/20 focus:border-amber-200/40 outline-none py-2 text-amber-100/80 placeholder:text-amber-100/30 font-sinistre" />
+								</div>
+								<div>
+									<textarea rows="6" placeholder="Write your message here..." class="w-full bg-transparent border-b border-amber-200/20 focus:border-amber-200/40 outline-none py-2 text-amber-100/80 placeholder:text-amber-100/30 font-sinistre resize-none leading-relaxed" style="background-image: repeating-linear-gradient(transparent, transparent 27px, rgba(255,255,255,0.03) 28px); background-size: 100% 28px;"></textarea>
+								</div>
+								<button type="submit" class="w-full py-3 bg-amber-900/20 border border-amber-400/30 hover:bg-amber-900/40 hover:border-amber-400/50 transition-all font-sinistre text-amber-200">
+									Send Postcard
+								</button>
+							</form>
+						</div>
+						
+						<!-- Right side: Address and stamp -->
+						<div class="p-8 relative">
+							<!-- Stamp -->
+							<div class="absolute top-6 right-6 w-20 h-24 border-2 border-dashed border-amber-400/30 flex items-center justify-center bg-amber-900/10">
+								<div class="text-center">
+									<div class="font-oldturcic text-2xl text-amber-400/50">𐰚</div>
+									<div class="text-[8px] text-amber-400/40 mt-1">SARAJEVO</div>
+									<div class="text-[8px] text-amber-400/40">2026</div>
+								</div>
+							</div>
+							
+							<!-- Address lines -->
+							<div class="mt-20 space-y-6">
+								<div class="border-b border-amber-200/20 pb-2">
+									<span class="text-xs text-amber-200/40">TO:</span>
+									<div class="font-sinistre text-amber-100/80 mt-1">Ahmet Tarik Duyar</div>
+								</div>
+								<div class="border-b border-amber-200/20 pb-2">
+									<div class="font-sinistre text-amber-100/60">Software Engineer</div>
+								</div>
+								<div class="border-b border-amber-200/20 pb-2">
+									<div class="font-sinistre text-amber-100/60">Sarajevo, Bosnia</div>
+								</div>
+								<div class="border-b border-amber-200/20 pb-2">
+									<div class="font-sinistre text-amber-100/40">contact@atduyar.com</div>
+								</div>
+							</div>
+							
+							<!-- Postmark -->
+							<div class="absolute bottom-6 right-6 w-16 h-16 rounded-full border-2 border-amber-400/20 flex items-center justify-center rotate-[-15deg]">
+								<div class="text-center text-amber-400/30">
+									<div class="text-[8px]">DELIVERED</div>
+									<div class="text-[10px] font-bold">2026</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Radial effect on hover -->
+			<div class="select-none pointer-events-none absolute left-0 top-0 h-full w-full transition-[--x] duration-600 ease-out [--x:0%] group-has-[button:hover]:[--x:100%] to-30% opacity-30 from-amber-600 to-transparent mix-blend-hard-light bg-radial-[circle_at_50%_80%,var(--tw-gradient-from)_var(--x)] group-has-[button:hover]:opacity-60"></div>
+		</section>
+
+		<!-- SECTION 10: THE CREDITS - Footer as Movie Credits -->
+		<section id="credits" class="relative overflow-hidden">
+			<div class="px-4 md:px-8 lg:px-16 py-20 text-center">
+				<div class="max-w-2xl mx-auto">
+					<!-- Film grain overlay -->
+					<div class="absolute inset-0 opacity-[0.02] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+					
+					<!-- Studio logo -->
+					<div class="mb-12">
+						<img src="/favicon.svg" alt="Logo" class="w-16 h-16 mx-auto opacity-60" />
+					</div>
+					
+					<!-- Title card -->
+					<div class="mb-16">
+						<h3 class="font-sinistre text-4xl text-blue-200 mb-2">AHMET TARIK DUYAR</h3>
+						<p class="text-gray-500 italic">A Full-Stack Production</p>
+					</div>
+					
+					<!-- Credits roll -->
+					<div class="space-y-8 text-sm">
+						<div>
+							<div class="text-gray-500 mb-1">WRITTEN AND DIRECTED BY</div>
+							<div class="font-sinistre text-lg">Ahmet Tarik Duyar</div>
+						</div>
+						
+						<div>
+							<div class="text-gray-500 mb-1">PRODUCED BY</div>
+							<div class="font-sinistre text-lg">Coffee and Late Nights</div>
+						</div>
+						
+						<div>
+							<div class="text-gray-500 mb-1">TECHNOLOGIES</div>
+							<div class="font-sinistre">Node.js / Rust / PostgreSQL / React</div>
+						</div>
+						
+						<div>
+							<div class="text-gray-500 mb-1">SPECIAL THANKS</div>
+							<div class="font-sinistre">The Open Source Community</div>
+						</div>
+						
+						<div>
+							<div class="text-gray-500 mb-1">FILMED ON LOCATION</div>
+							<div class="font-sinistre">Sarajevo, Bosnia and Herzegovina</div>
+						</div>
+					</div>
+					
+					<!-- Copyright -->
+					<div class="mt-16 pt-8 border-t border-[#90c5ff14]">
+						<p class="text-gray-600 text-xs">&copy; 2026 ATDUYAR PRODUCTIONS</p>
+						<p class="text-gray-700 text-xs mt-2">No code was harmed in the making of this portfolio.</p>
+					</div>
+					
+					<!-- Social links as "distribution" -->
+					<div class="mt-8 flex justify-center gap-8 text-gray-500 text-sm">
+						<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub</a>
+						<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="hover:text-white transition-colors">LinkedIn</a>
+						<a href="mailto:contact@atduyar.com" class="hover:text-white transition-colors">Email</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</BaseLayout>
+
+<script>
+	// Jukebox functionality
+	function playTrack(title, artist) {
+		const nowPlaying = document.getElementById('now-playing');
+		const trackArtist = document.getElementById('track-artist');
+		const bars = document.querySelectorAll('.visualizer-bar');
+		
+		if (nowPlaying) nowPlaying.textContent = title;
+		if (trackArtist) trackArtist.textContent = artist;
+		
+		// Animate visualizer
+		bars.forEach(bar => {
+			bar.classList.add('animate-visualizer');
+		});
+		
+		// Stop animation after 5 seconds
+		setTimeout(() => {
+			bars.forEach(bar => {
+				bar.classList.remove('animate-visualizer');
+			});
+		}, 5000);
+	}
+	
+	// Make function available globally
+	window.playTrack = playTrack;
+</script>
+
+<style>
+	@keyframes fade-in {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	
+	@keyframes slide-up {
+		from { 
+			opacity: 0;
+			transform: translateY(40px);
+		}
+		to { 
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	
+	@keyframes spin-very-slow {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); }
+	}
+	
+	@keyframes visualizer {
+		0%, 100% { height: 16px; }
+		25% { height: 48px; }
+		50% { height: 24px; }
+		75% { height: 56px; }
+	}
+	
+	.animate-fade-in {
+		animation: fade-in 1s ease-out forwards;
+		opacity: 0;
+	}
+	
+	.animate-slide-up {
+		animation: slide-up 0.8s ease-out forwards;
+		opacity: 0;
+	}
+	
+	.animate-spin-very-slow {
+		animation: spin-very-slow 8s linear infinite;
+	}
+	
+	.animate-visualizer {
+		animation: visualizer 0.5s ease-in-out infinite;
+	}
+	
+	.visualizer-bar:nth-child(2) { animation-delay: 0.1s; }
+	.visualizer-bar:nth-child(3) { animation-delay: 0.2s; }
+	.visualizer-bar:nth-child(4) { animation-delay: 0.05s; }
+	.visualizer-bar:nth-child(5) { animation-delay: 0.15s; }
+	.visualizer-bar:nth-child(6) { animation-delay: 0.25s; }
+	.visualizer-bar:nth-child(7) { animation-delay: 0.08s; }
+	.visualizer-bar:nth-child(8) { animation-delay: 0.18s; }
+	.visualizer-bar:nth-child(9) { animation-delay: 0.12s; }
+	.visualizer-bar:nth-child(10) { animation-delay: 0.22s; }
+</style>
