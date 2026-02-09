@@ -1,0 +1,507 @@
+---
+import BackgroundMarquee from "../../../components/BackgroundMarquee.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Ahmet Tarik Duyar" description="Full-Stack Software Engineer Portfolio" bodyClass="bg-[#0a0b0d] text-white w-screen overflow-x-hidden">
+	<main class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-7xl mx-auto min-h-dvh relative">
+		<!-- Subtle noise overlay -->
+		<div class="fixed inset-0 pointer-events-none opacity-[0.015] z-50" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+		
+		<!-- Navigation -->
+		<nav class="py-6 px-4 md:px-8 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
+			<div class="flex justify-between items-center">
+				<a href="#hero" class="group flex items-center gap-3">
+					<img src="/favicon.svg" alt="Logo" class="w-8 h-8 transition-transform group-hover:rotate-12" />
+					<span class="font-sinistre text-xl tracking-wide hidden sm:block">Atduyar</span>
+				</a>
+				<ul class="flex gap-4 md:gap-8">
+					<li><a href="#about" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all">About</a></li>
+					<li><a href="#constellation" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all">Stars</a></li>
+					<li><a href="#saga" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all">Saga</a></li>
+					<li><a href="#summon" class="nav-link font-sinistre text-lg px-4 py-1 border border-blue-500/30 hover:bg-blue-600/10 transition-all">Summon</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section id="hero" class="min-h-[80vh] flex flex-col justify-center px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="absolute inset-0 opacity-5">
+				<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-[128px]"></div>
+				<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-[128px]"></div>
+			</div>
+			
+			<!-- Floating stars -->
+			<div class="absolute inset-0 overflow-hidden pointer-events-none">
+				<span class="absolute top-[20%] left-[15%] w-1 h-1 bg-blue-400 rounded-full animate-twinkle"></span>
+				<span class="absolute top-[30%] right-[20%] w-1.5 h-1.5 bg-blue-300 rounded-full animate-twinkle-delay-1"></span>
+				<span class="absolute bottom-[25%] left-[25%] w-1 h-1 bg-indigo-400 rounded-full animate-twinkle-delay-2"></span>
+				<span class="absolute top-[50%] right-[30%] w-2 h-2 bg-blue-400 rounded-full animate-twinkle"></span>
+				<span class="absolute top-[15%] right-[40%] w-1 h-1 bg-cyan-400 rounded-full animate-twinkle-delay-1"></span>
+				<span class="absolute bottom-[35%] right-[15%] w-1.5 h-1.5 bg-blue-300 rounded-full animate-twinkle-delay-2"></span>
+				<span class="absolute top-[60%] left-[10%] w-1 h-1 bg-indigo-400 rounded-full animate-twinkle"></span>
+				<span class="absolute bottom-[20%] left-[40%] w-1 h-1 bg-blue-400 rounded-full animate-twinkle-delay-1"></span>
+			</div>
+			
+			<!-- Floating Turkic Glyphs -->
+			<div class="absolute inset-0 overflow-hidden pointer-events-none">
+				<span class="absolute top-1/4 left-[10%] font-oldturcic text-6xl md:text-8xl text-blue-400/[0.06] leading-none animate-float-1">𐰚</span>
+				<span class="absolute bottom-1/3 right-[25%] font-oldturcic text-7xl md:text-9xl text-blue-400/[0.06] leading-none animate-float-2">𐱅</span>
+			</div>
+			
+			<div class="relative z-10">
+				<p class="font-oldturcic text-blue-400/40 text-lg mb-4 tracking-[0.4em] animate-fade-in leading-none">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</p>
+				<h1 class="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-sinistre leading-[0.9] mb-8">
+					<span class="block animate-slide-up" style="animation-delay: 0.1s;">I'm Ahmet</span>
+					<span class="block animate-slide-up text-blue-300" style="animation-delay: 0.2s;">Tarik Duyar</span>
+				</h1>
+				<p class="text-lg md:text-xl text-gray-400 max-w-xl animate-fade-in" style="animation-delay: 0.5s;">
+					Building robust backend architectures and scalable systems. 
+					Passionate about C, Rust, and Linux.
+				</p>
+				<div class="flex gap-4 mt-10 animate-fade-in" style="animation-delay: 0.7s;">
+					<a href="#saga" class="px-6 py-3 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 hover:border-blue-400/50 transition-all font-sinistre text-lg rounded-sm">
+						Read My Saga
+					</a>
+					<a href="#summon" class="px-6 py-3 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all font-sinistre text-lg rounded-sm">
+						Summon Me
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14]">
+			<div class="flex flex-col lg:flex-row gap-12 items-start">
+				<div class="flex-1">
+					<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-8 flex items-center gap-4">
+						<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰋𐰃𐰠</span>
+						About Me
+						<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+					</h2>
+					<div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+						<p>
+							I'm a Full-Stack Software Engineer with a year of professional experience specializing in building robust backend architectures, designing scalable databases, and managing critical systems.
+						</p>
+						<p>
+							During my time at <span class="text-white">Deniz Egece Co. Ltd.</span>, I took ownership of architecting and deploying a streaming platform serving over <span class="text-blue-300">17,000 paid users</span>.
+						</p>
+						<p>
+							As an <span class="text-white">Honor Student</span> in Software Engineering at the International University of Sarajevo, I'm deeply focused on computer science fundamentals.
+						</p>
+					</div>
+				</div>
+				<div class="w-full lg:w-80 flex-shrink-0">
+					<div class="aspect-square bg-gradient-to-br from-[#90c5ff08] to-transparent border border-[#90c5ff14] rounded-sm p-8 flex items-center justify-center relative">
+						<img src="/favicon.svg" alt="Logo" class="w-full h-full opacity-80" />
+						<div class="absolute top-0 left-0 w-6 h-6 border-t border-l border-blue-400/30"></div>
+						<div class="absolute top-0 right-0 w-6 h-6 border-t border-r border-blue-400/30"></div>
+						<div class="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-blue-400/30"></div>
+						<div class="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-blue-400/30"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONSTELLATION SECTION - Skills as Stars -->
+		<section id="constellation" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
+			<!-- Star field background -->
+			<div class="absolute inset-0 pointer-events-none">
+				<div class="stars-layer"></div>
+			</div>
+			
+			<div class="relative z-10">
+				<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+					<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰖𐰸𐰞𐰕</span>
+					The Constellation
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-gray-500 mb-16 max-w-xl">Skills mapped across the digital firmament. Each star a mastery, connected in patterns of knowledge.</p>
+				
+				<!-- Star Map -->
+				<div class="relative min-h-[500px] md:min-h-[600px]">
+					<!-- Connection lines (SVG) -->
+					<svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+						<!-- Backend to Database -->
+						<line x1="20" y1="25" x2="50" y2="20" stroke="url(#starline)" stroke-width="0.2" />
+						<!-- Database to Systems -->
+						<line x1="50" y1="20" x2="80" y2="30" stroke="url(#starline)" stroke-width="0.2" />
+						<!-- Backend to Cloud -->
+						<line x1="20" y1="25" x2="30" y2="60" stroke="url(#starline)" stroke-width="0.2" />
+						<!-- Systems to Streaming -->
+						<line x1="80" y1="30" x2="70" y2="65" stroke="url(#starline)" stroke-width="0.2" />
+						<!-- Cloud to Frontend -->
+						<line x1="30" y1="60" x2="50" y2="80" stroke="url(#starline)" stroke-width="0.2" />
+						<!-- Frontend to Streaming -->
+						<line x1="50" y1="80" x2="70" y2="65" stroke="url(#starline)" stroke-width="0.2" />
+						<!-- Database to Frontend -->
+						<line x1="50" y1="20" x2="50" y2="80" stroke="url(#starline)" stroke-width="0.15" stroke-dasharray="1,1" />
+						
+						<defs>
+							<linearGradient id="starline" x1="0%" y1="0%" x2="100%" y2="0%">
+								<stop offset="0%" stop-color="rgba(96, 165, 250, 0.1)" />
+								<stop offset="50%" stop-color="rgba(96, 165, 250, 0.3)" />
+								<stop offset="100%" stop-color="rgba(96, 165, 250, 0.1)" />
+							</linearGradient>
+						</defs>
+					</svg>
+					
+					<!-- Star 1 - Backend (Polaris - The brightest) -->
+					<div class="absolute left-[15%] top-[20%] group cursor-default">
+						<div class="relative">
+							<!-- Star glow -->
+							<div class="absolute inset-0 w-16 h-16 -translate-x-1/2 -translate-y-1/2 bg-blue-400/20 rounded-full blur-xl group-hover:bg-blue-400/40 transition-all"></div>
+							<!-- Star core -->
+							<div class="absolute w-4 h-4 -translate-x-1/2 -translate-y-1/2 bg-blue-400 rounded-full animate-pulse-star"></div>
+							<div class="absolute w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"></div>
+							<!-- Star label -->
+							<div class="absolute top-6 left-0 -translate-x-1/2 text-center opacity-60 group-hover:opacity-100 transition-opacity">
+								<div class="font-oldturcic text-xl text-blue-400 leading-none mb-1">𐰋</div>
+								<div class="font-sinistre text-sm text-blue-300 whitespace-nowrap">Backend</div>
+								<div class="text-xs text-gray-500">Polaris</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Star 2 - Database -->
+					<div class="absolute left-[48%] top-[15%] group cursor-default">
+						<div class="relative">
+							<div class="absolute inset-0 w-14 h-14 -translate-x-1/2 -translate-y-1/2 bg-indigo-400/20 rounded-full blur-xl group-hover:bg-indigo-400/40 transition-all"></div>
+							<div class="absolute w-3 h-3 -translate-x-1/2 -translate-y-1/2 bg-indigo-400 rounded-full animate-pulse-star-delay"></div>
+							<div class="absolute w-1.5 h-1.5 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"></div>
+							<div class="absolute top-6 left-0 -translate-x-1/2 text-center opacity-60 group-hover:opacity-100 transition-opacity">
+								<div class="font-oldturcic text-xl text-indigo-400 leading-none mb-1">𐰃</div>
+								<div class="font-sinistre text-sm text-indigo-300 whitespace-nowrap">Database</div>
+								<div class="text-xs text-gray-500">Vega</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Star 3 - Systems -->
+					<div class="absolute right-[15%] top-[25%] group cursor-default">
+						<div class="relative">
+							<div class="absolute inset-0 w-16 h-16 -translate-x-1/2 -translate-y-1/2 bg-cyan-400/20 rounded-full blur-xl group-hover:bg-cyan-400/40 transition-all"></div>
+							<div class="absolute w-4 h-4 -translate-x-1/2 -translate-y-1/2 bg-cyan-400 rounded-full animate-pulse-star"></div>
+							<div class="absolute w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"></div>
+							<div class="absolute top-6 left-0 -translate-x-1/2 text-center opacity-60 group-hover:opacity-100 transition-opacity">
+								<div class="font-oldturcic text-xl text-cyan-400 leading-none mb-1">𐰠</div>
+								<div class="font-sinistre text-sm text-cyan-300 whitespace-nowrap">Systems</div>
+								<div class="text-xs text-gray-500">Sirius</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Star 4 - Cloud -->
+					<div class="absolute left-[25%] top-[55%] group cursor-default">
+						<div class="relative">
+							<div class="absolute inset-0 w-12 h-12 -translate-x-1/2 -translate-y-1/2 bg-amber-400/20 rounded-full blur-xl group-hover:bg-amber-400/40 transition-all"></div>
+							<div class="absolute w-3 h-3 -translate-x-1/2 -translate-y-1/2 bg-amber-400 rounded-full animate-pulse-star-delay"></div>
+							<div class="absolute w-1.5 h-1.5 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"></div>
+							<div class="absolute top-6 left-0 -translate-x-1/2 text-center opacity-60 group-hover:opacity-100 transition-opacity">
+								<div class="font-oldturcic text-xl text-amber-400 leading-none mb-1">𐱅</div>
+								<div class="font-sinistre text-sm text-amber-300 whitespace-nowrap">Cloud</div>
+								<div class="text-xs text-gray-500">Rigel</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Star 5 - Frontend -->
+					<div class="absolute left-[48%] bottom-[15%] group cursor-default">
+						<div class="relative">
+							<div class="absolute inset-0 w-14 h-14 -translate-x-1/2 -translate-y-1/2 bg-emerald-400/20 rounded-full blur-xl group-hover:bg-emerald-400/40 transition-all"></div>
+							<div class="absolute w-3 h-3 -translate-x-1/2 -translate-y-1/2 bg-emerald-400 rounded-full animate-pulse-star"></div>
+							<div class="absolute w-1.5 h-1.5 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"></div>
+							<div class="absolute top-6 left-0 -translate-x-1/2 text-center opacity-60 group-hover:opacity-100 transition-opacity">
+								<div class="font-oldturcic text-xl text-emerald-400 leading-none mb-1">𐰏</div>
+								<div class="font-sinistre text-sm text-emerald-300 whitespace-nowrap">Frontend</div>
+								<div class="text-xs text-gray-500">Altair</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Star 6 - Streaming -->
+					<div class="absolute right-[25%] top-[60%] group cursor-default">
+						<div class="relative">
+							<div class="absolute inset-0 w-14 h-14 -translate-x-1/2 -translate-y-1/2 bg-rose-400/20 rounded-full blur-xl group-hover:bg-rose-400/40 transition-all"></div>
+							<div class="absolute w-3 h-3 -translate-x-1/2 -translate-y-1/2 bg-rose-400 rounded-full animate-pulse-star-delay"></div>
+							<div class="absolute w-1.5 h-1.5 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"></div>
+							<div class="absolute top-6 left-0 -translate-x-1/2 text-center opacity-60 group-hover:opacity-100 transition-opacity">
+								<div class="font-oldturcic text-xl text-rose-400 leading-none mb-1">𐰚</div>
+								<div class="font-sinistre text-sm text-rose-300 whitespace-nowrap">Streaming</div>
+								<div class="text-xs text-gray-500">Betelgeuse</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Constellation Legend -->
+				<div class="mt-8 p-6 border border-[#90c5ff14] bg-[#0d0e12]/80">
+					<h3 class="font-sinistre text-lg mb-4 text-gray-400">Constellation Guide</h3>
+					<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+						<div class="text-center">
+							<div class="text-xs text-blue-400">Polaris</div>
+							<div class="text-xs text-gray-500">Node, Rust, Go</div>
+						</div>
+						<div class="text-center">
+							<div class="text-xs text-indigo-400">Vega</div>
+							<div class="text-xs text-gray-500">PostgreSQL, Redis</div>
+						</div>
+						<div class="text-center">
+							<div class="text-xs text-cyan-400">Sirius</div>
+							<div class="text-xs text-gray-500">C, Rust, Linux</div>
+						</div>
+						<div class="text-center">
+							<div class="text-xs text-amber-400">Rigel</div>
+							<div class="text-xs text-gray-500">Docker, K8s, AWS</div>
+						</div>
+						<div class="text-center">
+							<div class="text-xs text-emerald-400">Altair</div>
+							<div class="text-xs text-gray-500">React, TypeScript</div>
+						</div>
+						<div class="text-center">
+							<div class="text-xs text-rose-400">Betelgeuse</div>
+							<div class="text-xs text-gray-500">FFmpeg, Real-time</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SAGA SECTION - Projects & Experience as Epic Chapters -->
+		<section id="saga" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14]">
+			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-4 flex items-center gap-4">
+				<span class="font-oldturcic text-2xl md:text-3xl text-blue-400/30 leading-none">𐰇𐰕</span>
+				The Saga
+				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+			</h2>
+			<p class="text-gray-500 mb-16 max-w-xl">An epic tale told in chapters. Each verse a journey, each stanza a triumph.</p>
+			
+			<div class="space-y-12">
+				<!-- Chapter I - The Awakening -->
+				<article class="saga-chapter relative">
+					<div class="flex items-start gap-6">
+						<!-- Chapter number ornament -->
+						<div class="hidden md:flex flex-col items-center">
+							<div class="w-20 h-20 border-2 border-blue-400/30 rotate-45 flex items-center justify-center">
+								<span class="font-sinistre text-2xl text-blue-400 -rotate-45">I</span>
+							</div>
+							<div class="w-px h-full bg-gradient-to-b from-blue-400/30 to-transparent mt-4"></div>
+						</div>
+						
+						<div class="flex-1">
+							<div class="mb-4">
+								<span class="text-xs text-blue-400/60 uppercase tracking-[0.3em]">Chapter One</span>
+								<h3 class="font-sinistre text-3xl md:text-4xl text-blue-300 mt-1">The Awakening</h3>
+								<p class="text-gray-500 text-sm mt-2">2022 - The journey begins</p>
+							</div>
+							
+							<div class="prose-custom">
+								<p class="text-gray-400 leading-relaxed text-lg italic border-l-2 border-blue-400/20 pl-4">
+									"In the halls of the International University of Sarajevo, a young scholar took their first steps into the realm of software. Algorithms became poetry, data structures became architecture, and the pursuit of knowledge became an obsession."
+								</p>
+							</div>
+							
+							<div class="mt-6 p-4 bg-[#90c5ff05] border border-[#90c5ff10]">
+								<div class="flex items-center gap-3 mb-2">
+									<span class="font-oldturcic text-lg text-blue-400 leading-none">𐰋𐰃𐰠</span>
+									<span class="font-sinistre text-lg">Software Engineering @ IUS</span>
+								</div>
+								<p class="text-sm text-gray-500">Honor Student. Deep focus on CS fundamentals, algorithms, and system design.</p>
+							</div>
+						</div>
+					</div>
+				</article>
+				
+				<!-- Chapter II - The First Quest -->
+				<article class="saga-chapter relative">
+					<div class="flex items-start gap-6">
+						<div class="hidden md:flex flex-col items-center">
+							<div class="w-20 h-20 border-2 border-indigo-400/30 rotate-45 flex items-center justify-center">
+								<span class="font-sinistre text-2xl text-indigo-400 -rotate-45">II</span>
+							</div>
+							<div class="w-px h-full bg-gradient-to-b from-indigo-400/30 to-transparent mt-4"></div>
+						</div>
+						
+						<div class="flex-1">
+							<div class="mb-4">
+								<span class="text-xs text-indigo-400/60 uppercase tracking-[0.3em]">Chapter Two</span>
+								<h3 class="font-sinistre text-3xl md:text-4xl text-indigo-300 mt-1">The First Quest</h3>
+								<p class="text-gray-500 text-sm mt-2">2023 - A hero emerges</p>
+							</div>
+							
+							<div class="prose-custom">
+								<p class="text-gray-400 leading-relaxed text-lg italic border-l-2 border-indigo-400/20 pl-4">
+									"Called upon by Deniz Egece, the scholar became a builder. Tasked with creating a fortress of streaming, they forged pipelines of video, gates of payment, and watchtowers of analytics. 17,000 souls would come to rely upon this creation."
+								</p>
+							</div>
+							
+							<div class="mt-6 p-4 bg-[#90c5ff05] border border-[#90c5ff10]">
+								<div class="flex items-center gap-3 mb-2">
+									<span class="font-oldturcic text-lg text-indigo-400 leading-none">𐰇𐰕</span>
+									<span class="font-sinistre text-lg">Streaming Platform</span>
+								</div>
+								<p class="text-sm text-gray-500 mb-3">Full-Stack Developer @ Deniz Egece Co. Ltd.</p>
+								<div class="flex gap-2 flex-wrap">
+									<span class="px-2 py-0.5 text-xs border border-[#90c5ff20] bg-[#90c5ff08]">Node.js</span>
+									<span class="px-2 py-0.5 text-xs border border-[#90c5ff20] bg-[#90c5ff08]">PostgreSQL</span>
+									<span class="px-2 py-0.5 text-xs border border-[#90c5ff20] bg-[#90c5ff08]">FFmpeg</span>
+									<span class="px-2 py-0.5 text-xs border border-[#90c5ff20] bg-[#90c5ff08]">Redis</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				
+				<!-- Chapter III - The Monument -->
+				<article class="saga-chapter relative">
+					<div class="flex items-start gap-6">
+						<div class="hidden md:flex flex-col items-center">
+							<div class="w-20 h-20 border-2 border-cyan-400/30 rotate-45 flex items-center justify-center">
+								<span class="font-sinistre text-2xl text-cyan-400 -rotate-45">III</span>
+							</div>
+						</div>
+						
+						<div class="flex-1">
+							<div class="mb-4">
+								<span class="text-xs text-cyan-400/60 uppercase tracking-[0.3em]">Chapter Three</span>
+								<h3 class="font-sinistre text-3xl md:text-4xl text-cyan-300 mt-1">The Monument</h3>
+								<p class="text-gray-500 text-sm mt-2">2024 - A legacy inscribed</p>
+							</div>
+							
+							<div class="prose-custom">
+								<p class="text-gray-400 leading-relaxed text-lg italic border-l-2 border-cyan-400/20 pl-4">
+									"To honor the ancestors who carved wisdom in stone, the hero created a digital monument. Ancient Turkic scripts dance alongside modern code, a bridge between worlds, a testament to heritage preserved through technology."
+								</p>
+							</div>
+							
+							<div class="mt-6 p-4 bg-[#90c5ff05] border border-[#90c5ff10]">
+								<div class="flex items-center gap-3 mb-2">
+									<span class="font-oldturcic text-lg text-cyan-400 leading-none">𐰋𐰃</span>
+									<span class="font-sinistre text-lg">Digital Monument</span>
+								</div>
+								<p class="text-sm text-gray-500 mb-3">atduyar.com - A portfolio honoring heritage</p>
+								<div class="flex gap-2 flex-wrap">
+									<span class="px-2 py-0.5 text-xs border border-[#90c5ff20] bg-[#90c5ff08]">Astro</span>
+									<span class="px-2 py-0.5 text-xs border border-[#90c5ff20] bg-[#90c5ff08]">Tailwind</span>
+									<span class="px-2 py-0.5 text-xs border border-[#90c5ff20] bg-[#90c5ff08]">Cloudflare</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				
+				<!-- To Be Continued -->
+				<div class="text-center py-12">
+					<p class="font-oldturcic text-xl text-blue-400/30 leading-none mb-2">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</p>
+					<p class="font-sinistre text-2xl text-gray-600 italic">The saga continues...</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Summon Section -->
+		<section id="summon" class="px-4 md:px-8 lg:px-16 py-24 relative group">
+			<BackgroundMarquee class="group-has-[a:hover]:text-white duration-500 transition-all">
+				𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰖𐰸: 𐰼𐰾𐰼: 𐰸𐰆𐰯:
+			</BackgroundMarquee>
+			
+			<div class="font-oldturcic text-xl text-blue-400/20 mb-6 tracking-[0.4em] leading-none text-center">𐰚𐰇𐰠𐱅𐰃𐰏𐰤</div>
+			
+			<h2 class="text-4xl sm:text-5xl lg:text-6xl font-sinistre mb-8 text-center">
+				<span class="text-blue-300">Summon</span> <span class="text-gray-600">Me</span>
+			</h2>
+			
+			<p class="text-gray-400 text-lg mb-10 text-center max-w-xl mx-auto">
+				Write the next chapter together? The stars await your message.
+			</p>
+			
+			<div class="flex justify-center">
+				<a href="mailto:contact@atduyar.com" class="px-10 py-4 border-2 border-blue-400 text-blue-300 font-sinistre text-xl hover:bg-blue-400 hover:text-[#0d0e12] transition-all duration-300">
+					Send Word
+				</a>
+			</div>
+			
+			<div class="flex justify-center gap-10 mt-12">
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors flex items-center gap-2">
+					<span class="font-oldturcic text-lg leading-none">𐰋</span>
+					<span>GitHub</span>
+				</a>
+				<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors flex items-center gap-2">
+					<span class="font-oldturcic text-lg leading-none">𐰠</span>
+					<span>LinkedIn</span>
+				</a>
+			</div>
+			
+			<div class="font-oldturcic text-xl text-blue-400/20 mt-12 tracking-[0.4em] leading-none text-center">𐰉𐰆𐰡𐰃 𐰇𐰕𐰢 𐰽𐰴𐰦𐰢</div>
+			
+			<div class="select-none pointer-events-none absolute left-0 top-0 h-full w-full transition-[--x] duration-600 ease-out [--x:0%] group-has-[a:hover]:[--x:100%] to-30% opacity-50 from-blue-900 to-transparent mix-blend-hard-light bg-radial-[circle_at_50%_50%,var(--tw-gradient-from)_var(--x)] group-has-[a:hover]:opacity-100"></div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="px-4 md:px-8 lg:px-16 py-12 border-t border-[#90c5ff14]">
+			<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+				<div class="flex items-center gap-3">
+					<span class="font-oldturcic text-blue-400/40 text-lg leading-none">𐱅𐰭𐰼𐰃</span>
+					<span class="font-sinistre">Ahmet Tarik Duyar</span>
+				</div>
+				<p class="text-gray-600 text-sm">&copy; 2026 All rights reserved.</p>
+			</div>
+		</footer>
+	</main>
+</BaseLayout>
+
+<style>
+	@keyframes fade-in {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+	
+	@keyframes slide-up {
+		from { opacity: 0; transform: translateY(40px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+	
+	@keyframes float-1 {
+		0%, 100% { transform: translateY(0) rotate(0deg); }
+		50% { transform: translateY(-20px) rotate(5deg); }
+	}
+	
+	@keyframes float-2 {
+		0%, 100% { transform: translateY(0) rotate(0deg); }
+		50% { transform: translateY(15px) rotate(-3deg); }
+	}
+	
+	@keyframes twinkle {
+		0%, 100% { opacity: 0.3; transform: scale(1); }
+		50% { opacity: 1; transform: scale(1.2); }
+	}
+	
+	@keyframes pulse-star {
+		0%, 100% { opacity: 1; box-shadow: 0 0 10px currentColor; }
+		50% { opacity: 0.7; box-shadow: 0 0 20px currentColor; }
+	}
+	
+	.animate-fade-in { animation: fade-in 1s ease-out forwards; opacity: 0; }
+	.animate-slide-up { animation: slide-up 0.8s ease-out forwards; opacity: 0; }
+	.animate-float-1 { animation: float-1 8s ease-in-out infinite; }
+	.animate-float-2 { animation: float-2 10s ease-in-out infinite; }
+	.animate-twinkle { animation: twinkle 3s ease-in-out infinite; }
+	.animate-twinkle-delay-1 { animation: twinkle 3s ease-in-out 1s infinite; }
+	.animate-twinkle-delay-2 { animation: twinkle 3s ease-in-out 2s infinite; }
+	.animate-pulse-star { animation: pulse-star 2s ease-in-out infinite; }
+	.animate-pulse-star-delay { animation: pulse-star 2s ease-in-out 0.5s infinite; }
+	
+	/* Star field background */
+	.stars-layer {
+		position: absolute;
+		inset: 0;
+		background-image: 
+			radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.5), transparent),
+			radial-gradient(1px 1px at 30% 40%, rgba(255,255,255,0.3), transparent),
+			radial-gradient(1.5px 1.5px at 50% 10%, rgba(255,255,255,0.4), transparent),
+			radial-gradient(1px 1px at 70% 60%, rgba(255,255,255,0.3), transparent),
+			radial-gradient(1px 1px at 90% 30%, rgba(255,255,255,0.5), transparent),
+			radial-gradient(1px 1px at 15% 70%, rgba(255,255,255,0.3), transparent),
+			radial-gradient(1px 1px at 85% 80%, rgba(255,255,255,0.4), transparent),
+			radial-gradient(1.5px 1.5px at 45% 90%, rgba(255,255,255,0.3), transparent);
+	}
+</style>
