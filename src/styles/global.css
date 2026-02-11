@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @theme {
+	--font-sinistre-bold: "sinistre variable";
+	--font-sinistre-bold--font-variation-settings: "wght" 100;
+}
+
+@theme {
 	--font-sinistre: "sinistre variable";
 	--font-sinistre--font-variation-settings: "wght" 72;
 }
