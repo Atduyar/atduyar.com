@@ -1,309 +1,162 @@
 ---
-import BackgroundMarquee from "../../components/BackgroundMarquee.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Ahmet Tarik Duyar" description="Full-Stack Software Engineer Portfolio" bodyClass="bg-[#0a0b0d] text-white w-screen overflow-x-hidden">
-	<main class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-7xl mx-auto min-h-dvh relative">
-		<!-- Subtle noise overlay -->
-		<div class="fixed inset-0 pointer-events-none opacity-[0.015] z-50" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
-		
-		<!-- Navigation -->
-		<nav class="py-6 px-4 md:px-8 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
-			<div class="flex justify-between items-center">
-				<a href="#hero" class="group flex items-center gap-3">
-					<img src="/favicon.svg" alt="Logo" class="w-8 h-8 transition-transform group-hover:rotate-12" />
-					<span class="font-sinistre text-xl tracking-wide hidden sm:block">Atduyar</span>
-				</a>
-				<ul class="flex gap-4 md:gap-8">
-					<li><a href="#about" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all hover:-translate-y-0.5 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-blue-300 hover:after:w-full after:transition-all">About</a></li>
-					<li><a href="#skills" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all hover:-translate-y-0.5 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-blue-300 hover:after:w-full after:transition-all">Skills</a></li>
-					<li><a href="#projects" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all hover:-translate-y-0.5 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-blue-300 hover:after:w-full after:transition-all">Projects</a></li>
-					<li><a href="#contact" class="nav-link font-sinistre text-lg hover:text-blue-300 transition-all hover:-translate-y-0.5 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-blue-300 hover:after:w-full after:transition-all">Contact</a></li>
-				</ul>
+<!--
+	Variant 1 — "Quiet"
+	Single column, type-first, almost no ornament. The runic identity survives
+	as one glyph in the masthead and a faint divider mark. Everything else is
+	content: who, where, what shipped, how to reach.
+-->
+<BaseLayout
+	title="Ahmet Tarik Duyar — Software Engineer"
+	description="Full-stack software engineer building streaming and education platforms. Based in Sarajevo."
+	bodyClass="bg-[#0b0c0f] text-gray-300 antialiased"
+>
+	<main class="max-w-2xl mx-auto px-6 py-20 md:py-28">
+		<!-- Masthead -->
+		<header class="mb-20">
+			<div class="flex items-baseline gap-3 mb-6">
+				<span class="font-oldturcic text-blue-400/60 text-xl leading-none select-none" aria-hidden="true">𐱅</span>
+				<h1 class="font-sinistre text-3xl md:text-4xl text-white">Ahmet Tarik Duyar</h1>
 			</div>
-		</nav>
+			<p class="text-gray-400 leading-relaxed">
+				Full-stack software engineer in Sarajevo. I build and run production systems
+				end to end — most recently a streaming platform serving
+				<span class="text-gray-200">17,000+ paid users</span> across five platforms,
+				where I owned everything from database design to payments and CI/CD.
+			</p>
+			<p class="text-gray-400 leading-relaxed mt-4">
+				Computer science honor student at the International University of Sarajevo.
+				Outside of work I go lower in the stack: C, Rust, and Linux.
+			</p>
+			<nav class="flex gap-6 mt-8 text-sm">
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">GitHub</a>
+				<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">LinkedIn</a>
+				<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">atduyar@gmail.com</a>
+			</nav>
+		</header>
 
-		<!-- Hero Section -->
-		<section id="hero" class="min-h-[80vh] flex flex-col justify-center px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14] relative overflow-hidden">
-			<div class="absolute inset-0 opacity-5">
-				<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-[128px]"></div>
-				<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-[128px]"></div>
-			</div>
-			<div class="relative z-10">
-				<p class="font-oldturcic text-blue-400/60 text-sm mb-4 tracking-[0.5em] uppercase animate-fade-in">Software Engineer</p>
-				<h1 class="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-sinistre leading-[0.9] mb-8">
-					<span class="block animate-slide-up" style="animation-delay: 0.1s;">I'm Ahmet</span>
-					<span class="block animate-slide-up" style="animation-delay: 0.2s;">Tarik Duyar</span>
-				</h1>
-				<p class="text-lg md:text-xl text-gray-400 max-w-xl animate-fade-in" style="animation-delay: 0.5s;">
-					Building robust backend architectures and scalable systems. 
-					Passionate about C, Rust, and Linux.
+		<!-- Experience -->
+		<section class="mb-16">
+			<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-8">Experience</h2>
+
+			<article class="mb-10">
+				<div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+					<h3 class="text-white font-medium">Full-Stack Engineer · Deniz Egece Co. Ltd.</h3>
+					<span class="text-sm text-gray-500 tabular-nums">2022 — Present</span>
+				</div>
+				<p class="text-sm text-gray-400 leading-relaxed">
+					Founding engineer on EgeceTV, a health and education streaming platform.
+					Led backend architecture and database design, built the payment system,
+					and set up CI/CD. The platform serves ~1,000 videos to 17,000+ subscribers
+					on web, iOS, Android, Android TV, and Apple TV.
 				</p>
-				<div class="flex gap-4 mt-10 animate-fade-in" style="animation-delay: 0.7s;">
-					<a href="#projects" class="px-6 py-3 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 hover:border-blue-400/50 transition-all font-sinistre text-lg rounded-sm">
-						View Projects
-					</a>
-					<a href="#contact" class="px-6 py-3 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all font-sinistre text-lg rounded-sm">
-						Get in Touch
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- About Section -->
-		<section id="about" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14]">
-			<div class="flex flex-col lg:flex-row gap-12 items-start">
-				<div class="flex-1">
-					<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-8 flex items-center gap-4">
-						About Me
-						<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
-					</h2>
-					<div class="space-y-6 text-gray-300 text-lg leading-relaxed">
-						<p>
-							I'm a Full-Stack Software Engineer with a year of professional experience specializing in building robust backend architectures, designing scalable databases, and managing critical systems.
-						</p>
-						<p>
-							During my time at <span class="text-white">Deniz Egece Co. Ltd.</span>, I took ownership of architecting and deploying a streaming platform serving over <span class="text-blue-300">17,000 paid users</span>, demonstrating my ability to deliver end-to-end solutions across various platforms.
-						</p>
-						<p>
-							As an <span class="text-white">Honor Student</span> in Software Engineering at the International University of Sarajevo, I'm deeply focused on computer science fundamentals while actively exploring C, Rust, JavaScript, and Linux.
-						</p>
-					</div>
-				</div>
-				<div class="w-full lg:w-80 flex-shrink-0">
-					<div class="aspect-square bg-gradient-to-br from-[#90c5ff08] to-transparent border border-[#90c5ff14] rounded-sm p-8 flex items-center justify-center">
-						<img src="/favicon.svg" alt="Logo" class="w-full h-full opacity-80" />
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Skills Section -->
-		<section id="skills" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14]">
-			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-12 flex items-center gap-4">
-				Skills & Expertise
-				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
-			</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				<!-- Skill Card -->
-				<div class="skill-card group p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all bg-gradient-to-br from-[#90c5ff05] to-transparent">
-					<div class="flex items-center gap-3 mb-4">
-						<div class="w-2 h-2 bg-blue-400 rounded-full group-hover:animate-pulse"></div>
-						<h3 class="font-sinistre text-xl">Backend Development</h3>
-					</div>
-					<p class="text-gray-400 text-sm">Node.js, Rust, Go, Python. Building scalable APIs and microservices.</p>
-				</div>
-				<div class="skill-card group p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all bg-gradient-to-br from-[#90c5ff05] to-transparent">
-					<div class="flex items-center gap-3 mb-4">
-						<div class="w-2 h-2 bg-indigo-400 rounded-full group-hover:animate-pulse"></div>
-						<h3 class="font-sinistre text-xl">Database Design</h3>
-					</div>
-					<p class="text-gray-400 text-sm">PostgreSQL, Redis, MongoDB. Designing efficient data models.</p>
-				</div>
-				<div class="skill-card group p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all bg-gradient-to-br from-[#90c5ff05] to-transparent">
-					<div class="flex items-center gap-3 mb-4">
-						<div class="w-2 h-2 bg-cyan-400 rounded-full group-hover:animate-pulse"></div>
-						<h3 class="font-sinistre text-xl">Systems Programming</h3>
-					</div>
-					<p class="text-gray-400 text-sm">C, Rust, Linux. Low-level optimization and system architecture.</p>
-				</div>
-				<div class="skill-card group p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all bg-gradient-to-br from-[#90c5ff05] to-transparent">
-					<div class="flex items-center gap-3 mb-4">
-						<div class="w-2 h-2 bg-emerald-400 rounded-full group-hover:animate-pulse"></div>
-						<h3 class="font-sinistre text-xl">Frontend Development</h3>
-					</div>
-					<p class="text-gray-400 text-sm">React, TypeScript, Tailwind. Modern responsive interfaces.</p>
-				</div>
-				<div class="skill-card group p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all bg-gradient-to-br from-[#90c5ff05] to-transparent">
-					<div class="flex items-center gap-3 mb-4">
-						<div class="w-2 h-2 bg-amber-400 rounded-full group-hover:animate-pulse"></div>
-						<h3 class="font-sinistre text-xl">DevOps & Cloud</h3>
-					</div>
-					<p class="text-gray-400 text-sm">Docker, Kubernetes, AWS, Cloudflare. Infrastructure as code.</p>
-				</div>
-				<div class="skill-card group p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all bg-gradient-to-br from-[#90c5ff05] to-transparent">
-					<div class="flex items-center gap-3 mb-4">
-						<div class="w-2 h-2 bg-rose-400 rounded-full group-hover:animate-pulse"></div>
-						<h3 class="font-sinistre text-xl">Streaming Tech</h3>
-					</div>
-					<p class="text-gray-400 text-sm">Video streaming, real-time systems. Platform architecture.</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- Projects Section -->
-		<section id="projects" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14]">
-			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-12 flex items-center gap-4">
-				Featured Projects
-				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
-			</h2>
-			<div class="space-y-8">
-				<!-- Project 1 -->
-				<div class="project-card group p-8 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all relative overflow-hidden">
-					<div class="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-					<div class="relative z-10">
-						<div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-							<div>
-								<h3 class="font-sinistre text-2xl mb-2">Streaming Platform</h3>
-								<p class="text-blue-400/80 text-sm">Deniz Egece Co. Ltd.</p>
-							</div>
-							<div class="flex gap-2 flex-wrap">
-								<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">Node.js</span>
-								<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">PostgreSQL</span>
-								<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">FFmpeg</span>
-							</div>
-						</div>
-						<p class="text-gray-400 leading-relaxed">
-							Architected and deployed a full-featured streaming platform serving 17,000+ paid users. 
-							Implemented video transcoding pipelines, payment integrations, and real-time analytics dashboard.
-						</p>
-					</div>
-				</div>
-				<!-- Project 2 -->
-				<div class="project-card group p-8 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all relative overflow-hidden">
-					<div class="absolute inset-0 bg-gradient-to-r from-indigo-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-					<div class="relative z-10">
-						<div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-							<div>
-								<h3 class="font-sinistre text-2xl mb-2">Personal Portfolio</h3>
-								<p class="text-indigo-400/80 text-sm">atduyar.com</p>
-							</div>
-							<div class="flex gap-2 flex-wrap">
-								<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">Astro</span>
-								<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">Tailwind</span>
-								<span class="px-3 py-1 text-xs border border-[#90c5ff20] bg-[#90c5ff08] rounded-full">Cloudflare</span>
-							</div>
-						</div>
-						<p class="text-gray-400 leading-relaxed">
-							Custom portfolio website featuring unique typography with the Sinistre variable font,
-							Old Turkic script elements paying homage to heritage, and meticulously crafted interactions.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Experience Section -->
-		<section id="experience" class="px-4 md:px-8 lg:px-16 py-20 border-b border-[#90c5ff14]">
-			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-12 flex items-center gap-4">
-				Experience
-				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
-			</h2>
-			<div class="relative">
-				<!-- Timeline line -->
-				<div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#90c5ff30] via-[#90c5ff14] to-transparent"></div>
-				
-				<!-- Experience Item -->
-				<div class="relative pl-8 md:pl-0 md:w-1/2 md:pr-12 mb-12">
-					<div class="absolute left-0 md:left-auto md:right-0 top-2 w-2 h-2 rounded-full bg-blue-400 md:translate-x-1/2"></div>
-					<div class="p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all">
-						<span class="text-blue-400/80 text-sm">2023 - Present</span>
-						<h3 class="font-sinistre text-xl mt-2">Full-Stack Developer</h3>
-						<p class="text-gray-500 text-sm mb-3">Deniz Egece Co. Ltd.</p>
-						<p class="text-gray-400 text-sm">Led development of streaming infrastructure, database architecture, and user-facing applications.</p>
-					</div>
-				</div>
-				
-				<!-- Education Item -->
-				<div class="relative pl-8 md:pl-0 md:w-1/2 md:ml-auto md:pl-12">
-					<div class="absolute left-0 md:left-0 top-2 w-2 h-2 rounded-full bg-indigo-400 md:-translate-x-1/2"></div>
-					<div class="p-6 border border-[#90c5ff14] hover:border-[#90c5ff30] transition-all">
-						<span class="text-indigo-400/80 text-sm">2022 - Present</span>
-						<h3 class="font-sinistre text-xl mt-2">Software Engineering</h3>
-						<p class="text-gray-500 text-sm mb-3">International University of Sarajevo</p>
-						<p class="text-gray-400 text-sm">Honor Student. Deep focus on computer science fundamentals, algorithms, and system design.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Contact Section -->
-		<section id="contact" class="px-4 md:px-8 lg:px-16 py-20 relative group">
-			<BackgroundMarquee class="group-has-[button:hover]:text-white duration-500 transition-all">
-				𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰖𐰸: 𐰼𐰾𐰼: 𐰸𐰆𐰯: 𐰇𐰠𐱅𐰲𐰃: 𐰼𐱅𐰏𐰕: 𐰃𐰤𐰢: 𐰚𐰇𐰠𐱅𐰃𐰏𐰤: 𐰚𐰼𐰏𐰚: 𐰉𐰆𐰡𐰃: 𐰇𐰕𐰢: 𐰽𐰴𐰦𐰢: 𐰚𐰇𐰼𐰇𐰼: 𐰚𐰇𐰕𐰢: 𐰚𐰇𐰼𐰢𐰕: 𐱅𐰏: 𐰋𐰃𐰠𐰼: 𐰋𐰃𐰠𐰏𐰢: 𐰋𐰃𐰠𐰢𐰕: 𐱅𐰏: 𐰉𐰆𐰡𐰃: 𐰇𐰕𐰢: 𐰽𐰴𐰦𐰢: 𐰇𐰓: 𐱅𐰭𐰼𐰃: 𐰖𐰽𐰺: 𐰚𐰃𐰾𐰃: 𐰆𐰍𐰞𐰃: 𐰸𐰆𐰯: 𐰇𐰠𐰏𐰠𐰃: 𐱅𐰇𐰼𐰇𐰢𐰾:
-			</BackgroundMarquee>
-			
-			<h2 class="text-3xl sm:text-4xl lg:text-5xl font-sinistre mb-8 flex items-center gap-4">
-				Get in Touch
-				<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
-			</h2>
-			
-			<div class="max-w-2xl">
-				<p class="text-gray-400 text-lg mb-8">
-					Interested in working together? Feel free to reach out for collaborations, opportunities, or just a friendly chat.
+				<p class="text-sm text-gray-400 leading-relaxed mt-2">
+					Also worked on a distance-education platform connecting clients with
+					psychologists and dietitians — real-time video consultations, scheduling,
+					and progress tracking — built with .NET and Clean Architecture in a
+					five-person team.
 				</p>
-				
-				<form class="space-y-6">
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-						<div>
-							<label for="name" class="font-sinistre text-lg block mb-2">Your Name</label>
-							<input type="text" id="name" class="w-full bg-transparent border-b-2 border-[#90c5ff20] focus:border-blue-400 outline-none py-2 transition-colors" placeholder="John Doe" />
-						</div>
-						<div>
-							<label for="email" class="font-sinistre text-lg block mb-2">Email</label>
-							<input type="email" id="email" class="w-full bg-transparent border-b-2 border-[#90c5ff20] focus:border-blue-400 outline-none py-2 transition-colors" placeholder="john@example.com" />
-						</div>
+				<p class="text-sm text-gray-600 mt-3">Next.js · GraphQL · C# / .NET · MySQL · PostgreSQL · AWS</p>
+			</article>
+
+			<article>
+				<div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+					<h3 class="text-white font-medium">Freelance Developer</h3>
+					<span class="text-sm text-gray-500 tabular-nums">2021 — 2022</span>
+				</div>
+				<p class="text-sm text-gray-400 leading-relaxed">
+					Built Evrenomi, a blogging platform in C#/.NET, deployed and operated on
+					self-managed Linux infrastructure with a 95+ Lighthouse score.
+				</p>
+				<p class="text-sm text-gray-600 mt-3">C# · REST · Linux</p>
+			</article>
+		</section>
+
+		<!-- Divider mark -->
+		<div class="text-center mb-16 select-none" aria-hidden="true">
+			<span class="font-oldturcic text-blue-400/20 text-sm tracking-[0.6em]">𐰋𐰃𐰠</span>
+		</div>
+
+		<!-- Projects -->
+		<section class="mb-16">
+			<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-8">Selected Projects</h2>
+			<ul class="space-y-8">
+				<li>
+					<div class="flex flex-wrap items-baseline gap-x-3 mb-1">
+						<h3 class="text-white font-medium">EgeceTV</h3>
+						<span class="text-xs text-gray-600">streaming platform</span>
 					</div>
-					<div>
-						<label for="message" class="font-sinistre text-lg block mb-2">Message</label>
-						<textarea id="message" rows="5" class="w-full bg-transparent border-b-2 border-[#90c5ff20] focus:border-blue-400 outline-none py-2 transition-colors resize-none" placeholder="Your message..."></textarea>
+					<p class="text-sm text-gray-400 leading-relaxed">
+						Multi-platform video streaming with adaptive bitrate delivery, a custom
+						CMS, and subscription payments. One GraphQL API behind five clients.
+					</p>
+				</li>
+				<li>
+					<div class="flex flex-wrap items-baseline gap-x-3 mb-1">
+						<h3 class="text-white font-medium">REKV</h3>
+						<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-xs text-blue-400 hover:text-blue-300 transition-colors">source ↗</a>
 					</div>
-					<div class="flex justify-end">
-						<button type="submit" class="px-8 py-3 bg-blue-600/10 border border-blue-500/30 hover:bg-blue-600/20 hover:border-blue-400/50 transition-all font-sinistre text-lg rounded-sm group">
-							Send Message
-							<span class="inline-block ml-2 transition-transform group-hover:translate-x-1">&rarr;</span>
-						</button>
+					<p class="text-sm text-gray-400 leading-relaxed">
+						Type-safe key-value store library in Rust — memory-mapped storage,
+						zero-copy deserialization, async I/O.
+					</p>
+				</li>
+				<li>
+					<div class="flex flex-wrap items-baseline gap-x-3 mb-1">
+						<h3 class="text-white font-medium">Make2Game</h3>
+						<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="text-xs text-blue-400 hover:text-blue-300 transition-colors">source ↗</a>
 					</div>
-				</form>
-			</div>
-			
-			<!-- Radial effect on hover -->
-			<div class="select-none pointer-events-none absolute left-0 top-0 h-full w-full transition-[--x] duration-600 ease-out [--x:0%] group-has-[button:hover]:[--x:100%] to-30% opacity-50 from-blue-900 to-transparent mix-blend-hard-light bg-radial-[circle_at_100%_100%,var(--tw-gradient-from)_var(--x)] group-has-[button:hover]:opacity-100"></div>
+					<p class="text-sm text-gray-400 leading-relaxed">
+						2D game engine written from scratch in C++ and OpenGL, with Lua
+						scripting and an immediate-mode editor.
+					</p>
+				</li>
+				<li>
+					<div class="flex flex-wrap items-baseline gap-x-3 mb-1">
+						<h3 class="text-white font-medium">Evrenomi</h3>
+						<a href="https://evrenomi.com" target="_blank" rel="noopener" class="text-xs text-blue-400 hover:text-blue-300 transition-colors">live ↗</a>
+					</div>
+					<p class="text-sm text-gray-400 leading-relaxed">
+						Performance-focused blogging platform. 95+ Lighthouse across all
+						metrics, running on a self-managed Linux VPS.
+					</p>
+				</li>
+			</ul>
+		</section>
+
+		<!-- Skills -->
+		<section class="mb-20">
+			<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-8">Tools I Use</h2>
+			<dl class="space-y-3 text-sm">
+				<div class="grid grid-cols-[7rem_1fr] gap-4">
+					<dt class="text-gray-600">Web</dt>
+					<dd class="text-gray-300">TypeScript, React, Next.js, GraphQL</dd>
+				</div>
+				<div class="grid grid-cols-[7rem_1fr] gap-4">
+					<dt class="text-gray-600">Backend</dt>
+					<dd class="text-gray-300">C# / .NET, REST, Clean Architecture</dd>
+				</div>
+				<div class="grid grid-cols-[7rem_1fr] gap-4">
+					<dt class="text-gray-600">Data</dt>
+					<dd class="text-gray-300">MySQL, PostgreSQL, Prisma</dd>
+				</div>
+				<div class="grid grid-cols-[7rem_1fr] gap-4">
+					<dt class="text-gray-600">Systems</dt>
+					<dd class="text-gray-300">Rust, C, Linux</dd>
+				</div>
+				<div class="grid grid-cols-[7rem_1fr] gap-4">
+					<dt class="text-gray-600">Infra</dt>
+					<dd class="text-gray-300">Docker, AWS, GitHub Actions</dd>
+				</div>
+			</dl>
 		</section>
 
 		<!-- Footer -->
-		<footer class="px-4 md:px-8 lg:px-16 py-12 border-t border-[#90c5ff14]">
-			<div class="flex flex-col md:flex-row justify-between items-center gap-4">
-				<div class="flex items-center gap-3">
-					<img src="/favicon.svg" alt="Logo" class="w-6 h-6" />
-					<span class="font-sinistre">Ahmet Tarik Duyar</span>
-				</div>
-				<div class="flex gap-6">
-					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors">GitHub</a>
-					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-white transition-colors">LinkedIn</a>
-					<a href="mailto:contact@atduyar.com" class="text-gray-500 hover:text-white transition-colors">Email</a>
-				</div>
-				<p class="text-gray-600 text-sm">&copy; 2026 All rights reserved.</p>
-			</div>
+		<footer class="pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-sm text-gray-600">
+			<span>Sarajevo, Bosnia &amp; Herzegovina</span>
+			<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">Get in touch →</a>
 		</footer>
 	</main>
 </BaseLayout>
-
-<style>
-	@keyframes fade-in {
-		from { opacity: 0; }
-		to { opacity: 1; }
-	}
-	
-	@keyframes slide-up {
-		from { 
-			opacity: 0;
-			transform: translateY(40px);
-		}
-		to { 
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-	
-	.animate-fade-in {
-		animation: fade-in 1s ease-out forwards;
-		opacity: 0;
-	}
-	
-	.animate-slide-up {
-		animation: slide-up 0.8s ease-out forwards;
-		opacity: 0;
-	}
-</style>

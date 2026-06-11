@@ -2,352 +2,186 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="𐱅𐰭𐰼𐰃 | Atduyar" description="Ahmet Tarik Duyar - Ancient Futurism Portfolio" bodyClass="bg-[#0a0908] text-[#e8e4dc] min-h-screen overflow-x-hidden">
-	<!-- Ancient pattern overlay -->
-	<div class="fixed inset-0 pointer-events-none opacity-[0.02] z-0" style="background-image: url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath d=%22M30 0L60 30L30 60L0 30Z%22 fill=%22none%22 stroke=%22%23c9a45c%22 stroke-width=%220.5%22/%3E%3C/svg%3E');"></div>
-	
-	<!-- Golden accent lines -->
-	<div class="fixed top-0 left-8 lg:left-16 w-px h-full bg-gradient-to-b from-transparent via-[#c9a45c]/20 to-transparent pointer-events-none hidden md:block z-0"></div>
-	<div class="fixed top-0 right-8 lg:right-16 w-px h-full bg-gradient-to-b from-transparent via-[#c9a45c]/20 to-transparent pointer-events-none hidden md:block z-0"></div>
+<!--
+	Variant 5 — "Split"
+	Two-column layout: a sticky identity panel on the left (name, role, nav,
+	links) and scrolling content on the right. The runic theme lives in a
+	faint vertical glyph strip along the left edge. Collapses to a single
+	column on mobile.
+-->
+<BaseLayout
+	title="Ahmet Tarik Duyar — Software Engineer"
+	description="Full-stack software engineer in Sarajevo. Streaming platforms, .NET systems, Rust."
+	bodyClass="bg-[#0b0c10] text-gray-300 antialiased"
+>
+	<!-- Vertical glyph strip, far left, desktop only -->
+	<div class="fixed left-3 top-1/2 -translate-y-1/2 hidden xl:block select-none pointer-events-none" aria-hidden="true">
+		<span class="font-oldturcic text-blue-400/10 text-xl tracking-[0.6em] leading-none" style="writing-mode: vertical-rl;">𐰋𐰃𐰠𐰏 𐰃𐱁</span>
+	</div>
 
-	<main class="relative z-10">
-		<!-- Navigation with Turkic script -->
-		<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0908]/80 border-b border-[#c9a45c]/10">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-3 md:py-4 flex justify-between items-center">
-				<a href="#" class="flex items-center gap-2 md:gap-3 group shrink-0">
-					<img src="/favicon.svg" alt="Logo" class="w-8 h-8 md:w-10 md:h-10 opacity-80 group-hover:opacity-100 transition-opacity" />
-					<span class="font-oldturcic text-xl md:text-2xl text-[#c9a45c] hidden sm:block leading-none">𐱅𐰭𐰼𐰃</span>
-				</a>
-				<div class="flex items-center gap-3 sm:gap-4 md:gap-8">
-					<a href="#origin" class="text-xs sm:text-sm tracking-widest uppercase text-[#e8e4dc]/60 hover:text-[#c9a45c] transition-colors">Origin</a>
-					<a href="#craft" class="text-xs sm:text-sm tracking-widest uppercase text-[#e8e4dc]/60 hover:text-[#c9a45c] transition-colors">Craft</a>
-					<a href="#works" class="text-xs sm:text-sm tracking-widest uppercase text-[#e8e4dc]/60 hover:text-[#c9a45c] transition-colors">Works</a>
-					<a href="#summon" class="px-3 py-1.5 sm:px-4 sm:py-2 border border-[#c9a45c]/30 text-[#c9a45c] text-xs sm:text-sm tracking-widest uppercase hover:bg-[#c9a45c]/10 transition-all">Summon</a>
-				</div>
-			</div>
-		</nav>
-
-		<!-- Hero - Ancient meets modern -->
-		<section class="min-h-screen flex items-center justify-center relative pt-16 md:pt-20">
-			<!-- Floating Turkic glyphs -->
-			<div class="absolute inset-0 overflow-hidden pointer-events-none">
-				<span class="absolute top-1/4 left-[10%] font-oldturcic text-6xl md:text-8xl text-[#c9a45c]/[0.08] leading-none animate-float-1">𐰚</span>
-				<span class="absolute top-1/3 right-[15%] font-oldturcic text-5xl md:text-6xl text-[#c9a45c]/[0.08] leading-none animate-float-2">𐰇</span>
-				<span class="absolute bottom-1/4 left-[20%] font-oldturcic text-5xl md:text-7xl text-[#c9a45c]/[0.08] leading-none animate-float-3">𐰠</span>
-				<span class="absolute bottom-1/3 right-[25%] font-oldturcic text-7xl md:text-9xl text-[#c9a45c]/[0.08] leading-none animate-float-1">𐱅</span>
-				<span class="absolute top-1/2 left-[5%] font-oldturcic text-4xl md:text-5xl text-[#c9a45c]/[0.08] leading-none animate-float-2">𐰃</span>
-				<span class="absolute top-[60%] right-[8%] font-oldturcic text-5xl md:text-6xl text-[#c9a45c]/[0.08] leading-none animate-float-3">𐰏</span>
-			</div>
-			
-			<div class="text-center px-4 sm:px-6 relative w-full max-w-5xl mx-auto">
-				<!-- Turkic inscription above -->
-				<p class="font-oldturcic text-lg sm:text-xl md:text-2xl text-[#c9a45c]/40 mb-6 md:mb-8 tracking-[0.3em] md:tracking-[0.5em] leading-none animate-fade-in">
-					𐰚𐰇𐰠𐱅𐰃𐰏𐰤
+	<div class="max-w-6xl mx-auto px-6 md:px-12 lg:flex lg:gap-16">
+		<!-- Left: identity panel -->
+		<header class="lg:w-2/5 lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-between py-16 lg:py-24">
+			<div>
+				<h1 class="font-sinistre text-4xl md:text-5xl text-white mb-3">Ahmet Tarik Duyar</h1>
+				<p class="text-blue-300 mb-6">Full-Stack Software Engineer</p>
+				<p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+					I design, build, and operate production systems — from the database
+					schema to the deploy pipeline.
 				</p>
-				
-				<!-- Main title -->
-				<h1 class="font-sinistre leading-[0.9] tracking-tight mb-6 md:mb-8">
-					<span class="block text-[#e8e4dc] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl animate-rise-1">Ahmet Tarik</span>
-					<span class="block text-[#c9a45c] text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl animate-rise-2">Duyar</span>
-				</h1>
-				
-				<!-- Subtitle with decorative elements -->
-				<div class="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 mt-8 md:mt-12 animate-fade-in-delayed">
-					<div class="h-px w-8 sm:w-12 md:w-16 bg-gradient-to-r from-transparent to-[#c9a45c]/50"></div>
-					<p class="text-sm sm:text-base md:text-lg tracking-[0.2em] md:tracking-[0.3em] uppercase text-[#e8e4dc]/50">Software Engineer</p>
-					<div class="h-px w-8 sm:w-12 md:w-16 bg-gradient-to-l from-transparent to-[#c9a45c]/50"></div>
-				</div>
-			</div>
-			
-			<!-- Turkic script scroll prompt -->
-			<div class="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 md:gap-4">
-				<p class="font-oldturcic text-xs md:text-sm text-[#c9a45c]/40 leading-none">𐰆𐰸</p>
-				<div class="w-px h-10 md:h-16 bg-gradient-to-b from-[#c9a45c]/40 to-transparent animate-pulse-slow"></div>
-			</div>
-		</section>
 
-		<!-- Origin Section -->
-		<section id="origin" class="py-20 md:py-32 px-4 sm:px-6 md:px-12 relative">
-			<div class="max-w-5xl mx-auto">
-				<!-- Section header with Turkic decoration -->
-				<div class="flex items-center gap-3 sm:gap-4 md:gap-6 mb-10 md:mb-16">
-					<span class="font-oldturcic text-2xl sm:text-3xl md:text-4xl text-[#c9a45c]/30 leading-none shrink-0">𐰋𐰃𐰠</span>
-					<h2 class="font-sinistre text-3xl sm:text-4xl md:text-5xl lg:text-6xl shrink-0">Origin</h2>
-					<div class="flex-1 h-px bg-gradient-to-r from-[#c9a45c]/30 to-transparent"></div>
-				</div>
-				
-				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
-					<div class="lg:col-span-7 space-y-6 md:space-y-8">
-						<p class="text-base sm:text-lg md:text-xl leading-relaxed text-[#e8e4dc]/80">
-							A Full-Stack Software Engineer from the lands where ancient scripts once carved wisdom into stone. I carry the same precision into modern architecture.
-						</p>
-						<p class="text-base sm:text-lg md:text-xl leading-relaxed text-[#e8e4dc]/80">
-							At <span class="text-[#c9a45c]">Deniz Egece Co. Ltd.</span>, I architected a streaming platform serving <span class="text-[#c9a45c]">17,000+ subscribers</span>, managing video transcoding pipelines, payment systems, and real-time analytics.
-						</p>
-						<p class="text-base sm:text-lg md:text-xl leading-relaxed text-[#e8e4dc]/80">
-							Currently an Honor Student at the International University of Sarajevo, diving deep into the roots of computing: C, Rust, and Linux systems.
-						</p>
-					</div>
-					<div class="lg:col-span-4 lg:col-start-9">
-						<!-- Decorative card with emblem -->
-						<div class="aspect-square border border-[#c9a45c]/20 bg-gradient-to-br from-[#c9a45c]/5 to-transparent p-6 md:p-8 flex items-center justify-center relative max-w-xs mx-auto lg:max-w-none">
-							<img src="/favicon.svg" alt="Emblem" class="w-3/4 opacity-60" />
-							<!-- Corner decorations -->
-							<div class="absolute top-0 left-0 w-6 h-6 md:w-8 md:h-8 border-t border-l border-[#c9a45c]/40"></div>
-							<div class="absolute top-0 right-0 w-6 h-6 md:w-8 md:h-8 border-t border-r border-[#c9a45c]/40"></div>
-							<div class="absolute bottom-0 left-0 w-6 h-6 md:w-8 md:h-8 border-b border-l border-[#c9a45c]/40"></div>
-							<div class="absolute bottom-0 right-0 w-6 h-6 md:w-8 md:h-8 border-b border-r border-[#c9a45c]/40"></div>
-						</div>
-					</div>
-				</div>
+				<nav class="hidden lg:block mt-14" aria-label="Sections">
+					<ul class="space-y-4 text-xs uppercase tracking-[0.2em]">
+						<li><a href="#about" class="group flex items-center gap-3 text-gray-500 hover:text-white transition-colors">
+							<span class="h-px w-8 bg-gray-600 group-hover:w-14 group-hover:bg-blue-300 transition-all"></span>About
+						</a></li>
+						<li><a href="#experience" class="group flex items-center gap-3 text-gray-500 hover:text-white transition-colors">
+							<span class="h-px w-8 bg-gray-600 group-hover:w-14 group-hover:bg-blue-300 transition-all"></span>Experience
+						</a></li>
+						<li><a href="#projects" class="group flex items-center gap-3 text-gray-500 hover:text-white transition-colors">
+							<span class="h-px w-8 bg-gray-600 group-hover:w-14 group-hover:bg-blue-300 transition-all"></span>Projects
+						</a></li>
+					</ul>
+				</nav>
 			</div>
-		</section>
 
-		<!-- Craft/Skills Section -->
-		<section id="craft" class="py-20 md:py-32 relative overflow-hidden">
-			<!-- Scrolling Turkic text background - fixed sizing -->
-			<div class="absolute inset-0 flex items-center overflow-hidden pointer-events-none">
-				<div class="flex whitespace-nowrap animate-scroll-slow">
-					<span class="font-oldturcic text-[80px] sm:text-[120px] md:text-[160px] lg:text-[200px] text-[#c9a45c]/[0.06] leading-none px-8">
-						𐰚𐰇𐰠𐱅𐰃𐰏𐰤 𐰖𐰸 𐰼𐰾𐰼 𐰸𐰆𐰯 𐰇𐰠𐱅𐰲𐰃 𐰼𐱅𐰏𐰕 𐰃𐰤𐰢
-					</span>
-					<span class="font-oldturcic text-[80px] sm:text-[120px] md:text-[160px] lg:text-[200px] text-[#c9a45c]/[0.06] leading-none px-8">
-						𐰚𐰇𐰠𐱅𐰃𐰏𐰤 𐰖𐰸 𐰼𐰾𐰼 𐰸𐰆𐰯 𐰇𐰠𐱅𐰲𐰃 𐰼𐱅𐰏𐰕 𐰃𐰤𐰢
-					</span>
+			<div class="mt-10 lg:mt-0">
+				<div class="flex gap-6 text-sm">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors">LinkedIn</a>
+					<a href="mailto:atduyar@gmail.com" class="text-gray-500 hover:text-blue-300 transition-colors">Email</a>
 				</div>
+				<p class="text-xs text-gray-600 mt-4">Sarajevo, Bosnia &amp; Herzegovina</p>
 			</div>
-			
-			<div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
-				<div class="flex items-center gap-3 sm:gap-4 md:gap-6 mb-10 md:mb-16">
-					<span class="font-oldturcic text-2xl sm:text-3xl md:text-4xl text-[#c9a45c]/30 leading-none shrink-0">𐰽𐰴</span>
-					<h2 class="font-sinistre text-3xl sm:text-4xl md:text-5xl lg:text-6xl shrink-0">Craft</h2>
-					<div class="flex-1 h-px bg-gradient-to-r from-[#c9a45c]/30 to-transparent"></div>
-				</div>
-				
-				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-					<!-- Skill cards with ancient aesthetic -->
-					<div class="group p-5 md:p-6 border border-[#c9a45c]/10 hover:border-[#c9a45c]/40 bg-[#0a0908]/80 backdrop-blur-sm transition-all duration-300 relative overflow-hidden">
-						<div class="absolute inset-0 bg-gradient-to-br from-[#c9a45c]/0 to-[#c9a45c]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-						<div class="relative z-10">
-							<span class="font-oldturcic text-2xl md:text-3xl text-[#c9a45c]/50 block mb-3 md:mb-4 leading-none">𐰋</span>
-							<h3 class="font-sinistre text-lg md:text-xl text-[#c9a45c] mb-2 md:mb-3">Backend Mastery</h3>
-							<p class="text-xs md:text-sm text-[#e8e4dc]/60 leading-relaxed">Node.js, Rust, Go, Python. Building systems that endure.</p>
-						</div>
-					</div>
-					
-					<div class="group p-5 md:p-6 border border-[#c9a45c]/10 hover:border-[#c9a45c]/40 bg-[#0a0908]/80 backdrop-blur-sm transition-all duration-300 relative overflow-hidden">
-						<div class="absolute inset-0 bg-gradient-to-br from-[#c9a45c]/0 to-[#c9a45c]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-						<div class="relative z-10">
-							<span class="font-oldturcic text-2xl md:text-3xl text-[#c9a45c]/50 block mb-3 md:mb-4 leading-none">𐰃</span>
-							<h3 class="font-sinistre text-lg md:text-xl text-[#c9a45c] mb-2 md:mb-3">Database Architecture</h3>
-							<p class="text-xs md:text-sm text-[#e8e4dc]/60 leading-relaxed">PostgreSQL, Redis, MongoDB. Data carved in silicon.</p>
-						</div>
-					</div>
-					
-					<div class="group p-5 md:p-6 border border-[#c9a45c]/10 hover:border-[#c9a45c]/40 bg-[#0a0908]/80 backdrop-blur-sm transition-all duration-300 relative overflow-hidden">
-						<div class="absolute inset-0 bg-gradient-to-br from-[#c9a45c]/0 to-[#c9a45c]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-						<div class="relative z-10">
-							<span class="font-oldturcic text-2xl md:text-3xl text-[#c9a45c]/50 block mb-3 md:mb-4 leading-none">𐰠</span>
-							<h3 class="font-sinistre text-lg md:text-xl text-[#c9a45c] mb-2 md:mb-3">Systems Programming</h3>
-							<p class="text-xs md:text-sm text-[#e8e4dc]/60 leading-relaxed">C, Rust, Linux. Close to the metal.</p>
-						</div>
-					</div>
-					
-					<div class="group p-5 md:p-6 border border-[#c9a45c]/10 hover:border-[#c9a45c]/40 bg-[#0a0908]/80 backdrop-blur-sm transition-all duration-300 relative overflow-hidden">
-						<div class="absolute inset-0 bg-gradient-to-br from-[#c9a45c]/0 to-[#c9a45c]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-						<div class="relative z-10">
-							<span class="font-oldturcic text-2xl md:text-3xl text-[#c9a45c]/50 block mb-3 md:mb-4 leading-none">𐱅</span>
-							<h3 class="font-sinistre text-lg md:text-xl text-[#c9a45c] mb-2 md:mb-3">Cloud Infrastructure</h3>
-							<p class="text-xs md:text-sm text-[#e8e4dc]/60 leading-relaxed">Docker, Kubernetes, AWS. Clouds over the steppe.</p>
-						</div>
-					</div>
-					
-					<div class="group p-5 md:p-6 border border-[#c9a45c]/10 hover:border-[#c9a45c]/40 bg-[#0a0908]/80 backdrop-blur-sm transition-all duration-300 relative overflow-hidden">
-						<div class="absolute inset-0 bg-gradient-to-br from-[#c9a45c]/0 to-[#c9a45c]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-						<div class="relative z-10">
-							<span class="font-oldturcic text-2xl md:text-3xl text-[#c9a45c]/50 block mb-3 md:mb-4 leading-none">𐰏</span>
-							<h3 class="font-sinistre text-lg md:text-xl text-[#c9a45c] mb-2 md:mb-3">Streaming Technology</h3>
-							<p class="text-xs md:text-sm text-[#e8e4dc]/60 leading-relaxed">FFmpeg, HLS, Real-time. Rivers of data.</p>
-						</div>
-					</div>
-					
-					<div class="group p-5 md:p-6 border border-[#c9a45c]/10 hover:border-[#c9a45c]/40 bg-[#0a0908]/80 backdrop-blur-sm transition-all duration-300 relative overflow-hidden">
-						<div class="absolute inset-0 bg-gradient-to-br from-[#c9a45c]/0 to-[#c9a45c]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-						<div class="relative z-10">
-							<span class="font-oldturcic text-2xl md:text-3xl text-[#c9a45c]/50 block mb-3 md:mb-4 leading-none">𐰚</span>
-							<h3 class="font-sinistre text-lg md:text-xl text-[#c9a45c] mb-2 md:mb-3">Frontend Craft</h3>
-							<p class="text-xs md:text-sm text-[#e8e4dc]/60 leading-relaxed">React, TypeScript, Tailwind. The visible layer.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		</header>
 
-		<!-- Works Section -->
-		<section id="works" class="py-20 md:py-32 px-4 sm:px-6 md:px-12">
-			<div class="max-w-5xl mx-auto">
-				<div class="flex items-center gap-3 sm:gap-4 md:gap-6 mb-10 md:mb-16">
-					<span class="font-oldturcic text-2xl sm:text-3xl md:text-4xl text-[#c9a45c]/30 leading-none shrink-0">𐰼𐱅</span>
-					<h2 class="font-sinistre text-3xl sm:text-4xl md:text-5xl lg:text-6xl shrink-0">Works</h2>
-					<div class="flex-1 h-px bg-gradient-to-r from-[#c9a45c]/30 to-transparent"></div>
+		<!-- Right: content -->
+		<main class="lg:w-3/5 py-4 lg:py-24">
+			<!-- About -->
+			<section id="about" class="mb-20 scroll-mt-24">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-6 lg:sr-only">About</h2>
+				<div class="space-y-5 text-gray-400 leading-relaxed">
+					<p>
+						For the past three years I've been the engineer behind
+						<span class="text-gray-200">EgeceTV</span>, a streaming platform with
+						over 17,000 paying subscribers across five platforms. I led its backend
+						architecture and database design, built its payment system, and
+						automated its releases — and learned what it means to be responsible
+						for software people pay for every month.
+					</p>
+					<p>
+						I'm also a computer science honor student at the International
+						University of Sarajevo, and below the web stack I work in
+						<span class="text-gray-200">Rust, C, and Linux</span> — building a
+						key-value store, a game engine, and the infrastructure this site runs on.
+					</p>
 				</div>
-				
-				<div class="space-y-6 md:space-y-8">
-					<!-- Work item 1 -->
-					<article class="group p-5 sm:p-6 md:p-8 border border-[#c9a45c]/10 hover:border-[#c9a45c]/30 transition-all duration-300 relative">
-						<div class="flex flex-col lg:flex-row lg:items-start gap-4 md:gap-6">
-							<div class="flex-1">
-								<div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
-									<span class="font-oldturcic text-lg md:text-xl text-[#c9a45c]/40 leading-none">𐰇𐰕</span>
-									<h3 class="font-sinistre text-xl sm:text-2xl md:text-3xl text-[#c9a45c] group-hover:text-[#e8e4dc] transition-colors">Streaming Platform</h3>
-								</div>
-								<p class="text-sm md:text-base text-[#e8e4dc]/70 mb-4 leading-relaxed">
-									Full architecture of a video streaming service serving 17,000+ paid users. Video transcoding, payment integration, analytics dashboard, and real-time delivery systems.
-								</p>
-								<div class="flex flex-wrap gap-2">
-									<span class="px-2.5 py-1 text-xs border border-[#c9a45c]/20 text-[#c9a45c]/70 hover:border-[#c9a45c]/40 transition-colors">Node.js</span>
-									<span class="px-2.5 py-1 text-xs border border-[#c9a45c]/20 text-[#c9a45c]/70 hover:border-[#c9a45c]/40 transition-colors">PostgreSQL</span>
-									<span class="px-2.5 py-1 text-xs border border-[#c9a45c]/20 text-[#c9a45c]/70 hover:border-[#c9a45c]/40 transition-colors">FFmpeg</span>
-									<span class="px-2.5 py-1 text-xs border border-[#c9a45c]/20 text-[#c9a45c]/70 hover:border-[#c9a45c]/40 transition-colors">Redis</span>
-								</div>
-							</div>
-							<div class="lg:text-right shrink-0">
-								<p class="text-xs md:text-sm text-[#c9a45c]/60 tracking-wider">DENIZ EGECE</p>
-								<p class="text-xs md:text-sm text-[#e8e4dc]/40">2023</p>
+			</section>
+
+			<!-- Experience -->
+			<section id="experience" class="mb-20 scroll-mt-24">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-8">Experience</h2>
+
+				<div class="space-y-4">
+					<article class="group grid sm:grid-cols-[8rem_1fr] gap-2 sm:gap-6 p-4 -mx-4 rounded hover:bg-white/[0.03] transition-colors">
+						<span class="text-xs text-gray-500 uppercase tracking-wide pt-1 tabular-nums">2022 — Present</span>
+						<div>
+							<h3 class="text-gray-100 group-hover:text-blue-300 transition-colors">Full-Stack Engineer · Deniz Egece Co. Ltd.</h3>
+							<p class="text-sm text-gray-400 leading-relaxed mt-2">
+								Founding engineer on the EgeceTV streaming platform; also built a
+								distance-education platform for psychologists and dietitians
+								(.NET, Clean Architecture, WebRTC) in a five-person team. Owned
+								backend architecture, database design, payments, and CI/CD.
+							</p>
+							<div class="flex flex-wrap gap-2 mt-3">
+								<span class="text-xs text-blue-300/90 bg-blue-400/10 rounded-full px-3 py-1">Next.js</span>
+								<span class="text-xs text-blue-300/90 bg-blue-400/10 rounded-full px-3 py-1">GraphQL</span>
+								<span class="text-xs text-blue-300/90 bg-blue-400/10 rounded-full px-3 py-1">C# / .NET</span>
+								<span class="text-xs text-blue-300/90 bg-blue-400/10 rounded-full px-3 py-1">PostgreSQL</span>
+								<span class="text-xs text-blue-300/90 bg-blue-400/10 rounded-full px-3 py-1">AWS</span>
 							</div>
 						</div>
 					</article>
-					
-					<!-- Work item 2 -->
-					<article class="group p-5 sm:p-6 md:p-8 border border-[#c9a45c]/10 hover:border-[#c9a45c]/30 transition-all duration-300 relative">
-						<div class="flex flex-col lg:flex-row lg:items-start gap-4 md:gap-6">
-							<div class="flex-1">
-								<div class="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
-									<span class="font-oldturcic text-lg md:text-xl text-[#c9a45c]/40 leading-none">𐰋𐰃</span>
-									<h3 class="font-sinistre text-xl sm:text-2xl md:text-3xl text-[#c9a45c] group-hover:text-[#e8e4dc] transition-colors">Portfolio Website</h3>
-								</div>
-								<p class="text-sm md:text-base text-[#e8e4dc]/70 mb-4 leading-relaxed">
-									Personal portfolio honoring heritage through Old Turkic script elements while pushing modern web design. Custom fonts, animations, and cultural references.
-								</p>
-								<div class="flex flex-wrap gap-2">
-									<span class="px-2.5 py-1 text-xs border border-[#c9a45c]/20 text-[#c9a45c]/70 hover:border-[#c9a45c]/40 transition-colors">Astro</span>
-									<span class="px-2.5 py-1 text-xs border border-[#c9a45c]/20 text-[#c9a45c]/70 hover:border-[#c9a45c]/40 transition-colors">Tailwind</span>
-									<span class="px-2.5 py-1 text-xs border border-[#c9a45c]/20 text-[#c9a45c]/70 hover:border-[#c9a45c]/40 transition-colors">Cloudflare</span>
-								</div>
-							</div>
-							<div class="lg:text-right shrink-0">
-								<p class="text-xs md:text-sm text-[#c9a45c]/60 tracking-wider">PERSONAL</p>
-								<p class="text-xs md:text-sm text-[#e8e4dc]/40">2024</p>
+
+					<article class="group grid sm:grid-cols-[8rem_1fr] gap-2 sm:gap-6 p-4 -mx-4 rounded hover:bg-white/[0.03] transition-colors">
+						<span class="text-xs text-gray-500 uppercase tracking-wide pt-1 tabular-nums">2021 — 2022</span>
+						<div>
+							<h3 class="text-gray-100 group-hover:text-blue-300 transition-colors">Freelance Developer</h3>
+							<p class="text-sm text-gray-400 leading-relaxed mt-2">
+								Built and operated Evrenomi, a C#/.NET blogging platform with a
+								95+ Lighthouse score on self-managed Linux infrastructure.
+							</p>
+							<div class="flex flex-wrap gap-2 mt-3">
+								<span class="text-xs text-blue-300/90 bg-blue-400/10 rounded-full px-3 py-1">C#</span>
+								<span class="text-xs text-blue-300/90 bg-blue-400/10 rounded-full px-3 py-1">REST</span>
+								<span class="text-xs text-blue-300/90 bg-blue-400/10 rounded-full px-3 py-1">Linux</span>
 							</div>
 						</div>
 					</article>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Summon/Contact Section -->
-		<section id="summon" class="py-20 md:py-32 px-4 sm:px-6 md:px-12 relative">
-			<div class="max-w-3xl mx-auto text-center">
-				<!-- Decorative Turkic border -->
-				<div class="font-oldturcic text-xl sm:text-2xl md:text-3xl text-[#c9a45c]/20 mb-6 md:mb-8 tracking-[0.3em] md:tracking-[0.5em] leading-none">
-					𐰚𐰇𐰠𐱅𐰃𐰏𐰤
+			<!-- Projects -->
+			<section id="projects" class="mb-20 scroll-mt-24">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-8">Projects</h2>
+
+				<div class="space-y-4">
+					<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="group block p-4 -mx-4 rounded hover:bg-white/[0.03] transition-colors">
+						<div class="flex items-baseline justify-between gap-4">
+							<h3 class="text-gray-100 group-hover:text-blue-300 transition-colors">REKV <span class="text-gray-600 text-sm">↗</span></h3>
+							<span class="text-xs text-gray-600">Rust</span>
+						</div>
+						<p class="text-sm text-gray-400 leading-relaxed mt-2">
+							Type-safe key-value store library: memory-mapped storage, zero-copy
+							deserialization, async I/O.
+						</p>
+					</a>
+
+					<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="group block p-4 -mx-4 rounded hover:bg-white/[0.03] transition-colors">
+						<div class="flex items-baseline justify-between gap-4">
+							<h3 class="text-gray-100 group-hover:text-blue-300 transition-colors">Make2Game <span class="text-gray-600 text-sm">↗</span></h3>
+							<span class="text-xs text-gray-600">C++ / OpenGL</span>
+						</div>
+						<p class="text-sm text-gray-400 leading-relaxed mt-2">
+							2D game engine built from scratch with Lua scripting and an
+							immediate-mode GUI editor.
+						</p>
+					</a>
+
+					<a href="https://evrenomi.com" target="_blank" rel="noopener" class="group block p-4 -mx-4 rounded hover:bg-white/[0.03] transition-colors">
+						<div class="flex items-baseline justify-between gap-4">
+							<h3 class="text-gray-100 group-hover:text-blue-300 transition-colors">Evrenomi <span class="text-gray-600 text-sm">↗</span></h3>
+							<span class="text-xs text-gray-600">C# / .NET</span>
+						</div>
+						<p class="text-sm text-gray-400 leading-relaxed mt-2">
+							Performance-focused blogging platform — 95+ Lighthouse across all
+							metrics.
+						</p>
+					</a>
+
+					<div class="p-4 -mx-4">
+						<div class="flex items-baseline justify-between gap-4">
+							<h3 class="text-gray-100">EgeceTV</h3>
+							<span class="text-xs text-gray-600">commercial</span>
+						</div>
+						<p class="text-sm text-gray-400 leading-relaxed mt-2">
+							The streaming platform described above — 17K+ subscribers, five
+							platforms, one GraphQL API.
+						</p>
+					</div>
 				</div>
-				
-				<h2 class="font-sinistre text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 md:mb-8">
-					<span class="text-[#c9a45c]">Summon</span> <span class="text-[#e8e4dc]/30">Me</span>
-				</h2>
-				
-				<p class="text-base sm:text-lg md:text-xl text-[#e8e4dc]/60 mb-8 md:mb-12 max-w-xl mx-auto leading-relaxed">
-					Ready to forge something legendary? Reach out for collaborations, opportunities, or tales of code.
+			</section>
+
+			<!-- Footer / contact -->
+			<footer class="pt-8 border-t border-white/5">
+				<p class="text-sm text-gray-400 leading-relaxed max-w-md">
+					Open to interesting roles and collaborations — the fastest way to reach
+					me is <a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">atduyar@gmail.com</a>.
 				</p>
-				
-				<a href="mailto:contact@atduyar.com" class="inline-block px-8 py-3 md:px-10 md:py-4 border-2 border-[#c9a45c] text-[#c9a45c] font-sinistre text-lg md:text-xl hover:bg-[#c9a45c] hover:text-[#0a0908] transition-all duration-300">
-					Send Word
-				</a>
-				
-				<div class="flex justify-center gap-8 md:gap-12 mt-12 md:mt-16">
-					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-[#e8e4dc]/40 hover:text-[#c9a45c] transition-colors flex items-center gap-2">
-						<span class="font-oldturcic text-lg leading-none">𐰋</span>
-						<span class="text-sm md:text-base">GitHub</span>
-					</a>
-					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-[#e8e4dc]/40 hover:text-[#c9a45c] transition-colors flex items-center gap-2">
-						<span class="font-oldturcic text-lg leading-none">𐰠</span>
-						<span class="text-sm md:text-base">LinkedIn</span>
-					</a>
-				</div>
-				
-				<!-- Bottom Turkic text -->
-				<div class="font-oldturcic text-xl sm:text-2xl md:text-3xl text-[#c9a45c]/20 mt-12 md:mt-16 tracking-[0.3em] md:tracking-[0.5em] leading-none">
-					𐰉𐰆𐰡𐰃 𐰇𐰕𐰢 𐰽𐰴𐰦𐰢
-				</div>
-			</div>
-		</section>
-
-		<!-- Footer -->
-		<footer class="py-6 md:py-8 px-4 sm:px-6 md:px-12 border-t border-[#c9a45c]/10">
-			<div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 md:gap-4 text-xs md:text-sm text-[#e8e4dc]/40">
-				<div class="flex items-center gap-2 md:gap-3">
-					<span class="font-oldturcic text-[#c9a45c]/40 text-base md:text-lg leading-none">𐱅𐰭𐰼𐰃</span>
-					<span>&copy; 2026 Ahmet Tarik Duyar</span>
-				</div>
-				<p class="font-oldturcic text-xs text-[#c9a45c]/20 leading-none">𐰚𐰇𐰠𐱅𐰃𐰏𐰤 𐰖𐰸 𐰼𐰾𐰼</p>
-			</div>
-		</footer>
-	</main>
+				<p class="text-xs text-gray-600 mt-8">
+					© 2026 Ahmet Tarik Duyar. Built with Astro, deployed on infrastructure I run myself.
+				</p>
+			</footer>
+		</main>
+	</div>
 </BaseLayout>
-
-<style>
-	@keyframes float-1 {
-		0%, 100% { transform: translateY(0) rotate(0deg); }
-		50% { transform: translateY(-20px) rotate(5deg); }
-	}
-	
-	@keyframes float-2 {
-		0%, 100% { transform: translateY(0) rotate(0deg); }
-		50% { transform: translateY(15px) rotate(-3deg); }
-	}
-	
-	@keyframes float-3 {
-		0%, 100% { transform: translateY(0) rotate(0deg); }
-		50% { transform: translateY(-25px) rotate(8deg); }
-	}
-	
-	@keyframes rise-1 {
-		from { opacity: 0; transform: translateY(30px); }
-		to { opacity: 1; transform: translateY(0); }
-	}
-	
-	@keyframes rise-2 {
-		from { opacity: 0; transform: translateY(30px); }
-		to { opacity: 1; transform: translateY(0); }
-	}
-	
-	@keyframes fade-in {
-		from { opacity: 0; }
-		to { opacity: 1; }
-	}
-	
-	@keyframes scroll-slow {
-		from { transform: translateX(0); }
-		to { transform: translateX(-50%); }
-	}
-	
-	@keyframes pulse-slow {
-		0%, 100% { opacity: 0.4; }
-		50% { opacity: 0.1; }
-	}
-	
-	.animate-float-1 { animation: float-1 8s ease-in-out infinite; }
-	.animate-float-2 { animation: float-2 10s ease-in-out infinite; }
-	.animate-float-3 { animation: float-3 12s ease-in-out infinite; }
-	
-	.animate-rise-1 { animation: rise-1 1s ease-out 0.2s forwards; opacity: 0; }
-	.animate-rise-2 { animation: rise-2 1s ease-out 0.4s forwards; opacity: 0; }
-	
-	.animate-fade-in { animation: fade-in 1s ease-out 0.6s forwards; opacity: 0; }
-	.animate-fade-in-delayed { animation: fade-in 1s ease-out 0.8s forwards; opacity: 0; }
-	
-	.animate-scroll-slow { animation: scroll-slow 40s linear infinite; }
-	
-	.animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
-</style>
