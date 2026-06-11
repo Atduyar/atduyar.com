@@ -1,0 +1,222 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	/14 — "Bento II"
+	Second take on the /8 bento language: same rounded cards, one accent color,
+	but a denser 4-column composition and more live behavior — a Sarajevo
+	clock, a re-rollable "glyph of the day" card, and a copy-email button.
+-->
+<BaseLayout
+	title="Tarik Duyar"
+	description="Ahmet Tarik Duyar — software engineer in Sarajevo. Dashboard edition: code, writing, servers, glyphs."
+	bodyClass="bg-[#0a0b0e] text-gray-300 antialiased"
+>
+	<main class="max-w-6xl mx-auto px-6 py-14 md:py-20">
+		<div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-min">
+
+			<!-- Identity — 2x2 -->
+			<section class="col-span-2 row-span-2 border border-white/10 rounded-xl p-8 bg-gradient-to-br from-blue-500/[0.07] to-transparent relative overflow-hidden flex flex-col justify-between min-h-[18rem]">
+				<span class="font-oldturcic absolute -right-6 -bottom-10 text-[11rem] text-blue-400/[0.05] leading-none select-none pointer-events-none" aria-hidden="true">𐱅</span>
+				<div>
+					<h1 class="font-sinistre text-3xl md:text-4xl text-white mb-3">Tarik Duyar</h1>
+					<p class="text-blue-300 text-sm mb-5">Full-Stack Software Engineer</p>
+					<p class="text-gray-400 leading-relaxed max-w-sm text-sm">
+						I keep a streaming platform with 17,000+ subscribers alive, write
+						Rust to find out what databases are hiding, and self-host everything
+						that will sit still long enough.
+					</p>
+				</div>
+				<div class="flex flex-wrap gap-x-5 gap-y-2 text-sm relative">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">LinkedIn</a>
+					<button id="copy-email" type="button" class="text-blue-400 hover:text-blue-300 transition-colors cursor-pointer">copy email</button>
+				</div>
+			</section>
+
+			<!-- Clock -->
+			<section class="border border-white/10 rounded-xl p-5 flex flex-col justify-between min-h-[8.5rem]">
+				<h2 class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Sarajevo</h2>
+				<div>
+					<p id="clock" class="font-sinistre text-3xl text-white tabular-nums">--:--</p>
+					<p class="text-xs text-gray-600 mt-1">CET · usually awake</p>
+				</div>
+			</section>
+
+			<!-- Glyph of the day -->
+			<section class="border border-white/10 rounded-xl p-5 flex flex-col justify-between min-h-[8.5rem]">
+				<div class="flex items-baseline justify-between">
+					<h2 class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Glyph</h2>
+					<button id="reroll" type="button" class="text-[10px] text-blue-400/70 hover:text-blue-300 transition-colors cursor-pointer">↻ reroll</button>
+				</div>
+				<div class="flex items-end gap-3">
+					<span id="glyph-char" class="font-oldturcic text-4xl text-blue-300 leading-none select-none">𐱅</span>
+					<p id="glyph-info" class="text-xs text-gray-500 leading-snug pb-0.5">/t/ — the letter in my name</p>
+				</div>
+			</section>
+
+			<!-- Day job -->
+			<section class="col-span-2 border border-white/10 rounded-xl p-6">
+				<h2 class="text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-3">Day Job</h2>
+				<p class="text-gray-200 mb-1">EgeceTV @ Deniz Egece <span class="text-gray-600 text-xs">· 2022 — now</span></p>
+				<p class="text-sm text-gray-500 leading-relaxed">
+					Founding engineer. Backend architecture, database design, payments,
+					CI/CD — one GraphQL API behind web, iOS, Android, and two TV platforms.
+				</p>
+			</section>
+
+			<!-- Now -->
+			<section class="col-span-2 md:col-span-1 border border-white/10 rounded-xl p-5">
+				<h2 class="text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-3">Now</h2>
+				<ul class="space-y-2 text-xs text-gray-400 leading-relaxed">
+					<li class="flex gap-2"><span class="text-blue-400/60 select-none">·</span>REKV write path</li>
+					<li class="flex gap-2"><span class="text-blue-400/60 select-none">·</span>TV client performance</li>
+					<li class="flex gap-2"><span class="text-blue-400/60 select-none">·</span>Last year of CS @ IUS</li>
+					<li class="flex gap-2"><span class="text-blue-400/60 select-none">·</span>Eyeing self-hosted email</li>
+				</ul>
+			</section>
+
+			<!-- Stack -->
+			<section class="col-span-2 md:col-span-1 border border-white/10 rounded-xl p-5">
+				<h2 class="text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-3">Stack</h2>
+				<div class="flex flex-wrap gap-1.5">
+					<span class="text-[11px] text-blue-300/90 bg-blue-400/10 rounded-full px-2.5 py-1">TypeScript</span>
+					<span class="text-[11px] text-blue-300/90 bg-blue-400/10 rounded-full px-2.5 py-1">Next.js</span>
+					<span class="text-[11px] text-blue-300/90 bg-blue-400/10 rounded-full px-2.5 py-1">C# / .NET</span>
+					<span class="text-[11px] text-blue-300/90 bg-blue-400/10 rounded-full px-2.5 py-1">GraphQL</span>
+					<span class="text-[11px] text-blue-300/90 bg-blue-400/10 rounded-full px-2.5 py-1">PostgreSQL</span>
+					<span class="text-[11px] text-blue-300/90 bg-blue-400/10 rounded-full px-2.5 py-1">Rust</span>
+					<span class="text-[11px] text-blue-300/90 bg-blue-400/10 rounded-full px-2.5 py-1">Linux</span>
+					<span class="text-[11px] text-blue-300/90 bg-blue-400/10 rounded-full px-2.5 py-1">AWS</span>
+				</div>
+			</section>
+
+			<!-- Projects — 2 wide -->
+			<section class="col-span-2 border border-white/10 rounded-xl p-6">
+				<h2 class="text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-4">Side Projects</h2>
+				<ul class="space-y-3 text-sm">
+					<li class="flex flex-wrap items-baseline justify-between gap-2">
+						<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-gray-200 hover:text-blue-300 transition-colors">REKV ↗</a>
+						<span class="text-xs text-gray-600">kv store in rust — v0.1, reads work</span>
+					</li>
+					<li class="flex flex-wrap items-baseline justify-between gap-2">
+						<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="text-gray-200 hover:text-blue-300 transition-colors">Make2Game ↗</a>
+						<span class="text-xs text-gray-600">2d engine, c++/opengl — on ice</span>
+					</li>
+					<li class="flex flex-wrap items-baseline justify-between gap-2">
+						<a href="https://evrenomi.com" target="_blank" rel="noopener" class="text-gray-200 hover:text-blue-300 transition-colors">Evrenomi ↗</a>
+						<span class="text-xs text-gray-600">blog platform — in production since 2021</span>
+					</li>
+					<li class="flex flex-wrap items-baseline justify-between gap-2">
+						<a href="https://github.com/atduyar/dotfiles" target="_blank" rel="noopener" class="text-gray-200 hover:text-blue-300 transition-colors">dotfiles ↗</a>
+						<span class="text-xs text-gray-600">arch, zsh, terminal-first</span>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Writing — 2 wide -->
+			<section class="col-span-2 border border-white/10 rounded-xl p-6">
+				<div class="flex items-baseline justify-between mb-4">
+					<h2 class="text-[10px] uppercase tracking-[0.2em] text-gray-500">Writing</h2>
+					<span class="text-[10px] text-blue-400/60">blog soon</span>
+				</div>
+				<ul class="divide-y divide-white/5 text-sm">
+					<li class="py-2.5 flex flex-wrap items-baseline justify-between gap-2">
+						<span class="text-gray-300">Self-hosting Matrix: the .well-known rabbit hole</span>
+						<span class="text-xs text-gray-600 tabular-nums">jun</span>
+					</li>
+					<li class="py-2.5 flex flex-wrap items-baseline justify-between gap-2">
+						<span class="text-gray-300">Memory-mapped files vs. the borrow checker</span>
+						<span class="text-xs text-gray-600 tabular-nums">may</span>
+					</li>
+					<li class="py-2.5 flex flex-wrap items-baseline justify-between gap-2">
+						<span class="text-gray-300">Five platforms, one GraphQL API</span>
+						<span class="text-xs text-gray-600 tabular-nums">apr</span>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Off the clock -->
+			<section class="col-span-2 md:col-span-3 border border-white/10 rounded-xl p-6">
+				<h2 class="text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-4">Off the Clock</h2>
+				<div class="grid sm:grid-cols-3 gap-5 text-sm">
+					<div>
+						<p class="text-gray-200 mb-1">Self-hosting</p>
+						<p class="text-gray-500 text-xs leading-relaxed">Matrix homeserver, this site, backups. The VPS bill is the cheap part; the evenings are the real cost.</p>
+					</div>
+					<div>
+						<p class="text-gray-200 mb-1">One layer lower</p>
+						<p class="text-gray-500 text-xs leading-relaxed">Yearly rule: understand one more layer down the stack. 2026 is storage engines.</p>
+					</div>
+					<div>
+						<p class="text-gray-200 mb-1">Old Turkic script</p>
+						<p class="text-gray-500 text-xs leading-relaxed">1,300-year-old stone-carved alphabet — the glyph card up top deals real letters.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact -->
+			<section class="col-span-2 md:col-span-1 border border-blue-400/25 rounded-xl p-6 bg-blue-500/[0.05] flex flex-col justify-between gap-4">
+				<div>
+					<h2 class="text-[10px] uppercase tracking-[0.2em] text-gray-500 mb-2">Contact</h2>
+					<p class="text-sm text-gray-400 leading-relaxed">Roles, side quests, or stack opinions.</p>
+				</div>
+				<a href="mailto:atduyar@gmail.com" class="block text-center px-4 py-2.5 border border-blue-400/40 text-blue-300 text-sm rounded-lg hover:bg-blue-400 hover:text-[#0a0b0e] transition-all duration-300">
+					Email me
+				</a>
+			</section>
+		</div>
+
+		<footer class="mt-8 flex items-center justify-between text-xs text-gray-600">
+			<span>© 2026 Tarik Duyar · Sarajevo</span>
+			<span class="font-oldturcic text-blue-400/20 tracking-[0.4em] select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+		</footer>
+	</main>
+
+	<script is:inline>
+		// Sarajevo clock
+		const clock = document.getElementById("clock");
+		function tick() {
+			clock.textContent = new Intl.DateTimeFormat("en-GB", {
+				hour: "2-digit", minute: "2-digit", timeZone: "Europe/Sarajevo",
+			}).format(new Date());
+		}
+		tick();
+		setInterval(tick, 30_000);
+
+		// Copy email
+		const btn = document.getElementById("copy-email");
+		btn.addEventListener("click", async () => {
+			await navigator.clipboard.writeText("atduyar@gmail.com");
+			const old = btn.textContent;
+			btn.textContent = "copied!";
+			setTimeout(() => { btn.textContent = old; }, 1500);
+		});
+
+		// Glyph of the day
+		const glyphs = [
+			["𐱅", "/t/ — the letter in my name"],
+			["𐰋", "/b/ — front-vowel variant"],
+			["𐰚", "/k/ — front-vowel variant"],
+			["𐰠", "/l/ — front-vowel variant"],
+			["𐰃", "/i/ — a vowel"],
+			["𐰏", "/g/ — front-vowel variant"],
+			["𐰼", "/r/ — front-vowel variant"],
+			["𐰽", "/s/ — back-vowel variant"],
+			["𐰴", "/q/ — back-vowel variant"],
+			["𐰆", "/o, u/ — a vowel"],
+			["𐰖", "/y/ — back-vowel variant"],
+			["𐰭", "/ŋ/ — as in 'song'"],
+		];
+		const charEl = document.getElementById("glyph-char");
+		const infoEl = document.getElementById("glyph-info");
+		function roll() {
+			const [g, info] = glyphs[Math.floor(Math.random() * glyphs.length)];
+			charEl.textContent = g;
+			infoEl.textContent = info;
+		}
+		document.getElementById("reroll").addEventListener("click", roll);
+		roll();
+	</script>
+</BaseLayout>

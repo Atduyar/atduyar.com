@@ -1,0 +1,300 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	/16 — "Shell"
+	The surprise: the entire site is a working terminal. Visitors type (or tap)
+	commands to explore — whoami, work, projects, blog, uses, glyphs, contact.
+	Tab completion, arrow-key history, and a few easter eggs (sudo, bilig,
+	coffee). A clickable command bar keeps it usable on mobile and for people
+	who'd rather not type. Old Turkic 𐱅 as the prompt sigil.
+-->
+<BaseLayout
+	title="atduyar — interactive shell"
+	description="Ahmet Tarik Duyar's personal site as a working terminal. Type 'help' to begin."
+	bodyClass="bg-[#0a0c0e] text-gray-300 font-mono antialiased"
+>
+	<main class="max-w-3xl mx-auto px-4 sm:px-6 py-8 min-h-dvh flex flex-col text-[14px] leading-relaxed">
+		<!-- Terminal chrome -->
+		<div class="border border-white/10 bg-[#0c0e11] flex-1 flex flex-col min-h-0 rounded-lg overflow-hidden shadow-[0_0_60px_rgba(59,130,246,0.06)]">
+			<div class="flex items-center gap-2 px-4 py-2.5 border-b border-white/10 bg-white/[0.02]">
+				<span class="w-3 h-3 rounded-full bg-red-400/40"></span>
+				<span class="w-3 h-3 rounded-full bg-yellow-400/40"></span>
+				<span class="w-3 h-3 rounded-full bg-green-400/40"></span>
+				<span class="ml-3 text-xs text-gray-600">guest@atduyar.com — zsh</span>
+			</div>
+
+			<!-- Scrollback -->
+			<div id="term" class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-1 scroll-smooth" aria-live="polite"></div>
+
+			<!-- Input -->
+			<form id="cmdform" class="flex items-center gap-2 px-4 sm:px-6 py-4 border-t border-white/10">
+				<span class="text-blue-400 shrink-0 select-none" aria-hidden="true">𐱅</span>
+				<span class="text-gray-500 shrink-0">guest:~$</span>
+				<input
+					id="cmdline"
+					type="text"
+					autocomplete="off"
+					autocapitalize="off"
+					spellcheck="false"
+					class="flex-1 bg-transparent outline-none text-gray-100 caret-blue-400 min-w-0"
+					aria-label="Terminal command input"
+				/>
+			</form>
+		</div>
+
+		<!-- Tap bar for mobile / non-typers -->
+		<div class="flex flex-wrap gap-2 mt-4" id="chips">
+			<button data-cmd="help" class="chip">help</button>
+			<button data-cmd="whoami" class="chip">whoami</button>
+			<button data-cmd="work" class="chip">work</button>
+			<button data-cmd="projects" class="chip">projects</button>
+			<button data-cmd="blog" class="chip">blog</button>
+			<button data-cmd="uses" class="chip">uses</button>
+			<button data-cmd="glyphs" class="chip">glyphs</button>
+			<button data-cmd="contact" class="chip">contact</button>
+		</div>
+
+		<p class="mt-4 text-xs text-gray-600 flex flex-wrap justify-between gap-2">
+			<span>© 2026 Ahmet Tarik Duyar</span>
+			<span>tab: complete · ↑↓: history · prefer a normal site? <a href="/" class="text-blue-400 hover:text-blue-300 hover:underline">atduyar.com</a></span>
+		</p>
+	</main>
+
+	<style>
+		.chip {
+			border: 1px solid rgb(255 255 255 / 0.1);
+			color: rgb(156 163 175);
+			font-size: 12px;
+			padding: 6px 12px;
+			border-radius: 9999px;
+			cursor: pointer;
+			transition: all 0.2s;
+		}
+		.chip:hover {
+			border-color: rgb(96 165 250 / 0.5);
+			color: rgb(147 197 253);
+		}
+	</style>
+
+	<script is:inline>
+		const term = document.getElementById("term");
+		const input = document.getElementById("cmdline");
+		const form = document.getElementById("cmdform");
+
+		const B = (s) => `<span class="text-blue-300">${s}</span>`;
+		const D = (s) => `<span class="text-gray-600">${s}</span>`;
+		const W = (s) => `<span class="text-gray-100">${s}</span>`;
+		const A = (href, s) => `<a href="${href}" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-400/40">${s}</a>`;
+
+		const commands = {
+			help: () => [
+				W("available commands:"),
+				"",
+				`  ${B("whoami")}      who is this person`,
+				`  ${B("work")}        experience & day job`,
+				`  ${B("projects")}    things i've built`,
+				`  ${B("blog")}        writing (and drafts)`,
+				`  ${B("uses")}        hardware, software, servers`,
+				`  ${B("glyphs")}      why there are runes everywhere`,
+				`  ${B("now")}         what i'm doing these days`,
+				`  ${B("contact")}     reach me`,
+				`  ${B("clear")}       wipe the screen`,
+				"",
+				D("hints: tab completes, ↑/↓ recall history. a few commands are undocumented."),
+			],
+
+			whoami: () => [
+				W("ahmet tarik duyar") + D(" — tarik to everyone"),
+				"",
+				"software engineer in sarajevo, bosnia & herzegovina.",
+				"i build production systems end to end — schema, api, payments,",
+				"deploy pipeline — and run my own servers because someone has to.",
+				"",
+				"cs honor student @ international university of sarajevo.",
+				`rule of thumb: understand ${W("one layer below")} wherever you work.`,
+				"",
+				D("see also: work, projects, glyphs"),
+			],
+
+			work: () => [
+				W("full-stack engineer @ deniz egece co. ltd.") + D("  2022—now"),
+				`  founding engineer on ${B("egecetv")} — health & education streaming:`,
+				"  17,000+ paid subscribers, ~1,000 videos, 5 platforms",
+				"  (web / ios / android / android tv / apple tv).",
+				"  mine: backend architecture, mysql schema, one graphql api",
+				"  behind all clients, subscription payments, ci/cd.",
+				"",
+				"  also: distance-education platform (webrtc consultations,",
+				"  scheduling) — .net, clean architecture, team of 5.",
+				"",
+				W("freelance") + D("  2021—2022"),
+				`  built ${A("https://evrenomi.com", "evrenomi")} — c#/.net blog platform, 95+ lighthouse,`,
+				"  still in production on a vps i manage.",
+			],
+
+			projects: () => [
+				`${B("rekv")}        ${D("rust")}       type-safe kv store: mmap, zero-copy, async`,
+				`             ${A("https://github.com/atduyar/rekv", "github.com/atduyar/rekv")}`,
+				`${B("make2game")}   ${D("c++/opengl")} 2d engine from scratch, lua scripting`,
+				`             ${A("https://github.com/atduyar/make2game", "github.com/atduyar/make2game")}`,
+				`${B("evrenomi")}    ${D("c#/.net")}    blog platform, in production since 2021`,
+				`             ${A("https://evrenomi.com", "evrenomi.com")}`,
+				`${B("dotfiles")}    ${D("shell")}      arch, zsh, terminal-first`,
+				`             ${A("https://github.com/atduyar/dotfiles", "github.com/atduyar/dotfiles")}`,
+				"",
+				D("egecetv is the day job — see 'work'."),
+			],
+
+			blog: () => [
+				W("writing") + D(" — blog engine under construction, drafts queued:"),
+				"",
+				`  2026-06  self-hosting matrix: the .well-known rabbit hole`,
+				`  2026-05  memory-mapped files vs. the borrow checker ${D("[draft]")}`,
+				`  2026-04  five platforms, one graphql api ${D("[draft]")}`,
+				`  2026-03  why i wrote a game engine nobody asked for ${D("[draft]")}`,
+				"",
+				D("no rss yet. no newsletter ever."),
+			],
+
+			uses: () => [
+				`${D("desktop")}   arch linux, zsh, terminal-first everything`,
+				`${D("servers")}   debian vps — this site, a matrix homeserver, backups`,
+				`${D("editor")}    whatever's in the dotfiles this month`,
+				`${D("site")}      astro + tailwind, deployed with wrangler`,
+				`${D("dotfiles")}  ${A("https://github.com/atduyar/dotfiles", "github.com/atduyar/dotfiles")}`,
+			],
+
+			glyphs: () => [
+				`the ${B("𐱅")} in the prompt is a letter — /t/, for tarik — from`,
+				W("old turkic script") + ", the alphabet of the orkhon inscriptions:",
+				"stone monuments carved in the 8th century in today's mongolia.",
+				"",
+				"they're 1,300-year-old documentation that is still readable.",
+				"most software doesn't survive a decade. good bar to aim at.",
+				"",
+				`${B("𐰋𐰃𐰠𐰏")} spells ${W("bilig")} — "knowledge". try it as a command.`,
+			],
+
+			now: () => [
+				W("june 2026:"),
+				`  ${D("·")} shipping egecetv — tv client performance work`,
+				`  ${D("·")} rekv write path (crash safety vs. zero-copy ambitions)`,
+				`  ${D("·")} final stretch of the cs degree`,
+				`  ${D("·")} matrix server stable; eyeing self-hosted email next`,
+			],
+
+			contact: () => [
+				`${D("email")}     ${A("mailto:atduyar@gmail.com", "atduyar@gmail.com")}`,
+				`${D("github")}    ${A("https://github.com/atduyar", "github.com/atduyar")}`,
+				`${D("linkedin")}  ${A("https://linkedin.com/in/atduyar", "linkedin.com/in/atduyar")}`,
+				"",
+				"i reply to humans.",
+			],
+
+			clear: () => {
+				term.innerHTML = "";
+				return [];
+			},
+
+			// undocumented
+			ls: () => [`${B("whoami")}  ${B("work")}  ${B("projects")}  ${B("blog")}  ${B("uses")}  ${B("glyphs")}  ${B("now")}  ${B("contact")}`],
+			pwd: () => ["/home/guest"],
+			sudo: () => [D("guest is not in the sudoers file. this incident will be reported to no one — i self-host the logs.")],
+			bilig: () => [
+				`${B("𐰋𐰃𐰠𐰏")} — bilig: knowledge, wisdom.`,
+				`"${W("bilig bilse, bodun toq")}" — when there is knowledge, the people prosper.`,
+				D("you found the easter egg. there may be more."),
+			],
+			coffee: () => [D("HTTP 418: i'm a teapot. sarajevo runs on bosnian coffee anyway.")],
+			vim: () => [D("you may never leave. (:q! works in real life only.)")],
+			exit: () => [D("there is no exit. but the normal site is at ") + `<a href="/" class="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-400/40">atduyar.com</a>` + D(".")],
+			neofetch: () => [
+				`${B("𐱅")}  ${W("tarik")}@${W("atduyar.com")}`,
+				`${D("──────────────────")}`,
+				`${D("os")}       arch linux (desktop), debian (fleet)`,
+				`${D("role")}     full-stack engineer @ deniz egece`,
+				`${D("uptime")}   ~3 years in production`,
+				`${D("lang")}     ts, c#, rust, c++, sql`,
+				`${D("shell")}    zsh`,
+				`${D("location")} sarajevo, b&h`,
+			],
+		};
+
+		function print(html, cls = "") {
+			const div = document.createElement("div");
+			div.className = "whitespace-pre-wrap break-words " + cls;
+			div.innerHTML = html === "" ? "&nbsp;" : html;
+			term.appendChild(div);
+		}
+
+		function echo(cmd) {
+			print(`<span class="text-blue-400">𐱅</span> <span class="text-gray-500">guest:~$</span> <span class="text-gray-100">${cmd.replace(/</g, "&lt;")}</span>`, "mt-3");
+		}
+
+		function run(raw) {
+			const cmd = raw.trim().toLowerCase();
+			if (!cmd) return;
+			echo(cmd);
+			const handler = commands[cmd];
+			if (handler) {
+				for (const line of handler()) print(line);
+			} else {
+				print(`${cmd.replace(/</g, "&lt;")}: command not found ${"—"} try <span class="text-blue-300">help</span>`);
+			}
+			term.scrollTop = term.scrollHeight;
+		}
+
+		// History + completion
+		const history = [];
+		let hIdx = -1;
+
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+			const val = input.value;
+			if (val.trim()) {
+				history.push(val.trim());
+				hIdx = history.length;
+			}
+			input.value = "";
+			run(val);
+		});
+
+		input.addEventListener("keydown", (e) => {
+			if (e.key === "ArrowUp") {
+				e.preventDefault();
+				if (hIdx > 0) input.value = history[--hIdx] ?? "";
+			} else if (e.key === "ArrowDown") {
+				e.preventDefault();
+				if (hIdx < history.length - 1) input.value = history[++hIdx];
+				else { hIdx = history.length; input.value = ""; }
+			} else if (e.key === "Tab") {
+				e.preventDefault();
+				const prefix = input.value.trim().toLowerCase();
+				if (!prefix) return;
+				const matches = Object.keys(commands).filter((c) => c.startsWith(prefix));
+				if (matches.length === 1) input.value = matches[0];
+				else if (matches.length > 1) { echo(prefix); print(matches.map(B).join("  ")); term.scrollTop = term.scrollHeight; }
+			}
+		});
+
+		// Chips
+		for (const chip of document.querySelectorAll("#chips button")) {
+			chip.addEventListener("click", () => { run(chip.dataset.cmd); input.focus(); });
+		}
+
+		// Keep focus on the prompt (but don't steal text selection)
+		document.addEventListener("click", () => {
+			if (!getSelection().toString()) input.focus();
+		});
+
+		// Boot sequence
+		print(`${B("atduyar.com")} ${D("— interactive shell · est. sarajevo")}`);
+		print(D("login: guest — welcome."));
+		print("");
+		print(`i'm ${W("tarik")}, a software engineer. this site is a terminal.`);
+		print(`type ${B("help")} to look around, or tap a command below.`);
+		input.focus();
+	</script>
+</BaseLayout>
