@@ -1,0 +1,163 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	Variant 8 — "Bento"
+	Personal dashboard in a bento grid: intro, now, writing, setup, interests,
+	links — each its own card, scannable in ten seconds. The trendy personal-
+	site pattern done with restraint: one accent color, no counters, no
+	gimmick widgets.
+-->
+<BaseLayout
+	title="Tarik Duyar"
+	description="Ahmet Tarik Duyar — software engineer in Sarajevo. Code, servers, writing, and Old Turkic glyphs."
+	bodyClass="bg-[#0a0b0e] text-gray-300 antialiased"
+>
+	<main class="max-w-5xl mx-auto px-6 py-16 md:py-24">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-min">
+
+			<!-- Intro — spans 2 cols -->
+			<section class="md:col-span-2 border border-white/10 rounded-xl p-8 bg-gradient-to-br from-blue-500/[0.06] to-transparent relative overflow-hidden">
+				<span class="font-oldturcic absolute -right-4 -bottom-8 text-[9rem] text-blue-400/[0.05] leading-none select-none pointer-events-none" aria-hidden="true">𐱅</span>
+				<h1 class="font-sinistre text-3xl md:text-4xl text-white mb-4">Tarik Duyar</h1>
+				<p class="text-gray-400 leading-relaxed max-w-md">
+					Software engineer in Sarajevo. I build streaming platforms by day,
+					key-value stores and game engines by night, and I run every server
+					this site touches.
+				</p>
+				<div class="flex gap-5 mt-6 text-sm">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">LinkedIn</a>
+					<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">Email</a>
+				</div>
+			</section>
+
+			<!-- Location / status -->
+			<section class="border border-white/10 rounded-xl p-6 flex flex-col justify-between min-h-[10rem]">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500">Status</h2>
+				<div>
+					<p class="text-gray-200">Sarajevo, BiH <span class="text-gray-600">· CET</span></p>
+					<p class="text-sm text-gray-500 mt-1">Engineer @ Deniz Egece</p>
+					<p class="text-sm text-gray-500">CS honor student @ IUS</p>
+				</div>
+			</section>
+
+			<!-- Now -->
+			<section class="border border-white/10 rounded-xl p-6">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Now</h2>
+				<ul class="space-y-2.5 text-sm text-gray-400 leading-relaxed">
+					<li class="flex gap-2"><span class="text-blue-400/60 select-none">·</span>Shipping EgeceTV (17K+ subscribers)</li>
+					<li class="flex gap-2"><span class="text-blue-400/60 select-none">·</span>Building REKV, a KV store in Rust</li>
+					<li class="flex gap-2"><span class="text-blue-400/60 select-none">·</span>Maintaining a self-hosted Matrix server</li>
+					<li class="flex gap-2"><span class="text-blue-400/60 select-none">·</span>Final stretch of my CS degree</li>
+				</ul>
+				<p class="text-[10px] text-gray-600 mt-4">updated jun 2026</p>
+			</section>
+
+			<!-- Writing — spans 2 cols -->
+			<section class="md:col-span-2 border border-white/10 rounded-xl p-6">
+				<div class="flex items-baseline justify-between mb-4">
+					<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500">Writing</h2>
+					<span class="text-[10px] uppercase tracking-wider text-blue-400/60">blog launching soon</span>
+				</div>
+				<ul class="divide-y divide-white/5">
+					<li class="py-3 flex flex-wrap items-baseline justify-between gap-2">
+						<span class="text-gray-200 text-sm">Self-hosting Matrix: the .well-known rabbit hole</span>
+						<span class="text-xs text-gray-600 tabular-nums">jun 2026</span>
+					</li>
+					<li class="py-3 flex flex-wrap items-baseline justify-between gap-2">
+						<span class="text-gray-200 text-sm">Memory-mapped files vs. the borrow checker</span>
+						<span class="text-xs text-gray-600 tabular-nums">may 2026</span>
+					</li>
+					<li class="py-3 flex flex-wrap items-baseline justify-between gap-2">
+						<span class="text-gray-200 text-sm">Five platforms, one GraphQL API</span>
+						<span class="text-xs text-gray-600 tabular-nums">apr 2026</span>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Projects -->
+			<section class="border border-white/10 rounded-xl p-6">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Projects</h2>
+				<ul class="space-y-3 text-sm">
+					<li>
+						<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="group block">
+							<span class="text-gray-200 group-hover:text-blue-300 transition-colors">REKV ↗</span>
+							<span class="block text-xs text-gray-600">kv store · rust</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="group block">
+							<span class="text-gray-200 group-hover:text-blue-300 transition-colors">Make2Game ↗</span>
+							<span class="block text-xs text-gray-600">2d engine · c++ / opengl</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://evrenomi.com" target="_blank" rel="noopener" class="group block">
+							<span class="text-gray-200 group-hover:text-blue-300 transition-colors">Evrenomi ↗</span>
+							<span class="block text-xs text-gray-600">blog platform · c# / .net</span>
+						</a>
+					</li>
+					<li>
+						<span class="text-gray-200">EgeceTV</span>
+						<span class="block text-xs text-gray-600">streaming · commercial</span>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Setup / uses -->
+			<section class="border border-white/10 rounded-xl p-6">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Uses</h2>
+				<dl class="space-y-2 text-sm">
+					<div class="flex justify-between gap-4">
+						<dt class="text-gray-600">os</dt><dd class="text-gray-300">Arch Linux</dd>
+					</div>
+					<div class="flex justify-between gap-4">
+						<dt class="text-gray-600">shell</dt><dd class="text-gray-300">zsh</dd>
+					</div>
+					<div class="flex justify-between gap-4">
+						<dt class="text-gray-600">editor</dt><dd class="text-gray-300">terminal-first</dd>
+					</div>
+					<div class="flex justify-between gap-4">
+						<dt class="text-gray-600">dotfiles</dt>
+						<dd><a href="https://github.com/atduyar/dotfiles" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">public ↗</a></dd>
+					</div>
+				</dl>
+			</section>
+
+			<!-- Interests — spans 2 cols -->
+			<section class="md:col-span-2 border border-white/10 rounded-xl p-6">
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Off the Clock</h2>
+				<div class="grid sm:grid-cols-3 gap-5 text-sm">
+					<div>
+						<p class="text-gray-200 mb-1">Self-hosting</p>
+						<p class="text-gray-500 leading-relaxed">Matrix, this site, everything — on servers I run myself.</p>
+					</div>
+					<div>
+						<p class="text-gray-200 mb-1">Systems programming</p>
+						<p class="text-gray-500 leading-relaxed">One layer lower every year. Currently: storage engines.</p>
+					</div>
+					<div>
+						<p class="text-gray-200 mb-1">Old Turkic script</p>
+						<p class="text-gray-500 leading-relaxed">1,300-year-old stone inscriptions. The glyphs here are the real alphabet.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact CTA — full width -->
+			<section class="md:col-span-3 border border-blue-400/20 rounded-xl p-8 text-center bg-blue-500/[0.04]">
+				<p class="font-sinistre text-2xl text-white mb-2">Say hello.</p>
+				<p class="text-sm text-gray-500 mb-5">Always happy to talk about systems, side projects, or Sarajevo coffee.</p>
+				<a href="mailto:atduyar@gmail.com" class="inline-block px-6 py-3 border border-blue-400/40 text-blue-300 text-sm hover:bg-blue-400 hover:text-[#0a0b0e] rounded-lg transition-all duration-300">
+					atduyar@gmail.com
+				</a>
+			</section>
+		</div>
+
+		<footer class="mt-10 flex items-center justify-between text-xs text-gray-600">
+			<span>© 2026 Tarik Duyar</span>
+			<span class="font-oldturcic text-blue-400/20 tracking-[0.4em] select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+		</footer>
+	</main>
+</BaseLayout>

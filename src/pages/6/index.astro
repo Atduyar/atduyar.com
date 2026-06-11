@@ -1,0 +1,167 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	Variant 6 — "Garden"
+	A personal homepage hub: short greeting, a Now section, writing, projects,
+	and interests — the digital-garden pattern. Warm voice, runic accents kept
+	to a glyph in the masthead and section marks. Blog entries are placeholders
+	("soon" badges) until real posts exist; swap them for links then.
+-->
+<BaseLayout
+	title="Tarik Duyar"
+	description="Personal site of Ahmet Tarik Duyar — software engineer in Sarajevo. Code, writing, and the occasional rabbit hole."
+	bodyClass="bg-[#0b0c0f] text-gray-300 antialiased"
+>
+	<main class="max-w-2xl mx-auto px-6 py-20 md:py-28">
+		<!-- Greeting -->
+		<header class="mb-20">
+			<div class="flex items-baseline gap-3 mb-6">
+				<span class="font-oldturcic text-blue-400/60 text-xl leading-none select-none" aria-hidden="true">𐱅</span>
+				<h1 class="font-sinistre text-3xl md:text-4xl text-white">Hi, I'm Tarik.</h1>
+			</div>
+			<p class="text-gray-400 leading-relaxed">
+				I'm a software engineer in Sarajevo. By day I build streaming and education
+				platforms; by night I write Rust, tinker with my servers, and occasionally
+				disappear into a rabbit hole about Old Turkic script — which is where the
+				glyphs on this site come from.
+			</p>
+			<p class="text-gray-400 leading-relaxed mt-4">
+				This site is my corner of the internet: things I've built, things I'm
+				thinking about, and things I can't stop fiddling with.
+			</p>
+			<nav class="flex gap-6 mt-8 text-sm">
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">GitHub</a>
+				<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">LinkedIn</a>
+				<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">Email</a>
+			</nav>
+		</header>
+
+		<!-- Now -->
+		<section class="mb-16">
+			<h2 class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-gray-500 mb-6">
+				<span class="font-oldturcic text-blue-400/30 text-base leading-none select-none" aria-hidden="true">𐰋</span>
+				Now
+			</h2>
+			<ul class="space-y-3 text-sm text-gray-400 leading-relaxed">
+				<li class="flex gap-3"><span class="text-blue-400/50 select-none">·</span>
+					Working on EgeceTV at Deniz Egece — a streaming platform with 17K+ subscribers I've been building since 2022.</li>
+				<li class="flex gap-3"><span class="text-blue-400/50 select-none">·</span>
+					Finishing my CS degree at the International University of Sarajevo.</li>
+				<li class="flex gap-3"><span class="text-blue-400/50 select-none">·</span>
+					Building <a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">REKV</a>, a key-value store in Rust, to understand storage engines from the inside.</li>
+				<li class="flex gap-3"><span class="text-blue-400/50 select-none">·</span>
+					Running my own Matrix server, and learning more about federation than I planned to.</li>
+			</ul>
+			<p class="text-xs text-gray-600 mt-5">Updated June 2026 · inspired by <a href="https://nownownow.com/about" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors underline decoration-gray-700">nownownow</a></p>
+		</section>
+
+		<!-- Writing -->
+		<section class="mb-16">
+			<h2 class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-gray-500 mb-6">
+				<span class="font-oldturcic text-blue-400/30 text-base leading-none select-none" aria-hidden="true">𐰃</span>
+				Writing
+			</h2>
+			<p class="text-sm text-gray-500 mb-6">Posts I'm working on — this section becomes a real blog soon.</p>
+			<ul class="space-y-5">
+				<li>
+					<div class="flex items-baseline gap-3">
+						<h3 class="text-gray-200">Self-hosting Matrix: the .well-known rabbit hole</h3>
+						<span class="text-[10px] uppercase tracking-wider text-blue-400/60 border border-blue-400/20 px-1.5 py-0.5 rounded">soon</span>
+					</div>
+					<p class="text-sm text-gray-500 mt-1">Everything that went wrong setting up federation on my own domain, and the delegation dance that fixed it.</p>
+				</li>
+				<li>
+					<div class="flex items-baseline gap-3">
+						<h3 class="text-gray-200">What building a KV store taught me about Rust ownership</h3>
+						<span class="text-[10px] uppercase tracking-wider text-blue-400/60 border border-blue-400/20 px-1.5 py-0.5 rounded">soon</span>
+					</div>
+					<p class="text-sm text-gray-500 mt-1">Memory-mapped files and the borrow checker are natural enemies. Notes from REKV.</p>
+				</li>
+				<li>
+					<div class="flex items-baseline gap-3">
+						<h3 class="text-gray-200">Five platforms, one GraphQL API</h3>
+						<span class="text-[10px] uppercase tracking-wider text-blue-400/60 border border-blue-400/20 px-1.5 py-0.5 rounded">soon</span>
+					</div>
+					<p class="text-sm text-gray-500 mt-1">How EgeceTV serves web, mobile, and two TV platforms from a single backend without going insane.</p>
+				</li>
+			</ul>
+		</section>
+
+		<!-- Projects -->
+		<section class="mb-16">
+			<h2 class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-gray-500 mb-6">
+				<span class="font-oldturcic text-blue-400/30 text-base leading-none select-none" aria-hidden="true">𐰠</span>
+				Things I've Built
+			</h2>
+			<ul class="space-y-6">
+				<li>
+					<div class="flex flex-wrap items-baseline gap-x-3">
+						<h3 class="text-gray-200">EgeceTV</h3>
+						<span class="text-xs text-gray-600">day job · 2022—now</span>
+					</div>
+					<p class="text-sm text-gray-500 mt-1">Streaming platform, 17K+ paying users, five platforms, one API. I built the backend, the database, the payments, and the pipeline.</p>
+				</li>
+				<li>
+					<div class="flex flex-wrap items-baseline gap-x-3">
+						<h3 class="text-gray-200">REKV</h3>
+						<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-xs text-blue-400 hover:text-blue-300 transition-colors">source ↗</a>
+					</div>
+					<p class="text-sm text-gray-500 mt-1">Type-safe key-value store in Rust. Memory-mapped, zero-copy, async.</p>
+				</li>
+				<li>
+					<div class="flex flex-wrap items-baseline gap-x-3">
+						<h3 class="text-gray-200">Make2Game</h3>
+						<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="text-xs text-blue-400 hover:text-blue-300 transition-colors">source ↗</a>
+					</div>
+					<p class="text-sm text-gray-500 mt-1">A 2D game engine in C++ and OpenGL with Lua scripting, because using Unity felt like cheating.</p>
+				</li>
+				<li>
+					<div class="flex flex-wrap items-baseline gap-x-3">
+						<h3 class="text-gray-200">Evrenomi</h3>
+						<a href="https://evrenomi.com" target="_blank" rel="noopener" class="text-xs text-blue-400 hover:text-blue-300 transition-colors">live ↗</a>
+					</div>
+					<p class="text-sm text-gray-500 mt-1">A blogging platform I built freelance — 95+ Lighthouse, still running on a VPS I manage.</p>
+				</li>
+			</ul>
+		</section>
+
+		<!-- Interests -->
+		<section class="mb-20">
+			<h2 class="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-gray-500 mb-6">
+				<span class="font-oldturcic text-blue-400/30 text-base leading-none select-none" aria-hidden="true">𐰏</span>
+				Current Obsessions
+			</h2>
+			<div class="space-y-4 text-sm text-gray-400 leading-relaxed">
+				<p>
+					<span class="text-gray-200">Self-hosting.</span> Matrix server, this site,
+					my projects — everything runs on infrastructure I administer. Partly
+					principle, mostly because debugging a broken server at 2am is somehow fun.
+				</p>
+				<p>
+					<span class="text-gray-200">Linux.</span> Arch user, dotfiles in
+					<a href="https://github.com/atduyar/dotfiles" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">version control</a>,
+					terminal-first everything.
+				</p>
+				<p>
+					<span class="text-gray-200">Old Turkic script.</span> The Orkhon
+					inscriptions are 1,300-year-old stone-carved text from my ancestors'
+					corner of the world. The glyphs scattered around this site are real
+					characters from that alphabet.
+				</p>
+				<p>
+					<span class="text-gray-200">Going lower.</span> Every year I try to
+					understand one layer further down the stack. This year: storage engines
+					and memory-mapped I/O.
+				</p>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-sm text-gray-600">
+			<span>Sarajevo · <a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">atduyar@gmail.com</a></span>
+			<span class="font-oldturcic text-blue-400/20 select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+		</footer>
+	</main>
+</BaseLayout>

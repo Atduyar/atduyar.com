@@ -1,0 +1,112 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	Variant 9 — "Letter"
+	One long-form page written in first person, like a letter or a Sivers-style
+	about page. No cards, no grid — just prose with generous type, broken by
+	thin rules and small glyph marks. The most personal of the set: it reads
+	like the person, not the résumé.
+-->
+<BaseLayout
+	title="Tarik Duyar — About"
+	description="Ahmet Tarik Duyar — software engineer in Sarajevo. Who I am, what I build, what I care about."
+	bodyClass="bg-[#0b0c0f] text-gray-300 antialiased"
+>
+	<main class="max-w-xl mx-auto px-6 py-20 md:py-32">
+		<!-- Opening -->
+		<header class="mb-16">
+			<span class="font-oldturcic text-blue-400/40 text-2xl block mb-8 select-none" aria-hidden="true">𐱅</span>
+			<h1 class="font-sinistre text-4xl md:text-5xl text-white leading-tight mb-2">
+				I'm Tarik.
+			</h1>
+			<p class="text-gray-500">Software engineer. Sarajevo.</p>
+		</header>
+
+		<div class="space-y-6 text-gray-300 leading-relaxed text-[17px]">
+			<p>
+				I build software for a living and, inconveniently for my free time, also
+				for fun.
+			</p>
+			<p>
+				The living part: since 2022 I've been the engineer behind
+				<span class="text-white">EgeceTV</span>, a streaming platform at Deniz
+				Egece with more than 17,000 paying subscribers across five platforms.
+				I designed its backend, its database, its payment system, and the
+				pipeline that deploys it. When something breaks at 2am, my phone is the
+				one that buzzes — which has taught me more about software design than
+				any book.
+			</p>
+			<p>
+				The fun part happens below the web stack. I'm writing
+				<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors underline decoration-blue-400/30 underline-offset-4">a key-value store in Rust</a>
+				to understand how storage engines actually work, and before that I built
+				<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors underline decoration-blue-400/30 underline-offset-4">a 2D game engine in C++</a>
+				to understand what Unity was hiding from me. Neither will take over the
+				world. Both rewired how I think.
+			</p>
+		</div>
+
+		<hr class="my-12 border-white/5" />
+
+		<div class="space-y-6 text-gray-300 leading-relaxed text-[17px]">
+			<p class="text-gray-500 text-sm uppercase tracking-[0.2em]">What I believe about software</p>
+			<p>
+				Boring architecture wins. The most valuable systems I've shipped were the
+				least clever ones — a single well-designed API serving five client
+				platforms beats five special snowflakes every time.
+			</p>
+			<p>
+				Owning the whole stack changes how you build. I run my own servers — this
+				site, a Matrix homeserver, the projects I host. Self-hosting is mostly a
+				hobby, but it keeps me honest: you write different code when you're also
+				the one operating it.
+			</p>
+			<p>
+				And you should regularly build one layer below where you work. The web
+				made sense to me only after I wrote the renderer; databases made sense
+				only once I memory-mapped a file myself.
+			</p>
+		</div>
+
+		<hr class="my-12 border-white/5" />
+
+		<div class="space-y-6 text-gray-300 leading-relaxed text-[17px]">
+			<p class="text-gray-500 text-sm uppercase tracking-[0.2em]">Right now</p>
+			<p>
+				Finishing my computer science degree at the International University of
+				Sarajevo (as an honor student, my mother would want you to know),
+				shipping at Deniz Egece, and slowly turning my drafts about Matrix
+				federation and Rust ownership into an actual blog. It will appear here
+				when it's ready.
+			</p>
+			<p>
+				The glyphs on this page are <span class="text-white">Old Turkic</span> —
+				an alphabet carved into stone in the Orkhon Valley thirteen centuries
+				ago. I keep them around as a reminder that good engineering outlives its
+				engineers: those inscriptions are still readable; most software doesn't
+				survive a decade.
+			</p>
+		</div>
+
+		<hr class="my-12 border-white/5" />
+
+		<!-- Sign-off -->
+		<footer>
+			<p class="text-gray-300 leading-relaxed text-[17px] mb-10">
+				If any of this resonates — about work, side projects, or an argument
+				over whether self-hosting email is ever worth it — write to me at
+				<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors underline decoration-blue-400/30 underline-offset-4">atduyar@gmail.com</a>.
+			</p>
+			<div class="flex items-center justify-between">
+				<div class="flex gap-5 text-sm text-gray-500">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors">LinkedIn</a>
+				</div>
+				<span class="font-oldturcic text-blue-400/25 text-lg tracking-[0.3em] select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+			</div>
+			<p class="text-xs text-gray-600 mt-10">© 2026 Ahmet Tarik Duyar</p>
+		</footer>
+	</main>
+</BaseLayout>

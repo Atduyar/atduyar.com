@@ -1,0 +1,152 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	Variant 10 — "Atlas"
+	A start-page / directory homepage: a centered identity block, then the
+	site laid out as three named territories — Code, Words, Curiosities —
+	each a column with its entries. This is the variant that leans hardest
+	into the runic identity (full-height hero, glyph seal, named sections)
+	while keeping every word of copy professional.
+-->
+<BaseLayout
+	title="Tarik Duyar"
+	description="Personal site of Ahmet Tarik Duyar — code, writing, and curiosities. Software engineer in Sarajevo."
+	bodyClass="bg-[#0a0b0d] text-gray-200 antialiased"
+>
+	<div class="max-w-5xl mx-auto border-x border-[#90c5ff10] min-h-dvh bg-[#0c0d11]">
+
+		<!-- Hero / identity -->
+		<header class="min-h-[70vh] flex flex-col items-center justify-center text-center px-6 py-20 border-b border-[#90c5ff10] relative overflow-hidden">
+			<div class="absolute inset-0 opacity-[0.04] pointer-events-none">
+				<div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[32rem] h-[32rem] bg-blue-500 rounded-full blur-[140px]"></div>
+			</div>
+			<div class="relative">
+				<!-- Seal -->
+				<div class="w-16 h-16 mx-auto mb-10 rounded-full border border-blue-400/30 flex items-center justify-center">
+					<span class="font-oldturcic text-blue-300/80 text-3xl leading-none select-none" aria-hidden="true">𐱅</span>
+				</div>
+				<h1 class="font-sinistre text-5xl md:text-7xl text-white leading-none mb-6">Tarik Duyar</h1>
+				<p class="text-gray-400 max-w-md mx-auto leading-relaxed">
+					Software engineer in Sarajevo. This is my personal site —
+					part workshop, part notebook, part map of what I'm curious about.
+				</p>
+				<div class="flex justify-center gap-7 mt-10 text-sm">
+					<a href="#code" class="text-gray-500 hover:text-blue-300 transition-colors">Code</a>
+					<a href="#words" class="text-gray-500 hover:text-blue-300 transition-colors">Words</a>
+					<a href="#curiosities" class="text-gray-500 hover:text-blue-300 transition-colors">Curiosities</a>
+					<a href="mailto:atduyar@gmail.com" class="text-blue-300 hover:text-blue-200 transition-colors">Contact</a>
+				</div>
+			</div>
+		</header>
+
+		<!-- Three territories -->
+		<main class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#90c5ff10]">
+
+			<!-- Code -->
+			<section id="code" class="p-8 md:p-10 scroll-mt-8">
+				<h2 class="flex items-baseline gap-3 mb-2">
+					<span class="font-oldturcic text-blue-400/30 text-lg leading-none select-none" aria-hidden="true">𐰃𐱁</span>
+					<span class="font-sinistre text-2xl text-white">Code</span>
+				</h2>
+				<p class="text-xs text-gray-600 mb-8">what I build</p>
+
+				<ul class="space-y-7 text-sm">
+					<li>
+						<p class="text-gray-200 mb-1">EgeceTV <span class="text-gray-600 text-xs">· day job</span></p>
+						<p class="text-gray-500 leading-relaxed">Streaming platform with 17K+ paying subscribers on five platforms. I built the backend, database, payments, and CI/CD at Deniz Egece.</p>
+					</li>
+					<li>
+						<p class="mb-1"><a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-gray-200 hover:text-blue-300 transition-colors">REKV ↗</a></p>
+						<p class="text-gray-500 leading-relaxed">Type-safe key-value store in Rust. Memory-mapped, zero-copy, async — my excuse to learn storage engines properly.</p>
+					</li>
+					<li>
+						<p class="mb-1"><a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="text-gray-200 hover:text-blue-300 transition-colors">Make2Game ↗</a></p>
+						<p class="text-gray-500 leading-relaxed">2D game engine from scratch in C++ and OpenGL, scripted with Lua.</p>
+					</li>
+					<li>
+						<p class="mb-1"><a href="https://evrenomi.com" target="_blank" rel="noopener" class="text-gray-200 hover:text-blue-300 transition-colors">Evrenomi ↗</a></p>
+						<p class="text-gray-500 leading-relaxed">Blogging platform in C#/.NET. 95+ Lighthouse, self-hosted since 2021.</p>
+					</li>
+				</ul>
+
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="inline-block mt-8 text-xs text-blue-400 hover:text-blue-300 transition-colors">everything else on GitHub →</a>
+			</section>
+
+			<!-- Words -->
+			<section id="words" class="p-8 md:p-10 scroll-mt-8">
+				<h2 class="flex items-baseline gap-3 mb-2">
+					<span class="font-oldturcic text-blue-400/30 text-lg leading-none select-none" aria-hidden="true">𐰽𐰉</span>
+					<span class="font-sinistre text-2xl text-white">Words</span>
+				</h2>
+				<p class="text-xs text-gray-600 mb-8">what I'm writing — blog launching soon</p>
+
+				<ul class="space-y-7 text-sm">
+					<li>
+						<p class="text-gray-200 leading-snug mb-1">Self-hosting Matrix: the .well-known rabbit hole</p>
+						<p class="text-gray-500 leading-relaxed">Federation, delegation, and the reverse-proxy header that cost me an evening.</p>
+					</li>
+					<li>
+						<p class="text-gray-200 leading-snug mb-1">Memory-mapped files vs. the borrow checker</p>
+						<p class="text-gray-500 leading-relaxed">Field notes from building REKV — where zero-copy and Rust's ownership model collide.</p>
+					</li>
+					<li>
+						<p class="text-gray-200 leading-snug mb-1">Five platforms, one GraphQL API</p>
+						<p class="text-gray-500 leading-relaxed">The schema decisions that let one backend serve web, mobile, and two TV platforms.</p>
+					</li>
+					<li>
+						<p class="text-gray-200 leading-snug mb-1">Why I wrote a game engine nobody asked for</p>
+						<p class="text-gray-500 leading-relaxed">A defense of building from scratch as a way of learning.</p>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Curiosities -->
+			<section id="curiosities" class="p-8 md:p-10 scroll-mt-8">
+				<h2 class="flex items-baseline gap-3 mb-2">
+					<span class="font-oldturcic text-blue-400/30 text-lg leading-none select-none" aria-hidden="true">𐰚𐰇</span>
+					<span class="font-sinistre text-2xl text-white">Curiosities</span>
+				</h2>
+				<p class="text-xs text-gray-600 mb-8">what pulls me in</p>
+
+				<ul class="space-y-7 text-sm">
+					<li>
+						<p class="text-gray-200 mb-1">Old Turkic script</p>
+						<p class="text-gray-500 leading-relaxed">The Orkhon inscriptions — 1,300-year-old engineering documentation, carved in stone, still readable. Every glyph on this site is from that alphabet.</p>
+					</li>
+					<li>
+						<p class="text-gray-200 mb-1">Self-hosting</p>
+						<p class="text-gray-500 leading-relaxed">A Matrix homeserver, this site, and whatever else fits on the VPS. You write better software when you also operate it.</p>
+					</li>
+					<li>
+						<p class="text-gray-200 mb-1">Linux, all the way down</p>
+						<p class="text-gray-500 leading-relaxed">Arch on the desktop, Debian on the servers, <a href="https://github.com/atduyar/dotfiles" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">dotfiles in git</a>.</p>
+					</li>
+					<li>
+						<p class="text-gray-200 mb-1">One layer lower</p>
+						<p class="text-gray-500 leading-relaxed">A standing rule: each year, understand one more layer beneath where I work. 2026 is the year of storage engines.</p>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<!-- Contact band -->
+		<section class="border-t border-[#90c5ff10] px-6 py-16 text-center">
+			<p class="font-sinistre text-3xl text-white mb-3">Write to me.</p>
+			<p class="text-sm text-gray-500 mb-8">About work, side projects, or which layer of the stack is best. (It's the one below yours.)</p>
+			<a href="mailto:atduyar@gmail.com" class="inline-block px-7 py-3 border border-blue-400/40 text-blue-300 text-sm hover:bg-blue-400 hover:text-[#0a0b0d] transition-all duration-300">
+				atduyar@gmail.com
+			</a>
+		</section>
+
+		<footer class="border-t border-[#90c5ff10] px-6 py-8 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-600">
+			<span>© 2026 Ahmet Tarik Duyar · Sarajevo</span>
+			<div class="flex items-center gap-5">
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors">GitHub</a>
+				<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors">LinkedIn</a>
+				<span class="font-oldturcic text-blue-400/20 tracking-[0.3em] select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+			</div>
+		</footer>
+	</div>
+</BaseLayout>

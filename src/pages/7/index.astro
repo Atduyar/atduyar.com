@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	Variant 7 — "Journal"
+	Blog-first personal site: the post index IS the homepage, with a compact
+	bio header and a slim footer. Large serif-feel titles via Sinistre, dates
+	in the margin. Posts are unlinked drafts ("draft" tag) until written —
+	swap each <article> into an <a> when the post ships.
+-->
+<BaseLayout
+	title="Tarik Duyar — Journal"
+	description="Writing by Ahmet Tarik Duyar on systems, self-hosting, Rust, and shipping software."
+	bodyClass="bg-[#0b0c0f] text-gray-300 antialiased"
+>
+	<main class="max-w-xl mx-auto px-6 py-16 md:py-24">
+		<!-- Compact bio header -->
+		<header class="mb-16 flex items-start gap-5">
+			<div class="w-14 h-14 shrink-0 rounded-full border border-blue-400/30 bg-blue-400/5 flex items-center justify-center">
+				<span class="font-oldturcic text-blue-300/80 text-2xl leading-none select-none" aria-hidden="true">𐱅</span>
+			</div>
+			<div>
+				<h1 class="font-sinistre text-2xl text-white mb-1">Tarik Duyar</h1>
+				<p class="text-sm text-gray-500 leading-relaxed">
+					Software engineer in Sarajevo. I write about systems, self-hosting,
+					and what breaks in production.
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">GitHub</a> ·
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">LinkedIn</a> ·
+					<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">email</a>
+				</p>
+			</div>
+		</header>
+
+		<!-- Post index -->
+		<section class="space-y-14">
+			<article>
+				<p class="text-xs text-gray-600 mb-2 tabular-nums">June 2026 · <span class="text-blue-400/60 uppercase tracking-wider">draft</span></p>
+				<h2 class="font-sinistre text-2xl md:text-3xl text-gray-100 leading-snug mb-3">
+					Self-hosting Matrix: the .well-known rabbit hole
+				</h2>
+				<p class="text-gray-400 text-sm leading-relaxed">
+					I wanted my Matrix ID on my own domain. Three evenings later I understood
+					server delegation, federation discovery, and exactly which reverse-proxy
+					header I had been mangling. A post about the gap between "should be
+					simple" and "is simple."
+				</p>
+			</article>
+
+			<article>
+				<p class="text-xs text-gray-600 mb-2 tabular-nums">May 2026 · <span class="text-blue-400/60 uppercase tracking-wider">draft</span></p>
+				<h2 class="font-sinistre text-2xl md:text-3xl text-gray-100 leading-snug mb-3">
+					Memory-mapped files vs. the borrow checker
+				</h2>
+				<p class="text-gray-400 text-sm leading-relaxed">
+					Building REKV, a key-value store in Rust, forced me to confront what
+					"zero-copy" really costs when the compiler can't see your memory. Notes
+					on unsafe blocks I'm proud of and one I'm not.
+				</p>
+			</article>
+
+			<article>
+				<p class="text-xs text-gray-600 mb-2 tabular-nums">April 2026 · <span class="text-blue-400/60 uppercase tracking-wider">draft</span></p>
+				<h2 class="font-sinistre text-2xl md:text-3xl text-gray-100 leading-snug mb-3">
+					Five platforms, one GraphQL API
+				</h2>
+				<p class="text-gray-400 text-sm leading-relaxed">
+					EgeceTV ships on web, iOS, Android, Android TV, and Apple TV from a
+					single backend. What that design bought us, what it cost, and the schema
+					decisions I'd make again.
+				</p>
+			</article>
+
+			<article>
+				<p class="text-xs text-gray-600 mb-2 tabular-nums">March 2026 · <span class="text-blue-400/60 uppercase tracking-wider">draft</span></p>
+				<h2 class="font-sinistre text-2xl md:text-3xl text-gray-100 leading-snug mb-3">
+					Why I wrote a game engine nobody asked for
+				</h2>
+				<p class="text-gray-400 text-sm leading-relaxed">
+					Make2Game is a 2D engine in C++ and OpenGL with Lua scripting. It will
+					never compete with Godot, and that was never the point — a defense of
+					building things from scratch to learn what abstractions hide.
+				</p>
+			</article>
+		</section>
+
+		<!-- About strip -->
+		<section class="mt-20 pt-10 border-t border-white/5">
+			<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-5">When I'm not writing</h2>
+			<p class="text-sm text-gray-400 leading-relaxed">
+				I'm the engineer behind a streaming platform with 17,000+ subscribers at
+				Deniz Egece, a CS honor student at the International University of
+				Sarajevo, and the reluctant sysadmin of more Linux boxes than I need.
+				Side projects live on
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">GitHub</a>.
+			</p>
+			<p class="text-sm text-gray-500 leading-relaxed mt-4">
+				The glyph up top is Old Turkic — an alphabet carved into stone monuments
+				1,300 years ago. I like old scripts and new compilers roughly equally.
+			</p>
+		</section>
+
+		<!-- Footer -->
+		<footer class="mt-16 pt-8 border-t border-white/5 flex items-center justify-between text-xs text-gray-600">
+			<span>© 2026 Tarik Duyar</span>
+			<span class="font-oldturcic text-blue-400/20 tracking-[0.4em] select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+		</footer>
+	</main>
+</BaseLayout>
