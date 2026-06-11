@@ -18,129 +18,451 @@
 		<!-- Blueprint style projects -->
 		<div class="space-y-8">
 			<!-- EgeceTV -->
-			<div class="blueprint-item group relative border border-blue-400/20 hover:border-blue-400/40 transition-all p-6 bg-[#0a0b0d]/50">
+			<div class="blueprint-item group relative border border-blue-400/20 hover:border-blue-400/50 transition-all duration-500 bg-[#0a0b0d]/50 overflow-hidden">
 				<!-- Corner markers -->
-				<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-blue-400/40"></div>
-				<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-blue-400/40"></div>
-				<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-blue-400/40"></div>
-				<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-blue-400/40"></div>
+				<div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-blue-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-blue-400"></div>
+				<div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-blue-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-blue-400"></div>
+				<div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-blue-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-blue-400"></div>
+				<div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-blue-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-blue-400"></div>
 
-				<div class="flex flex-col md:flex-row gap-6">
-					<div class="flex-1">
-						<div class="flex items-center gap-4 mb-4">
-							<div class="font-mono text-xs text-blue-400/60 border border-blue-400/30 px-2 py-1">SECTION A</div>
-							<h3 class="font-sinistre text-2xl text-blue-200">EgeceTV</h3>
+				<!-- Header always visible -->
+				<div class="p-6 cursor-pointer" onclick="toggleProject('egecetv')">
+					<div class="flex flex-col lg:flex-row gap-6">
+						<div class="flex-1">
+							<div class="flex items-center gap-4 mb-4">
+								<div class="font-mono text-xs text-blue-400/60 border border-blue-400/30 px-2 py-1">SECTION A</div>
+								<h3 class="font-sinistre text-2xl text-blue-200 group-hover:text-blue-100 transition-colors">EgeceTV</h3>
+								<div class="ml-auto flex items-center gap-2 text-blue-400/60 group-hover:text-blue-400 transition-colors">
+									<span class="font-mono text-xs hidden sm:block">EXPAND SPECS</span>
+									<svg id="icon-egecetv" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+									</svg>
+								</div>
+							</div>
+							<p class="text-gray-400 text-sm leading-relaxed">
+								Health and education streaming platform built from the ground up. Led technical decision-making for backend architecture and database design, serving ~1,000 videos across 5 platforms.
+							</p>
 						</div>
-						<p class="text-gray-400 text-sm leading-relaxed mb-4">
-							Health and education streaming platform built from the ground up. Led technical decision-making for backend architecture and database design, serving ~1,000 videos across 5 platforms.
-						</p>
-						<div class="flex gap-3 flex-wrap font-mono text-xs">
-							<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">Next.js</span>
-							<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">GraphQL</span>
-							<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">MySQL</span>
-							<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">Prisma.js</span>
-							<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">Linux</span>
-							<span class="text-cyan-400 border-b border-cyan-400/30 pb-0.5">GitHub Actions</span>
+						<!-- Quick stats -->
+						<div class="lg:w-56 flex flex-col justify-center gap-2 font-mono text-xs text-gray-500 border-l border-blue-400/10 lg:pl-6">
+							<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+								<span>Users:</span>
+								<span class="text-blue-300">17,000+</span>
+							</div>
+							<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+								<span>Platforms:</span>
+								<span class="text-emerald-300">5</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Role:</span>
+								<span class="text-amber-300">Founding Eng.</span>
+							</div>
 						</div>
 					</div>
-					<!-- Measurement annotations -->
-					<div class="md:w-48 flex flex-col justify-center gap-2 font-mono text-xs text-gray-500">
-						<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
-							<span>Users:</span>
-							<span class="text-blue-300">17,000+</span>
+				</div>
+
+				<!-- Expandable Details -->
+				<div id="details-egecetv" class="hidden border-t border-blue-400/20">
+					<div class="p-6 space-y-6">
+						<!-- Architecture Overview -->
+						<div class="grid md:grid-cols-2 gap-6">
+							<div class="space-y-4">
+								<h4 class="font-sinistre text-lg text-blue-300 flex items-center gap-2">
+									<span class="w-2 h-2 bg-blue-400 rounded-full"></span>
+									System Architecture
+								</h4>
+								<div class="font-mono text-xs text-gray-400 space-y-2 bg-[#0d0e12] p-4 border border-blue-400/10">
+									<div class="flex items-center gap-2">
+										<span class="text-blue-400">[CDN]</span>
+										<span class="text-gray-600">→</span>
+										<span class="text-cyan-400">[Next.js]</span>
+										<span class="text-gray-600">→</span>
+										<span class="text-emerald-400">[GraphQL]</span>
+									</div>
+									<div class="flex items-center gap-2 pl-16">
+										<span class="text-gray-600">↓</span>
+									</div>
+									<div class="flex items-center gap-2 pl-8">
+										<span class="text-purple-400">[Prisma]</span>
+										<span class="text-gray-600">→</span>
+										<span class="text-amber-400">[MySQL]</span>
+									</div>
+								</div>
+								<div class="text-sm text-gray-400 space-y-2">
+									<p><span class="text-blue-300">Challenge:</span> Delivering seamless video streaming across web, iOS, Android, Android TV, and Apple TV platforms simultaneously.</p>
+									<p><span class="text-emerald-300">Solution:</span> Implemented a unified GraphQL API with platform-specific resolvers and adaptive bitrate streaming via CDN integration.</p>
+								</div>
+							</div>
+							<div class="space-y-4">
+								<h4 class="font-sinistre text-lg text-blue-300 flex items-center gap-2">
+									<span class="w-2 h-2 bg-blue-400 rounded-full"></span>
+									Technical Specs
+								</h4>
+								<div class="grid grid-cols-2 gap-3 font-mono text-xs">
+									<div class="border border-blue-400/20 p-3">
+										<div class="text-gray-500 mb-1">Database</div>
+										<div class="text-blue-300">MySQL 8.0</div>
+										<div class="text-gray-600 text-[10px]">Prisma ORM</div>
+									</div>
+									<div class="border border-blue-400/20 p-3">
+										<div class="text-gray-500 mb-1">API</div>
+										<div class="text-blue-300">GraphQL</div>
+										<div class="text-gray-600 text-[10px]">Apollo Server</div>
+									</div>
+									<div class="border border-blue-400/20 p-3">
+										<div class="text-gray-500 mb-1">Frontend</div>
+										<div class="text-blue-300">Next.js 14</div>
+										<div class="text-gray-600 text-[10px]">App Router</div>
+									</div>
+									<div class="border border-blue-400/20 p-3">
+										<div class="text-gray-500 mb-1">Deploy</div>
+										<div class="text-blue-300">GitHub Actions</div>
+										<div class="text-gray-600 text-[10px]">CI/CD Pipeline</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
-							<span>Platforms:</span>
-							<span class="text-emerald-300">5</span>
+
+						<!-- Key Features -->
+						<div class="border-t border-blue-400/10 pt-6">
+							<h4 class="font-sinistre text-lg text-blue-300 mb-4 flex items-center gap-2">
+								<span class="w-2 h-2 bg-blue-400 rounded-full"></span>
+								Key Features Implemented
+							</h4>
+							<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+								<div class="group/feature relative border border-blue-400/10 hover:border-blue-400/30 p-4 transition-all">
+									<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-blue-400/30"></div>
+									<div class="font-mono text-xs text-blue-400/60 mb-2">01</div>
+									<div class="font-sinistre text-blue-200 mb-1">Adaptive Streaming</div>
+									<div class="text-xs text-gray-500">HLS/DASH protocols with automatic quality switching based on bandwidth</div>
+								</div>
+								<div class="group/feature relative border border-blue-400/10 hover:border-blue-400/30 p-4 transition-all">
+									<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-blue-400/30"></div>
+									<div class="font-mono text-xs text-blue-400/60 mb-2">02</div>
+									<div class="font-sinistre text-blue-200 mb-1">Multi-Platform</div>
+									<div class="text-xs text-gray-500">Unified codebase approach with platform-specific optimizations</div>
+								</div>
+								<div class="group/feature relative border border-blue-400/10 hover:border-blue-400/30 p-4 transition-all">
+									<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-blue-400/30"></div>
+									<div class="font-mono text-xs text-blue-400/60 mb-2">03</div>
+									<div class="font-sinistre text-blue-200 mb-1">Content CMS</div>
+									<div class="text-xs text-gray-500">Custom admin panel for video management and categorization</div>
+								</div>
+								<div class="group/feature relative border border-blue-400/10 hover:border-blue-400/30 p-4 transition-all">
+									<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-blue-400/30"></div>
+									<div class="font-mono text-xs text-blue-400/60 mb-2">04</div>
+									<div class="font-sinistre text-blue-200 mb-1">Analytics</div>
+									<div class="text-xs text-gray-500">View tracking and user engagement metrics dashboard</div>
+								</div>
+							</div>
 						</div>
-						<div class="flex justify-between">
-							<span>Role:</span>
-							<span class="text-amber-300">Founding Eng.</span>
+
+						<!-- Tech Stack Tags -->
+						<div class="flex flex-wrap gap-2 pt-4 border-t border-blue-400/10">
+							<span class="font-mono text-xs text-cyan-400 border border-cyan-400/30 px-3 py-1.5">Next.js</span>
+							<span class="font-mono text-xs text-cyan-400 border border-cyan-400/30 px-3 py-1.5">GraphQL</span>
+							<span class="font-mono text-xs text-cyan-400 border border-cyan-400/30 px-3 py-1.5">MySQL</span>
+							<span class="font-mono text-xs text-cyan-400 border border-cyan-400/30 px-3 py-1.5">Prisma.js</span>
+							<span class="font-mono text-xs text-cyan-400 border border-cyan-400/30 px-3 py-1.5">Linux</span>
+							<span class="font-mono text-xs text-cyan-400 border border-cyan-400/30 px-3 py-1.5">GitHub Actions</span>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!-- Distance Education Platform -->
-			<div class="blueprint-item group relative border border-indigo-400/20 hover:border-indigo-400/40 transition-all p-6 bg-[#0a0b0d]/50">
-				<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-indigo-400/40"></div>
-				<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-indigo-400/40"></div>
-				<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-indigo-400/40"></div>
-				<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-indigo-400/40"></div>
+			<div class="blueprint-item group relative border border-indigo-400/20 hover:border-indigo-400/50 transition-all duration-500 bg-[#0a0b0d]/50 overflow-hidden">
+				<div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-indigo-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-indigo-400"></div>
+				<div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-indigo-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-indigo-400"></div>
+				<div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-indigo-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-indigo-400"></div>
+				<div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-indigo-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-indigo-400"></div>
 
-				<div class="flex flex-col md:flex-row gap-6">
-					<div class="flex-1">
-						<div class="flex items-center gap-4 mb-4">
-							<div class="font-mono text-xs text-indigo-400/60 border border-indigo-400/30 px-2 py-1">SECTION B</div>
-							<h3 class="font-sinistre text-2xl text-indigo-200">Distance Education Platform</h3>
+				<div class="p-6 cursor-pointer" onclick="toggleProject('distance')">
+					<div class="flex flex-col lg:flex-row gap-6">
+						<div class="flex-1">
+							<div class="flex items-center gap-4 mb-4">
+								<div class="font-mono text-xs text-indigo-400/60 border border-indigo-400/30 px-2 py-1">SECTION B</div>
+								<h3 class="font-sinistre text-2xl text-indigo-200 group-hover:text-indigo-100 transition-colors">Distance Education Platform</h3>
+								<div class="ml-auto flex items-center gap-2 text-indigo-400/60 group-hover:text-indigo-400 transition-colors">
+									<span class="font-mono text-xs hidden sm:block">EXPAND SPECS</span>
+									<svg id="icon-distance" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+									</svg>
+								</div>
+							</div>
+							<p class="text-gray-400 text-sm leading-relaxed">
+								Platform connecting clients with psychologists and dietitians. Real-time video conferencing, reservation scheduling, homework tracking, and personalized content delivery.
+							</p>
 						</div>
-						<p class="text-gray-400 text-sm leading-relaxed mb-4">
-							Platform connecting clients with psychologists and dietitians. Real-time video conferencing, reservation scheduling, homework tracking, and personalized content delivery.
-						</p>
-						<div class="flex gap-3 flex-wrap font-mono text-xs">
-							<span class="text-purple-400 border-b border-purple-400/30 pb-0.5">C#</span>
-							<span class="text-purple-400 border-b border-purple-400/30 pb-0.5">.NET</span>
-							<span class="text-purple-400 border-b border-purple-400/30 pb-0.5">Clean Architecture</span>
-							<span class="text-purple-400 border-b border-purple-400/30 pb-0.5">PostgreSQL</span>
-							<span class="text-purple-400 border-b border-purple-400/30 pb-0.5">Docker</span>
-							<span class="text-purple-400 border-b border-purple-400/30 pb-0.5">AWS</span>
+						<div class="lg:w-56 flex flex-col justify-center gap-2 font-mono text-xs text-gray-500 border-l border-indigo-400/10 lg:pl-6">
+							<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+								<span>Architecture:</span>
+								<span class="text-indigo-300">Clean Arch</span>
+							</div>
+							<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+								<span>Team:</span>
+								<span class="text-emerald-300">5 devs</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Platforms:</span>
+								<span class="text-amber-300">iOS / Android</span>
+							</div>
 						</div>
 					</div>
-					<div class="md:w-48 flex flex-col justify-center gap-2 font-mono text-xs text-gray-500">
-						<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
-							<span>Architecture:</span>
-							<span class="text-indigo-300">Clean Arch</span>
+				</div>
+
+				<div id="details-distance" class="hidden border-t border-indigo-400/20">
+					<div class="p-6 space-y-6">
+						<div class="grid md:grid-cols-2 gap-6">
+							<div class="space-y-4">
+								<h4 class="font-sinistre text-lg text-indigo-300 flex items-center gap-2">
+									<span class="w-2 h-2 bg-indigo-400 rounded-full"></span>
+									Clean Architecture Layers
+								</h4>
+								<div class="font-mono text-xs text-gray-400 space-y-2 bg-[#0d0e12] p-4 border border-indigo-400/10">
+									<div class="flex items-center gap-2">
+										<span class="text-indigo-400">[API]</span>
+										<span class="text-gray-600">→</span>
+										<span class="text-purple-400">[Application]</span>
+									</div>
+									<div class="flex items-center gap-2 pl-8">
+										<span class="text-gray-600">↓</span>
+									</div>
+									<div class="flex items-center gap-2">
+										<span class="text-cyan-400">[Domain]</span>
+										<span class="text-gray-600">←</span>
+										<span class="text-emerald-400">[Infrastructure]</span>
+									</div>
+								</div>
+								<div class="text-sm text-gray-400 space-y-2">
+									<p><span class="text-indigo-300">Challenge:</span> Building a HIPAA-compliant system with real-time video and sensitive health data.</p>
+									<p><span class="text-emerald-300">Solution:</span> Clean Architecture with encrypted data at rest/transit, WebRTC for video, and strict access controls.</p>
+								</div>
+							</div>
+							<div class="space-y-4">
+								<h4 class="font-sinistre text-lg text-indigo-300 flex items-center gap-2">
+									<span class="w-2 h-2 bg-indigo-400 rounded-full"></span>
+									Infrastructure
+								</h4>
+								<div class="grid grid-cols-2 gap-3 font-mono text-xs">
+									<div class="border border-indigo-400/20 p-3">
+										<div class="text-gray-500 mb-1">Backend</div>
+										<div class="text-indigo-300">.NET 8</div>
+										<div class="text-gray-600 text-[10px]">Minimal APIs</div>
+									</div>
+									<div class="border border-indigo-400/20 p-3">
+										<div class="text-gray-500 mb-1">Database</div>
+										<div class="text-indigo-300">PostgreSQL</div>
+										<div class="text-gray-600 text-[10px]">Entity Framework</div>
+									</div>
+									<div class="border border-indigo-400/20 p-3">
+										<div class="text-gray-500 mb-1">Video</div>
+										<div class="text-indigo-300">WebRTC</div>
+										<div class="text-gray-600 text-[10px]">Custom Signaling</div>
+									</div>
+									<div class="border border-indigo-400/20 p-3">
+										<div class="text-gray-500 mb-1">Cloud</div>
+										<div class="text-indigo-300">AWS</div>
+										<div class="text-gray-600 text-[10px]">ECS + S3</div>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
-							<span>Team:</span>
-							<span class="text-emerald-300">5 devs</span>
+
+						<div class="border-t border-indigo-400/10 pt-6">
+							<h4 class="font-sinistre text-lg text-indigo-300 mb-4 flex items-center gap-2">
+								<span class="w-2 h-2 bg-indigo-400 rounded-full"></span>
+								Core Modules
+							</h4>
+							<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+								<div class="group/feature relative border border-indigo-400/10 hover:border-indigo-400/30 p-4 transition-all">
+									<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-indigo-400/30"></div>
+									<div class="font-mono text-xs text-indigo-400/60 mb-2">01</div>
+									<div class="font-sinistre text-indigo-200 mb-1">Video Consultation</div>
+									<div class="text-xs text-gray-500">End-to-end encrypted WebRTC sessions with recording capability</div>
+								</div>
+								<div class="group/feature relative border border-indigo-400/10 hover:border-indigo-400/30 p-4 transition-all">
+									<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-indigo-400/30"></div>
+									<div class="font-mono text-xs text-indigo-400/60 mb-2">02</div>
+									<div class="font-sinistre text-indigo-200 mb-1">Smart Scheduling</div>
+									<div class="text-xs text-gray-500">Calendar integration with timezone handling and reminders</div>
+								</div>
+								<div class="group/feature relative border border-indigo-400/10 hover:border-indigo-400/30 p-4 transition-all">
+									<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-indigo-400/30"></div>
+									<div class="font-mono text-xs text-indigo-400/60 mb-2">03</div>
+									<div class="font-sinistre text-indigo-200 mb-1">Homework System</div>
+									<div class="text-xs text-gray-500">Assignment creation, submission, and progress tracking</div>
+								</div>
+								<div class="group/feature relative border border-indigo-400/10 hover:border-indigo-400/30 p-4 transition-all">
+									<div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-indigo-400/30"></div>
+									<div class="font-mono text-xs text-indigo-400/60 mb-2">04</div>
+									<div class="font-sinistre text-indigo-200 mb-1">Content Delivery</div>
+									<div class="text-xs text-gray-500">Personalized resources based on consultation history</div>
+								</div>
+							</div>
 						</div>
-						<div class="flex justify-between">
-							<span>Platforms:</span>
-							<span class="text-amber-300">iOS / Android</span>
+
+						<div class="flex flex-wrap gap-2 pt-4 border-t border-indigo-400/10">
+							<span class="font-mono text-xs text-purple-400 border border-purple-400/30 px-3 py-1.5">C#</span>
+							<span class="font-mono text-xs text-purple-400 border border-purple-400/30 px-3 py-1.5">.NET</span>
+							<span class="font-mono text-xs text-purple-400 border border-purple-400/30 px-3 py-1.5">Clean Architecture</span>
+							<span class="font-mono text-xs text-purple-400 border border-purple-400/30 px-3 py-1.5">PostgreSQL</span>
+							<span class="font-mono text-xs text-purple-400 border border-purple-400/30 px-3 py-1.5">Docker</span>
+							<span class="font-mono text-xs text-purple-400 border border-purple-400/30 px-3 py-1.5">AWS</span>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!-- Personal Projects -->
-			<div class="blueprint-item group relative border border-cyan-400/20 hover:border-cyan-400/40 transition-all p-6 bg-[#0a0b0d]/50">
-				<div class="absolute -top-1 -left-1 w-3 h-3 border-t-2 border-l-2 border-cyan-400/40"></div>
-				<div class="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-cyan-400/40"></div>
-				<div class="absolute -bottom-1 -left-1 w-3 h-3 border-b-2 border-l-2 border-cyan-400/40"></div>
-				<div class="absolute -bottom-1 -right-1 w-3 h-3 border-b-2 border-r-2 border-cyan-400/40"></div>
+			<div class="blueprint-item group relative border border-cyan-400/20 hover:border-cyan-400/50 transition-all duration-500 bg-[#0a0b0d]/50 overflow-hidden">
+				<div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-cyan-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-cyan-400"></div>
+				<div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-cyan-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-cyan-400"></div>
+				<div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-cyan-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-cyan-400"></div>
+				<div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-cyan-400/50 transition-all group-hover:w-6 group-hover:h-6 group-hover:border-cyan-400"></div>
 
-				<div class="flex flex-col md:flex-row gap-6">
-					<div class="flex-1">
-						<div class="flex items-center gap-4 mb-4">
-							<div class="font-mono text-xs text-cyan-400/60 border border-cyan-400/30 px-2 py-1">SECTION C</div>
-							<h3 class="font-sinistre text-2xl text-cyan-200">Personal Projects</h3>
+				<div class="p-6 cursor-pointer" onclick="toggleProject('personal')">
+					<div class="flex flex-col lg:flex-row gap-6">
+						<div class="flex-1">
+							<div class="flex items-center gap-4 mb-4">
+								<div class="font-mono text-xs text-cyan-400/60 border border-cyan-400/30 px-2 py-1">SECTION C</div>
+								<h3 class="font-sinistre text-2xl text-cyan-200 group-hover:text-cyan-100 transition-colors">Personal Projects</h3>
+								<div class="ml-auto flex items-center gap-2 text-cyan-400/60 group-hover:text-cyan-400 transition-colors">
+									<span class="font-mono text-xs hidden sm:block">EXPAND SPECS</span>
+									<svg id="icon-personal" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+									</svg>
+								</div>
+							</div>
+							<p class="text-gray-400 text-sm leading-relaxed">
+								Experimental projects exploring systems programming, game development, and web technologies. Each project represents a deep dive into a specific domain or technology stack.
+							</p>
 						</div>
-						<div class="space-y-3 text-gray-400 text-sm leading-relaxed mb-4">
-							<p><span class="text-cyan-300">REKV</span> — Rust key-value store library, exploring type-safe storage APIs with a long-term vision toward a backend framework.</p>
-							<p><span class="text-cyan-300">Make2Game</span> — Experimental 2D game engine with Lua scripting and ImGui editor. C/C++, OpenGL, SDL2.</p>
-							<p><span class="text-cyan-300">Evrenomi</span> — Social media blogging platform. Google Lighthouse 95+. Deployed on Linux servers.</p>
-						</div>
-						<div class="flex gap-3 flex-wrap font-mono text-xs">
-							<span class="text-teal-400 border-b border-teal-400/30 pb-0.5">Rust</span>
-							<span class="text-teal-400 border-b border-teal-400/30 pb-0.5">C/C++</span>
-							<span class="text-teal-400 border-b border-teal-400/30 pb-0.5">OpenGL</span>
-							<span class="text-teal-400 border-b border-teal-400/30 pb-0.5">C#</span>
-							<span class="text-teal-400 border-b border-teal-400/30 pb-0.5">Linux</span>
+						<div class="lg:w-56 flex flex-col justify-center gap-2 font-mono text-xs text-gray-500 border-l border-cyan-400/10 lg:pl-6">
+							<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+								<span>Focus:</span>
+								<span class="text-cyan-300">Systems</span>
+							</div>
+							<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
+								<span>Status:</span>
+								<span class="text-emerald-300">Active</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Type:</span>
+								<span class="text-amber-300">Open Source</span>
+							</div>
 						</div>
 					</div>
-					<div class="md:w-48 flex flex-col justify-center gap-2 font-mono text-xs text-gray-500">
-						<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
-							<span>REKV:</span>
-							<span class="text-cyan-300">Rust / Cargo</span>
+				</div>
+
+				<div id="details-personal" class="hidden border-t border-cyan-400/20">
+					<div class="p-6 space-y-6">
+						<!-- REKV -->
+						<div class="border border-cyan-400/20 p-5 hover:border-cyan-400/40 transition-colors">
+							<div class="flex flex-col md:flex-row md:items-start gap-4 mb-4">
+								<div class="flex-1">
+									<div class="flex items-center gap-3 mb-2">
+										<h4 class="font-sinistre text-xl text-cyan-200">REKV</h4>
+										<span class="font-mono text-xs text-cyan-400/60 border border-cyan-400/30 px-2 py-0.5">v0.1.0</span>
+									</div>
+									<p class="text-sm text-gray-400 mb-3">Type-safe key-value store library written in Rust. Zero-copy deserialization, memory-mapped storage, and async I/O operations.</p>
+								</div>
+								<div class="flex gap-2">
+									<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener noreferrer" class="group/link flex items-center gap-2 px-4 py-2 border border-cyan-400/30 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all font-mono text-xs text-cyan-300">
+										<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+										<span>View Source</span>
+									</a>
+								</div>
+							</div>
+							<div class="grid sm:grid-cols-3 gap-3 font-mono text-xs">
+								<div class="border border-cyan-400/10 p-2">
+									<div class="text-gray-500">Language</div>
+									<div class="text-cyan-300">Rust</div>
+								</div>
+								<div class="border border-cyan-400/10 p-2">
+									<div class="text-gray-500">License</div>
+									<div class="text-cyan-300">MIT</div>
+								</div>
+								<div class="border border-cyan-400/10 p-2">
+									<div class="text-gray-500">Status</div>
+									<div class="text-emerald-300">In Development</div>
+								</div>
+							</div>
 						</div>
-						<div class="flex justify-between border-b border-dashed border-gray-700 pb-1">
-							<span>Make2Game:</span>
-							<span class="text-emerald-300">C++ / OpenGL</span>
+
+						<!-- Make2Game -->
+						<div class="border border-teal-400/20 p-5 hover:border-teal-400/40 transition-colors">
+							<div class="flex flex-col md:flex-row md:items-start gap-4 mb-4">
+								<div class="flex-1">
+									<div class="flex items-center gap-3 mb-2">
+										<h4 class="font-sinistre text-xl text-teal-200">Make2Game</h4>
+										<span class="font-mono text-xs text-teal-400/60 border border-teal-400/30 px-2 py-0.5">Experimental</span>
+									</div>
+									<p class="text-sm text-gray-400 mb-3">2D game engine with Lua scripting support and immediate-mode GUI editor. Built from scratch using C++ and OpenGL.</p>
+								</div>
+								<div class="flex gap-2">
+									<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener noreferrer" class="group/link flex items-center gap-2 px-4 py-2 border border-teal-400/30 hover:border-teal-400 hover:bg-teal-400/10 transition-all font-mono text-xs text-teal-300">
+										<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+										<span>View Source</span>
+									</a>
+								</div>
+							</div>
+							<div class="grid sm:grid-cols-3 gap-3 font-mono text-xs">
+								<div class="border border-teal-400/10 p-2">
+									<div class="text-gray-500">Languages</div>
+									<div class="text-teal-300">C++ / Lua</div>
+								</div>
+								<div class="border border-teal-400/10 p-2">
+									<div class="text-gray-500">Graphics</div>
+									<div class="text-teal-300">OpenGL 4.6</div>
+								</div>
+								<div class="border border-teal-400/10 p-2">
+									<div class="text-gray-500">GUI</div>
+									<div class="text-teal-300">ImGui</div>
+								</div>
+							</div>
 						</div>
-						<div class="flex justify-between">
-							<span>Evrenomi:</span>
-							<span class="text-amber-300">C# / REST</span>
+
+						<!-- Evrenomi -->
+						<div class="border border-amber-400/20 p-5 hover:border-amber-400/40 transition-colors">
+							<div class="flex flex-col md:flex-row md:items-start gap-4 mb-4">
+								<div class="flex-1">
+									<div class="flex items-center gap-3 mb-2">
+										<h4 class="font-sinistre text-xl text-amber-200">Evrenomi</h4>
+										<span class="font-mono text-xs text-amber-400/60 border border-amber-400/30 px-2 py-0.5">Production</span>
+									</div>
+									<p class="text-sm text-gray-400 mb-3">Social media blogging platform optimized for performance. Achieved Google Lighthouse score of 95+ across all metrics. Deployed on self-managed Linux infrastructure.</p>
+								</div>
+								<div class="flex gap-2">
+									<a href="https://evrenomi.com" target="_blank" rel="noopener noreferrer" class="group/link flex items-center gap-2 px-4 py-2 border border-amber-400/30 hover:border-amber-400 hover:bg-amber-400/10 transition-all font-mono text-xs text-amber-300">
+										<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+										<span>Live Site</span>
+									</a>
+								</div>
+							</div>
+							<div class="grid sm:grid-cols-3 gap-3 font-mono text-xs">
+								<div class="border border-amber-400/10 p-2">
+									<div class="text-gray-500">Backend</div>
+									<div class="text-amber-300">C# / .NET</div>
+								</div>
+								<div class="border border-amber-400/10 p-2">
+									<div class="text-gray-500">Lighthouse</div>
+									<div class="text-amber-300">95+ Score</div>
+								</div>
+								<div class="border border-amber-400/10 p-2">
+									<div class="text-gray-500">Hosting</div>
+									<div class="text-amber-300">Linux VPS</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="flex flex-wrap gap-2 pt-4 border-t border-cyan-400/10">
+							<span class="font-mono text-xs text-teal-400 border border-teal-400/30 px-3 py-1.5">Rust</span>
+							<span class="font-mono text-xs text-teal-400 border border-teal-400/30 px-3 py-1.5">C/C++</span>
+							<span class="font-mono text-xs text-teal-400 border border-teal-400/30 px-3 py-1.5">OpenGL</span>
+							<span class="font-mono text-xs text-teal-400 border border-teal-400/30 px-3 py-1.5">Lua</span>
+							<span class="font-mono text-xs text-teal-400 border border-teal-400/30 px-3 py-1.5">C#</span>
+							<span class="font-mono text-xs text-teal-400 border border-teal-400/30 px-3 py-1.5">Linux</span>
 						</div>
 					</div>
 				</div>
@@ -149,10 +471,35 @@
 
 		<!-- Blueprint stamp -->
 		<div class="mt-8 flex justify-end">
-			<div class="border-2 border-blue-400/30 px-4 py-2 rotate-[-3deg]">
+			<div class="border-2 border-blue-400/30 px-4 py-2 rotate-[-3deg] hover:rotate-0 transition-transform">
 				<div class="font-mono text-xs text-blue-400/60">APPROVED FOR CONSTRUCTION</div>
 				<div class="font-sinistre text-lg text-blue-300">A.T.D. // 2026</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+<script is:inline>
+	function toggleProject(projectId) {
+		const details = document.getElementById('details-' + projectId);
+		const icon = document.getElementById('icon-' + projectId);
+		
+		if (details.classList.contains('hidden')) {
+			details.classList.remove('hidden');
+			icon.style.transform = 'rotate(180deg)';
+		} else {
+			details.classList.add('hidden');
+			icon.style.transform = 'rotate(0deg)';
+		}
+	}
+</script>
+
+<style>
+	.blueprint-item {
+		transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	
+	.blueprint-item:hover {
+		box-shadow: 0 0 40px rgba(96, 165, 250, 0.1);
+	}
+</style>
