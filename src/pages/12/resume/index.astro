@@ -1,0 +1,188 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<!-- Site B · resume — a complete CV page, print-friendly -->
+<BaseLayout
+	title="Resume — Tarik Duyar"
+	description="Resume of Ahmet Tarik Duyar — full-stack software engineer. Streaming platforms, .NET systems, Rust."
+	bodyClass="bg-[#0a0b0d] text-gray-200 antialiased"
+>
+	<div class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-5xl mx-auto min-h-dvh">
+		<nav class="py-5 px-6 md:px-12 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40 print:hidden">
+			<div class="flex justify-between items-center">
+				<a href="/12" class="flex items-center gap-3">
+					<span class="font-oldturcic text-blue-400/70 text-lg leading-none select-none" aria-hidden="true">𐱅</span>
+					<span class="font-sinistre text-xl text-white">Tarik Duyar</span>
+				</a>
+				<ul class="flex gap-5 md:gap-7 text-sm">
+					<li><a href="/12/writing" class="text-gray-400 hover:text-blue-300 transition-colors">Writing</a></li>
+					<li><a href="/12/resume" class="text-white underline decoration-blue-400/50 underline-offset-4">Resume</a></li>
+					<li><a href="/12/glyphs" class="text-gray-400 hover:text-blue-300 transition-colors">Glyphs</a></li>
+					<li><a href="mailto:atduyar@gmail.com" class="text-blue-300 border border-blue-500/30 px-3 py-1 hover:bg-blue-600/10 hover:border-blue-400/50 transition-all">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<main class="px-6 md:px-12 py-14 max-w-3xl">
+			<!-- Header -->
+			<header class="mb-12">
+				<div class="flex flex-wrap items-start justify-between gap-4">
+					<div>
+						<h1 class="font-sinistre text-4xl text-white mb-2">Ahmet Tarik Duyar</h1>
+						<p class="text-blue-300">Full-Stack Software Engineer</p>
+						<p class="text-sm text-gray-500 mt-2">Sarajevo, Bosnia &amp; Herzegovina · atduyar@gmail.com · github.com/atduyar</p>
+					</div>
+					<button id="print-btn" type="button" class="print:hidden text-sm px-4 py-2 border border-blue-400/30 text-blue-300 hover:bg-blue-600/10 hover:border-blue-400/50 transition-all cursor-pointer">
+						Print / Save PDF
+					</button>
+				</div>
+				<p class="text-gray-400 leading-relaxed mt-6 max-w-2xl">
+					Engineer with end-to-end ownership of production systems: three years
+					building and operating a streaming platform with 17,000+ paying
+					subscribers — architecture, database, payments, and deployment.
+					Comfortable from React down to Rust.
+				</p>
+			</header>
+
+			<!-- Experience -->
+			<section class="mb-12">
+				<h2 class="font-sinistre text-2xl text-white mb-8 flex items-center gap-4">
+					Experience
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+
+				<article class="mb-10">
+					<div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+						<h3 class="text-lg text-white">Full-Stack Engineer · Deniz Egece Co. Ltd.</h3>
+						<span class="text-sm text-gray-500 tabular-nums">2022 — Present</span>
+					</div>
+					<ul class="mt-3 space-y-2 text-sm text-gray-400 leading-relaxed list-disc list-inside marker:text-blue-400/40">
+						<li>Founding engineer on <span class="text-gray-200">EgeceTV</span>, a health &amp; education streaming platform: 17,000+ paid subscribers, ~1,000 videos, clients on web, iOS, Android, Android TV, and Apple TV.</li>
+						<li>Designed the backend architecture and MySQL schema; a single GraphQL API serves all five client platforms.</li>
+						<li>Built the subscription payment system end to end.</li>
+						<li>Set up CI/CD with GitHub Actions; releases ship without manual steps.</li>
+						<li>Co-built a distance-education platform (WebRTC video consultations, scheduling, homework tracking) using .NET and Clean Architecture, in a five-person team handling sensitive health data.</li>
+					</ul>
+					<p class="text-xs text-gray-600 mt-3">Next.js · GraphQL · C#/.NET · MySQL · PostgreSQL · Prisma · Docker · AWS</p>
+				</article>
+
+				<article>
+					<div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+						<h3 class="text-lg text-white">Freelance Developer</h3>
+						<span class="text-sm text-gray-500 tabular-nums">2021 — 2022</span>
+					</div>
+					<ul class="mt-3 space-y-2 text-sm text-gray-400 leading-relaxed list-disc list-inside marker:text-blue-400/40">
+						<li>Built and still operate <span class="text-gray-200">Evrenomi</span>, a C#/.NET blogging platform: 95+ Lighthouse score, self-managed Linux hosting.</li>
+					</ul>
+					<p class="text-xs text-gray-600 mt-3">C# · REST · Linux</p>
+				</article>
+			</section>
+
+			<!-- Projects -->
+			<section class="mb-12">
+				<h2 class="font-sinistre text-2xl text-white mb-8 flex items-center gap-4">
+					Open Source &amp; Side Projects
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<div class="space-y-6 text-sm">
+					<div>
+						<div class="flex flex-wrap items-baseline gap-3 mb-1">
+							<h3 class="text-white">REKV</h3>
+							<span class="text-gray-600">Rust</span>
+							<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors print:hidden">github.com/atduyar/rekv</a>
+						</div>
+						<p class="text-gray-400 leading-relaxed">Type-safe key-value store library: memory-mapped storage, zero-copy deserialization, async I/O.</p>
+					</div>
+					<div>
+						<div class="flex flex-wrap items-baseline gap-3 mb-1">
+							<h3 class="text-white">Make2Game</h3>
+							<span class="text-gray-600">C++ / OpenGL / Lua</span>
+							<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors print:hidden">github.com/atduyar/make2game</a>
+						</div>
+						<p class="text-gray-400 leading-relaxed">2D game engine built from scratch, with Lua scripting and an immediate-mode (ImGui) editor.</p>
+					</div>
+					<div>
+						<div class="flex flex-wrap items-baseline gap-3 mb-1">
+							<h3 class="text-white">Self-hosted infrastructure</h3>
+							<span class="text-gray-600">Linux / Debian</span>
+						</div>
+						<p class="text-gray-400 leading-relaxed">Personally administer the VPS infrastructure running this site, a federated Matrix homeserver, and all side projects.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section class="mb-12">
+				<h2 class="font-sinistre text-2xl text-white mb-8 flex items-center gap-4">
+					Skills
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<dl class="space-y-3 text-sm">
+					<div class="grid grid-cols-[7rem_1fr] gap-4">
+						<dt class="text-gray-600">Web</dt>
+						<dd class="text-gray-300">TypeScript, React, Next.js, GraphQL, Astro</dd>
+					</div>
+					<div class="grid grid-cols-[7rem_1fr] gap-4">
+						<dt class="text-gray-600">Backend</dt>
+						<dd class="text-gray-300">C# / .NET, REST, Clean Architecture, WebRTC</dd>
+					</div>
+					<div class="grid grid-cols-[7rem_1fr] gap-4">
+						<dt class="text-gray-600">Data</dt>
+						<dd class="text-gray-300">MySQL, PostgreSQL, Prisma, Entity Framework</dd>
+					</div>
+					<div class="grid grid-cols-[7rem_1fr] gap-4">
+						<dt class="text-gray-600">Systems</dt>
+						<dd class="text-gray-300">Rust, C, C++, Linux administration</dd>
+					</div>
+					<div class="grid grid-cols-[7rem_1fr] gap-4">
+						<dt class="text-gray-600">Infra</dt>
+						<dd class="text-gray-300">Docker, AWS, GitHub Actions, Cloudflare</dd>
+					</div>
+				</dl>
+			</section>
+
+			<!-- Education -->
+			<section class="mb-12">
+				<h2 class="font-sinistre text-2xl text-white mb-8 flex items-center gap-4">
+					Education
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<div class="flex flex-wrap items-baseline justify-between gap-2">
+					<div>
+						<h3 class="text-white">B.Sc. Computer Science — International University of Sarajevo</h3>
+						<p class="text-sm text-gray-500 mt-1">Honor student</p>
+					</div>
+					<span class="text-sm text-gray-500">in progress</span>
+				</div>
+			</section>
+
+			<!-- Languages (placeholder) -->
+			<section class="mb-12">
+				<h2 class="font-sinistre text-2xl text-white mb-8 flex items-center gap-4">
+					Languages
+					<span class="flex-1 h-px bg-gradient-to-r from-[#90c5ff14] to-transparent"></span>
+				</h2>
+				<p class="text-sm text-gray-400">
+					Turkish (native) · English (professional) · Bosnian (conversational)
+					<span class="text-gray-600 text-xs ml-2">— placeholder, adjust levels</span>
+				</p>
+			</section>
+
+			<footer class="pt-8 border-t border-[#90c5ff14] text-xs text-gray-600 print:hidden">
+				References and detailed project walk-throughs available on request ·
+				<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">atduyar@gmail.com</a>
+			</footer>
+		</main>
+	</div>
+
+	<script is:inline>
+		document.getElementById("print-btn").addEventListener("click", () => window.print());
+	</script>
+
+	<style>
+		@media print {
+			body { background: white !important; color: #111 !important; }
+		}
+	</style>
+</BaseLayout>

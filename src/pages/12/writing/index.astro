@@ -1,0 +1,93 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<!-- Site B · writing index -->
+<BaseLayout
+	title="Writing — Tarik Duyar"
+	description="Essays and field notes by Tarik Duyar on systems, self-hosting, and production software."
+	bodyClass="bg-[#0a0b0d] text-gray-200 antialiased"
+>
+	<div class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-5xl mx-auto min-h-dvh">
+		<nav class="py-5 px-6 md:px-12 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
+			<div class="flex justify-between items-center">
+				<a href="/12" class="flex items-center gap-3">
+					<span class="font-oldturcic text-blue-400/70 text-lg leading-none select-none" aria-hidden="true">𐱅</span>
+					<span class="font-sinistre text-xl text-white">Tarik Duyar</span>
+				</a>
+				<ul class="flex gap-5 md:gap-7 text-sm">
+					<li><a href="/12/writing" class="text-white underline decoration-blue-400/50 underline-offset-4">Writing</a></li>
+					<li><a href="/12/resume" class="text-gray-400 hover:text-blue-300 transition-colors">Resume</a></li>
+					<li><a href="/12/glyphs" class="text-gray-400 hover:text-blue-300 transition-colors">Glyphs</a></li>
+					<li><a href="mailto:atduyar@gmail.com" class="text-blue-300 border border-blue-500/30 px-3 py-1 hover:bg-blue-600/10 hover:border-blue-400/50 transition-all">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<main class="px-6 md:px-12 py-14 max-w-3xl">
+			<header class="mb-12">
+				<h1 class="font-sinistre text-4xl text-white mb-4">Writing</h1>
+				<p class="text-gray-400 leading-relaxed max-w-xl">
+					Field notes from building and breaking things — written for the version
+					of me from six months ago who needed them. No newsletter, no popups;
+					posts appear when they're ready.
+				</p>
+			</header>
+
+			<div class="space-y-2">
+				<a href="/12/writing/matrix-well-known" class="group block py-6 border-b border-[#90c5ff0a] hover:bg-white/[0.02] px-4 -mx-4 transition-colors">
+					<p class="text-xs text-gray-600 mb-2 tabular-nums">June 2026 · 6 min</p>
+					<h2 class="font-sinistre text-2xl text-gray-100 group-hover:text-blue-200 transition-colors mb-2">
+						Self-hosting Matrix: the .well-known rabbit hole
+					</h2>
+					<p class="text-sm text-gray-400 leading-relaxed">
+						Federation, delegation, and the three evenings it took to put my
+						Matrix ID on my own domain. A content-type header, a CORS header,
+						and a port number walk into a bar.
+					</p>
+				</a>
+
+				<div class="block py-6 border-b border-[#90c5ff0a] px-4 -mx-4">
+					<p class="text-xs text-gray-600 mb-2">In progress</p>
+					<h2 class="font-sinistre text-2xl text-gray-400 mb-2">
+						Memory-mapped files vs. the borrow checker
+						<span class="text-xs text-blue-400/50 uppercase tracking-wider align-middle ml-2">draft</span>
+					</h2>
+					<p class="text-sm text-gray-500 leading-relaxed">
+						Field notes from REKV — where zero-copy and Rust's ownership model
+						collide, and the unsafe block I'm still not proud of.
+					</p>
+				</div>
+
+				<div class="block py-6 border-b border-[#90c5ff0a] px-4 -mx-4">
+					<p class="text-xs text-gray-600 mb-2">In progress</p>
+					<h2 class="font-sinistre text-2xl text-gray-400 mb-2">
+						Five platforms, one GraphQL API
+						<span class="text-xs text-blue-400/50 uppercase tracking-wider align-middle ml-2">draft</span>
+					</h2>
+					<p class="text-sm text-gray-500 leading-relaxed">
+						The schema decisions that let EgeceTV serve web, mobile, and two TV
+						platforms from one backend — and the ones I'd take back.
+					</p>
+				</div>
+
+				<div class="block py-6 px-4 -mx-4">
+					<p class="text-xs text-gray-600 mb-2">In progress</p>
+					<h2 class="font-sinistre text-2xl text-gray-400 mb-2">
+						Why I wrote a game engine nobody asked for
+						<span class="text-xs text-blue-400/50 uppercase tracking-wider align-middle ml-2">draft</span>
+					</h2>
+					<p class="text-sm text-gray-500 leading-relaxed">
+						Make2Game will never compete with Godot. That was never the point —
+						a defense of building from scratch as a way of learning.
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<footer class="px-6 md:px-12 py-8 border-t border-[#90c5ff14] flex flex-wrap justify-between gap-4 text-xs text-gray-600">
+			<span>© 2026 Ahmet Tarik Duyar · Sarajevo</span>
+			<a href="/12" class="hover:text-blue-300 transition-colors">← home</a>
+		</footer>
+	</div>
+</BaseLayout>

@@ -1,0 +1,142 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+// Code samples kept in frontmatter so braces don't fight Astro's template syntax.
+const wellKnownServer = `// https://atduyar.com/.well-known/matrix/server
+{
+  "m.server": "matrix.atduyar.com:443"
+}`;
+
+const wellKnownClient = `// https://atduyar.com/.well-known/matrix/client
+{
+  "m.homeserver": {
+    "base_url": "https://matrix.atduyar.com"
+  }
+}`;
+
+const curlCheck = `$ curl https://atduyar.com/.well-known/matrix/server
+{"m.server": "matrix.atduyar.com:443"}
+
+$ # and the federation tester agrees, finally:
+$ # https://federationtester.matrix.org/#atduyar.com`;
+---
+
+<!--
+	Site A · blog post — written as a real example post.
+	NOTE: the technical narrative is plausible and grounded in the repo's
+	"matrix server well-known hints" commit, but verify details (hostnames,
+	what actually went wrong for you) before publishing.
+-->
+<BaseLayout
+	title="self-hosting matrix: the .well-known rabbit hole — tarik duyar"
+	description="Federation, delegation, and the three evenings it took to put my Matrix ID on my own domain."
+	bodyClass="bg-[#0c0d10] text-gray-300 font-mono antialiased"
+>
+	<main class="max-w-3xl mx-auto px-6 py-14 md:py-20 text-[15px] leading-relaxed">
+		<nav class="mb-14 flex flex-wrap items-center justify-between gap-3 text-sm">
+			<span class="text-gray-500">
+				<span class="text-blue-400 select-none" aria-hidden="true">𐱅</span>
+				tarik@duyar:<span class="text-gray-300">~/blog/matrix-well-known</span>$
+			</span>
+			<div class="flex gap-5">
+				<a href="/11" class="text-gray-500 hover:text-blue-300 transition-colors">home</a>
+				<a href="/11/blog" class="text-gray-500 hover:text-blue-300 transition-colors">blog</a>
+				<a href="/11/about" class="text-gray-500 hover:text-blue-300 transition-colors">about</a>
+			</div>
+		</nav>
+
+		<article class="max-w-2xl">
+			<header class="mb-10">
+				<p class="text-gray-600 text-sm mb-2 tabular-nums">2026-06-08 · 6 min read</p>
+				<h1 class="text-white text-xl leading-snug">self-hosting matrix: the .well-known rabbit hole</h1>
+			</header>
+
+			<div class="space-y-5 text-gray-300">
+				<p>
+					i wanted one thing: a matrix id that says <span class="text-blue-300">@tarik:atduyar.com</span>
+					instead of advertising whichever subdomain the homeserver actually
+					lives on. this is called <span class="text-gray-100">delegation</span>,
+					it is allegedly simple, and it took me three evenings.
+				</p>
+
+				<h2 class="text-white pt-4"><span class="text-gray-600 select-none"># </span>the setup</h2>
+				<p>
+					the homeserver runs on a vps at <span class="text-gray-100">matrix.atduyar.com</span>.
+					but matrix identity is tied to the <em>server name</em> — the part after
+					the colon in your id. if i set the server name to atduyar.com, every
+					other homeserver in the federation will knock on atduyar.com:8448 and
+					expect a matrix server to answer. my web server answers instead, with a
+					confused 404.
+				</p>
+				<p>
+					the fix is delegation: atduyar.com publishes a small file telling the
+					federation "the real server is over there." that file lives at a
+					<span class="text-gray-100">.well-known</span> url:
+				</p>
+				<pre class="border border-white/10 bg-black/30 p-4 overflow-x-auto text-sm text-gray-300"><code set:text={wellKnownServer} /></pre>
+				<p>
+					and a second one for clients, so element and friends know where to
+					log in:
+				</p>
+				<pre class="border border-white/10 bg-black/30 p-4 overflow-x-auto text-sm text-gray-300"><code set:text={wellKnownClient} /></pre>
+
+				<h2 class="text-white pt-4"><span class="text-gray-600 select-none"># </span>where the evenings went</h2>
+				<p>
+					<span class="text-gray-100">evening one: content-type.</span> my web
+					server happily served the file — as text/plain. some implementations
+					don't care. the federation tester does. the spec says application/json,
+					and you will serve application/json.
+				</p>
+				<p>
+					<span class="text-gray-100">evening two: cors.</span> the client
+					.well-known is fetched by browsers, from web clients hosted on other
+					origins. no <span class="text-gray-100">access-control-allow-origin: *</span>,
+					no login for you. the error message, naturally, says nothing about cors.
+				</p>
+				<p>
+					<span class="text-gray-100">evening three: the port.</span> i wrote
+					matrix.atduyar.com in the delegation file and forgot
+					<span class="text-gray-100">:443</span>. without an explicit port, the
+					spec falls back to trying 8448 on the delegated host too. half of
+					federation worked — the half that cached an older lookup — which is the
+					most misleading possible failure mode.
+				</p>
+				<p>after which:</p>
+				<pre class="border border-white/10 bg-black/30 p-4 overflow-x-auto text-sm text-gray-300"><code set:text={curlCheck} /></pre>
+
+				<h2 class="text-white pt-4"><span class="text-gray-600 select-none"># </span>what i actually learned</h2>
+				<p>
+					none of these failures were exotic. they were a content-type header, a
+					cors header, and a port number — the kind of details a managed service
+					hides from you completely. that's the argument for self-hosting in one
+					sentence: <span class="text-gray-100">you don't understand a protocol
+					until you've served it wrong three different ways.</span>
+				</p>
+				<p>
+					was it worth three evenings to have a prettier user id? obviously not.
+					am i going to do the same thing for email next? obviously yes.
+				</p>
+			</div>
+
+			<footer class="mt-12 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-3 text-sm">
+				<a href="/11/blog" class="text-blue-400 hover:text-blue-300 hover:underline">← all posts</a>
+				<a href="mailto:atduyar@gmail.com" class="text-gray-600 hover:text-blue-300 transition-colors">found a mistake? tell me</a>
+			</footer>
+		</article>
+	</main>
+
+	<script is:inline>
+		let pendingG = false;
+		document.addEventListener("keydown", (e) => {
+			if (e.target.matches("input, textarea") || e.metaKey || e.ctrlKey || e.altKey) return;
+			if (pendingG) {
+				pendingG = false;
+				if (e.key === "h") location.href = "/11";
+				if (e.key === "b") location.href = "/11/blog";
+				if (e.key === "a") location.href = "/11/about";
+				return;
+			}
+			if (e.key === "g") pendingG = true;
+		});
+	</script>
+</BaseLayout>

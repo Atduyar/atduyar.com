@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	Site C — "Notebook" · home
+	A garden-style personal site: the home page is a living feed of what's
+	happening (posts, notes, project updates) plus doorways into deeper pages.
+	Pages: / (this), /notes (tag-filterable), /projects (case studies), /now.
+	Softer visual language than A and B: rounded cards, relaxed spacing.
+-->
+<BaseLayout
+	title="Tarik Duyar"
+	description="Tarik Duyar's notebook — software engineering, self-hosting, side projects, and whatever else is in progress."
+	bodyClass="bg-[#0e1014] text-gray-300 antialiased"
+>
+	<main class="max-w-3xl mx-auto px-6 py-16 md:py-24">
+		<!-- Header -->
+		<header class="mb-16">
+			<div class="flex items-center justify-between mb-10">
+				<a href="/13" class="flex items-center gap-3">
+					<span class="w-9 h-9 rounded-lg border border-blue-400/30 bg-blue-400/5 flex items-center justify-center">
+						<span class="font-oldturcic text-blue-300/80 text-lg leading-none select-none" aria-hidden="true">𐱅</span>
+					</span>
+					<span class="font-sinistre text-lg text-white">Tarik Duyar</span>
+				</a>
+				<nav class="flex gap-5 text-sm">
+					<a href="/13/notes" class="text-gray-400 hover:text-blue-300 transition-colors">Notes</a>
+					<a href="/13/projects" class="text-gray-400 hover:text-blue-300 transition-colors">Projects</a>
+					<a href="/13/now" class="text-gray-400 hover:text-blue-300 transition-colors">Now</a>
+				</nav>
+			</div>
+
+			<h1 class="font-sinistre text-3xl md:text-4xl text-white leading-snug mb-5">
+				A notebook, a workshop,<br class="hidden sm:block" /> and occasionally a soapbox.
+			</h1>
+			<p class="text-gray-400 leading-relaxed max-w-xl">
+				I'm Tarik — a software engineer in Sarajevo. I build a streaming platform
+				with 17,000+ subscribers for a living, and this is where everything else
+				lives: half-finished thoughts, side projects, server adventures, and the
+				occasional strong opinion about software.
+			</p>
+			<div class="flex gap-5 mt-7 text-sm">
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors">GitHub</a>
+				<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors">LinkedIn</a>
+				<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">Email me</a>
+			</div>
+		</header>
+
+		<!-- What's new — the feed -->
+		<section class="mb-16">
+			<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-7">What's New</h2>
+			<ol class="relative border-l border-white/10 ml-2 space-y-9">
+				<li class="pl-7 relative">
+					<span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-blue-400"></span>
+					<p class="text-xs text-gray-600 mb-1 tabular-nums">June 2026 · wrote</p>
+					<a href="/13/notes#matrix-well-known" class="text-gray-100 hover:text-blue-300 transition-colors">
+						Self-hosting Matrix: the .well-known rabbit hole
+					</a>
+					<p class="text-sm text-gray-500 mt-1 leading-relaxed">Three evenings, three HTTP headers, one prettier user ID.</p>
+				</li>
+				<li class="pl-7 relative">
+					<span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-blue-400/60"></span>
+					<p class="text-xs text-gray-600 mb-1 tabular-nums">May 2026 · shipped</p>
+					<a href="/13/projects#rekv" class="text-gray-100 hover:text-blue-300 transition-colors">
+						REKV v0.1 — memory-mapped reads working
+					</a>
+					<p class="text-sm text-gray-500 mt-1 leading-relaxed">The Rust key-value store now survives its own benchmark suite.</p>
+				</li>
+				<li class="pl-7 relative">
+					<span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-blue-400/60"></span>
+					<p class="text-xs text-gray-600 mb-1 tabular-nums">April 2026 · learned</p>
+					<a href="/13/notes" class="text-gray-100 hover:text-blue-300 transition-colors">
+						TIL: GraphQL persisted queries cut our TV-client payloads
+					</a>
+					<p class="text-sm text-gray-500 mt-1 leading-relaxed">A short note from the EgeceTV trenches.</p>
+				</li>
+				<li class="pl-7 relative">
+					<span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-blue-400/40"></span>
+					<p class="text-xs text-gray-600 mb-1 tabular-nums">2026 · ongoing</p>
+					<span class="text-gray-100">Final year of my CS degree at IUS</span>
+					<p class="text-sm text-gray-500 mt-1 leading-relaxed">Honor student, allegedly still sleeping enough.</p>
+				</li>
+			</ol>
+		</section>
+
+		<!-- Doorways -->
+		<section class="mb-16">
+			<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-7">Explore</h2>
+			<div class="grid sm:grid-cols-3 gap-4">
+				<a href="/13/notes" class="group rounded-xl border border-white/10 hover:border-blue-400/40 p-6 transition-all bg-white/[0.015]">
+					<span class="font-oldturcic text-blue-400/40 text-xl block mb-3 select-none" aria-hidden="true">𐰽𐰉</span>
+					<h3 class="text-gray-100 group-hover:text-blue-200 transition-colors mb-1">Notes</h3>
+					<p class="text-sm text-gray-500 leading-relaxed">Essays and TILs — filterable by topic.</p>
+				</a>
+				<a href="/13/projects" class="group rounded-xl border border-white/10 hover:border-blue-400/40 p-6 transition-all bg-white/[0.015]">
+					<span class="font-oldturcic text-blue-400/40 text-xl block mb-3 select-none" aria-hidden="true">𐰃𐱁</span>
+					<h3 class="text-gray-100 group-hover:text-blue-200 transition-colors mb-1">Projects</h3>
+					<p class="text-sm text-gray-500 leading-relaxed">Case studies of things I've built and run.</p>
+				</a>
+				<a href="/13/now" class="group rounded-xl border border-white/10 hover:border-blue-400/40 p-6 transition-all bg-white/[0.015]">
+					<span class="font-oldturcic text-blue-400/40 text-xl block mb-3 select-none" aria-hidden="true">𐰚𐰇</span>
+					<h3 class="text-gray-100 group-hover:text-blue-200 transition-colors mb-1">Now</h3>
+					<p class="text-sm text-gray-500 leading-relaxed">What I'm doing, reading, and learning this season.</p>
+				</a>
+			</div>
+		</section>
+
+		<!-- Short bio / resume hook -->
+		<section class="mb-16 rounded-xl border border-white/10 bg-white/[0.015] p-7">
+			<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-5">The Professional Bit</h2>
+			<p class="text-sm text-gray-400 leading-relaxed">
+				Full-stack engineer at Deniz Egece since 2022 — founding engineer of
+				EgeceTV (streaming, 17K+ paid users, five platforms; I own the backend,
+				database, payments, and CI/CD) and co-builder of a telehealth education
+				platform (.NET, Clean Architecture, WebRTC). Before that, freelance:
+				built and still run <a href="https://evrenomi.com" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">Evrenomi</a>.
+				Stack: TypeScript/Next.js, C#/.NET, SQL, Rust, Linux, AWS.
+			</p>
+			<div class="flex gap-5 mt-5 text-sm">
+				<a href="/13/projects" class="text-blue-400 hover:text-blue-300 transition-colors">Project details →</a>
+				<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors">LinkedIn ↗</a>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-600">
+			<span>© 2026 Tarik Duyar · Sarajevo</span>
+			<span class="font-oldturcic text-blue-400/20 tracking-[0.3em] select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+		</footer>
+	</main>
+
+	<style is:global>
+		html { background-color: #0e1014; color-scheme: dark; }
+	</style>
+</BaseLayout>

@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<!-- Site A · blog index -->
+<BaseLayout
+	title="blog — tarik duyar"
+	description="Writing by Tarik Duyar on systems, self-hosting, Rust, and production software."
+	bodyClass="bg-[#0c0d10] text-gray-300 font-mono antialiased"
+>
+	<main class="max-w-3xl mx-auto px-6 py-14 md:py-20 text-[15px] leading-relaxed">
+		<nav class="mb-14 flex flex-wrap items-center justify-between gap-3 text-sm">
+			<span class="text-gray-500">
+				<span class="text-blue-400 select-none" aria-hidden="true">𐱅</span>
+				tarik@duyar:<span class="text-gray-300">~/blog</span>$
+			</span>
+			<div class="flex gap-5">
+				<a href="/11" class="text-gray-500 hover:text-blue-300 transition-colors">home</a>
+				<a href="/11/blog" class="text-gray-100 underline decoration-blue-400/50 underline-offset-4">blog</a>
+				<a href="/11/about" class="text-gray-500 hover:text-blue-300 transition-colors">about</a>
+			</div>
+		</nav>
+
+		<header class="mb-12">
+			<h1 class="text-white text-lg mb-3">blog</h1>
+			<p class="text-gray-400 max-w-xl text-sm">
+				notes on systems, self-hosting, and things that broke in interesting ways.
+				written for the version of me from six months ago who needed them.
+			</p>
+		</header>
+
+		<!-- 2026 -->
+		<section class="mb-10">
+			<h2 class="text-gray-600 text-sm mb-5">2026</h2>
+			<div class="space-y-6">
+				<article>
+					<div class="flex flex-wrap items-baseline gap-x-4">
+						<span class="text-gray-600 tabular-nums text-sm shrink-0">06-08</span>
+						<a href="/11/blog/matrix-well-known" class="text-blue-400 hover:text-blue-300 hover:underline">self-hosting matrix: the .well-known rabbit hole</a>
+					</div>
+					<p class="text-sm text-gray-500 mt-1 ml-0 sm:ml-14">federation, delegation, and the three evenings it took to put my matrix id on my own domain.</p>
+				</article>
+				<article>
+					<div class="flex flex-wrap items-baseline gap-x-4">
+						<span class="text-gray-600 tabular-nums text-sm shrink-0">05-xx</span>
+						<span class="text-gray-300">memory-mapped files vs. the borrow checker <span class="text-gray-600 text-xs">[draft]</span></span>
+					</div>
+					<p class="text-sm text-gray-500 mt-1 ml-0 sm:ml-14">field notes from rekv — where zero-copy and rust's ownership model collide.</p>
+				</article>
+				<article>
+					<div class="flex flex-wrap items-baseline gap-x-4">
+						<span class="text-gray-600 tabular-nums text-sm shrink-0">04-xx</span>
+						<span class="text-gray-300">five platforms, one graphql api <span class="text-gray-600 text-xs">[draft]</span></span>
+					</div>
+					<p class="text-sm text-gray-500 mt-1 ml-0 sm:ml-14">how egecetv serves web, mobile, and two tv platforms from a single backend.</p>
+				</article>
+				<article>
+					<div class="flex flex-wrap items-baseline gap-x-4">
+						<span class="text-gray-600 tabular-nums text-sm shrink-0">03-xx</span>
+						<span class="text-gray-300">why i wrote a game engine nobody asked for <span class="text-gray-600 text-xs">[draft]</span></span>
+					</div>
+					<p class="text-sm text-gray-500 mt-1 ml-0 sm:ml-14">make2game will never compete with godot. that was never the point.</p>
+				</article>
+			</div>
+		</section>
+
+		<p class="text-xs text-gray-600 mb-12">
+			drafts become links when they're done. no schedule, no newsletter popup — check back or watch
+			<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline">github</a>.
+		</p>
+
+		<footer class="pt-6 border-t border-white/10 text-sm text-gray-600 flex flex-wrap justify-between gap-3">
+			<span>© 2026 atduyar</span>
+			<span class="text-gray-700">keys: <kbd class="text-gray-500">g h</kbd> home · <kbd class="text-gray-500">g b</kbd> blog · <kbd class="text-gray-500">g a</kbd> about</span>
+		</footer>
+	</main>
+
+	<script is:inline>
+		let pendingG = false;
+		document.addEventListener("keydown", (e) => {
+			if (e.target.matches("input, textarea") || e.metaKey || e.ctrlKey || e.altKey) return;
+			if (pendingG) {
+				pendingG = false;
+				if (e.key === "h") location.href = "/11";
+				if (e.key === "b") location.href = "/11/blog";
+				if (e.key === "a") location.href = "/11/about";
+				return;
+			}
+			if (e.key === "g") pendingG = true;
+		});
+	</script>
+</BaseLayout>

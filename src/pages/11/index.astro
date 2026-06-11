@@ -1,0 +1,165 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	Site A — "index" · home
+	Multi-page monospace personal site grown out of variant /3.
+	Pages: / (this), /about, /blog, /blog/matrix-well-known.
+	Functionality: g+key keyboard nav, Sarajevo clock, copy-email button.
+-->
+<BaseLayout
+	title="tarik duyar"
+	description="Ahmet Tarik Duyar — software engineer in Sarajevo. Code, writing, servers, and the occasional stone-carved alphabet."
+	bodyClass="bg-[#0c0d10] text-gray-300 font-mono antialiased"
+>
+	<main class="max-w-3xl mx-auto px-6 py-14 md:py-20 text-[15px] leading-relaxed">
+		<!-- Prompt nav -->
+		<nav class="mb-14 flex flex-wrap items-center justify-between gap-3 text-sm">
+			<span class="text-gray-500">
+				<span class="text-blue-400 select-none" aria-hidden="true">𐱅</span>
+				tarik@duyar:<span class="text-gray-300">~</span>$
+			</span>
+			<div class="flex gap-5">
+				<a href="/11" class="text-gray-100 underline decoration-blue-400/50 underline-offset-4">home</a>
+				<a href="/11/blog" class="text-gray-500 hover:text-blue-300 transition-colors">blog</a>
+				<a href="/11/about" class="text-gray-500 hover:text-blue-300 transition-colors">about</a>
+			</div>
+		</nav>
+
+		<!-- Intro -->
+		<header class="mb-14">
+			<h1 class="text-white text-lg mb-4">ahmet tarik duyar</h1>
+			<p class="text-gray-400 max-w-xl">
+				software engineer in sarajevo. i build streaming platforms for a living,
+				key-value stores and game engines for fun, and i run every server my
+				projects touch. this site is the index of all of it.
+			</p>
+			<div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline">github</a>
+				<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline">linkedin</a>
+				<button id="copy-email" type="button" class="text-blue-400 hover:text-blue-300 hover:underline cursor-pointer">copy email</button>
+				<span class="text-gray-600">sarajevo · <span id="clock">--:--</span></span>
+			</div>
+		</header>
+
+		<!-- Now -->
+		<section class="mb-12">
+			<h2 class="text-white mb-4"><span class="text-gray-600 select-none">## </span>now</h2>
+			<ul class="space-y-2 text-sm text-gray-400">
+				<li><span class="text-gray-600 select-none">- </span>shipping EgeceTV at deniz egece — streaming, 17k+ paid subscribers, 5 platforms</li>
+				<li><span class="text-gray-600 select-none">- </span>building <a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline">rekv</a>, a key-value store in rust</li>
+				<li><span class="text-gray-600 select-none">- </span>finishing a cs degree at the international university of sarajevo</li>
+				<li><span class="text-gray-600 select-none">- </span>babysitting a self-hosted matrix server (<a href="/11/blog/matrix-well-known" class="text-blue-400 hover:text-blue-300 hover:underline">it fought back</a>)</li>
+			</ul>
+			<p class="text-xs text-gray-600 mt-3">last updated 2026-06-11</p>
+		</section>
+
+		<!-- Recent writing -->
+		<section class="mb-12">
+			<h2 class="text-white mb-4"><span class="text-gray-600 select-none">## </span>recent writing</h2>
+			<div class="space-y-3 text-sm">
+				<div class="flex flex-wrap items-baseline gap-x-4">
+					<span class="text-gray-600 tabular-nums shrink-0">2026-06</span>
+					<a href="/11/blog/matrix-well-known" class="text-blue-400 hover:text-blue-300 hover:underline">self-hosting matrix: the .well-known rabbit hole</a>
+				</div>
+				<div class="flex flex-wrap items-baseline gap-x-4">
+					<span class="text-gray-600 tabular-nums shrink-0">2026-05</span>
+					<span class="text-gray-400">memory-mapped files vs. the borrow checker <span class="text-gray-600 text-xs">[draft]</span></span>
+				</div>
+				<div class="flex flex-wrap items-baseline gap-x-4">
+					<span class="text-gray-600 tabular-nums shrink-0">2026-04</span>
+					<span class="text-gray-400">five platforms, one graphql api <span class="text-gray-600 text-xs">[draft]</span></span>
+				</div>
+			</div>
+			<a href="/11/blog" class="inline-block mt-4 text-sm text-blue-400 hover:text-blue-300 hover:underline">all posts →</a>
+		</section>
+
+		<!-- Projects -->
+		<section class="mb-12">
+			<h2 class="text-white mb-4"><span class="text-gray-600 select-none">## </span>projects</h2>
+			<div class="space-y-5 text-sm">
+				<div>
+					<div class="flex flex-wrap items-baseline gap-3">
+						<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline">rekv</a>
+						<span class="text-gray-600">rust</span>
+					</div>
+					<p class="text-gray-400 mt-1">type-safe key-value store. memory-mapped storage, zero-copy deserialization, async i/o.</p>
+				</div>
+				<div>
+					<div class="flex flex-wrap items-baseline gap-3">
+						<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline">make2game</a>
+						<span class="text-gray-600">c++ / opengl / lua</span>
+					</div>
+					<p class="text-gray-400 mt-1">2d game engine from scratch, with lua scripting and an imgui editor.</p>
+				</div>
+				<div>
+					<div class="flex flex-wrap items-baseline gap-3">
+						<a href="https://evrenomi.com" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline">evrenomi.com</a>
+						<span class="text-gray-600">c# / .net</span>
+					</div>
+					<p class="text-gray-400 mt-1">blogging platform, 95+ lighthouse, on a vps i manage myself.</p>
+				</div>
+				<div>
+					<div class="flex flex-wrap items-baseline gap-3">
+						<span class="text-gray-100">egecetv</span>
+						<span class="text-gray-600">commercial — day job</span>
+					</div>
+					<p class="text-gray-400 mt-1">production streaming platform: 17k+ subscribers, ~1,000 videos, web + mobile + tv. <a href="/11/about" class="text-blue-400 hover:text-blue-300 hover:underline">details in about</a>.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Interests -->
+		<section class="mb-12">
+			<h2 class="text-white mb-4"><span class="text-gray-600 select-none">## </span>interests</h2>
+			<div class="grid grid-cols-[8rem_1fr] gap-y-2 text-sm">
+				<span class="text-gray-600">self-hosting</span><span class="text-gray-300">matrix, this site, everything — debugging servers at 2am is fun, allegedly</span>
+				<span class="text-gray-600">linux</span><span class="text-gray-300">arch on desktop, debian on servers, <a href="https://github.com/atduyar/dotfiles" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline">dotfiles in git</a></span>
+				<span class="text-gray-600">old turkic</span><span class="text-gray-300">the 𐱅 up top is a 1,300-year-old letter. <a href="/11/about#glyphs" class="text-blue-400 hover:text-blue-300 hover:underline">story in about</a></span>
+				<span class="text-gray-600">going lower</span><span class="text-gray-300">one layer further down the stack every year. 2026: storage engines</span>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="pt-6 border-t border-white/10 text-sm text-gray-600 flex flex-wrap justify-between gap-3">
+			<span>© 2026 atduyar</span>
+			<span class="text-gray-700">keys: <kbd class="text-gray-500">g h</kbd> home · <kbd class="text-gray-500">g b</kbd> blog · <kbd class="text-gray-500">g a</kbd> about</span>
+		</footer>
+	</main>
+
+	<script is:inline>
+		// Sarajevo clock
+		const clock = document.getElementById("clock");
+		function tick() {
+			clock.textContent = new Intl.DateTimeFormat("en-GB", {
+				hour: "2-digit", minute: "2-digit", timeZone: "Europe/Sarajevo",
+			}).format(new Date());
+		}
+		tick();
+		setInterval(tick, 30_000);
+
+		// Copy email
+		const btn = document.getElementById("copy-email");
+		btn.addEventListener("click", async () => {
+			await navigator.clipboard.writeText("atduyar@gmail.com");
+			const old = btn.textContent;
+			btn.textContent = "copied!";
+			setTimeout(() => { btn.textContent = old; }, 1500);
+		});
+
+		// g-prefixed keyboard nav
+		let pendingG = false;
+		document.addEventListener("keydown", (e) => {
+			if (e.target.matches("input, textarea") || e.metaKey || e.ctrlKey || e.altKey) return;
+			if (pendingG) {
+				pendingG = false;
+				if (e.key === "h") location.href = "/11";
+				if (e.key === "b") location.href = "/11/blog";
+				if (e.key === "a") location.href = "/11/about";
+				return;
+			}
+			if (e.key === "g") pendingG = true;
+		});
+	</script>
+</BaseLayout>

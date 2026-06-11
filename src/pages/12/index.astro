@@ -1,0 +1,195 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<!--
+	Site B — "Manor" · home
+	The runic theme grown into a complete personal site.
+	Pages: / (this), /resume, /writing, /writing/matrix-well-known, /glyphs.
+	The home mixes person, work, writing, and interests; subpages carry depth.
+-->
+<BaseLayout
+	title="Tarik Duyar"
+	description="Ahmet Tarik Duyar — software engineer in Sarajevo. Work, writing, and a 1,300-year-old alphabet."
+	bodyClass="bg-[#0a0b0d] text-gray-200 antialiased"
+>
+	<div class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-5xl mx-auto min-h-dvh">
+		<!-- Nav -->
+		<nav class="py-5 px-6 md:px-12 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
+			<div class="flex justify-between items-center">
+				<a href="/12" class="flex items-center gap-3">
+					<span class="font-oldturcic text-blue-400/70 text-lg leading-none select-none" aria-hidden="true">𐱅</span>
+					<span class="font-sinistre text-xl text-white">Tarik Duyar</span>
+				</a>
+				<ul class="flex gap-5 md:gap-7 text-sm">
+					<li><a href="/12/writing" class="text-gray-400 hover:text-blue-300 transition-colors">Writing</a></li>
+					<li><a href="/12/resume" class="text-gray-400 hover:text-blue-300 transition-colors">Resume</a></li>
+					<li><a href="/12/glyphs" class="text-gray-400 hover:text-blue-300 transition-colors">Glyphs</a></li>
+					<li><a href="mailto:atduyar@gmail.com" class="text-blue-300 border border-blue-500/30 px-3 py-1 hover:bg-blue-600/10 hover:border-blue-400/50 transition-all">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Hero -->
+		<section class="px-6 md:px-12 py-20 md:py-28 border-b border-[#90c5ff14] relative overflow-hidden">
+			<div class="absolute inset-0 opacity-5 pointer-events-none">
+				<div class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-[140px]"></div>
+			</div>
+			<div class="relative max-w-3xl">
+				<h1 class="font-sinistre text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
+					Engineer by day,<br />
+					<span class="text-blue-300">sysadmin of my own chaos</span> by night.
+				</h1>
+				<p class="text-lg text-gray-400 leading-relaxed max-w-xl">
+					I'm Tarik — a software engineer in Sarajevo. I build a streaming
+					platform used by 17,000+ subscribers, write Rust to understand what
+					databases hide from me, and run my own servers because someone has to.
+				</p>
+				<div class="flex flex-wrap gap-5 mt-8 text-sm">
+					<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors">GitHub</a>
+					<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-gray-500 hover:text-blue-300 transition-colors">LinkedIn</a>
+					<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">atduyar@gmail.com</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Now strip -->
+		<section class="px-6 md:px-12 py-8 border-b border-[#90c5ff14] bg-blue-500/[0.03]">
+			<div class="flex flex-wrap items-baseline gap-x-8 gap-y-2 text-sm">
+				<span class="text-xs uppercase tracking-[0.2em] text-blue-400/70 shrink-0">Now</span>
+				<span class="text-gray-400">Shipping EgeceTV</span>
+				<span class="text-gray-400">Building <a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-blue-300 hover:text-blue-200 transition-colors">REKV</a> in Rust</span>
+				<span class="text-gray-400">Finishing my CS degree</span>
+				<span class="text-gray-400">Drafting blog posts</span>
+				<span class="text-gray-600 text-xs ml-auto">June 2026</span>
+			</div>
+		</section>
+
+		<!-- Work -->
+		<section class="px-6 md:px-12 py-16 border-b border-[#90c5ff14]">
+			<div class="flex items-baseline justify-between mb-10">
+				<h2 class="font-sinistre text-3xl text-white">Work</h2>
+				<a href="/12/resume" class="text-sm text-blue-400 hover:text-blue-300 transition-colors">full resume →</a>
+			</div>
+			<div class="grid md:grid-cols-2 gap-6">
+				<div class="border border-[#90c5ff14] bg-[#0a0b0d]/50 p-6">
+					<div class="flex items-baseline justify-between mb-3">
+						<h3 class="text-lg text-white">EgeceTV</h3>
+						<span class="text-xs text-gray-600">2022 — now · day job</span>
+					</div>
+					<p class="text-sm text-gray-400 leading-relaxed">
+						Streaming platform with 17,000+ paying subscribers on five platforms.
+						I'm the founding engineer: backend architecture, database design,
+						payments, CI/CD.
+					</p>
+				</div>
+				<div class="border border-[#90c5ff14] bg-[#0a0b0d]/50 p-6">
+					<div class="flex items-baseline justify-between mb-3">
+						<h3 class="text-lg text-white">Distance Education Platform</h3>
+						<span class="text-xs text-gray-600">team of 5</span>
+					</div>
+					<p class="text-sm text-gray-400 leading-relaxed">
+						Telehealth platform connecting clients with psychologists and
+						dietitians — WebRTC consultations, scheduling, progress tracking.
+						.NET, Clean Architecture.
+					</p>
+				</div>
+				<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="group border border-[#90c5ff14] hover:border-blue-400/40 bg-[#0a0b0d]/50 p-6 transition-all">
+					<div class="flex items-baseline justify-between mb-3">
+						<h3 class="text-lg text-white group-hover:text-blue-200 transition-colors">REKV ↗</h3>
+						<span class="text-xs text-gray-600">Rust · side project</span>
+					</div>
+					<p class="text-sm text-gray-400 leading-relaxed">
+						Type-safe key-value store: memory-mapped storage, zero-copy
+						deserialization, async I/O.
+					</p>
+				</a>
+				<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="group border border-[#90c5ff14] hover:border-blue-400/40 bg-[#0a0b0d]/50 p-6 transition-all">
+					<div class="flex items-baseline justify-between mb-3">
+						<h3 class="text-lg text-white group-hover:text-blue-200 transition-colors">Make2Game ↗</h3>
+						<span class="text-xs text-gray-600">C++ / OpenGL · side project</span>
+					</div>
+					<p class="text-sm text-gray-400 leading-relaxed">
+						2D game engine from scratch with Lua scripting and an immediate-mode
+						editor.
+					</p>
+				</a>
+			</div>
+		</section>
+
+		<!-- Writing -->
+		<section class="px-6 md:px-12 py-16 border-b border-[#90c5ff14]">
+			<div class="flex items-baseline justify-between mb-10">
+				<h2 class="font-sinistre text-3xl text-white">Writing</h2>
+				<a href="/12/writing" class="text-sm text-blue-400 hover:text-blue-300 transition-colors">all posts →</a>
+			</div>
+			<div class="space-y-1">
+				<a href="/12/writing/matrix-well-known" class="group flex flex-wrap items-baseline justify-between gap-2 py-4 border-b border-[#90c5ff0a] hover:bg-white/[0.02] px-3 -mx-3 transition-colors">
+					<span class="text-gray-200 group-hover:text-blue-200 transition-colors">Self-hosting Matrix: the .well-known rabbit hole</span>
+					<span class="text-xs text-gray-600 tabular-nums">Jun 2026</span>
+				</a>
+				<div class="flex flex-wrap items-baseline justify-between gap-2 py-4 border-b border-[#90c5ff0a] px-3 -mx-3">
+					<span class="text-gray-400">Memory-mapped files vs. the borrow checker <span class="text-xs text-blue-400/50 uppercase tracking-wider ml-2">draft</span></span>
+					<span class="text-xs text-gray-600 tabular-nums">soon</span>
+				</div>
+				<div class="flex flex-wrap items-baseline justify-between gap-2 py-4 px-3 -mx-3">
+					<span class="text-gray-400">Five platforms, one GraphQL API <span class="text-xs text-blue-400/50 uppercase tracking-wider ml-2">draft</span></span>
+					<span class="text-xs text-gray-600 tabular-nums">soon</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Beyond the keyboard -->
+		<section class="px-6 md:px-12 py-16 border-b border-[#90c5ff14] relative overflow-hidden">
+			<span class="font-oldturcic absolute -right-6 top-1/2 -translate-y-1/2 text-[12rem] text-blue-400/[0.04] leading-none select-none pointer-events-none" aria-hidden="true">𐰚</span>
+			<div class="relative">
+				<h2 class="font-sinistre text-3xl text-white mb-10">Beyond the Keyboard</h2>
+				<div class="grid sm:grid-cols-3 gap-8 max-w-3xl text-sm">
+					<div>
+						<p class="text-gray-200 mb-2">Old Turkic script</p>
+						<p class="text-gray-500 leading-relaxed mb-3">
+							The glyphs on this site are a real 8th-century alphabet, carved in
+							stone and still readable.
+						</p>
+						<a href="/12/glyphs" class="text-blue-400 hover:text-blue-300 transition-colors">the full story →</a>
+					</div>
+					<div>
+						<p class="text-gray-200 mb-2">Self-hosting</p>
+						<p class="text-gray-500 leading-relaxed">
+							A Matrix homeserver, this site, my projects — on infrastructure
+							I run. You write better software when you also operate it.
+						</p>
+					</div>
+					<div>
+						<p class="text-gray-200 mb-2">One layer lower</p>
+						<p class="text-gray-500 leading-relaxed">
+							A standing rule: every year, understand one more layer down the
+							stack. 2026 is storage engines.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section class="px-6 md:px-12 py-20 text-center">
+			<span class="font-oldturcic text-blue-400/20 text-lg tracking-[0.5em] block mb-6 select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+			<h2 class="font-sinistre text-4xl text-white mb-4">Say hello.</h2>
+			<p class="text-gray-400 mb-8 max-w-md mx-auto">
+				Work, side projects, or an opinion about my stack — all welcome.
+			</p>
+			<a href="mailto:atduyar@gmail.com" class="inline-block px-8 py-4 border border-blue-400/50 text-blue-300 hover:bg-blue-400 hover:text-[#0d0e12] transition-all duration-300">
+				atduyar@gmail.com
+			</a>
+		</section>
+
+		<footer class="px-6 md:px-12 py-8 border-t border-[#90c5ff14] flex flex-wrap justify-between gap-4 text-xs text-gray-600">
+			<span>© 2026 Ahmet Tarik Duyar · Sarajevo</span>
+			<div class="flex gap-5">
+				<a href="/12/writing" class="hover:text-blue-300 transition-colors">Writing</a>
+				<a href="/12/resume" class="hover:text-blue-300 transition-colors">Resume</a>
+				<a href="/12/glyphs" class="hover:text-blue-300 transition-colors">Glyphs</a>
+			</div>
+		</footer>
+	</div>
+</BaseLayout>

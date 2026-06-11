@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+
+const wellKnownServer = `// https://atduyar.com/.well-known/matrix/server
+{
+  "m.server": "matrix.atduyar.com:443"
+}`;
+
+const wellKnownClient = `// https://atduyar.com/.well-known/matrix/client
+{
+  "m.homeserver": {
+    "base_url": "https://matrix.atduyar.com"
+  }
+}`;
+---
+
+<!--
+	Site B · post page — editorial styling + reading progress bar.
+	Verify the technical details match what actually happened before publishing.
+-->
+<BaseLayout
+	title="Self-hosting Matrix: the .well-known rabbit hole — Tarik Duyar"
+	description="Federation, delegation, and the three evenings it took to put my Matrix ID on my own domain."
+	bodyClass="bg-[#0a0b0d] text-gray-200 antialiased"
+>
+	<!-- Reading progress bar -->
+	<div id="progress" class="fixed top-0 left-0 h-0.5 bg-blue-400 z-50 transition-[width] duration-150" style="width: 0%"></div>
+
+	<div class="bg-[#0d0e12] border-x border-[#90c5ff14] max-w-5xl mx-auto min-h-dvh">
+		<nav class="py-5 px-6 md:px-12 border-b border-[#90c5ff14] sticky top-0 bg-[#0d0e12]/90 backdrop-blur-sm z-40">
+			<div class="flex justify-between items-center">
+				<a href="/12" class="flex items-center gap-3">
+					<span class="font-oldturcic text-blue-400/70 text-lg leading-none select-none" aria-hidden="true">𐱅</span>
+					<span class="font-sinistre text-xl text-white">Tarik Duyar</span>
+				</a>
+				<ul class="flex gap-5 md:gap-7 text-sm">
+					<li><a href="/12/writing" class="text-white underline decoration-blue-400/50 underline-offset-4">Writing</a></li>
+					<li><a href="/12/resume" class="text-gray-400 hover:text-blue-300 transition-colors">Resume</a></li>
+					<li><a href="/12/glyphs" class="text-gray-400 hover:text-blue-300 transition-colors">Glyphs</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<main class="px-6 md:px-12 py-14">
+			<article class="max-w-2xl mx-auto">
+				<header class="mb-12">
+					<p class="text-xs text-gray-600 mb-4 tabular-nums">June 8, 2026 · 6 min read</p>
+					<h1 class="font-sinistre text-3xl md:text-4xl text-white leading-tight mb-4">
+						Self-hosting Matrix: the .well-known rabbit hole
+					</h1>
+					<p class="text-gray-500 leading-relaxed">
+						Federation, delegation, and the three evenings it took to put my
+						Matrix ID on my own domain.
+					</p>
+				</header>
+
+				<div class="space-y-6 text-gray-300 leading-relaxed text-[17px]">
+					<p>
+						I wanted one thing: a Matrix ID that says
+						<code class="text-blue-300 text-sm bg-blue-400/10 px-1.5 py-0.5 rounded">@tarik:atduyar.com</code>
+						instead of advertising whichever subdomain the homeserver actually
+						lives on. This is called <strong class="text-white font-medium">delegation</strong>,
+						it is allegedly simple, and it took me three evenings.
+					</p>
+
+					<h2 class="font-sinistre text-2xl text-white pt-4">The setup</h2>
+					<p>
+						The homeserver runs on a VPS at <code class="text-blue-300 text-sm bg-blue-400/10 px-1.5 py-0.5 rounded">matrix.atduyar.com</code>.
+						But Matrix identity is tied to the <em>server name</em> — the part
+						after the colon in your ID. If I set the server name to atduyar.com,
+						every other homeserver in the federation will knock on
+						atduyar.com:8448 and expect a Matrix server to answer. My web server
+						answers instead, with a confused 404.
+					</p>
+					<p>
+						The fix is delegation: atduyar.com publishes a small file telling
+						the federation "the real server is over there."
+					</p>
+					<pre class="border border-[#90c5ff14] bg-[#0a0b0d] p-5 overflow-x-auto text-sm text-gray-300 font-mono rounded"><code set:text={wellKnownServer} /></pre>
+					<p>And a second one so clients like Element know where to log in:</p>
+					<pre class="border border-[#90c5ff14] bg-[#0a0b0d] p-5 overflow-x-auto text-sm text-gray-300 font-mono rounded"><code set:text={wellKnownClient} /></pre>
+
+					<h2 class="font-sinistre text-2xl text-white pt-4">Where the evenings went</h2>
+					<p>
+						<strong class="text-white font-medium">Evening one: Content-Type.</strong>
+						My web server happily served the file — as text/plain. Some
+						implementations don't care. The federation tester does. The spec says
+						application/json, and you will serve application/json.
+					</p>
+					<p>
+						<strong class="text-white font-medium">Evening two: CORS.</strong>
+						The client .well-known is fetched by browsers, from web clients
+						hosted on other origins. No
+						<code class="text-blue-300 text-sm bg-blue-400/10 px-1.5 py-0.5 rounded">Access-Control-Allow-Origin: *</code>,
+						no login for you. The error message, naturally, says nothing about CORS.
+					</p>
+					<p>
+						<strong class="text-white font-medium">Evening three: the port.</strong>
+						I wrote matrix.atduyar.com in the delegation file and forgot the
+						<code class="text-blue-300 text-sm bg-blue-400/10 px-1.5 py-0.5 rounded">:443</code>.
+						Without an explicit port, the spec falls back to trying 8448 on the
+						delegated host too. Half of federation worked — the half that had
+						cached an older lookup — which is the most misleading possible
+						failure mode.
+					</p>
+
+					<h2 class="font-sinistre text-2xl text-white pt-4">What I actually learned</h2>
+					<p>
+						None of these failures were exotic. They were a Content-Type header,
+						a CORS header, and a port number — exactly the kind of details a
+						managed service hides from you. That's the argument for self-hosting
+						in one sentence: <strong class="text-white font-medium">you don't
+						understand a protocol until you've served it wrong three different
+						ways.</strong>
+					</p>
+					<p>
+						Was it worth three evenings to have a prettier user ID? Obviously
+						not. Am I going to do the same thing for email next? Obviously yes.
+					</p>
+				</div>
+
+				<footer class="mt-14 pt-8 border-t border-[#90c5ff14]">
+					<div class="flex flex-wrap items-center justify-between gap-4 text-sm">
+						<a href="/12/writing" class="text-blue-400 hover:text-blue-300 transition-colors">← All posts</a>
+						<a href="mailto:atduyar@gmail.com" class="text-gray-600 hover:text-blue-300 transition-colors">Spotted a mistake? Tell me.</a>
+					</div>
+					<div class="mt-10 flex items-center gap-4 p-5 border border-[#90c5ff14] bg-[#0a0b0d]/50">
+						<span class="font-oldturcic text-blue-300/70 text-2xl leading-none select-none" aria-hidden="true">𐱅</span>
+						<p class="text-sm text-gray-500 leading-relaxed">
+							I'm Tarik, a software engineer in Sarajevo. I build streaming
+							platforms by day and break my own servers by night.
+							<a href="/12" class="text-blue-400 hover:text-blue-300 transition-colors">More about me →</a>
+						</p>
+					</div>
+				</footer>
+			</article>
+		</main>
+	</div>
+
+	<script is:inline>
+		const bar = document.getElementById("progress");
+		document.addEventListener("scroll", () => {
+			const total = document.documentElement.scrollHeight - innerHeight;
+			bar.style.width = `${total > 0 ? (scrollY / total) * 100 : 0}%`;
+		}, { passive: true });
+	</script>
+</BaseLayout>

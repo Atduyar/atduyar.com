@@ -1,0 +1,175 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<!-- Site C · projects — case studies with context, outcome, and honesty -->
+<BaseLayout
+	title="Projects — Tarik Duyar"
+	description="Things Tarik Duyar has built and runs: EgeceTV, REKV, Make2Game, Evrenomi, and a small fleet of servers."
+	bodyClass="bg-[#0e1014] text-gray-300 antialiased"
+>
+	<main class="max-w-3xl mx-auto px-6 py-16 md:py-24">
+		<header class="mb-12">
+			<div class="flex items-center justify-between mb-10">
+				<a href="/13" class="flex items-center gap-3">
+					<span class="w-9 h-9 rounded-lg border border-blue-400/30 bg-blue-400/5 flex items-center justify-center">
+						<span class="font-oldturcic text-blue-300/80 text-lg leading-none select-none" aria-hidden="true">𐱅</span>
+					</span>
+					<span class="font-sinistre text-lg text-white">Tarik Duyar</span>
+				</a>
+				<nav class="flex gap-5 text-sm">
+					<a href="/13/notes" class="text-gray-400 hover:text-blue-300 transition-colors">Notes</a>
+					<a href="/13/projects" class="text-white underline decoration-blue-400/50 underline-offset-4">Projects</a>
+					<a href="/13/now" class="text-gray-400 hover:text-blue-300 transition-colors">Now</a>
+				</nav>
+			</div>
+			<h1 class="font-sinistre text-3xl text-white mb-4">Projects</h1>
+			<p class="text-gray-400 leading-relaxed max-w-xl">
+				Not a gallery — a logbook. What each thing is, why it exists, and what
+				state it's honestly in.
+			</p>
+		</header>
+
+		<div class="space-y-6">
+			<!-- EgeceTV -->
+			<article class="rounded-xl border border-white/10 bg-white/[0.015] p-7">
+				<div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
+					<h2 class="font-sinistre text-2xl text-gray-100">EgeceTV</h2>
+					<span class="text-[10px] uppercase tracking-wider text-emerald-400/80 border border-emerald-400/20 rounded px-1.5 py-0.5">in production</span>
+				</div>
+				<div class="space-y-4 text-sm text-gray-400 leading-relaxed">
+					<p>
+						<span class="text-gray-200">What:</span> a health &amp; education
+						streaming platform — my day job at Deniz Egece, where I'm the founding
+						engineer. 17,000+ paying subscribers, ~1,000 videos, clients on web,
+						iOS, Android, Android TV, and Apple TV.
+					</p>
+					<p>
+						<span class="text-gray-200">My part:</span> backend architecture, the
+						MySQL schema, a single GraphQL API serving all five clients, the
+						subscription payment system, and the CI/CD pipeline. When it breaks,
+						my phone buzzes.
+					</p>
+					<p>
+						<span class="text-gray-200">Honest state:</span> alive, growing, and
+						teaching me daily that boring architecture wins.
+					</p>
+				</div>
+				<p class="text-xs text-gray-600 mt-5">Next.js · GraphQL · MySQL · Prisma · AWS · GitHub Actions · 2022 — now</p>
+			</article>
+
+			<!-- REKV -->
+			<article id="rekv" class="rounded-xl border border-white/10 bg-white/[0.015] p-7 scroll-mt-8">
+				<div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
+					<h2 class="font-sinistre text-2xl text-gray-100">REKV</h2>
+					<span class="text-[10px] uppercase tracking-wider text-blue-400/80 border border-blue-400/20 rounded px-1.5 py-0.5">active development</span>
+				</div>
+				<div class="space-y-4 text-sm text-gray-400 leading-relaxed">
+					<p>
+						<span class="text-gray-200">What:</span> a type-safe key-value store
+						library in Rust — memory-mapped storage, zero-copy deserialization,
+						async I/O.
+					</p>
+					<p>
+						<span class="text-gray-200">Why:</span> I use databases every day and
+						decided I wasn't allowed to keep treating them as magic. Building the
+						storage layer myself is the tuition fee.
+					</p>
+					<p>
+						<span class="text-gray-200">Honest state:</span> v0.1 — reads work,
+						the benchmark suite passes, and the borrow checker and I have reached
+						a fragile peace (see <a href="/13/notes" class="text-blue-400 hover:text-blue-300 transition-colors">the notes</a>).
+					</p>
+				</div>
+				<div class="flex items-center justify-between mt-5">
+					<p class="text-xs text-gray-600">Rust · MIT license · 2025 — now</p>
+					<a href="https://github.com/atduyar/rekv" target="_blank" rel="noopener" class="text-sm text-blue-400 hover:text-blue-300 transition-colors">source ↗</a>
+				</div>
+			</article>
+
+			<!-- Make2Game -->
+			<article class="rounded-xl border border-white/10 bg-white/[0.015] p-7">
+				<div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
+					<h2 class="font-sinistre text-2xl text-gray-100">Make2Game</h2>
+					<span class="text-[10px] uppercase tracking-wider text-gray-500 border border-white/10 rounded px-1.5 py-0.5">on ice</span>
+				</div>
+				<div class="space-y-4 text-sm text-gray-400 leading-relaxed">
+					<p>
+						<span class="text-gray-200">What:</span> a 2D game engine written
+						from scratch in C++ and OpenGL — Lua scripting, immediate-mode (ImGui)
+						editor, batched renderer.
+					</p>
+					<p>
+						<span class="text-gray-200">Why:</span> using Unity felt like driving
+						an automatic. I wanted to build the transmission. It will never
+						compete with Godot; it taught me more graphics programming than any
+						course did.
+					</p>
+					<p>
+						<span class="text-gray-200">Honest state:</span> parked while REKV
+						has my evenings. The renderer works; the editor is 80% done, like all
+						editors.
+					</p>
+				</div>
+				<div class="flex items-center justify-between mt-5">
+					<p class="text-xs text-gray-600">C++ · OpenGL · Lua · ImGui</p>
+					<a href="https://github.com/atduyar/make2game" target="_blank" rel="noopener" class="text-sm text-blue-400 hover:text-blue-300 transition-colors">source ↗</a>
+				</div>
+			</article>
+
+			<!-- Evrenomi -->
+			<article class="rounded-xl border border-white/10 bg-white/[0.015] p-7">
+				<div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
+					<h2 class="font-sinistre text-2xl text-gray-100">Evrenomi</h2>
+					<span class="text-[10px] uppercase tracking-wider text-emerald-400/80 border border-emerald-400/20 rounded px-1.5 py-0.5">in production</span>
+				</div>
+				<div class="space-y-4 text-sm text-gray-400 leading-relaxed">
+					<p>
+						<span class="text-gray-200">What:</span> a blogging platform built as
+						freelance work in 2021 — C#/.NET, obsessively optimized to a 95+
+						Lighthouse score.
+					</p>
+					<p>
+						<span class="text-gray-200">Honest state:</span> still online, still
+						fast, still on a Linux VPS I administer. My longest-running
+						production system, and the project that taught me operations.
+					</p>
+				</div>
+				<div class="flex items-center justify-between mt-5">
+					<p class="text-xs text-gray-600">C# / .NET · Linux VPS · 2021 — now</p>
+					<a href="https://evrenomi.com" target="_blank" rel="noopener" class="text-sm text-blue-400 hover:text-blue-300 transition-colors">live ↗</a>
+				</div>
+			</article>
+
+			<!-- The fleet -->
+			<article class="rounded-xl border border-white/10 bg-white/[0.015] p-7">
+				<div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
+					<h2 class="font-sinistre text-2xl text-gray-100">The Fleet</h2>
+					<span class="text-[10px] uppercase tracking-wider text-emerald-400/80 border border-emerald-400/20 rounded px-1.5 py-0.5">always on fire somewhere</span>
+				</div>
+				<div class="space-y-4 text-sm text-gray-400 leading-relaxed">
+					<p>
+						<span class="text-gray-200">What:</span> the self-hosted
+						infrastructure underneath everything else — this site, a federated
+						Matrix homeserver, project hosting, backups. Debian on the servers,
+						Arch on the desktop, <a href="https://github.com/atduyar/dotfiles" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">dotfiles in git</a>.
+					</p>
+					<p>
+						<span class="text-gray-200">Why:</span> you write different — better —
+						software when you're also the one who has to operate it.
+					</p>
+				</div>
+				<p class="text-xs text-gray-600 mt-5">Linux · nginx · Docker · too much cron</p>
+			</article>
+		</div>
+
+		<footer class="mt-16 pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-600">
+			<a href="/13" class="hover:text-blue-300 transition-colors">← home</a>
+			<span class="font-oldturcic text-blue-400/20 tracking-[0.3em] select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+		</footer>
+	</main>
+
+	<style is:global>
+		html { background-color: #0e1014; color-scheme: dark; }
+	</style>
+</BaseLayout>

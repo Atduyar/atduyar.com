@@ -1,0 +1,175 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<!-- Site A · about — person + full resume on one page -->
+<BaseLayout
+	title="about — tarik duyar"
+	description="About Ahmet Tarik Duyar: software engineer, CS honor student, self-hosting enthusiast."
+	bodyClass="bg-[#0c0d10] text-gray-300 font-mono antialiased"
+>
+	<main class="max-w-3xl mx-auto px-6 py-14 md:py-20 text-[15px] leading-relaxed">
+		<nav class="mb-14 flex flex-wrap items-center justify-between gap-3 text-sm">
+			<span class="text-gray-500">
+				<span class="text-blue-400 select-none" aria-hidden="true">𐱅</span>
+				tarik@duyar:<span class="text-gray-300">~/about</span>$
+			</span>
+			<div class="flex gap-5">
+				<a href="/11" class="text-gray-500 hover:text-blue-300 transition-colors">home</a>
+				<a href="/11/blog" class="text-gray-500 hover:text-blue-300 transition-colors">blog</a>
+				<a href="/11/about" class="text-gray-100 underline decoration-blue-400/50 underline-offset-4">about</a>
+			</div>
+		</nav>
+
+		<!-- The person -->
+		<section class="mb-12">
+			<h1 class="text-white text-lg mb-4">about</h1>
+			<div class="space-y-4 text-gray-400 max-w-xl">
+				<p>
+					i'm tarik — full name ahmet tarik duyar — a software engineer from
+					türkiye, living in sarajevo. i like systems i can hold the whole shape
+					of in my head: the schema, the api, the deploy pipeline, the monthly bill.
+				</p>
+				<p>
+					my rule of thumb is to understand one layer below wherever i work.
+					web apps led me to databases, databases led me to storage engines,
+					storage engines led me to rust and mmap. no idea where it ends.
+					probably verilog.
+				</p>
+				<p>
+					off the computer: history (see <a href="#glyphs" class="text-blue-400 hover:text-blue-300 hover:underline">glyphs</a>),
+					strong coffee, and walking sarajevo's hills while a build runs.
+				</p>
+			</div>
+		</section>
+
+		<!-- Experience -->
+		<section class="mb-12">
+			<h2 class="text-white mb-6"><span class="text-gray-600 select-none">## </span>experience</h2>
+
+			<article class="mb-8 border-l-2 border-blue-400/20 pl-5">
+				<div class="flex flex-wrap justify-between gap-2">
+					<h3 class="text-gray-100">full-stack engineer @ deniz egece co. ltd.</h3>
+					<span class="text-gray-600 text-sm">2022—now</span>
+				</div>
+				<ul class="mt-3 space-y-2 text-sm text-gray-400">
+					<li><span class="text-gray-600 select-none">- </span>founding engineer on EgeceTV: health &amp; education streaming, 17,000+ paid subscribers, ~1,000 videos, 5 client platforms</li>
+					<li><span class="text-gray-600 select-none">- </span>designed backend architecture + mysql schema; one graphql api behind every client</li>
+					<li><span class="text-gray-600 select-none">- </span>built subscription payments and the github-actions ci/cd pipeline</li>
+					<li><span class="text-gray-600 select-none">- </span>built a distance-education platform (webrtc video consultations, scheduling, progress tracking) with .net + clean architecture, team of 5</li>
+				</ul>
+				<p class="mt-3 text-xs text-gray-600">next.js · graphql · c#/.net · mysql · postgresql · prisma · aws</p>
+			</article>
+
+			<article class="mb-8 border-l-2 border-blue-400/20 pl-5">
+				<div class="flex flex-wrap justify-between gap-2">
+					<h3 class="text-gray-100">freelance developer</h3>
+					<span class="text-gray-600 text-sm">2021—2022</span>
+				</div>
+				<ul class="mt-3 space-y-2 text-sm text-gray-400">
+					<li><span class="text-gray-600 select-none">- </span>built evrenomi, a c#/.net blogging platform; 95+ lighthouse, self-managed linux hosting — still running</li>
+				</ul>
+			</article>
+
+			<article class="border-l-2 border-blue-400/20 pl-5">
+				<div class="flex flex-wrap justify-between gap-2">
+					<h3 class="text-gray-100">b.sc. computer science @ international university of sarajevo</h3>
+					<span class="text-gray-600 text-sm">honor student</span>
+				</div>
+				<ul class="mt-3 space-y-2 text-sm text-gray-400">
+					<li><span class="text-gray-600 select-none">- </span>fundamentals the hard way: c, algorithms, operating systems. started game-dev experiments in c++/opengl here</li>
+				</ul>
+			</article>
+		</section>
+
+		<!-- Stack -->
+		<section class="mb-12">
+			<h2 class="text-white mb-6"><span class="text-gray-600 select-none">## </span>stack</h2>
+			<div class="grid grid-cols-[6rem_1fr] gap-y-2 text-sm">
+				<span class="text-gray-600">web</span><span class="text-gray-300">typescript, react, next.js, graphql</span>
+				<span class="text-gray-600">backend</span><span class="text-gray-300">c# / .net, rest, clean architecture</span>
+				<span class="text-gray-600">data</span><span class="text-gray-300">mysql, postgresql, prisma</span>
+				<span class="text-gray-600">systems</span><span class="text-gray-300">rust, c, linux</span>
+				<span class="text-gray-600">infra</span><span class="text-gray-300">docker, aws, github actions</span>
+			</div>
+		</section>
+
+		<!-- Uses -->
+		<section class="mb-12">
+			<h2 class="text-white mb-6"><span class="text-gray-600 select-none">## </span>uses</h2>
+			<div class="grid grid-cols-[6rem_1fr] gap-y-2 text-sm">
+				<span class="text-gray-600">desktop</span><span class="text-gray-300">arch linux <span class="text-gray-600">(btw)</span></span>
+				<span class="text-gray-600">servers</span><span class="text-gray-300">debian on a vps — runs this site, a matrix homeserver, and my projects</span>
+				<span class="text-gray-600">shell</span><span class="text-gray-300">zsh, terminal-first everything</span>
+				<span class="text-gray-600">dotfiles</span><a href="https://github.com/atduyar/dotfiles" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline w-fit">github.com/atduyar/dotfiles</a>
+				<span class="text-gray-600">this site</span><span class="text-gray-300">astro + tailwind, deployed with wrangler</span>
+			</div>
+		</section>
+
+		<!-- Glyphs -->
+		<section id="glyphs" class="mb-12 scroll-mt-8">
+			<h2 class="text-white mb-6"><span class="text-gray-600 select-none">## </span>glyphs</h2>
+			<div class="space-y-4 text-sm text-gray-400 max-w-xl">
+				<p>
+					the characters scattered around this site — like the
+					<span class="font-oldturcic text-blue-300">𐱅</span> in the prompt — are
+					<span class="text-gray-200">old turkic script</span>, the alphabet of the
+					orkhon inscriptions: stone monuments raised in the 8th century in
+					today's mongolia. it's the oldest written form of the language family
+					i grew up speaking.
+				</p>
+				<p>
+					i keep them around for one reason: those inscriptions are
+					thirteen-hundred-year-old documentation that is still readable.
+					most software doesn't survive a decade. it's a good bar to aim at.
+				</p>
+				<div class="border border-white/10 p-4 mt-2">
+					<p class="text-gray-600 text-xs mb-3">a few letters and their sounds:</p>
+					<div class="flex flex-wrap gap-x-8 gap-y-2">
+						<span><span class="font-oldturcic text-blue-300 text-lg">𐱅</span> <span class="text-gray-500">/t/</span></span>
+						<span><span class="font-oldturcic text-blue-300 text-lg">𐰋</span> <span class="text-gray-500">/b/</span></span>
+						<span><span class="font-oldturcic text-blue-300 text-lg">𐰚</span> <span class="text-gray-500">/k/</span></span>
+						<span><span class="font-oldturcic text-blue-300 text-lg">𐰠</span> <span class="text-gray-500">/l/</span></span>
+						<span><span class="font-oldturcic text-blue-300 text-lg">𐰃</span> <span class="text-gray-500">/i/</span></span>
+						<span><span class="font-oldturcic text-blue-300 text-lg">𐰏</span> <span class="text-gray-500">/g/</span></span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section class="mb-12">
+			<h2 class="text-white mb-6"><span class="text-gray-600 select-none">## </span>contact</h2>
+			<div class="grid grid-cols-[6rem_1fr] gap-y-1 text-sm">
+				<span class="text-gray-600">email</span>
+				<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 hover:underline w-fit">atduyar@gmail.com</a>
+				<span class="text-gray-600">github</span>
+				<a href="https://github.com/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline w-fit">github.com/atduyar</a>
+				<span class="text-gray-600">linkedin</span>
+				<a href="https://linkedin.com/in/atduyar" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 hover:underline w-fit">linkedin.com/in/atduyar</a>
+				<span class="text-gray-600">matrix</span>
+				<span class="text-gray-300">@tarik:atduyar.com <span class="text-gray-600 text-xs">(placeholder — confirm your real handle)</span></span>
+			</div>
+		</section>
+
+		<footer class="pt-6 border-t border-white/10 text-sm text-gray-600 flex flex-wrap justify-between gap-3">
+			<span>© 2026 atduyar</span>
+			<span class="text-gray-700">keys: <kbd class="text-gray-500">g h</kbd> home · <kbd class="text-gray-500">g b</kbd> blog · <kbd class="text-gray-500">g a</kbd> about</span>
+		</footer>
+	</main>
+
+	<script is:inline>
+		let pendingG = false;
+		document.addEventListener("keydown", (e) => {
+			if (e.target.matches("input, textarea") || e.metaKey || e.ctrlKey || e.altKey) return;
+			if (pendingG) {
+				pendingG = false;
+				if (e.key === "h") location.href = "/11";
+				if (e.key === "b") location.href = "/11/blog";
+				if (e.key === "a") location.href = "/11/about";
+				return;
+			}
+			if (e.key === "g") pendingG = true;
+		});
+	</script>
+</BaseLayout>

@@ -1,0 +1,112 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+---
+
+<!-- Site C · now — a proper /now page (nownownow.com pattern) -->
+<BaseLayout
+	title="Now — Tarik Duyar"
+	description="What Tarik Duyar is doing now: work, study, side projects, reading."
+	bodyClass="bg-[#0e1014] text-gray-300 antialiased"
+>
+	<main class="max-w-3xl mx-auto px-6 py-16 md:py-24">
+		<header class="mb-12">
+			<div class="flex items-center justify-between mb-10">
+				<a href="/13" class="flex items-center gap-3">
+					<span class="w-9 h-9 rounded-lg border border-blue-400/30 bg-blue-400/5 flex items-center justify-center">
+						<span class="font-oldturcic text-blue-300/80 text-lg leading-none select-none" aria-hidden="true">𐱅</span>
+					</span>
+					<span class="font-sinistre text-lg text-white">Tarik Duyar</span>
+				</a>
+				<nav class="flex gap-5 text-sm">
+					<a href="/13/notes" class="text-gray-400 hover:text-blue-300 transition-colors">Notes</a>
+					<a href="/13/projects" class="text-gray-400 hover:text-blue-300 transition-colors">Projects</a>
+					<a href="/13/now" class="text-white underline decoration-blue-400/50 underline-offset-4">Now</a>
+				</nav>
+			</div>
+			<h1 class="font-sinistre text-3xl text-white mb-4">Now</h1>
+			<p class="text-gray-400 leading-relaxed max-w-xl">
+				What I'm actually doing these days — the
+				<a href="https://nownownow.com/about" target="_blank" rel="noopener" class="text-blue-400 hover:text-blue-300 transition-colors">/now page</a>
+				idea. Last updated <span class="text-gray-300">June 11, 2026</span>, from Sarajevo.
+			</p>
+		</header>
+
+		<div class="space-y-10">
+			<section>
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Working on</h2>
+				<div class="space-y-3 text-gray-400 leading-relaxed">
+					<p>
+						<span class="text-gray-200">EgeceTV</span> keeps growing — current
+						focus is performance work on the TV clients, which are always the
+						slowest devices we support.
+					</p>
+					<p>
+						<span class="text-gray-200">REKV</span> hit v0.1: memory-mapped reads
+						work and survive the benchmark suite. Next milestone is the write
+						path, where my zero-copy ambitions meet crash-safety reality.
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Studying</h2>
+				<p class="text-gray-400 leading-relaxed">
+					Final stretch of my CS degree at the International University of
+					Sarajevo. The thesis topic is circling something around storage
+					engines — conveniently aligned with the side project.
+					<span class="text-gray-600 text-sm">(placeholder — put your real thesis topic here)</span>
+				</p>
+			</section>
+
+			<section>
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Reading</h2>
+				<ul class="space-y-3 text-gray-400 leading-relaxed">
+					<li>
+						<span class="text-gray-200">Designing Data-Intensive Applications</span>
+						— Martin Kleppmann. The REKV instigator; on my second pass, slower this time.
+					</li>
+					<li>
+						<span class="text-gray-200">Placeholder slot</span>
+						<span class="text-gray-600 text-sm"> — whatever's actually on your nightstand; one honest entry beats five impressive ones.</span>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Tinkering</h2>
+				<p class="text-gray-400 leading-relaxed">
+					The Matrix homeserver is stable after
+					<a href="/13/notes#matrix-well-known" class="text-blue-400 hover:text-blue-300 transition-colors">the .well-known saga</a>,
+					so naturally I'm now eyeing self-hosted email — the hobby equivalent of
+					adopting a wolf.
+				</p>
+			</section>
+
+			<section>
+				<h2 class="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">Life</h2>
+				<p class="text-gray-400 leading-relaxed">
+					Sarajevo in early summer: walking the hills while builds run, too much
+					coffee, occasional attempts at a normal sleep schedule.
+					<span class="text-gray-600 text-sm">(placeholder — add anything human you're comfortable sharing: sport, music, travel)</span>
+				</p>
+			</section>
+		</div>
+
+		<div class="mt-14 rounded-xl border border-blue-400/20 bg-blue-400/[0.04] p-6">
+			<p class="text-sm text-gray-400 leading-relaxed">
+				Doing something similar, or want to compare notes on any of the above?
+				<a href="mailto:atduyar@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">Email me</a> —
+				I reply to humans.
+			</p>
+		</div>
+
+		<footer class="mt-16 pt-8 border-t border-white/5 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-600">
+			<a href="/13" class="hover:text-blue-300 transition-colors">← home</a>
+			<span class="font-oldturcic text-blue-400/20 tracking-[0.3em] select-none" aria-hidden="true">𐰋𐰃𐰠𐰏</span>
+		</footer>
+	</main>
+
+	<style is:global>
+		html { background-color: #0e1014; color-scheme: dark; }
+	</style>
+</BaseLayout>
